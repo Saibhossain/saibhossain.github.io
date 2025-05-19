@@ -4,15 +4,38 @@
   <meta charset="UTF-8">
   <title>Saib Hossain - CV</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2em;
-      line-height: 1.6;
+    * {
+      box-sizing: border-box;
     }
-    h1, h2, h3 {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7fa;
       color: #2c3e50;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      background: #ffffff;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 5px;
+      color: #1a1a1a;
+    }
+    h2 {
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-top: 40px;
+      font-size: 24px;
+    }
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
     }
     ul {
       padding-left: 20px;
@@ -21,74 +44,227 @@
       color: #2980b9;
       text-decoration: none;
     }
+    a:hover {
+      text-decoration: underline;
+    }
+    .contact-info {
+      margin-top: 10px;
+    }
+    .profile-pic {
+      float: right;
+      width: 240px;
+      height: auto;
+      border-radius: 12px;
+      margin-top: -50px; 
+      margin-left: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .clear {
+      clear: both;
+    }
+
+    /* for language section  */
+    .language-bar {
+        margin-bottom: 0.9em;
+    }
+
+    .language-bar span {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.2em;
+    }
+
+    .bar {
+        background-color: #eee;
+        border-radius: 8px;
+        height: 5px;
+        width: 100%;
+        margin-bottom: 0.2em;
+        overflow: hidden;
+    }
+
+    .level {
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    .high {
+        width: 100%;
+        background-color: #3498db;
+    }
+
+    .medium {
+        width: 90%;
+        background-color: #f1c40f;
+    }
+
+    .low {
+        width: 90%;
+        background-color: #3ce745;
+    }
+
+    small {
+        font-size: 0.65em;
+        color: #555;
+    }
+
+
+    /* for skills section  */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+        margin-bottom: 1em;
+    }
+    .skill-category h3 {
+        margin-bottom: 0.3em;
+        color: #34495e;
+        font-size: 1.0em;
+    }
+    .skill-category p {
+        margin: 0;
+        color: #2c3e50;
+        font-size: 0.95em;
+}
   </style>
 </head>
 <body>
 
   <h1>Saib Hossain</h1>
-  <img src="photo.jpg" alt="Saib Hossain" width="150" style="float: right; margin: 10px; border-radius: 10px;">
-  <p>
-    <strong>Email:</strong> saibhossain5@gmail.com<br>
-    <strong>Phone:</strong> 01769918015<br>
-    <strong>GitHub:</strong> <a href="https://github.com/Saibhossain">github.com/Saibhossain</a><br>
-    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saib-hossain-182834229/">LinkedIn Profile</a>
-  </p>
+  <img src="photo.jpg" alt="Saib Hossain" class="profile-pic">
 
-  <h2>Career Objective</h2>
-   <p>
-   Motivated and detail-oriented Computer Science student with hands-on experience in Natural Language Processing (NLP), Transformer-based architectures, and fine-tuning large language models (LLMs). Proficient in applying machine learning and deep learning techniques to solve real-world problems, with a strong interest in advancing AI research. Seeking a Research Assistant role where I can contribute to optimizing NLP models, developing high-quality datasets, and supporting cutting-edge research initiatives. Passionate about continuous learning, collaboration, and driving meaningful innovation in artificial intelligence.
-  </p>
+  <div class="contact-info">
+    <p><strong>Email:</strong> saibhossain5@gmail.com</p>
+    <p><strong>Phone:</strong> 01769918015</p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Saibhossain">github.com/Saibhossain</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saib-hossain-182834229/">linkedin.com/in/saib-hossain</a></p>
+  </div>
 
-  <h2>Education</h2>
-  <ul>
-    <li><strong>BSc in Computer Science & Engineering</strong>, United International University (3.41 GPA) – 2026</li>
-    <li><strong>HSC (Science)</strong>, Satkhira Govt. College – 2018</li>
-  </ul>
+  <div class="clear"></div>
 
-  <h2>Certifications & Training</h2>
-  <ul>
-    <li>IBM AI Engineering - <a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE">Certificate</a></li>
-    <li>Google Data Analytics Professional Certificate - <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA">Certificate</a></li>
-    <li>Data Science Fundamentals with Python and SQL Specialization (IBM) - <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV">Certificate</a></li>
-    <li>Financial Markets - Yale University - <a href="https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y">Certificate</a></li>
-    <li>Transformer Models and BERT Model - <a href="https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA">Certificate</a></li>
-  </ul>
+  <div class="section">
+    <h2>Career Objective</h2>
+    <p>
+      Motivated and detail-oriented Computer Science student with hands-on experience in Natural Language Processing (NLP), Transformer-based architectures, and fine-tuning large language models (LLMs). Proficient in applying machine learning and deep learning techniques to solve real-world problems, with a strong interest in advancing AI research. Seeking a Research Assistant role where I can contribute to optimizing NLP models, developing high-quality datasets, and supporting cutting-edge research initiatives. Passionate about continuous learning, collaboration, and driving meaningful innovation in artificial intelligence.
+    </p>
+  </div>
 
-  <h2>Projects</h2>
-  <ul>
-    <li><a href="https://github.com/Saibhossain/DeepLearning-with-PyTorch">DeepLearning-with-PyTorch</a> – CNNs, transfer learning on MNIST/CIFAR-10</li>
-    <li><a href="https://github.com/Saibhossain/AI_ChatBotUsingGPT-2">AI-Powered Study Assistant Chatbot</a> – GPT-2, FastAPI, JS</li>
-    <li><a href="https://github.com/Saibhossain/PyTorch-vs-TensorFlow-Comparison">PyTorch vs TensorFlow</a> – model comparisons</li>
-    <li><a href="https://github.com/Saibhossain/Book_Recommender_llm.git">Book Recommendation using LLM</a> – Personalized book recommender</li>
-  </ul>
+  <div class="section">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="https://github.com/Saibhossain/DeepLearning-with-PyTorch">DeepLearning-with-PyTorch</a> – CNNs, transfer learning on MNIST/CIFAR-10</li>
+      <li><a href="https://github.com/Saibhossain/AI_ChatBotUsingGPT-2">AI-Powered Study Assistant Chatbot</a> – GPT-2, FastAPI, JS</li>
+      <li><a href="https://github.com/Saibhossain/PyTorch-vs-TensorFlow-Comparison">PyTorch vs TensorFlow</a> – model comparisons</li>
+      <li><a href="https://github.com/Saibhossain/Book_Recommender_llm.git" target="_blank"><strong>Book Recommendation System</strong></a> – 
+            Built an intelligent <strong>Book Recommendation System</strong> leveraging <strong>Large Language Models (LLMs)</strong> to offer personalized suggestions through semantic analysis.
+            <ul>
+                <li><strong>Model:</strong> Used <em>OpenAI's GPT models</em> to analyze book content and user preferences.</li>
+                <li><strong>Tech Stack:</strong> Hugging Face, React, Node.js, REST API, PyTorch</li>
+                <li><strong>Key Features:</strong> 
+                    <ul>
+                    <li>Data Collection from Kaggle and preprocessing</li>
+                    <li>Semantic Embedding & Similarity Matching</li>
+                    <li>Interactive web UI for user input and live recommendations</li>
+                    </ul>
+               </li>
+             <li><strong>Outcome:</strong> Responsive and accurate system that understands nuanced preferences—enhancing user satisfaction and engagement.</li>
+         </ul>
+       </li>
+    </ul>
+  </div>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Python, Java</li>
-    <li>Machine Learning, Transformers, BERT</li>
-    <li>Data Analysis</li>
-    <li>MS Word, Excel, PowerPoint</li>
-    <li>Research, Creativity, Innovation</li>
-  </ul>
+  <div class="section">
+    <h2>Certifications & Training</h2>
+    <ul>
+      <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE">IBM AI Engineering</a></li>
+      <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA">Google Data Analytics Professional Certificate</a></li>
+      <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV">Data Science Fundamentals (IBM)</a></li>
+      <li><a href="https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y">Financial Markets - Yale University</a></li>
+      <li><a href="https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA">Transformer Models and BERT</a></li>
+    </ul>
+  </div>
+  
 
-  <h2>Achievements</h2>
-  <ul>
-    <li>Lead the Future 2025 @ INVENTIOUS 4.1 - <a href="https://drive.google.com/file/d/1QShVejNa6ngV_1KZtnbFYexbNWwk_Igp/view?usp=drive_link">Certificate</a></li>
-    <li>UIU Book Reading Competition 2025 - <a href="https://drive.google.com/file/d/1DMMh9L9jVvbYTCl3tDduCiyJjU9BJMnz/view?usp=sharing">Certificate</a></li>
-  </ul>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+    <div class="skill-category">
+        <h3>Geospatial Tech</h3>
+        <p>Google Earth Engine (GEE), Remote Sensing, GIS</p>
+    </div>
+    <div class="skill-category">
+        <h3>Machine Learning</h3>
+        <p>Scikit-learn, Pandas, NumPy, SVM</p>
+    </div>
+    <div class="skill-category">
+        <h3>Deep Learning</h3>
+        <p>PyTorch, TensorFlow, Keras, CNN, RNN, U-Net</p>
+    </div>
+    <div class="skill-category">
+        <h3>Frontend & Backend</h3>
+        <p>React, Node.js, Express.js</p>
+   </div>
+    <div class="skill-category">
+        <h3>Natural Language Processing</h3>
+        <p>Transformers, BERT, GPT-2, HuggingFace</p>
+    </div>
+    <div class="skill-category">
+        <h3>Languages</h3>
+        <p>Python, Java, C, C++, MySql</p>
+    </div>
+    <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <p>Git, Github, Google Colab, Jupyter</p>
+    </div>
+    </div>
+
+  <div class="section">
+    <h2>Achievements</h2>
+    <ul>
+      <li><a href="https://drive.google.com/file/d/1QShVejNa6ngV_1KZtnbFYexbNWwk_Igp/view?usp=drive_link">Lead the Future 2025 @ INVENTIOUS 4.1</a></li>
+      <li><a href="https://drive.google.com/file/d/1DMMh9L9jVvbYTCl3tDduCiyJjU9BJMnz/view?usp=sharing">UIU Book Reading Competition 2025</a></li>
+    </ul>
+  </div>
+
+   <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>BSc in Computer Science & Engineering</strong>, United International University — CGPA: 3.41 (Studying)</li>
+      <li><strong>HSC (Science)</strong>, Satkhira Govt.College (2018) — GPA: 5.00</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Extra-Curricular Activities</h2>
+    <p>
+      <strong>General Secretary</strong> at NCTF SATKHIRA (2013–2018)<br>
+      NCTF works for child rights and protection in Bangladesh, supported by Save the Children, Plan International, and Bangladesh Shishu Academy.
+    </p>
+
+  </div>
+  <div class="section">
 
   <h2>Languages</h2>
-  <ul>
-    <li>Bangla - High (Read, Write, Speak)</li>
-    <li>English - Medium</li>
-    <li>Hindi - Low (Read, Write), High (Speak)</li>
-  </ul>
+  <div class="language-bar">
+    <span>Bangla</span>
+    <div class="bar"><div class="level high"></div></div>
+    <small>Read, Write, Speak</small>
+  </div>
 
-  <h2>Extra-Curricular Activities</h2>
-  <p>
-    General Secretary at NCTF SATKHIRA (2013-2018)<br>
-    NCTF works for child rights & protection in Bangladesh. Supported by Save the Children, Plan International & Bangladesh Shishu Academy.
-  </p>
+  <div class="language-bar">
+    <span>English</span>
+    <div class="bar"><div class="level medium"></div></div>
+    <small>Basic Conversation, Reading</small>
+  </div>
+
+  <div class="language-bar">
+    <span>Hindi</span>
+    <div class="bar"><div class="level low"></div></div>
+    <small>Read, Write (Low), Speak (High)</small>
+  </div>
+</div>
+
 
 </body>
 </html>
