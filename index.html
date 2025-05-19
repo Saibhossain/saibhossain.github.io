@@ -67,49 +67,47 @@
     }
 
     /* for language section  */
-    .language-bar {
-        margin-bottom: 0.9em;
+    .language-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.2rem;
     }
 
-    .language-bar span {
-        display: block;
-        font-weight: 600;
-        margin-bottom: 0.2em;
-    }
+    .language-item {
+        padding: 0.5rem;
+        border-left: 3px solid #007acc;
+        background-color: #f9f9f9;
+        border-radius: 6px;
+     }
 
-    .bar {
-        background-color: #eee;
-        border-radius: 8px;
-        height: 5px;
-        width: 100%;
-        margin-bottom: 0.2em;
-        overflow: hidden;
+    .levelskills {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.2rem 0.6rem;
+        margin-top: 0.5rem;
     }
 
     .level {
-        height: 100%;
-        border-radius: 8px;
+        width: 60px;
+        height: 6px;
+        border-radius: 4px;
+        background-color: #ddd;
+        margin-top: 3px;
+        }
+
+    .level.high {
+        background-color: #4CAF50;
+        width: 60px;
+        }
+    .level.medium {
+        background-color: #FFC107;
+        width: 40px;
+        }
+    .level.low {
+        background-color: #F44336;
+        width: 20px;
     }
 
-    .high {
-        width: 100%;
-        background-color: #3498db;
-    }
-
-    .medium {
-        width: 90%;
-        background-color: #f1c40f;
-    }
-
-    .low {
-        width: 90%;
-        background-color: #3ce745;
-    }
-
-    small {
-        font-size: 0.65em;
-        color: #555;
-    }
 
 
     /* for skills section  */
@@ -141,6 +139,7 @@
     <p><strong>Phone:</strong> 01769918015</p>
     <p><strong>GitHub:</strong> <a href="https://github.com/Saibhossain">github.com/Saibhossain</a></p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saib-hossain-182834229/">linkedin.com/in/saib-hossain</a></p>
+    <p>(OPEN for work)</p>
   </div>
 
   <div class="clear"></div>
@@ -156,10 +155,43 @@
     <h2>Projects</h2>
     <ul>
       <li><a href="https://github.com/Saibhossain/DeepLearning-with-PyTorch">DeepLearning-with-PyTorch</a> – CNNs, transfer learning on MNIST/CIFAR-10</li>
-      <li><a href="https://github.com/Saibhossain/AI_ChatBotUsingGPT-2">AI-Powered Study Assistant Chatbot</a> – GPT-2, FastAPI, JS</li>
-      <li><a href="https://github.com/Saibhossain/PyTorch-vs-TensorFlow-Comparison">PyTorch vs TensorFlow</a> – model comparisons</li>
-      <li><a href="https://github.com/Saibhossain/Book_Recommender_llm.git" target="_blank"><strong>Book Recommendation System</strong></a> – 
-            Built an intelligent <strong>Book Recommendation System</strong> leveraging <strong>Large Language Models (LLMs)</strong> to offer personalized suggestions through semantic analysis.
+      
+      <br>
+      <li><a href="https://github.com/Saibhossain/AI_ChatBotUsingGPT-2" target="_blank"><strong>AI-Powered Study Assistant Chatbot</strong></a> – 
+            Built a smart chatbot for academic assistance using <strong>GPT-2</strong> and custom Q&A datasets to simulate human-like tutoring interactions.
+            <ul>
+                <li><strong>Model:</strong> Fine-tuned <em>GPT-2</em> on domain-specific educational Q&A pairs to generate accurate, context-aware responses.</li>
+                <li><strong>Tech Stack:</strong> PyTorch, Hugging Face Transformers, FastAPI, JavaScript, HTML/CSS</li>
+                <li><strong>Key Features:</strong>
+                <ul>
+                    <li>Custom dataset preparation and prompt engineering for effective dialogue generation</li>
+                    <li>Real-time communication between front-end and model using FastAPI backend</li>
+                    <li>User-friendly web interface to simulate live academic support</li>
+                </ul>
+                </li>
+                <li><strong>Outcome:</strong> Successfully deployed a responsive chatbot capable of assisting students with personalized answers—enhancing learning efficiency.</li>
+            </ul>
+     </li>
+
+      <br>
+      <li><a href="https://github.com/Saibhossain/PyTorch-vs-TensorFlow-Comparison" target="_blank"><strong>PyTorch vs TensorFlow</strong></a> – Conducted a comparative analysis of <strong>PyTorch</strong> and <strong>TensorFlow</strong> frameworks focusing on deep learning model performance and development experience.
+            <ul>
+                <li><strong>Models:</strong> Implemented CNN architectures in both frameworks for benchmarking on classification tasks.</li>
+                <li><strong>Tech Stack:</strong> PyTorch, TensorFlow, NumPy, Matplotlib, Google Colab</li>
+                <li><strong>Key Features:</strong>
+                <ul>
+                    <li>Identical model architecture replicated across both frameworks</li>
+                    <li>Evaluation of training speed, code simplicity, and performance accuracy</li>
+                    <li>Visualization of training metrics for side-by-side comparison</li>
+                </ul>
+                </li>
+                <li><strong>Outcome:</strong> Delivered an insightful comparison highlighting trade-offs in usability, performance, and debugging tools for real-world DL projects.</li>
+            </ul>
+      </li>
+      
+      <br>
+      
+      <li><a href="https://github.com/Saibhossain/Book_Recommender_llm.git" target="_blank"><strong>Book Recommendation System</strong></a> – Built an intelligent <strong>Book Recommendation System</strong> leveraging <strong>Large Language Models (LLMs)</strong> to offer personalized suggestions through semantic analysis.
             <ul>
                 <li><strong>Model:</strong> Used <em>OpenAI's GPT models</em> to analyze book content and user preferences.</li>
                 <li><strong>Tech Stack:</strong> Hugging Face, React, Node.js, REST API, PyTorch</li>
@@ -179,11 +211,38 @@
   <div class="section">
     <h2>Certifications & Training</h2>
     <ul>
-      <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE">IBM AI Engineering</a></li>
-      <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA">Google Data Analytics Professional Certificate</a></li>
-      <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV">Data Science Fundamentals (IBM)</a></li>
-      <li><a href="https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y">Financial Markets - Yale University</a></li>
-      <li><a href="https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA">Transformer Models and BERT</a></li>
+      <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE" target="_blank">
+            <strong>IBM AI Engineering Professional Certificate</strong>
+            </a><br>
+            Gained hands-on experience in machine learning, deep learning with PyTorch and TensorFlow, and building AI applications.<br>
+            <em>Skills:</em> Neural Networks, Deep Learning, ML Pipelines, Deployment
+     </li>
+
+      <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA" target="_blank">
+            <strong>Google Data Analytics Professional Certificate</strong>
+            </a><br>
+            Built a strong foundation in data analysis using spreadsheets, SQL, R, and visualization tools like Tableau.<br>
+            <em>Skills:</em> Data Cleaning, SQL, Data Visualization, R Programming
+        </li>
+
+      <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV" target="_blank">
+            <strong>IBM Data Science Fundamentals</strong>
+            </a><br>
+            Learned the basics of data science, Python programming, and data analysis using tools like Jupyter, Pandas, and Numpy.<br>
+            <em>Skills:</em> Python, Data Science Workflow, Pandas, Data Wrangling
+      </li>
+      <li><a href="https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y" target="_blank">
+            <strong>Financial Markets – Yale University </strong>
+            </a><br>
+            Developed foundational understanding of financial markets, investment strategies, risk management, and behavioral finance.<br>
+            <em>Skills:</em> Financial Literacy, Market Dynamics, Risk Analysis, Economic Behavior
+      </li>
+      <li><a href="https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA" target="_blank">
+            <strong>Transformer Models and BERT </strong>
+            </a><br>
+            Gained practical knowledge of transformer architecture and BERT. Focused on attention mechanisms, fine-tuning for NLP tasks, and working with Hugging Face.<br>
+            <em>Skills:</em> Transformers, BERT, Hugging Face, PyTorch, NLP, Fine-tuning
+      </li>
     </ul>
   </div>
   
@@ -243,27 +302,46 @@
     </p>
 
   </div>
-  <div class="section">
 
-  <h2>Languages</h2>
-  <div class="language-bar">
-    <span>Bangla</span>
-    <div class="bar"><div class="level high"></div></div>
-    <small>Read, Write, Speak</small>
-  </div>
+    <div class="section">
+        <h2>Languages</h2>
+        <div class="language-grid">
+            
+            <div class="language-item">
+             <strong>Bangla</strong>
+                <div class="levelskills">
+                    <span>Read</span><div class="level high"></div>
+                    <span>Write</span><div class="level high"></div>
+                    <span>Speak</span><div class="level high"></div>
+                    <span>Listen</span><div class="level high"></div>
+                </div>
+            </div>
 
-  <div class="language-bar">
-    <span>English</span>
-    <div class="bar"><div class="level medium"></div></div>
-    <small>Basic Conversation, Reading</small>
-  </div>
+            <div class="language-item">
+             <strong>English</strong>
+                <div class="levelskills">
+                    <span>Read</span><div class="level high"></div>
+                    <span>Write</span><div class="level high"></div>
+                    <span>Speak</span><div class="level high"></div>
+                    <span>Listen</span><div class="level high"></div>
+                </div>
+            </div>
 
-  <div class="language-bar">
-    <span>Hindi</span>
-    <div class="bar"><div class="level low"></div></div>
-    <small>Read, Write (Low), Speak (High)</small>
-  </div>
-</div>
+            <div class="language-item">
+             <strong>Hindi</strong>
+                <div class="levelskills">
+                    <span>Read</span><div class="level low"></div>
+                    <span>Write</span><div class="level low"></div>
+                    <span>Speak</span><div class="level medium"></div>
+                    <span>Listen</span><div class="level high"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+  
 
 
 </body>
