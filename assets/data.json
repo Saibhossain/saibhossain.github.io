@@ -1,0 +1,194 @@
+{
+  "personal": {
+    "name": "Saib Hossain",
+    "image": "assets/photo.jpg",
+    "email": "saibhossain5@gmail.com",
+    "phone": "01769918015",
+    "github_url": "https://github.com/Saibhossain",
+    "github_text": "github.com/Saibhossain",
+    "linkedin_url": "https://www.linkedin.com/in/saib-hossain-182834229/",
+    "linkedin_text": "linkedin.com/in/saib-hossain",
+    "facebook_url": "https://www.facebook.com/share/1AvARmJL7k/?mibextid=wwXIfr",
+    "facebook_text": "facebook.com/in/saib-hossain",
+    "status": "(OPEN for work)",
+    "objective": "Motivated and detail-oriented Computer Science student with hands-on experience in Natural Language Processing (NLP), Transformer-based architectures, and fine-tuning large language models (LLMs). Proficient in applying machine learning and deep learning techniques to solve real-world problems, with a strong interest in advancing AI research. Seeking a Research Assistant role where I can contribute to optimizing NLP models, developing high-quality datasets, and supporting cutting-edge research initiatives. Passionate about continuous learning, collaboration, and driving meaningful innovation in artificial intelligence."
+  },
+  "research_experience": [
+    {
+      "role": "Research Assistant",
+      "organization": "Institute of Advanced Research (IAR), UIU",
+      "duration": "Nov 2025 - Feb 2026",
+      "title": "Project: Correlation search between 'radiomic features' and lung tumors: stage, therapeutic success, survival time.",
+      "details": [
+        "Developed deep learning pipelines for medical image analysis.",
+        "Extracted and analyzed radiomic features; supported model evaluation and statistical correlation studies.",
+        "Documented experiments and findings of model reliability, data bias, and clinical applicability, relevant to healthcare AI governance."
+      ]
+    },
+    {
+      "role": "Machine Learning Engineer Intern",
+      "organization": "Fluvo Soft (Remote)",
+      "duration": "Nov 2025 - Present",
+      "title": "Generative AI & Computer Vision",
+      "details": [
+        "Designed a synthetic face generation pipeline with StyleGAN2 and Stable Diffusion XL (SDXL) to address data scarcity in vision research.",
+        "Fine-tuned diffusion models using LoRA for identity preservation and controlled diversity.",
+        "Applied Adaptive Discriminator Augmentation (ADA) to mitigate overfitting with small datasets.",
+        "Conducted error analysis and quality evaluation to improve generative consistency and realism."
+      ]
+    },
+    {
+      "role": "Volunteer Research Assistant",
+      "organization": "Ruach Tech (London, UK - Remote)",
+      "duration": "Jan 2026 – Present",
+      "title": "AI Safety & Alignment Research",
+      "details": [
+        "Contributing to the Engineering & Research Division, focusing on the theoretical underpinnings of safe Artificial Intelligence systems.",
+        "Conducting critical literature reviews and drafting research briefs to support exploratory research into advanced model capabilities and alignment.",
+        "Synthesizing complex technical papers into actionable insights for ongoing R&D projects."
+      ]
+    }
+    
+  ],
+  "projects": [
+    {
+      "title": "Log Classification System using Hybrid NLP (Regex + ML + LLM)",
+      "url": "https://github.com/Saibhossain/Log_Classifier_Using_LLM_NLP_Regex.git",
+      "description": "Developed a hybrid log classification system to accurately categorize synthetic and real-world system log messages using a combination of rule-based regex methods, traditional ML classifiers (Logistic Regression), and Large Language Models (LLMs).",
+      "details": [
+        "<strong>Model:</strong> Regex rules for structured logs, Logistic Regression on MiniLM embeddings and DeepSeek LLaMA-70B via Groq API for ambiguous legacy logs.",
+        "<strong>Tech Stack:</strong> Python, Scikit-learn, Hugging Face Transformers, SentenceTransformers, BART, Pandas, Regex, Groq API",
+        "<strong>Key Features:</strong> Semantic clustering with DBSCAN and MiniLM, custom regex for precise classification, fallback logic pipeline (Regex → ML → LLM), instruction-tuned prompts.",
+        "<strong>Outcome:</strong> Achieved a modular, scalable, and explainable log classification system balancing speed, accuracy, and generality."
+      ]
+    },
+    {
+      "title": "End-to-End AI Project Portfolio",
+      "url": "https://github.com/Saibhossain/5_ML_DL_Projects",
+      "description": "A curated collection of end-to-end machine learning and deep learning projects showcasing core competencies across regression, classification, recommendation, NLP, and computer vision.",
+      "details": [
+        "<strong>House Price Prediction:</strong> Used <em>Linear Regression</em> to predict housing prices. (Python, Scikit-learn)",
+        "<strong>Customer Churn Prediction:</strong> Built a classification model to identify high-risk churn users. (Scikit-learn, Random Forest)",
+        "<strong>Product Recommendation System:</strong> Designed a hybrid system combining SVD-based and content-based filtering. (Surprise Library, Scikit-learn)",
+        "<strong>Sentiment Analysis:</strong> Performed sentiment classification on customer reviews. (NLTK, Scikit-learn)",
+        "<strong>Object Detection for Inventory:</strong> Trained a YOLOv5 model to detect and localize products. (PyTorch, YOLOv5)"
+      ]
+    },
+    {
+      "title": "DeepLearning-with-PyTorch",
+      "url": "https://github.com/Saibhossain/DeepLearning-with-PyTorch",
+      "description": "Implemented various deep learning models and techniques using PyTorch, including CNNs, batch normalization, momentum optimization, and neural networks with different architectures.",
+      "details": [
+        "<strong>Technologies:</strong> PyTorch, Python, Google Colab",
+        "<strong>Key Projects:</strong> CNN for image classification, Fashion MNIST, MNIST digit recognition, neural networks with hidden layers, momentum optimization, and anime image classification."
+      ]
+    },
+    {
+      "title": "AI-Powered Study Assistant Chatbot",
+      "url": "https://github.com/Saibhossain/AI_ChatBotUsingGPT-2",
+      "description": "Built a smart chatbot for academic assistance using GPT-2 and custom Q&A datasets to simulate human-like tutoring interactions.",
+      "details": [
+        "<strong>Model:</strong> Fine-tuned GPT-2 on domain-specific educational Q&A pairs.",
+        "<strong>Tech Stack:</strong> PyTorch, Hugging Face Transformers, FastAPI, JavaScript, HTML/CSS",
+        "<strong>Key Features:</strong> Custom dataset preparation, real-time communication via FastAPI, user-friendly web interface.",
+        "<strong>Outcome:</strong> Successfully deployed a responsive chatbot capable of assisting students with personalized answers."
+      ]
+    },
+    {
+      "title": "PyTorch vs TensorFlow",
+      "url": "https://github.com/Saibhossain/PyTorch-vs-TensorFlow-Comparison",
+      "description": "Conducted a comparative analysis of PyTorch and TensorFlow frameworks focusing on deep learning model performance and development experience.",
+      "details": [
+        "<strong>Models:</strong> Implemented CNN architectures in both frameworks for benchmarking.",
+        "<strong>Tech Stack:</strong> PyTorch, TensorFlow, NumPy, Matplotlib, Google Colab",
+        "<strong>Key Features:</strong> Identical architecture replication, evaluation of training speed and accuracy, visualization of metrics.",
+        "<strong>Outcome:</strong> Delivered an insightful comparison highlighting trade-offs in usability and performance."
+      ]
+    },
+    {
+      "title": "Book Recommendation System",
+      "url": "https://github.com/Saibhossain/Book_Recommender_llm.git",
+      "description": "Built an intelligent Book Recommendation System leveraging Large Language Models (LLMs) to offer personalized suggestions through semantic analysis.",
+      "details": [
+        "<strong>Model:</strong> Used OpenAI's GPT models to analyze book content.",
+        "<strong>Tech Stack:</strong> Hugging Face, React, Node.js, REST API, PyTorch",
+        "<strong>Key Features:</strong> Data collection from Kaggle, semantic embedding, interactive web UI.",
+        "<strong>Outcome:</strong> Responsive and accurate system that understands nuanced preferences."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "IBM AI Engineering Professional Certificate",
+      "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE",
+      "description": "Gained hands-on experience in machine learning, deep learning with PyTorch and TensorFlow, and building AI applications.",
+      "skills": "Neural Networks, Deep Learning, ML Pipelines, Deployment"
+    },
+    {
+      "title": "Google Data Analytics Professional Certificate",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA",
+      "description": "Built a strong foundation in data analysis using spreadsheets, SQL, R, and visualization tools like Tableau.",
+      "skills": "Data Cleaning, SQL, Data Visualization, R Programming"
+    },
+    {
+      "title": "IBM Data Science Fundamentals",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV",
+      "description": "Learned the basics of data science, Python programming, and data analysis using tools like Jupyter, Pandas, and Numpy.",
+      "skills": "Python, Data Science Workflow, Pandas, Data Wrangling"
+    },
+    {
+      "title": "Financial Markets – Yale University",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y",
+      "description": "Developed foundational understanding of financial markets, investment strategies, risk management, and behavioral finance.",
+      "skills": "Financial Literacy, Market Dynamics, Risk Analysis, Economic Behavior"
+    },
+    {
+      "title": "Transformer Models and BERT",
+      "url": "https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA",
+      "description": "Gained practical knowledge of transformer architecture and BERT. Focused on attention mechanisms, fine-tuning for NLP tasks, and working with Hugging Face.",
+      "skills": "Transformers, BERT, Hugging Face, PyTorch, NLP, Fine-tuning"
+    }
+  ],
+  "skills": [
+    { "category": "Geospatial Tech", "items": "Google Earth Engine (GEE), Remote Sensing, GIS" },
+    { "category": "Machine Learning", "items": "Scikit-learn, Pandas, NumPy, SVM" },
+    { "category": "Deep Learning", "items": "PyTorch, TensorFlow, Keras, CNN, RNN, U-Net" },
+    { "category": "Frontend & Backend", "items": "React, Node.js, Express.js" },
+    { "category": "Natural Language Processing", "items": "Transformers, BERT, GPT-2, HuggingFace" },
+    { "category": "Languages", "items": "Python, Java, C, C++, MySql" },
+    { "category": "Tools & Platforms", "items": "Git, Github, Google Colab, Jupyter" }
+  ],
+  "achievements": [
+    { "title": "Lead the Future 2025 @ INVENTIOUS 4.1", "url": "https://drive.google.com/file/d/1QShVejNa6ngV_1KZtnbFYexbNWwk_Igp/view?usp=drive_link" },
+    { "title": "UIU Book Reading Competition 2025", "url": "https://drive.google.com/file/d/1DMMh9L9jVvbYTCl3tDduCiyJjU9BJMnz/view?usp=sharing" }
+  ],
+  "education": [
+    { "degree": "BSc in Computer Science & Engineering", "institution": "United International University", "details": "CGPA: 3.44 (Studying)" },
+    { "degree": "HSC (Science)", "institution": "Satkhira Govt.College (2018)", "details": "GPA: 5.00" }
+  ],
+  "extracurriculars": [
+    {
+      "role": "Associate, Software & Autonomous Navigation",
+      "org": "UIU Mars Rover Team",
+      "duration": "2023–2024",
+      "details": [
+        "Contributed to the development of autonomous navigation systems using Python and Robot Operating System (ROS) for Mars rover prototypes.",
+        "Implemented sensor fusion with LiDAR, IMU, and camera modules to enhance localization and decision-making.",
+        "Utilized tools including Gazebo, Rviz, OpenCV, and techniques such as SLAM and PID control to ensure robust performance in real-world simulations."
+      ]
+    },
+    {
+      "role": "General Secretary",
+      "org": "NCTF SATKHIRA",
+      "duration": "2013–2018",
+      "details": [
+        "NCTF works for child rights and protection in Bangladesh, supported by Save the Children, Plan International, and Bangladesh Shishu Academy."
+      ]
+    }
+  ],
+  "languages": [
+    { "name": "Bangla", "levels": {"Read": "high", "Write": "high", "Speak": "high", "Listen": "high"} },
+    { "name": "English", "levels": {"Read": "high", "Write": "high", "Speak": "high", "Listen": "high"} },
+    { "name": "Hindi", "levels": {"Read": "low", "Write": "low", "Speak": "medium", "Listen": "high"} }
+  ]
+}

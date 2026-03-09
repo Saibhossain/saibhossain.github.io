@@ -2,411 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Saib Hossain - CV</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f7fa;
-      color: #2c3e50;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      background: #ffffff;
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 5px;
-      color: #1a1a1a;
-    }
-    h2 {
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 5px;
-      margin-top: 40px;
-      font-size: 24px;
-    }
-    h3 {
-      margin-top: 20px;
-      font-size: 18px;
-    }
-    p, li {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .contact-info {
-      margin-top: 10px;
-    }
-    .profile-pic {
-      float: right;
-      width: 240px;
-      height: auto;
-      border-radius: 12px;
-      margin-top: -50px; 
-      margin-left: 25px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-    .clear {
-      clear: both;
-    }
-
-    /* for language section  */
-    .language-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.2rem;
-    }
-
-    .language-item {
-        padding: 0.5rem;
-        border-left: 3px solid #007acc;
-        background-color: #f9f9f9;
-        border-radius: 6px;
-     }
-
-    .levelskills {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 0.2rem 0.6rem;
-        margin-top: 0.5rem;
-    }
-
-    .level {
-        width: 60px;
-        height: 6px;
-        border-radius: 4px;
-        background-color: #ddd;
-        margin-top: 3px;
-        }
-
-    .level.high {
-        background-color: #4CAF50;
-        width: 60px;
-        }
-    .level.medium {
-        background-color: #FFC107;
-        width: 40px;
-        }
-    .level.low {
-        background-color: #F44336;
-        width: 20px;
-    }
-
-
-
-    /* for skills section  */
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 10px;
-        margin-bottom: 1em;
-    }
-    .skill-category h3 {
-        margin-bottom: 0.3em;
-        color: #34495e;
-        font-size: 1.0em;
-    }
-    .skill-category p {
-        margin: 0;
-        color: #2c3e50;
-        font-size: 0.95em;
-}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saib Hossain - Portfolio CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <h1>Saib Hossain</h1>
-  <img src="photo.jpg" alt="Saib Hossain" class="profile-pic">
+  <div class="container fade-in">
+    <header class="header">
+      <div class="header-text">
+        <h1 id="user-name"></h1>
+        <div class="contact-info" id="contact-info">
+          </div>
+      </div>
+      <img id="profile-pic" src="" alt="Profile Picture" class="profile-pic">
+    </header>
 
-  <div class="contact-info">
-    <p><strong>Email:</strong> saibhossain5@gmail.com</p>
-    <p><strong>Phone:</strong> 01769918015</p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Saibhossain">github.com/Saibhossain</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saib-hossain-182834229/">linkedin.com/in/saib-hossain</a></p>
-    <p>(OPEN for work)</p>
-  </div>
-
-  <div class="clear"></div>
-
-  <div class="section">
-    <h2>Career Objective</h2>
-    <p>
-      Motivated and detail-oriented Computer Science student with hands-on experience in Natural Language Processing (NLP), Transformer-based architectures, and fine-tuning large language models (LLMs). Proficient in applying machine learning and deep learning techniques to solve real-world problems, with a strong interest in advancing AI research. Seeking a Research Assistant role where I can contribute to optimizing NLP models, developing high-quality datasets, and supporting cutting-edge research initiatives. Passionate about continuous learning, collaboration, and driving meaningful innovation in artificial intelligence.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/Saibhossain/Log_Classifier_Using_LLM_NLP_Regex.git" target="_blank"><strong>Log Classification System using Hybrid NLP (Regex + ML + LLM)</strong></a> – Developed a hybrid log classification system to accurately categorize synthetic and real-world system log messages using a combination of rule-based regex methods, traditional ML classifiers (Logistic Regression), and Large Language Models (LLMs).
-               <ul>
-                  <li><strong>Model:</strong> Regex rules for structured logs, Logistic Regression on MiniLM embeddings and DeepSeek LLaMA-70B via Groq API for ambiguous legacy logs.</li>
-                  <li><strong>Tech Stack:</strong> Python, Scikit-learn, Hugging Face Transformers, SentenceTransformers, BART, Pandas, Regex, Groq API</li>
-                  <li><strong>Key Features:</strong>
-                    <ul>
-                      <li>Semantic clustering with DBSCAN and MiniLM to reveal hidden log patterns</li>
-                      <li>Custom regex for precise classification of known log formats (e.g., login, backup, file upload)</li>
-                      <li>Fallback logic pipeline that chooses between Regex → ML → LLM for optimal accuracy</li>
-                      <li>Instruction-tuned prompts for enhanced LLM-based classification of complex logs</li>
-                    </ul>
-                  </li>
-                  <li><strong>Outcome:</strong> Achieved a modular, scalable, and explainable log classification system balancing speed, accuracy, and generality across diverse log types.</li>
-                </ul>
-      </li>
-      <br>
-      <li><a href="https://github.com/Saibhossain/5_ML_DL_Projects" target="_blank"><strong>End-to-End AI Project Portfolio</strong></a> – 
-            A curated collection of end-to-end machine learning and deep learning projects showcasing core competencies across regression, classification, recommendation, NLP, and computer vision.
-            <ul>
-                <li><strong>House Price Prediction:</strong> Used <em>Linear Regression</em> to predict housing prices based on real-world features.
-                    <ul>
-                        <li><strong>Tech:</strong> Python, Scikit-learn</li>
-                    </ul>
-                </li>
-                <li><strong>Customer Churn Prediction:</strong> Built a classification model to identify high-risk churn users in a telecom dataset.
-                    <ul>
-                        <li><strong>Tech:</strong> Scikit-learn, Random Forest</li>
-                    </ul>
-                </li>
-                <li><strong>Product Recommendation System:</strong> Designed a hybrid system combining <em>SVD-based collaborative filtering</em> and <em>content-based filtering</em> for personalized recommendations.
-                    <ul>
-                        <li><strong>Tech:</strong> Python, Surprise Library, Scikit-learn</li>
-                    </ul>
-                </li>
-                <li><strong>Sentiment Analysis:</strong> Performed sentiment classification on customer reviews using traditional NLP and ML techniques.
-                    <ul>
-                        <li><strong>Tech:</strong> NLTK, Scikit-learn</li>
-                    </ul>
-                </li>
-                <li><strong>Object Detection for Inventory:</strong> Trained a <em>YOLOv5</em> model to detect and localize products in inventory images for real-time management.
-                    <ul>
-                        <li><strong>Tech:</strong> PyTorch, YOLOv5</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-
-      <br>
-
-      <li><a href="https://github.com/Saibhossain/DeepLearning-with-PyTorch" target="_blank"><strong>DeepLearning-with-PyTorch</strong></a> – 
-            Implemented various deep learning models and techniques using PyTorch, including CNNs, batch normalization, momentum optimization, and neural networks with different architectures.
-             <ul>
-                <li><strong>Technologies:</strong> PyTorch, Python, Google Colab</li>
-                <li><strong>Key Projects:</strong> CNN for image classification, Fashion MNIST, MNIST digit recognition, neural networks with hidden layers, momentum optimization, and anime image classification.</li>
-            </ul>
-      </li>
-
-      <br>
-      <li><a href="https://github.com/Saibhossain/AI_ChatBotUsingGPT-2" target="_blank"><strong>AI-Powered Study Assistant Chatbot</strong></a> – 
-            Built a smart chatbot for academic assistance using <strong>GPT-2</strong> and custom Q&A datasets to simulate human-like tutoring interactions.
-            <ul>
-                <li><strong>Model:</strong> Fine-tuned <em>GPT-2</em> on domain-specific educational Q&A pairs to generate accurate, context-aware responses.</li>
-                <li><strong>Tech Stack:</strong> PyTorch, Hugging Face Transformers, FastAPI, JavaScript, HTML/CSS</li>
-                <li><strong>Key Features:</strong>
-                <ul>
-                    <li>Custom dataset preparation and prompt engineering for effective dialogue generation</li>
-                    <li>Real-time communication between front-end and model using FastAPI backend</li>
-                    <li>User-friendly web interface to simulate live academic support</li>
-                </ul>
-                </li>
-                <li><strong>Outcome:</strong> Successfully deployed a responsive chatbot capable of assisting students with personalized answers—enhancing learning efficiency.</li>
-            </ul>
-     </li>
-
-      <br>
-      <li><a href="https://github.com/Saibhossain/PyTorch-vs-TensorFlow-Comparison" target="_blank"><strong>PyTorch vs TensorFlow</strong></a> – Conducted a comparative analysis of <strong>PyTorch</strong> and <strong>TensorFlow</strong> frameworks focusing on deep learning model performance and development experience.
-            <ul>
-                <li><strong>Models:</strong> Implemented CNN architectures in both frameworks for benchmarking on classification tasks.</li>
-                <li><strong>Tech Stack:</strong> PyTorch, TensorFlow, NumPy, Matplotlib, Google Colab</li>
-                <li><strong>Key Features:</strong>
-                <ul>
-                    <li>Identical model architecture replicated across both frameworks</li>
-                    <li>Evaluation of training speed, code simplicity, and performance accuracy</li>
-                    <li>Visualization of training metrics for side-by-side comparison</li>
-                </ul>
-                </li>
-                <li><strong>Outcome:</strong> Delivered an insightful comparison highlighting trade-offs in usability, performance, and debugging tools for real-world DL projects.</li>
-            </ul>
-      </li>
-      
-      <br>
-      
-      <li><a href="https://github.com/Saibhossain/Book_Recommender_llm.git" target="_blank"><strong>Book Recommendation System</strong></a> – Built an intelligent <strong>Book Recommendation System</strong> leveraging <strong>Large Language Models (LLMs)</strong> to offer personalized suggestions through semantic analysis.
-            <ul>
-                <li><strong>Model:</strong> Used <em>OpenAI's GPT models</em> to analyze book content and user preferences.</li>
-                <li><strong>Tech Stack:</strong> Hugging Face, React, Node.js, REST API, PyTorch</li>
-                <li><strong>Key Features:</strong> 
-                    <ul>
-                    <li>Data Collection from Kaggle and preprocessing</li>
-                    <li>Semantic Embedding & Similarity Matching</li>
-                    <li>Interactive web UI for user input and live recommendations</li>
-                    </ul>
-               </li>
-             <li><strong>Outcome:</strong> Responsive and accurate system that understands nuanced preferences—enhancing user satisfaction and engagement.</li>
-         </ul>
-       </li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Certifications & Training</h2>
-    <ul>
-      <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE" target="_blank">
-            <strong>IBM AI Engineering Professional Certificate</strong>
-            </a><br>
-            Gained hands-on experience in machine learning, deep learning with PyTorch and TensorFlow, and building AI applications.<br>
-            <em>Skills:</em> Neural Networks, Deep Learning, ML Pipelines, Deployment
-     </li>
-
-      <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA" target="_blank">
-            <strong>Google Data Analytics Professional Certificate</strong>
-            </a><br>
-            Built a strong foundation in data analysis using spreadsheets, SQL, R, and visualization tools like Tableau.<br>
-            <em>Skills:</em> Data Cleaning, SQL, Data Visualization, R Programming
-        </li>
-
-      <li><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV" target="_blank">
-            <strong>IBM Data Science Fundamentals</strong>
-            </a><br>
-            Learned the basics of data science, Python programming, and data analysis using tools like Jupyter, Pandas, and Numpy.<br>
-            <em>Skills:</em> Python, Data Science Workflow, Pandas, Data Wrangling
-      </li>
-      <li><a href="https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y" target="_blank">
-            <strong>Financial Markets – Yale University </strong>
-            </a><br>
-            Developed foundational understanding of financial markets, investment strategies, risk management, and behavioral finance.<br>
-            <em>Skills:</em> Financial Literacy, Market Dynamics, Risk Analysis, Economic Behavior
-      </li>
-      <li><a href="https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA" target="_blank">
-            <strong>Transformer Models and BERT </strong>
-            </a><br>
-            Gained practical knowledge of transformer architecture and BERT. Focused on attention mechanisms, fine-tuning for NLP tasks, and working with Hugging Face.<br>
-            <em>Skills:</em> Transformers, BERT, Hugging Face, PyTorch, NLP, Fine-tuning
-      </li>
-    </ul>
-  </div>
-  
-
-    <h2>Skills</h2>
-    <div class="skills-grid">
-    <div class="skill-category">
-        <h3>Geospatial Tech</h3>
-        <p>Google Earth Engine (GEE), Remote Sensing, GIS</p>
-    </div>
-    <div class="skill-category">
-        <h3>Machine Learning</h3>
-        <p>Scikit-learn, Pandas, NumPy, SVM</p>
-    </div>
-    <div class="skill-category">
-        <h3>Deep Learning</h3>
-        <p>PyTorch, TensorFlow, Keras, CNN, RNN, U-Net</p>
-    </div>
-    <div class="skill-category">
-        <h3>Frontend & Backend</h3>
-        <p>React, Node.js, Express.js</p>
-   </div>
-    <div class="skill-category">
-        <h3>Natural Language Processing</h3>
-        <p>Transformers, BERT, GPT-2, HuggingFace</p>
-    </div>
-    <div class="skill-category">
-        <h3>Languages</h3>
-        <p>Python, Java, C, C++, MySql</p>
-    </div>
-    <div class="skill-category">
-        <h3>Tools & Platforms</h3>
-        <p>Git, Github, Google Colab, Jupyter</p>
-    </div>
-    </div>
-
-  <div class="section">
-    <h2>Achievements</h2>
-    <ul>
-      <li><a href="https://drive.google.com/file/d/1QShVejNa6ngV_1KZtnbFYexbNWwk_Igp/view?usp=drive_link">Lead the Future 2025 @ INVENTIOUS 4.1</a></li>
-      <li><a href="https://drive.google.com/file/d/1DMMh9L9jVvbYTCl3tDduCiyJjU9BJMnz/view?usp=sharing">UIU Book Reading Competition 2025</a></li>
-    </ul>
-  </div>
-
-   <div class="section">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>BSc in Computer Science & Engineering</strong>, United International University — CGPA: 3.41 (Studying)</li>
-      <li><strong>HSC (Science)</strong>, Satkhira Govt.College (2018) — GPA: 5.00</li>
-    </ul>
-  </div>
-
-  <div class="section">
-
-    <h2>Extra-Curricular Activities</h2>
+    <section class="section slide-up">
+      <h2><i class="fas fa-bullseye"></i> Career Objective</h2>
+      <p id="objective-text"></p>
+    </section>
     
+    <section class="section slide-up delay-1">
+      <h2><i class="fas fa-microscope"></i> Research & Experience</h2>
+      <div id="research-container">
+        </div>
+    </section>
 
-    <p>
-      <strong>Associate, Software & Autonomous Navigation</strong> at UIU Mars Rover Team, (2023–2024)<br>
-      Contributed to the development of autonomous navigation systems using <em>Python</em> and <em>Robot Operating System (ROS)</em> for Mars rover prototypes.<br>
-      Implemented sensor fusion with <em>LiDAR</em>, <em>IMU</em>, and <em>camera modules</em> to enhance localization and decision-making.<br>
-      Utilized tools including <em>Gazebo</em>, <em>Rviz</em>, <em>OpenCV</em>, and techniques such as <em>SLAM</em> and <em>PID control</em> to ensure robust performance in real-world simulations.
-    </p>
-    <p>
-      <strong>General Secretary</strong> at NCTF SATKHIRA (2013–2018)<br>
-      NCTF works for child rights and protection in Bangladesh, supported by Save the Children, Plan International, and Bangladesh Shishu Academy.
-    </p>
+    <section class="section slide-up delay-1">
+      <h2><i class="fas fa-code-branch"></i> Projects</h2>
+      <div id="projects-container">
+        </div>
+    </section>
+
+    <section class="section slide-up delay-2">
+      <h2><i class="fas fa-certificate"></i> Certifications & Training</h2>
+      <div id="certs-container">
+        </div>
+    </section>
+
+    <section class="section slide-up delay-3">
+      <h2><i class="fas fa-laptop-code"></i> Skills</h2>
+      <div class="skills-grid" id="skills-container">
+        </div>
+    </section>
+
+    <section class="section slide-up delay-4">
+      <h2><i class="fas fa-trophy"></i> Achievements</h2>
+      <ul class="styled-list" id="achievements-container">
+        </ul>
+    </section>
+
+    <section class="section slide-up delay-4">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <ul class="styled-list" id="education-container">
+        </ul>
+    </section>
+
+    <section class="section slide-up delay-5">
+      <h2><i class="fas fa-users"></i> Extra-Curricular Activities</h2>
+      <div id="extra-container">
+        </div>
+    </section>
+
+    <section class="section slide-up delay-5">
+      <h2><i class="fas fa-language"></i> Languages</h2>
+      <div class="language-grid" id="languages-container">
+        </div>
+    </section>
   </div>
 
-    <div class="section">
-        <h2>Languages</h2>
-        <div class="language-grid">
-            
-            <div class="language-item">
-             <strong>Bangla</strong>
-                <div class="levelskills">
-                    <span>Read</span><div class="level high"></div>
-                    <span>Write</span><div class="level high"></div>
-                    <span>Speak</span><div class="level high"></div>
-                    <span>Listen</span><div class="level high"></div>
-                </div>
-            </div>
-
-            <div class="language-item">
-             <strong>English</strong>
-                <div class="levelskills">
-                    <span>Read</span><div class="level high"></div>
-                    <span>Write</span><div class="level high"></div>
-                    <span>Speak</span><div class="level high"></div>
-                    <span>Listen</span><div class="level high"></div>
-                </div>
-            </div>
-
-            <div class="language-item">
-             <strong>Hindi</strong>
-                <div class="levelskills">
-                    <span>Read</span><div class="level low"></div>
-                    <span>Write</span><div class="level low"></div>
-                    <span>Speak</span><div class="level medium"></div>
-                    <span>Listen</span><div class="level high"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-  
-
-
+  <script src="js/script.js"></script>
 </body>
 </html>
