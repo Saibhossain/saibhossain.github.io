@@ -17,7 +17,7 @@
     {
       "role": "Research Assistant",
       "organization": "Institute of Advanced Research (IAR), UIU",
-      "duration": "Nov 2025 - Feb 2026",
+      "duration": "Nov 2025 - Present",
       "title": "Project: Correlation search between 'radiomic features' and lung tumors: stage, therapeutic success, survival time.",
       "details": [
         "Developed deep learning pipelines for medical image analysis.",
@@ -52,70 +52,126 @@
   ],
   "projects": [
     {
-      "title": "Log Classification System using Hybrid NLP (Regex + ML + LLM)",
-      "url": "https://github.com/Saibhossain/Log_Classifier_Using_LLM_NLP_Regex.git",
-      "description": "Developed a hybrid log classification system to accurately categorize synthetic and real-world system log messages using a combination of rule-based regex methods, traditional ML classifiers (Logistic Regression), and Large Language Models (LLMs).",
+      "title": "Agentic AI Technical Interviewer",
+      "url": "https://github.com/Saibhossain/Interview-agent.git",
+      "description": "Engineered a stateful, non-linear AI interviewing agent that autonomously parses candidate CVs, generates customized technical agendas, and conducts dynamic conversational interviews.",
       "details": [
-        "<strong>Model:</strong> Regex rules for structured logs, Logistic Regression on MiniLM embeddings and DeepSeek LLaMA-70B via Groq API for ambiguous legacy logs.",
-        "<strong>Tech Stack:</strong> Python, Scikit-learn, Hugging Face Transformers, SentenceTransformers, BART, Pandas, Regex, Groq API",
-        "<strong>Key Features:</strong> Semantic clustering with DBSCAN and MiniLM, custom regex for precise classification, fallback logic pipeline (Regex → ML → LLM), instruction-tuned prompts.",
-        "<strong>Outcome:</strong> Achieved a modular, scalable, and explainable log classification system balancing speed, accuracy, and generality."
+        "<strong>Model:</strong> Designed a robust state machine using LangGraph to manage complex conversation loops, including intent routing (clarification vs. evaluation) and dynamic follow-up generation.",
+        "<strong>Tech Stack:</strong> LangGraph, LangChain, Pydantic, PyPDFLoader, Streamlit.",
+        "<strong>Key Features:</strong> PDF text extraction and chunking, multi-LLM support (Cloud/Gemini + Local/Ollama), structured JSON output validation for strict grading, and context-aware session memory.",
+        "<strong>Outcome:</strong> Delivered a highly scalable interview simulator that successfully mimics human conversational nuances, providing candidates with real-time feedback and recruiters with standardized technical evaluations."
       ]
     },
     {
-      "title": "End-to-End AI Project Portfolio",
-      "url": "https://github.com/Saibhossain/5_ML_DL_Projects",
-      "description": "A curated collection of end-to-end machine learning and deep learning projects showcasing core competencies across regression, classification, recommendation, NLP, and computer vision.",
-      "details": [
-        "<strong>House Price Prediction:</strong> Used <em>Linear Regression</em> to predict housing prices. (Python, Scikit-learn)",
-        "<strong>Customer Churn Prediction:</strong> Built a classification model to identify high-risk churn users. (Scikit-learn, Random Forest)",
-        "<strong>Product Recommendation System:</strong> Designed a hybrid system combining SVD-based and content-based filtering. (Surprise Library, Scikit-learn)",
-        "<strong>Sentiment Analysis:</strong> Performed sentiment classification on customer reviews. (NLTK, Scikit-learn)",
-        "<strong>Object Detection for Inventory:</strong> Trained a YOLOv5 model to detect and localize products. (PyTorch, YOLOv5)"
-      ]
-    },
-    {
-      "title": "DeepLearning-with-PyTorch",
-      "url": "https://github.com/Saibhossain/DeepLearning-with-PyTorch",
-      "description": "Implemented various deep learning models and techniques using PyTorch, including CNNs, batch normalization, momentum optimization, and neural networks with different architectures.",
-      "details": [
-        "<strong>Technologies:</strong> PyTorch, Python, Google Colab",
-        "<strong>Key Projects:</strong> CNN for image classification, Fashion MNIST, MNIST digit recognition, neural networks with hidden layers, momentum optimization, and anime image classification."
-      ]
-    },
-    {
-      "title": "AI-Powered Study Assistant Chatbot",
-      "url": "https://github.com/Saibhossain/AI_ChatBotUsingGPT-2",
-      "description": "Built a smart chatbot for academic assistance using GPT-2 and custom Q&A datasets to simulate human-like tutoring interactions.",
-      "details": [
-        "<strong>Model:</strong> Fine-tuned GPT-2 on domain-specific educational Q&A pairs.",
-        "<strong>Tech Stack:</strong> PyTorch, Hugging Face Transformers, FastAPI, JavaScript, HTML/CSS",
-        "<strong>Key Features:</strong> Custom dataset preparation, real-time communication via FastAPI, user-friendly web interface.",
-        "<strong>Outcome:</strong> Successfully deployed a responsive chatbot capable of assisting students with personalized answers."
-      ]
-    },
-    {
-      "title": "PyTorch vs TensorFlow",
-      "url": "https://github.com/Saibhossain/PyTorch-vs-TensorFlow-Comparison",
-      "description": "Conducted a comparative analysis of PyTorch and TensorFlow frameworks focusing on deep learning model performance and development experience.",
-      "details": [
-        "<strong>Models:</strong> Implemented CNN architectures in both frameworks for benchmarking.",
-        "<strong>Tech Stack:</strong> PyTorch, TensorFlow, NumPy, Matplotlib, Google Colab",
-        "<strong>Key Features:</strong> Identical architecture replication, evaluation of training speed and accuracy, visualization of metrics.",
-        "<strong>Outcome:</strong> Delivered an insightful comparison highlighting trade-offs in usability and performance."
-      ]
-    },
-    {
-      "title": "Book Recommendation System",
-      "url": "https://github.com/Saibhossain/Book_Recommender_llm.git",
-      "description": "Built an intelligent Book Recommendation System leveraging Large Language Models (LLMs) to offer personalized suggestions through semantic analysis.",
-      "details": [
-        "<strong>Model:</strong> Used OpenAI's GPT models to analyze book content.",
-        "<strong>Tech Stack:</strong> Hugging Face, React, Node.js, REST API, PyTorch",
-        "<strong>Key Features:</strong> Data collection from Kaggle, semantic embedding, interactive web UI.",
-        "<strong>Outcome:</strong> Responsive and accurate system that understands nuanced preferences."
-      ]
-    }
+    "title": "MedAssist-LLM-iPhone (Offline Medical QA LLM)",
+    "url": "https://github.com/Saibhossain/MedAssist-LLM-iPhone.git",
+    "description": "Fine-tuned a lightweight Qwen2.5-0.5B-Instruct Large Language Model on a medical Question-Answering dataset and optimized it for fully offline inference on iPhone devices.",
+    "details": [
+      "<strong>Model:</strong> Qwen2.5-0.5B-Instruct fine-tuned with LoRA for medical question answering.",
+      "<strong>Tech Stack:</strong> Python, Unsloth, Hugging Face Transformers, LoRA, GGUF, llama.cpp, PocketPal.",
+      "<strong>Key Features:</strong> Model quantization for mobile inference, fully offline deployment pipeline, privacy-preserving medical QA without cloud dependency.",
+      "<strong>Outcome:</strong> Achieved efficient on-device LLM inference on iPhone with optimized memory usage and fast response times."
+    ]
+  },
+  {
+    "title": "Real-Time Vision + LLM Agent (LLM with Eyes)",
+    "url": "https://github.com/Saibhossain/Eye-of-LLM.git",
+    "description": "Developed an autonomous vision agent that integrates real-time object detection with LLM reasoning to understand visual environments.",
+    "details": [
+      "<strong>Model:</strong> YOLO11 for object detection combined with Gemini 2.5 Flash LLM for contextual reasoning.",
+      "<strong>Tech Stack:</strong> Python, YOLO11, Gemini API, Computer Vision.",
+      "<strong>Key Features:</strong> Real-time camera stream processing, object segmentation and detection, LLM-based contextual interpretation.",
+      "<strong>Outcome:</strong> Created an intelligent vision pipeline where detected objects are analyzed by an LLM for higher-level understanding."
+    ]
+  },
+  {
+    "title": "Synthetic Face Dataset Generation (GANs + Diffusion)",
+    "url": "https://github.com/Saibhossain/face-generation-model.git",
+    "description": "Built a hybrid generative pipeline combining GANs and diffusion models to study dataset effects on synthetic face generation.",
+    "details": [
+      "<strong>Model:</strong> StyleGAN2-ADA for generative modeling and SDXL diffusion for dataset augmentation.",
+      "<strong>Tech Stack:</strong> Python, PyTorch, GANs, Diffusion Models, LoRA Fine-tuning.",
+      "<strong>Key Features:</strong> Hybrid generation pipeline, LoRA fine-tuning for identity control, dataset engineering for small-data scenarios.",
+      "<strong>Outcome:</strong> Produced high-quality synthetic face datasets suitable for controlled vision experiments and model training."
+    ]
+  },
+  {
+    "title": "LangGraph MCP Agent with XAMPP Database Integration",
+    "url": "https://github.com/Saibhossain/multi-agent-ai.git",
+    "description": "Developed a modular LangGraph-powered MCP server integrated with XAMPP MySQL for intelligent document management and AI-driven query workflows.",
+    "details": [
+      "<strong>Architecture:</strong> LangGraph multi-agent workflow with MCP server for tool orchestration.",
+      "<strong>Tech Stack:</strong> Python 3.12, LangGraph, FastAPI, MCP Server, MySQL (XAMPP), Uvicorn.",
+      "<strong>Key Features:</strong> File upload pipeline, metadata indexing, AI-driven database queries, scalable modular architecture.",
+      "<strong>Outcome:</strong> Built an extendable system suitable for multi-agent AI applications interacting with structured databases."
+    ]
+  },
+  {
+    "title": "Bangla Sign Language Translator",
+    "url": "https://github.com/Saibhossain/bangla-sign-language-assistant.git",
+    "description": "Developed a vision-based Bangla sign language recognition system that translates hand gestures into Bangla alphabets and spoken words.",
+    "details": [
+      "<strong>Model:</strong> CNN-based sign recognition trained using MediaPipe hand landmark features.",
+      "<strong>Tech Stack:</strong> PyTorch, MediaPipe, Streamlit, gTTS, ESP32, Raspberry Pi.",
+      "<strong>Key Features:</strong> Real-time gesture detection, Bangla alphabet prediction, speech output using text-to-speech.",
+      "<strong>Outcome:</strong> Enabled assistive communication technology for Bangla sign language users."
+    ]
+  },
+  {
+    "title": "Googler Search Agent",
+    "url": "https://github.com/Saibhossain/Googler-Search-Agent.git",
+    "description": "Built an autonomous AI search agent that retrieves web results and generates concise summaries using local LLMs.",
+    "details": [
+      "<strong>Model:</strong> Local LLMs running via Ollama with LangGraph workflow orchestration.",
+      "<strong>Tech Stack:</strong> Python, LangGraph, Ollama, DuckDuckGo Search API, Web Automation.",
+      "<strong>Key Features:</strong> Autonomous query execution, result retrieval, summarization pipeline.",
+      "<strong>Outcome:</strong> Created an offline-friendly research assistant capable of automated web information synthesis."
+    ]
+  },
+  {
+    "title": "Prompt-Based Dynamic LLM Selector",
+    "url": "https://github.com/Saibhossain/prompt-based-dynamic-llm-selector.git",
+    "description": "Developed a dynamic routing system that intelligently selects the most suitable locally hosted LLM based on prompt complexity.",
+    "details": [
+      "<strong>Model:</strong> Gemma3:1B, Gemma3n:4B, DeepSeek-R1:1.5B deployed locally via Ollama.",
+      "<strong>Tech Stack:</strong> Python, Ollama, Local LLM orchestration.",
+      "<strong>Key Features:</strong> Prompt analysis and routing, multi-model orchestration, optimized resource utilization.",
+      "<strong>Outcome:</strong> Achieved efficient multi-model inference by balancing accuracy and computational cost."
+    ]
+  },
+  {
+    "title": "DeepLearning-with-PyTorch",
+    "url": "https://github.com/Saibhossain/DeepLearning-with-PyTorch.git",
+    "description": "Implemented deep learning models for image classification using convolutional neural networks.",
+    "details": [
+      "<strong>Model:</strong> CNN architectures trained on MNIST and FashionMNIST datasets.",
+      "<strong>Tech Stack:</strong> Python, PyTorch, Google Colab.",
+      "<strong>Key Features:</strong> Neural network training pipelines, optimization experiments, model evaluation.",
+      "<strong>Outcome:</strong> Demonstrated foundational deep learning techniques for computer vision tasks."
+    ]
+  },
+  {
+    "title": "AI-Based Plagiarism Detection",
+    "url": "https://github.com/Saibhossain/AI-based-plagiarism-detection.git",
+    "description": "Implemented a lightweight system to detect AI-generated text using local language models and NLP classification techniques.",
+    "details": [
+      "<strong>Model:</strong> On-device LLM-based text classification.",
+      "<strong>Tech Stack:</strong> Python, NLP, Local LLM inference.",
+      "<strong>Key Features:</strong> AI-generated text detection, document analysis pipeline.",
+      "<strong>Outcome:</strong> Built a privacy-preserving plagiarism detection tool capable of operating without cloud services."
+    ]
+  },
+  {
+    "title": "AI-Powered Study Assistant Chatbot",
+    "url": "https://github.com/Saibhossain/AI_ChatBotUsingGPT-2.git",
+    "description": "Developed an educational chatbot using GPT-2 to assist students with study-related questions.",
+    "details": [
+      "<strong>Model:</strong> GPT-2 fine-tuned for educational conversational tasks.",
+      "<strong>Tech Stack:</strong> Python, FastAPI, JavaScript, HTML/CSS.",
+      "<strong>Key Features:</strong> REST API backend, interactive web interface, conversational learning support.",
+      "<strong>Outcome:</strong> Built a full-stack AI chatbot capable of providing academic assistance."
+    ]
+  }
   ],
   "certifications": [
     {
@@ -150,13 +206,13 @@
     }
   ],
   "skills": [
-    { "category": "Geospatial Tech", "items": "Google Earth Engine (GEE), Remote Sensing, GIS" },
-    { "category": "Machine Learning", "items": "Scikit-learn, Pandas, NumPy, SVM" },
-    { "category": "Deep Learning", "items": "PyTorch, TensorFlow, Keras, CNN, RNN, U-Net" },
-    { "category": "Frontend & Backend", "items": "React, Node.js, Express.js" },
-    { "category": "Natural Language Processing", "items": "Transformers, BERT, GPT-2, HuggingFace" },
+    { "category": "Agentic AI Tech", "items": "LangChain, LangGraph, agent workflows, Multi-agent systems,API-based AI integration" },
+    { "category": "Programming & Frameworks:", "items": "Python, FastAPI, PyTorch, TensorFlow, Scikit-learn, OpenCV" },
+    { "category": "Deep Learning", "items": "Keras, CNN, RNN, Transformers, BERT, GPT-2," },
+    { "category": "LLM & RAG Systems", "items": "RAG pipelines, Agentic RAG, Prompt engineering" },
+    { "category": "Model Deployment & MLOps", "items": "HuggingFace, subabase, vercel,langsmith, mlflow" },
     { "category": "Languages", "items": "Python, Java, C, C++, MySql" },
-    { "category": "Tools & Platforms", "items": "Git, Github, Google Colab, Jupyter" }
+    { "category": "Tools & Platforms", "items": "Git, Github, Google Colab, Jupyter, Google Cloud, Custom Server" }
   ],
   "achievements": [
     { "title": "Lead the Future 2025 @ INVENTIOUS 4.1", "url": "https://drive.google.com/file/d/1QShVejNa6ngV_1KZtnbFYexbNWwk_Igp/view?usp=drive_link" },
