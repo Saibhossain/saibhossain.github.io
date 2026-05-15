@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Featured AI projects by Saib Hossain - Agentic AI, Medical Imaging, Generative Models"/>
+  <meta name="theme-color" content="#0a0a1a"/>
+  <title>Projects | Saib Hossain</title>
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Critical CSS Inline -->
+  <style>
+    :root{--bg:#0a0a1a;--surface:rgba(30,30,60,0.7);--primary:#6366f1;--accent:#06b6d4;--text:#e2e8f0;--text-muted:#94a3b8}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:0.75rem 1.5rem;background:var(--primary);color:#fff;z-index:10000;border-radius:10px;font-weight:600}
+    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  </style>
+  
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="../../assets/css/base.css"/>
+  <link rel="stylesheet" href="../../assets/css/components.css"/>
+  <link rel="stylesheet" href="../../assets/css/layout.css"/>
+  <link rel="stylesheet" href="../../assets/css/animations.css"/>
+  
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg"/>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  
+  <!-- Header Placeholder -->
+  <header id="header-placeholder"></header>
+  
+  <main id="main">
+    <!-- Unique Page Header with Animated Background -->
+    <header class="page-header projects-header">
+      <div class="header-glow"></div>
+      <div class="container">
+        <h1 class="gradient-text" id="page-title">Featured Projects</h1>
+        <p class="page-description" id="page-desc">Hands-on AI projects showcasing agentic systems, medical imaging, and generative models.</p>
+        
+        <!-- Filter Tabs (Unique to Projects Page) -->
+        <div class="project-filters" id="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="agentic">Agentic AI</button>
+          <button class="filter-btn" data-filter="medical">Medical AI</button>
+          <button class="filter-btn" data-filter="generative">Generative</button>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Projects Grid with Masonry-style Layout -->
+    <section class="section">
+      <div class="container">
+        <div class="projects-masonry" id="projects-container">
+          <!-- Populated from projects.json -->
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Loading projects...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Unique CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-card glass-card fade-in-up">
+          <div class="cta-content">
+            <h3 class="gradient-text">Have a project in mind?</h3>
+            <p class="text-muted">Let's collaborate on innovative AI solutions that push boundaries.</p>
+            <div class="cta-actions">
+              <a href="../contact/" class="btn btn-primary">Start a Conversation →</a>
+              <a href="../../" class="btn btn-outline">Back to Home</a>
+            </div>
+          </div>
+          <div class="cta-decoration">
+            <div class="decoration-dot"></div>
+            <div class="decoration-dot delay-1"></div>
+            <div class="decoration-dot delay-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer Placeholder -->
+  <footer id="footer-placeholder"></footer>
+  
+  <!-- Shared JS (Correct Relative Paths) -->
+  <script src="../../assets/js/core/config.js"></script>
+  <script src="../../assets/js/core/utils.js"></script>
+  <script src="../../assets/js/core/nav.js"></script>
+  <script src="../../assets/js/components/links.js"></script>
+  
+  <!-- Page-specific JS -->
+  <script src="script.js"></script>
+</body>
+</html>

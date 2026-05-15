@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "name": "Saib Hossain",
+    "title": "AI Researcher | Medical Imaging & Generative AI",
+    "email": "saibhossain5@gmail.com",
+    "location": "Bangladesh · Remote-First"
+  },
+  "links": {
+    "github": "https://github.com/Saibhossain",
+    "linkedin": "https://linkedin.com/in/saib-hossain-182834229/",
+    "email": "mailto:saibhossain5@gmail.com",
+    "kaggle": "https://kaggle.com/your-username",
+    "huggingface": "https://huggingface.co/your-username",
+    "orcid": "https://orcid.org/your-id",
+    "scholar": "https://scholar.google.com/citations?user=xxx"
+  },
+  "skills": {
+    "Agentic AI": [
+      {"name": "LangGraph", "level": 95},
+      {"name": "Multi-Agent Systems", "level": 90}
+    ],
+    "Deep Learning": [
+      {"name": "PyTorch", "level": 95},
+      {"name": "GANs/Diffusion", "level": 90}
+    ]
+  },
+  "quickLinks": [
+    {"label": "About", "href": "/pages/about/", "icon": "user"},
+    {"label": "Projects", "href": "/pages/projects/", "icon": "code"},
+    {"label": "Research", "href": "/pages/research/", "icon": "microscope"},
+    {"label": "Contact", "href": "/pages/contact/", "icon": "mail"}
+  ]
+}

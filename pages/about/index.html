@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Saib Hossain</title>
+  <style>:root{--bg:#0a0a1a;--text:#e2e8f0}*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif}</style>
+  <link rel="stylesheet" href="../../assets/css/base.css"/>
+  <link rel="stylesheet" href="../../assets/css/components.css"/>
+  <link rel="stylesheet" href="../../assets/css/layout.css"/>
+  <link rel="stylesheet" href="../../assets/css/animations.css"/>
+</head>
+<body>
+  <div id="header-placeholder" data-depth="1"></div>
+
+  <main id="main">
+    <header class="page-header fade-in-up">
+      <h1 class="gradient-text">Featured Projects</h1>
+      <p>My work in Agentic AI, Computer Vision, and LLMs.</p>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="projects-grid" id="projects-container">
+          <!-- Content injected by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder" data-depth="1"></div>
+
+  <!-- Scripts (Relative Paths) -->
+  <script src="../../assets/js/core/config.js"></script>
+  <script src="../../assets/js/core/utils.js"></script>
+  <script src="../../assets/js/core/nav.js"></script>
+  <script src="../../assets/js/components/links.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const globalData = await fetchJSON('../../assets/data/global.json'); // Absolute relative path from root
+      if (globalData) renderFooterLinks(globalData.links);
+
+      const projects = await fetchJSON('projects.json'); // Relative to /assets/data/
+      const container = document.getElementById('projects-container');
+      
+      if (container && projects) {
+        container.innerHTML = projects.map((p, i) => `
+          <article class="glass-card project-card fade-in-up" style="animation-delay:${i*0.1}s">
+            <h3><a href="${p.url}" target="_blank" class="gradient-text">${escapeHtml(p.title)}</a></h3>
+            <p class="text-muted mt-2">${escapeHtml(p.desc)}</p>
+            <div class="project-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+            <div class="mt-auto" style="margin-top:1rem">
+              <a href="${p.url}" target="_blank" class="btn btn-outline btn-sm">View Code →</a>
+            </div>
+          </article>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

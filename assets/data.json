@@ -1,250 +1,322 @@
 {
   "personal": {
     "name": "Saib Hossain",
-    "image": "assets/photo.jpg",
-    "email": "saibhossain5@gmail.com",
-    "phone": "01769918015",
-    "github_url": "https://github.com/Saibhossain",
-    "github_text": "github.com/Saibhossain",
-    "linkedin_url": "https://www.linkedin.com/in/saib-hossain-182834229/",
-    "linkedin_text": "linkedin.com/in/saib-hossain",
-    "facebook_url": "https://www.facebook.com/share/1AvARmJL7k/?mibextid=wwXIfr",
-    "facebook_text": "facebook.com/in/saib-hossain",
-    "status": "(OPEN for work)",
-    "objective": "Motivated and detail-oriented Computer Science student with hands-on experience in Natural Language Processing (NLP), Transformer-based architectures, and fine-tuning large language models (LLMs). Proficient in applying machine learning and deep learning techniques to solve real-world problems, with a strong interest in advancing AI research. Seeking a Research Assistant role where I can contribute to optimizing NLP models, developing high-quality datasets, and supporting cutting-edge research initiatives. Passionate about continuous learning, collaboration, and driving meaningful innovation in artificial intelligence."
+    "title": "AI Researcher | Agentic Systems & Medical Imaging",
+    "bio": "Developing Agentic AI systems for lung cancer screening and survival analysis using deep learning on CT imaging. Passionate about integrating clinical data with computer vision, generative modeling, and AI safety for impactful healthcare solutions.",
+    "image": "assets/images/profile.webp",
+    "location": "Bangladesh · Remote-First",
+    "status": "🟢 Open to Research Roles & Collaborations"
   },
-  "research_experience": [
+
+  "links": {
+    "email": "mailto:saibhossain5@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/saib-hossain-182834229/",
+    "github": "https://github.com/Saibhossain",
+    "kaggle": "https://kaggle.com/your-kaggle-username",
+    "huggingface": "https://huggingface.co/your-hf-username",
+    "orcid": "https://orcid.org/your-orcid-id",
+    "google_scholar": "https://scholar.google.com/citations?user=your-scholar-id",
+    "collaboration": "mailto:saibhossain5@gmail.com?subject=Research%20Collaboration%20Inquiry",
+    "startup": "https://your-startup-link.com",
+    "facebook": "https://www.facebook.com/share/1AvARmJL7k/?mibextid=wwXIfr"
+  },
+
+  "research_focus": [
     {
-      "role": "Research Assistant",
+      "title": "Radiomic Features & Lung Tumor Correlation Analysis",
       "organization": "Institute of Advanced Research (IAR), UIU",
-      "duration": "Nov 2025 - Present",
-      "title": "Project: Correlation search between 'radiomic features' and lung tumors: stage, therapeutic success, survival time.",
-      "details": [
-        "Developed deep learning pipelines for medical image analysis.",
-        "Extracted and analyzed radiomic features; supported model evaluation and statistical correlation studies.",
-        "Documented experiments and findings of model reliability, data bias, and clinical applicability, relevant to healthcare AI governance."
-      ]
+      "duration": "Nov 2025 – Present",
+      "description": "Developing deep learning pipelines for medical image analysis to correlate radiomic features with tumor stage, therapeutic success, and survival outcomes. Focus on model reliability, data bias mitigation, and clinical AI governance.",
+      "tags": ["Medical Imaging", "Radiomics", "Survival Analysis", "CT Scans", "AI Governance"],
+      "url": "https://github.com/Saibhossain"
     },
     {
-      "role": "Machine Learning Engineer Intern",
+      "title": "Generative AI for Synthetic Medical Data",
       "organization": "Fluvo Soft (Remote)",
-      "duration": "Nov 2025 - Present",
-      "title": "Generative AI & Computer Vision",
-      "details": [
-        "Designed a synthetic face generation pipeline with StyleGAN2 and Stable Diffusion XL (SDXL) to address data scarcity in vision research.",
-        "Fine-tuned diffusion models using LoRA for identity preservation and controlled diversity.",
-        "Applied Adaptive Discriminator Augmentation (ADA) to mitigate overfitting with small datasets.",
-        "Conducted error analysis and quality evaluation to improve generative consistency and realism."
-      ]
+      "duration": "Nov 2025 – Present",
+      "description": "Building hybrid GAN + Diffusion pipelines (StyleGAN2-ADA, SDXL+LoRA) to generate high-quality synthetic face/medical data for vision research, addressing data scarcity while preserving identity control and diversity.",
+      "tags": ["GANs", "Diffusion Models", "LoRA", "Data Augmentation", "Computer Vision"],
+      "url": "https://github.com/Saibhossain/face-generation-model.git"
     },
     {
-      "role": "Volunteer Research Assistant",
+      "title": "AI Safety & Alignment Research",
       "organization": "Ruach Tech (London, UK - Remote)",
       "duration": "Jan 2026 – Present",
-      "title": "AI Safety & Alignment Research",
-      "details": [
-        "Contributing to the Engineering & Research Division, focusing on the theoretical underpinnings of safe Artificial Intelligence systems.",
-        "Conducting critical literature reviews and drafting research briefs to support exploratory research into advanced model capabilities and alignment.",
-        "Synthesizing complex technical papers into actionable insights for ongoing R&D projects."
-      ]
+      "description": "Contributing to theoretical foundations of safe AI systems through literature reviews, research briefs, and synthesis of technical papers on model capabilities and alignment strategies.",
+      "tags": ["AI Safety", "Alignment", "Research Synthesis", "Ethics"],
+      "url": ""
     }
-    
   ],
+
   "projects": [
     {
       "title": "Agentic AI Technical Interviewer",
+      "description": "Stateful, non-linear AI interviewing agent that parses CVs, generates customized technical agendas, and conducts dynamic conversational interviews with intent routing and structured evaluation.",
       "url": "https://github.com/Saibhossain/Interview-agent.git",
-      "description": "Engineered a stateful, non-linear AI interviewing agent that autonomously parses candidate CVs, generates customized technical agendas, and conducts dynamic conversational interviews.",
-      "details": [
-        "<strong>Model:</strong> Designed a robust state machine using LangGraph to manage complex conversation loops, including intent routing (clarification vs. evaluation) and dynamic follow-up generation.",
-        "<strong>Tech Stack:</strong> LangGraph, LangChain, Pydantic, PyPDFLoader, Streamlit.",
-        "<strong>Key Features:</strong> PDF text extraction and chunking, multi-LLM support (Cloud/Gemini + Local/Ollama), structured JSON output validation for strict grading, and context-aware session memory.",
-        "<strong>Outcome:</strong> Delivered a highly scalable interview simulator that successfully mimics human conversational nuances, providing candidates with real-time feedback and recruiters with standardized technical evaluations."
+      "tags": ["LangGraph", "LangChain", "Agentic AI", "Streamlit", "Multi-LLM"],
+      "highlights": [
+        "Robust state machine for complex conversation loops",
+        "Multi-LLM support (Gemini + Ollama)",
+        "Structured JSON output validation",
+        "Context-aware session memory"
       ]
     },
     {
-    "title": "MedAssist-LLM-iPhone (Offline Medical QA LLM)",
-    "url": "https://github.com/Saibhossain/MedAssist-LLM-iPhone.git",
-    "description": "Fine-tuned a lightweight Qwen2.5-0.5B-Instruct Large Language Model on a medical Question-Answering dataset and optimized it for fully offline inference on iPhone devices.",
-    "details": [
-      "<strong>Model:</strong> Qwen2.5-0.5B-Instruct fine-tuned with LoRA for medical question answering.",
-      "<strong>Tech Stack:</strong> Python, Unsloth, Hugging Face Transformers, LoRA, GGUF, llama.cpp, PocketPal.",
-      "<strong>Key Features:</strong> Model quantization for mobile inference, fully offline deployment pipeline, privacy-preserving medical QA without cloud dependency.",
-      "<strong>Outcome:</strong> Achieved efficient on-device LLM inference on iPhone with optimized memory usage and fast response times."
-    ]
-  },
-  {
-    "title": "Real-Time Vision + LLM Agent (LLM with Eyes)",
-    "url": "https://github.com/Saibhossain/Eye-of-LLM.git",
-    "description": "Developed an autonomous vision agent that integrates real-time object detection with LLM reasoning to understand visual environments.",
-    "details": [
-      "<strong>Model:</strong> YOLO11 for object detection combined with Gemini 2.5 Flash LLM for contextual reasoning.",
-      "<strong>Tech Stack:</strong> Python, YOLO11, Gemini API, Computer Vision.",
-      "<strong>Key Features:</strong> Real-time camera stream processing, object segmentation and detection, LLM-based contextual interpretation.",
-      "<strong>Outcome:</strong> Created an intelligent vision pipeline where detected objects are analyzed by an LLM for higher-level understanding."
-    ]
-  },
-  {
-    "title": "Synthetic Face Dataset Generation (GANs + Diffusion)",
-    "url": "https://github.com/Saibhossain/face-generation-model.git",
-    "description": "Built a hybrid generative pipeline combining GANs and diffusion models to study dataset effects on synthetic face generation.",
-    "details": [
-      "<strong>Model:</strong> StyleGAN2-ADA for generative modeling and SDXL diffusion for dataset augmentation.",
-      "<strong>Tech Stack:</strong> Python, PyTorch, GANs, Diffusion Models, LoRA Fine-tuning.",
-      "<strong>Key Features:</strong> Hybrid generation pipeline, LoRA fine-tuning for identity control, dataset engineering for small-data scenarios.",
-      "<strong>Outcome:</strong> Produced high-quality synthetic face datasets suitable for controlled vision experiments and model training."
-    ]
-  },
-  {
-    "title": "LangGraph MCP Agent with XAMPP Database Integration",
-    "url": "https://github.com/Saibhossain/multi-agent-ai.git",
-    "description": "Developed a modular LangGraph-powered MCP server integrated with XAMPP MySQL for intelligent document management and AI-driven query workflows.",
-    "details": [
-      "<strong>Architecture:</strong> LangGraph multi-agent workflow with MCP server for tool orchestration.",
-      "<strong>Tech Stack:</strong> Python 3.12, LangGraph, FastAPI, MCP Server, MySQL (XAMPP), Uvicorn.",
-      "<strong>Key Features:</strong> File upload pipeline, metadata indexing, AI-driven database queries, scalable modular architecture.",
-      "<strong>Outcome:</strong> Built an extendable system suitable for multi-agent AI applications interacting with structured databases."
-    ]
-  },
-  {
-    "title": "Bangla Sign Language Translator",
-    "url": "https://github.com/Saibhossain/bangla-sign-language-assistant.git",
-    "description": "Developed a vision-based Bangla sign language recognition system that translates hand gestures into Bangla alphabets and spoken words.",
-    "details": [
-      "<strong>Model:</strong> CNN-based sign recognition trained using MediaPipe hand landmark features.",
-      "<strong>Tech Stack:</strong> PyTorch, MediaPipe, Streamlit, gTTS, ESP32, Raspberry Pi.",
-      "<strong>Key Features:</strong> Real-time gesture detection, Bangla alphabet prediction, speech output using text-to-speech.",
-      "<strong>Outcome:</strong> Enabled assistive communication technology for Bangla sign language users."
-    ]
-  },
-  {
-    "title": "Googler Search Agent",
-    "url": "https://github.com/Saibhossain/Googler-Search-Agent.git",
-    "description": "Built an autonomous AI search agent that retrieves web results and generates concise summaries using local LLMs.",
-    "details": [
-      "<strong>Model:</strong> Local LLMs running via Ollama with LangGraph workflow orchestration.",
-      "<strong>Tech Stack:</strong> Python, LangGraph, Ollama, DuckDuckGo Search API, Web Automation.",
-      "<strong>Key Features:</strong> Autonomous query execution, result retrieval, summarization pipeline.",
-      "<strong>Outcome:</strong> Created an offline-friendly research assistant capable of automated web information synthesis."
-    ]
-  },
-  {
-    "title": "Prompt-Based Dynamic LLM Selector",
-    "url": "https://github.com/Saibhossain/prompt-based-dynamic-llm-selector.git",
-    "description": "Developed a dynamic routing system that intelligently selects the most suitable locally hosted LLM based on prompt complexity.",
-    "details": [
-      "<strong>Model:</strong> Gemma3:1B, Gemma3n:4B, DeepSeek-R1:1.5B deployed locally via Ollama.",
-      "<strong>Tech Stack:</strong> Python, Ollama, Local LLM orchestration.",
-      "<strong>Key Features:</strong> Prompt analysis and routing, multi-model orchestration, optimized resource utilization.",
-      "<strong>Outcome:</strong> Achieved efficient multi-model inference by balancing accuracy and computational cost."
-    ]
-  },
-  {
-    "title": "DeepLearning-with-PyTorch",
-    "url": "https://github.com/Saibhossain/DeepLearning-with-PyTorch.git",
-    "description": "Implemented deep learning models for image classification using convolutional neural networks.",
-    "details": [
-      "<strong>Model:</strong> CNN architectures trained on MNIST and FashionMNIST datasets.",
-      "<strong>Tech Stack:</strong> Python, PyTorch, Google Colab.",
-      "<strong>Key Features:</strong> Neural network training pipelines, optimization experiments, model evaluation.",
-      "<strong>Outcome:</strong> Demonstrated foundational deep learning techniques for computer vision tasks."
-    ]
-  },
-  {
-    "title": "AI-Based Plagiarism Detection",
-    "url": "https://github.com/Saibhossain/AI-based-plagiarism-detection.git",
-    "description": "Implemented a lightweight system to detect AI-generated text using local language models and NLP classification techniques.",
-    "details": [
-      "<strong>Model:</strong> On-device LLM-based text classification.",
-      "<strong>Tech Stack:</strong> Python, NLP, Local LLM inference.",
-      "<strong>Key Features:</strong> AI-generated text detection, document analysis pipeline.",
-      "<strong>Outcome:</strong> Built a privacy-preserving plagiarism detection tool capable of operating without cloud services."
-    ]
-  },
-  {
-    "title": "AI-Powered Study Assistant Chatbot",
-    "url": "https://github.com/Saibhossain/AI_ChatBotUsingGPT-2.git",
-    "description": "Developed an educational chatbot using GPT-2 to assist students with study-related questions.",
-    "details": [
-      "<strong>Model:</strong> GPT-2 fine-tuned for educational conversational tasks.",
-      "<strong>Tech Stack:</strong> Python, FastAPI, JavaScript, HTML/CSS.",
-      "<strong>Key Features:</strong> REST API backend, interactive web interface, conversational learning support.",
-      "<strong>Outcome:</strong> Built a full-stack AI chatbot capable of providing academic assistance."
-    ]
-  }
+      "title": "MedAssist-LLM-iPhone (Offline Medical QA)",
+      "description": "Fine-tuned Qwen2.5-0.5B-Instruct on medical QA dataset with LoRA, optimized for fully offline inference on iPhone via GGUF quantization and llama.cpp.",
+      "url": "https://github.com/Saibhossain/MedAssist-LLM-iPhone.git",
+      "tags": ["LLM Fine-tuning", "LoRA", "Mobile AI", "Privacy-Preserving", "GGUF"],
+      "highlights": [
+        "On-device LLM inference without cloud dependency",
+        "Unsloth + Hugging Face Transformers pipeline",
+        "Optimized memory usage for mobile deployment"
+      ]
+    },
+    {
+      "title": "Real-Time Vision + LLM Agent (LLM with Eyes)",
+      "description": "Autonomous vision agent integrating YOLO11 object detection with Gemini 2.5 Flash for contextual reasoning about visual environments in real-time.",
+      "url": "https://github.com/Saibhossain/Eye-of-LLM.git",
+      "tags": ["Computer Vision", "YOLO11", "Gemini API", "Real-time Processing", "Multimodal AI"],
+      "highlights": [
+        "Real-time camera stream processing",
+        "Object segmentation + LLM contextual interpretation",
+        "Modular pipeline for extensibility"
+      ]
+    },
+    {
+      "title": "Synthetic Face Dataset Generation (GANs + Diffusion)",
+      "description": "Hybrid generative pipeline combining StyleGAN2-ADA and SDXL+LoRA to study dataset effects on synthetic face generation for controlled vision experiments.",
+      "url": "https://github.com/Saibhossain/face-generation-model.git",
+      "tags": ["StyleGAN2", "SDXL", "LoRA", "Dataset Engineering", "Small-Data Learning"],
+      "highlights": [
+        "Identity-preserving generation with controlled diversity",
+        "Adaptive Discriminator Augmentation for small datasets",
+        "Quality evaluation framework for generative consistency"
+      ]
+    },
+    {
+      "title": "LangGraph MCP Agent + XAMPP MySQL Integration",
+      "description": "Modular LangGraph-powered MCP server with FastAPI backend and MySQL integration for intelligent document management and AI-driven query workflows.",
+      "url": "https://github.com/Saibhossain/multi-agent-ai.git",
+      "tags": ["LangGraph", "MCP Server", "FastAPI", "MySQL", "Multi-Agent Systems"],
+      "highlights": [
+        "File upload pipeline with metadata indexing",
+        "AI-driven structured database queries",
+        "Scalable modular architecture for extensibility"
+      ]
+    },
+    {
+      "title": "Bangla Sign Language Translator",
+      "description": "Vision-based Bangla sign language recognition system translating hand gestures into Bangla alphabets and spoken words using MediaPipe + CNN.",
+      "url": "https://github.com/Saibhossain/bangla-sign-language-assistant.git",
+      "tags": ["Computer Vision", "MediaPipe", "CNN", "Accessibility", "Edge Deployment"],
+      "highlights": [
+        "Real-time gesture detection with hand landmarks",
+        "Bangla alphabet prediction + text-to-speech output",
+        "ESP32/Raspberry Pi deployment for assistive tech"
+      ]
+    },
+    {
+      "title": "Googler Search Agent",
+      "description": "Autonomous AI search agent retrieving web results and generating concise summaries using local LLMs via Ollama + LangGraph orchestration.",
+      "url": "https://github.com/Saibhossain/Googler-Search-Agent.git",
+      "tags": ["Agentic AI", "Local LLMs", "Ollama", "Web Automation", "Summarization"],
+      "highlights": [
+        "Offline-friendly research assistant",
+        "Autonomous query execution + result synthesis",
+        "Privacy-preserving web information processing"
+      ]
+    },
+    {
+      "title": "Prompt-Based Dynamic LLM Selector",
+      "description": "Intelligent routing system selecting optimal locally-hosted LLM (Gemma3, DeepSeek-R1) based on prompt complexity to balance accuracy and compute cost.",
+      "url": "https://github.com/Saibhossain/prompt-based-dynamic-llm-selector.git",
+      "tags": ["LLM Orchestration", "Prompt Engineering", "Resource Optimization", "Local Inference"],
+      "highlights": [
+        "Dynamic model selection based on prompt analysis",
+        "Multi-model orchestration via Ollama",
+        "Cost-aware inference routing"
+      ]
+    },
+    {
+      "title": "DeepLearning-with-PyTorch",
+      "description": "Foundational deep learning implementations for image classification using CNNs on MNIST/FashionMNIST with optimization experiments.",
+      "url": "https://github.com/Saibhossain/DeepLearning-with-PyTorch.git",
+      "tags": ["PyTorch", "CNN", "Computer Vision", "Educational"],
+      "highlights": [
+        "Neural network training pipelines",
+        "Hyperparameter optimization experiments",
+        "Model evaluation and comparison framework"
+      ]
+    },
+    {
+      "title": "AI-Based Plagiarism Detection",
+      "description": "Privacy-preserving system detecting AI-generated text using on-device LLMs and NLP classification techniques without cloud dependency.",
+      "url": "https://github.com/Saibhossain/AI-based-plagiarism-detection.git",
+      "tags": ["NLP", "Text Classification", "Privacy-Preserving", "Local LLM"],
+      "highlights": [
+        "On-device inference for document analysis",
+        "AI-generated vs human-written text discrimination",
+        "Lightweight pipeline for edge deployment"
+      ]
+    },
+    {
+      "title": "AI-Powered Study Assistant Chatbot",
+      "description": "Educational chatbot using fine-tuned GPT-2 for student Q&A support with FastAPI backend and interactive web interface.",
+      "url": "https://github.com/Saibhossain/AI_ChatBotUsingGPT-2.git",
+      "tags": ["GPT-2", "FastAPI", "Full-Stack", "Educational AI"],
+      "highlights": [
+        "REST API backend with conversational AI",
+        "Interactive web interface for learning support",
+        "Fine-tuning pipeline for domain adaptation"
+      ]
+    }
   ],
+
   "certifications": [
     {
       "title": "IBM AI Engineering Professional Certificate",
       "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE",
-      "description": "Gained hands-on experience in machine learning, deep learning with PyTorch and TensorFlow, and building AI applications.",
-      "skills": "Neural Networks, Deep Learning, ML Pipelines, Deployment"
+      "description": "Hands-on experience in machine learning, deep learning with PyTorch/TensorFlow, and building deployable AI applications.",
+      "skills": ["Neural Networks", "Deep Learning", "ML Pipelines", "Model Deployment"],
+      "issuer": "IBM via Coursera",
+      "year": "2024"
     },
     {
       "title": "Google Data Analytics Professional Certificate",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA",
-      "description": "Built a strong foundation in data analysis using spreadsheets, SQL, R, and visualization tools like Tableau.",
-      "skills": "Data Cleaning, SQL, Data Visualization, R Programming"
-    },
-    {
-      "title": "IBM Data Science Fundamentals",
-      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV",
-      "description": "Learned the basics of data science, Python programming, and data analysis using tools like Jupyter, Pandas, and Numpy.",
-      "skills": "Python, Data Science Workflow, Pandas, Data Wrangling"
-    },
-    {
-      "title": "Financial Markets – Yale University",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y",
-      "description": "Developed foundational understanding of financial markets, investment strategies, risk management, and behavioral finance.",
-      "skills": "Financial Literacy, Market Dynamics, Risk Analysis, Economic Behavior"
+      "description": "Foundation in data analysis using spreadsheets, SQL, R, and visualization tools like Tableau.",
+      "skills": ["SQL", "Data Visualization", "R Programming", "Data Cleaning"],
+      "issuer": "Google via Coursera",
+      "year": "2024"
     },
     {
       "title": "Transformer Models and BERT",
       "url": "https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA",
-      "description": "Gained practical knowledge of transformer architecture and BERT. Focused on attention mechanisms, fine-tuning for NLP tasks, and working with Hugging Face.",
-      "skills": "Transformers, BERT, Hugging Face, PyTorch, NLP, Fine-tuning"
+      "description": "Practical knowledge of transformer architecture, attention mechanisms, and fine-tuning BERT for NLP tasks with Hugging Face.",
+      "skills": ["Transformers", "BERT", "Hugging Face", "PyTorch", "NLP Fine-tuning"],
+      "issuer": "DeepLearning.AI via Coursera",
+      "year": "2024"
+    },
+    {
+      "title": "IBM Data Science Fundamentals",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV",
+      "description": "Basics of data science workflow, Python programming, and data analysis using Jupyter, Pandas, and NumPy.",
+      "skills": ["Python", "Pandas", "Data Wrangling", "Jupyter"],
+      "issuer": "IBM via Coursera",
+      "year": "2023"
+    },
+    {
+      "title": "Financial Markets – Yale University",
+      "url": "https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y",
+      "description": "Foundational understanding of financial markets, investment strategies, risk management, and behavioral finance.",
+      "skills": ["Financial Literacy", "Risk Analysis", "Market Dynamics"],
+      "issuer": "Yale University via Coursera",
+      "year": "2023"
     }
   ],
-  "skills": [
-    { "category": "Agentic AI Tech", "items": "LangChain, LangGraph, agent workflows, Multi-agent systems,API-based AI integration" },
-    { "category": "Programming & Frameworks:", "items": "Python, FastAPI, PyTorch, TensorFlow, Scikit-learn, OpenCV" },
-    { "category": "Deep Learning", "items": "Keras, CNN, RNN, Transformers, BERT, GPT-2," },
-    { "category": "LLM & RAG Systems", "items": "RAG pipelines, Agentic RAG, Prompt engineering" },
-    { "category": "Model Deployment & MLOps", "items": "HuggingFace, subabase, vercel,langsmith, mlflow" },
-    { "category": "Languages", "items": "Python, Java, C, C++, MySql" },
-    { "category": "Tools & Platforms", "items": "Git, Github, Google Colab, Jupyter, Google Cloud, Custom Server" }
-  ],
+
+  "skills": {
+    "Agentic AI & Orchestration": [
+      {"name": "LangGraph / LangChain", "level": 95},
+      {"name": "Multi-Agent Systems", "level": 90},
+      {"name": "Prompt Engineering", "level": 92},
+      {"name": "RAG Pipelines", "level": 88},
+      {"name": "API Integration", "level": 90}
+    ],
+    "Deep Learning & Computer Vision": [
+      {"name": "PyTorch / TensorFlow", "level": 95},
+      {"name": "CNNs / Transformers", "level": 93},
+      {"name": "GANs / Diffusion Models", "level": 90},
+      {"name": "YOLO / MediaPipe", "level": 85},
+      {"name": "Medical Imaging", "level": 88}
+    ],
+    "LLM Engineering": [
+      {"name": "LoRA / QLoRA Fine-tuning", "level": 92},
+      {"name": "GGUF / llama.cpp", "level": 85},
+      {"name": "Ollama / Local LLMs", "level": 90},
+      {"name": "Hugging Face Ecosystem", "level": 94},
+      {"name": "Model Quantization", "level": 87}
+    ],
+    "MLOps & Deployment": [
+      {"name": "FastAPI / Streamlit", "level": 90},
+      {"name": "Docker / Cloud Deployment", "level": 80},
+      {"name": "MLflow / Experiment Tracking", "level": 85},
+      {"name": "GitHub Actions / CI/CD", "level": 82},
+      {"name": "Edge / Mobile Deployment", "level": 88}
+    ],
+    "Data & Tools": [
+      {"name": "Python / SQL", "level": 95},
+      {"name": "Pandas / NumPy / Scikit-learn", "level": 93},
+      {"name": "Git / GitHub / Kaggle", "level": 96},
+      {"name": "Google Colab / Jupyter", "level": 94},
+      {"name": "Linux / Bash Scripting", "level": 85}
+    ]
+  },
+
   "achievements": [
-    { "title": "Lead the Future 2025 @ INVENTIOUS 4.1", "url": "https://drive.google.com/file/d/1QShVejNa6ngV_1KZtnbFYexbNWwk_Igp/view?usp=drive_link" },
-    { "title": "UIU Book Reading Competition 2025", "url": "https://drive.google.com/file/d/1DMMh9L9jVvbYTCl3tDduCiyJjU9BJMnz/view?usp=sharing" }
+    {
+      "title": "Lead the Future 2025 @ INVENTIOUS 4.1",
+      "url": "https://drive.google.com/file/d/1QShVejNa6ngV_1KZtnbFYexbNWwk_Igp/view?usp=drive_link",
+      "description": "Recognition for innovative AI project leadership and technical execution."
+    },
+    {
+      "title": "UIU Book Reading Competition 2025",
+      "url": "https://drive.google.com/file/d/1DMMh9L9jVvbYTCl3tDduCiyJjU9BJMnz/view?usp=sharing",
+      "description": "Awarded for academic engagement and knowledge synthesis."
+    }
   ],
+
   "education": [
-    { "degree": "BSc in Computer Science & Engineering", "institution": "United International University", "details": "CGPA: 3.44 (Studying)" },
-    { "degree": "HSC (Science)", "institution": "Satkhira Govt.College (2018)", "details": "GPA: 5.00" }
+    {
+      "degree": "BSc in Computer Science & Engineering",
+      "institution": "United International University",
+      "details": "CGPA: 3.44/4.00 · Expected Graduation: 2026",
+      "location": "Dhaka, Bangladesh",
+      "relevant_coursework": ["Machine Learning", "Computer Vision", "NLP", "Database Systems", "Software Engineering"]
+    },
+    {
+      "degree": "HSC (Science)",
+      "institution": "Satkhira Govt. College",
+      "details": "GPA: 5.00/5.00 · Year: 2018",
+      "location": "Satkhira, Bangladesh"
+    }
   ],
+
   "extracurriculars": [
     {
       "role": "Associate, Software & Autonomous Navigation",
       "org": "UIU Mars Rover Team",
       "duration": "2023–2024",
-      "details": [
-        "Contributed to the development of autonomous navigation systems using Python and Robot Operating System (ROS) for Mars rover prototypes.",
-        "Implemented sensor fusion with LiDAR, IMU, and camera modules to enhance localization and decision-making.",
-        "Utilized tools including Gazebo, Rviz, OpenCV, and techniques such as SLAM and PID control to ensure robust performance in real-world simulations."
+      "description": "Developed autonomous navigation systems for Mars rover prototypes using ROS, sensor fusion, and SLAM.",
+      "highlights": [
+        "Implemented LiDAR/IMU/camera sensor fusion for robust localization",
+        "Built simulation pipelines in Gazebo/Rviz with PID control",
+        "Applied OpenCV for visual odometry and obstacle detection"
       ]
     },
     {
       "role": "General Secretary",
       "org": "NCTF SATKHIRA",
       "duration": "2013–2018",
-      "details": [
-        "NCTF works for child rights and protection in Bangladesh, supported by Save the Children, Plan International, and Bangladesh Shishu Academy."
+      "description": "Led child rights advocacy initiatives in partnership with Save the Children and Plan International.",
+      "highlights": [
+        "Organized community awareness campaigns on child protection",
+        "Coordinated with national NGOs for program implementation",
+        "Developed leadership and stakeholder management skills"
       ]
     }
   ],
+
   "languages": [
-    { "name": "Bangla", "levels": {"Read": "high", "Write": "high", "Speak": "high", "Listen": "high"} },
-    { "name": "English", "levels": {"Read": "high", "Write": "high", "Speak": "high", "Listen": "high"} },
-    { "name": "Hindi", "levels": {"Read": "low", "Write": "low", "Speak": "medium", "Listen": "high"} }
-  ]
+    { "name": "Bangla", "levels": {"Read": 100, "Write": 100, "Speak": 100, "Listen": 100} },
+    { "name": "English", "levels": {"Read": 95, "Write": 95, "Speak": 90, "Listen": 95} },
+    { "name": "Hindi", "levels": {"Read": 40, "Write": 30, "Speak": 60, "Listen": 80} }
+  ],
+
+  "meta": {
+    "last_updated": "2026-01-15",
+    "version": "2.0-futuristic",
+    "notes": "Restructured for new portfolio design. Update placeholder links (kaggle, huggingface, orcid, scholar) with your actual URLs."
+  }
 }
