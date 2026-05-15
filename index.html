@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Saib Hossain - AI Researcher specializing in medical imaging, lung cancer screening, and generative AI"/>
+  <meta name="description" content="MD Saib Hossain - AI Engineer & ML Researcher building safe, intelligent systems for healthcare and automation"/>
   <meta name="theme-color" content="#0a0a1a"/>
   
-  <title>Saib Hossain | AI Research Portfolio</title>
+  <title>MD Saib Hossain | AI Engineer • ML Researcher</title>
   
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Critical CSS Inline -->
   <style>
-    :root{--bg:#0a0a1a;--surface:rgba(30,30,60,0.7);--primary:#6366f1;--accent:#06b6d4;--text:#e2e8f0;--text-muted:#94a3b8}
+    :root{--bg:#0a0a1a;--surface:rgba(30,30,60,0.7);--primary:#6366f1;--accent:#06b6d4;--text:#e2e8f0;--text-muted:#94a3b8;--success:#10b981;--border:rgba(255,255,255,0.1)}
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
     .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:0.75rem 1.5rem;background:var(--primary);color:#fff;z-index:10000;border-radius:10px;font-weight:600}
+    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:0.75rem 1.5rem;background:var(--primary);color:#fff;z-index:10000;border-radius:10px;font-weight:600;text-decoration:none}
     .container{max-width:1200px;margin:0 auto;padding:0 2rem}
-    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+    .section{padding:6rem 0;position:relative}
+    .text-gradient{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .text-muted{color:var(--text-muted)}
+    .glass-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:transform 0.3s ease,box-shadow 0.3s ease;backdrop-filter:blur(10px)}
+    .glass-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.3);border-color:var(--primary)}
+    .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 1.75rem;border-radius:12px;font-weight:600;text-decoration:none;transition:all 0.2s ease;border:2px solid transparent;cursor:pointer}
+    .btn-primary{background:linear-gradient(135deg,var(--primary),#818cf8);color:#fff}
+    .btn-primary:hover{box-shadow:0 0 20px rgba(99,102,241,0.5);transform:translateY(-2px)}
+    .btn-outline{background:transparent;border-color:var(--primary);color:var(--primary)}
+    .btn-outline:hover{background:rgba(99,102,241,0.1)}
+    .badge{display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(16,185,129,0.15);color:var(--success);border-radius:20px;font-size:0.875rem;font-weight:500;border:1px solid rgba(16,185,129,0.3)}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+    @media(max-width:768px){.section{padding:4rem 0}.container{padding:0 1.5rem}}
   </style>
   
   <!-- Shared CSS -->
@@ -29,132 +43,235 @@
   <link rel="stylesheet" href="assets/css/layout.css"/>
   <link rel="stylesheet" href="assets/css/animations.css"/>
   
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"MD Saib Hossain","jobTitle":"AI Engineer | AI/ML Researcher","url":"https://saibhossain.dev","image":"https://saibhossain.dev/assets/images/profile.jpg","sameAs":["https://linkedin.com/in/saibhossain","https://github.com/Saibhossain"],"worksFor":{"@type":"Organization","name":"FireAI (Betopia Group)"},"researchInterest":["Agentic AI","LLM Safety","Medical Imaging AI","RAG Systems"]}
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
   
-  <!-- Header Placeholder (loaded via JS) -->
+  <!-- Header loaded via JS -->
   <header id="header-placeholder"></header>
   
   <main id="main">
-    <!-- Hero Section -->
-    <section class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-content fade-in-up">
-          <h1 class="hero-title">
-            <span class="gradient-text" id="hero-name">Saib Hossain</span>
-          </h1>
-          <p class="hero-subtitle" id="hero-title">AI Researcher | Medical Imaging</p>
-          <p class="hero-bio" id="hero-bio">Building Agentic AI systems for lung cancer screening using deep learning on CT imaging.</p>
-          
-          <div class="hero-actions">
-            <a href="pages/projects/index.html" class="btn btn-primary">View Projects</a>
-            <a href="pages/contact/index.html" class="btn btn-outline">Get in Touch</a>
-          </div>
-          <span id="status-badge" class="status-badge"></span>
-        </div>
+    
+    <!-- 🎯 Hero Section: Animated Entrance -->
+    <section class="hero-section" id="hero" aria-label="Introduction">
+      <div class="spinning-bg" aria-hidden="true"></div>
+      
+      <div class="container hero-content">
+        <!-- Name: Letter-by-letter animation -->
+        <h1 class="hero-name" id="animated-name" aria-label="MD Saib Hossain">
+          <span class="letter" data-index="0">M</span><span class="letter" data-index="1">D</span>
+          <span class="letter" data-index="2">&nbsp;</span>
+          <span class="letter" data-index="3">S</span><span class="letter" data-index="4">a</span><span class="letter" data-index="5">i</span><span class="letter" data-index="6">b</span>
+          <span class="letter" data-index="7">&nbsp;</span>
+          <span class="letter" data-index="8">H</span><span class="letter" data-index="9">o</span><span class="letter" data-index="10">s</span><span class="letter" data-index="11">s</span><span class="letter" data-index="12">a</span><span class="letter" data-index="13">i</span><span class="letter" data-index="14">n</span><span class="letter" data-index="15">.</span>
+        </h1>
         
-        <div class="hero-image fade-in-up delay-1">
-          <div class="profile-glow float">
+        <!-- Title -->
+        <p class="hero-title">AI Engineer | AI/ML Researcher</p>
+        
+        <!-- Profile Image: Slow fade-in -->
+        <div class="hero-image-wrapper">
+          <div class="profile-glow">
             <picture>
-              <source srcset="assets/images/photo.jpg" type="image/webp">
-              <img src="assets/images/profile.jpg" alt="Saib Hossain" class="profile-pic" width="280" height="280" loading="eager"/>
+              <source srcset="assets/images/profile.jpg" type="image/avif">
+              <source srcset="assets/images/profile.jpg" type="image/webp">
+              <img src="assets/images/profile.jpg" alt="MD Saib Hossain" class="profile-pic fade-in-slow" width="380" height="280" loading="eager"/>
             </picture>
           </div>
         </div>
+        
+        <!-- Tagline under image (citation style) -->
+        <blockquote class="hero-tagline fade-in-delayed">
+          <p>"Teaching computers to think, so humans can focus on dreaming."</p>
+          <cite>— MD Saib Hossain</cite>
+        </blockquote>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-arrow"></span>
       </div>
     </section>
+
+      <div class="funny-column scroll-reveal-left">
+        <h3 class="funny-title">  "</h3>
+        <ul class="funny-list">
+          
+          <li class="funny-item">"Being an AI engineer means I'm basically a kindergarten teacher for robots—I spend hours telling them to play nice and asking them to please stop making things up."</li>
+          
+        </ul>
+      </div>
     
-    <!-- Quick Links Section -->
-    <section class="section">
+    <!-- 📖 About Me Section: Scroll-triggered fade -->
+    <section class="about-section section scroll-reveal-up" id="about" aria-labelledby="about-heading">
       <div class="container">
-        <h2 class="section-title fade-in-up">Explore</h2>
-        <div class="quick-links-grid" id="quick-links">
-          <!-- Populated from global.json -->
+        <div class="about-content">
+          <blockquote class="quote-mark">"</blockquote>
+          <h2 id="about-heading" class="section-title text-gradient">About Me</h2>
+          <p class="about-text">My name is <strong>MD Saib Hossain</strong>, and I am a builder of digital brains. As an AI Engineer, my job is to teach computers how to read, see, and understand the world just like humans do. Instead of just writing regular code, I create smart virtual assistants that can chat, answer questions, and solve complex puzzles on their own.</p>
+          <p class="about-text">I am highly passionate about making sure these computer brains are safe, friendly, and actually helpful to everyday people. Beyond just technology, I care deeply about using my skills to help communities grow, especially in important areas like health and education. Whether I am designing a new smart system or volunteering for social work, my goal is always to make the future a little bit brighter and a lot more intelligent.</p>
+          <blockquote class="quote-mark quote-end">"</blockquote>
+          
+          <!-- SINGLE FUNNY LINE (Added after About Me) -->
+          <blockquote class="funny-line-post-about scroll-reveal-center">
+            "Being an AI engineer means I'm basically a kindergarten teacher for robots—I spend hours telling them to play nice and asking them to please stop making things up."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Ongoing Research -->
+    <section class="research-section section scroll-reveal-up" id="research" aria-labelledby="research-heading">
+      <div class="container">
+        <h2 id="research-heading" class="section-title">Ongoing Research</h2>
+        <div class="research-grid-single">
+          <div class="research-card glass-card">
+            <h4 class="research-title">Prompt Injection is an Authorization Problem</h4>
+            <p class="research-desc">Cryptographic provenance framework for secure agentic workflows. <strong>Submitted to NeurIPS</strong> • Under Review</p>
+            <a href="#" class="research-link" data-modal="research-1">Click here to show more details →</a>
+          </div>
+          <div class="research-card glass-card">
+            <h4 class="research-title">COAST: Clinical Oncology Architecture</h4>
+            <p class="research-desc">Survival prediction model integrating deep learning with clinical data using Cox Proportional Hazards. <strong>Q1 Journal Prep</strong> • UIU Funded</p>
+            <a href="#" class="research-link" data-modal="research-2">Click here to show more details →</a>
+          </div>
+          <div class="research-cta">
+            <a href="pages/publications/index.html" class="btn btn-primary">ALL Research</a>
+          </div>
         </div>
       </div>
     </section>
     
-    <!-- Connect Section -->
-    <section class="section">
+    <!-- 📊 Progress: Ongoing Projects -->
+    <section class="projects-section section" id="projects" aria-labelledby="projects-heading">
       <div class="container">
-        <h2 class="section-title fade-in-up">Connect</h2>
-        <div class="links-grid" id="links-container">
-          <!-- Populated from global.json -->
+        <h2 id="projects-heading" class="section-title fade-in-up">Ongoing Projects</h2>
+        
+        <div class="projects-grid">
+          <!-- Project 1 with Progress Bar -->
+          <div class="project-card glass-card scroll-reveal-up">
+            <div class="project-header">
+              <h4 class="project-title">Self-Reflective RAG System</h4>
+              <span class="project-status badge">🔄 In Development</span>
+            </div>
+            <p class="project-desc">Autonomous RAG with query rewriting, hallucination detection, and answer validation using LangGraph & OpenAI.</p>
+            
+            <!-- Progress Bar -->
+            <div class="progress-container">
+              <div class="progress-label">
+                <span>Development Progress</span>
+                <span class="progress-value">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:75%" data-progress="75"></div>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span class="tech-tag">LangGraph</span>
+              <span class="tech-tag">RAG</span>
+              <span class="tech-tag">OpenAI</span>
+            </div>
+            <a href="https://github.com/Saibhossain/self_rag_system" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+          </div>
+          
+          <!-- Project 2 with Progress Bar -->
+          <div class="project-card glass-card scroll-reveal-up">
+            <div class="project-header">
+              <h4 class="project-title">Agentic AI Technical Interviewer</h4>
+              <span class="project-status badge">🚀 Beta Testing</span>
+            </div>
+            <p class="project-desc">Autonomous AI interviewer that parses resumes, generates assessments, and conducts stateful technical conversations.</p>
+            
+            <!-- Progress Bar -->
+            <div class="progress-container">
+              <div class="progress-label">
+                <span>Development Progress</span>
+                <span class="progress-value">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:90%" data-progress="90"></div>
+              </div>
+            </div>
+            
+            <div class="project-tech">
+              <span class="tech-tag">Agentic AI</span>
+              <span class="tech-tag">LLM</span>
+              <span class="tech-tag">PDF Parsing</span>
+            </div>
+            <a href="https://github.com/Saibhossain/Interview-agent" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+          </div>
+        </div>
+        
+        <div class="projects-cta">
+          <a href="pages/projects/index.html" class="btn btn-outline">View All Projects</a>
         </div>
       </div>
     </section>
+    
+    <!-- 🚀 Startup Section: Praxic Intelligence -->
+    <section class="startup-section section scroll-reveal-center" id="startup" aria-labelledby="startup-heading">
+      <div class="container">
+        <div class="startup-content glass-card scroll-reveal-center">
+          <div class="startup-logo">
+            <!-- Replace with actual Praxic Intelligence logo -->
+            <div class="logo-placeholder">
+              <span class="logo-icon">🧠</span>
+              <span class="logo-text">Praxic Intelligence</span>
+            </div>
+          </div>
+          <h3 id="startup-heading" class="startup-title">Building the Future of Agentic AI</h3>
+          <p class="startup-desc">
+            Praxic Intelligence is my startup focused on developing production-ready agentic AI systems for enterprise workflow automation, with emphasis on security, scalability, and real-world impact.
+          </p>
+          <a href="#" class="btn btn-primary startup-cta">Explore our product →</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 🤝 Collaboration Section -->
+    <section class="collab-section section scroll-reveal-center" id="collaborate" aria-labelledby="collab-heading">
+      <div class="container">
+        <div class="collab-content scroll-reveal-center">
+          <h2 id="collab-heading" class="section-title text-gradient">Let's Collaborate</h2>
+          <p class="collab-text">
+            Interested in research collaboration, clinical AI deployment, or agentic system design? I'm open to academic partnerships and impactful industry projects.
+          </p>
+          <div class="collab-actions">
+            <a href="pages/contact/index.html" class="btn btn-primary">Get in Touch</a>
+            <a href="https://www.linkedin.com/in/saib-hossain-182834229/" target="_blank" rel="noopener" class="btn btn-outline">
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:saibhossain5@gmail.com" class="btn btn-outline">
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
   </main>
   
-  <!-- Footer Placeholder (loaded via JS) -->
+  <!-- Footer loaded via JS -->
   <footer id="footer-placeholder"></footer>
   
-  <!-- Shared JS -->
+  <!-- Shared Scripts -->
   <script src="assets/js/core/config.js"></script>
   <script src="assets/js/core/utils.js"></script>
   <script src="assets/js/core/nav.js"></script>
-  <script src="assets/js/components/links.js"></script>
   
-  <!-- Home Page Script -->
-    <!-- Home Page Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      // Load global data and store globally for footer use
-      const globalData = await fetchJSON('global.json');
-      if (!globalData) {
-        console.warn('Could not load global.json');
-        return;
-      }
-      
-      // Store globally so footer script can access it
-      window.__globalData = globalData;
-      
-      // Populate hero section
-      if (globalData.meta) {
-        setText('hero-name', globalData.meta.name);
-        setText('hero-title', globalData.meta.title);
-        setText('hero-bio', globalData.meta.bio || 'Building impactful AI solutions.');
-        
-        const badge = document.getElementById('status-badge');
-        if (badge && globalData.meta.status) {
-          badge.textContent = globalData.meta.status;
-          badge.style.display = 'inline-flex';
-        }
-      }
-      
-      // Render quick links
-      if (globalData.quickLinks) {
-        const container = document.getElementById('quick-links');
-        globalData.quickLinks.forEach((link, i) => {
-          const card = document.createElement('a');
-          card.href = link.href;
-          card.className = 'quick-link-card glass-card fade-in-up';
-          card.style.animationDelay = `${i * 0.05}s`;
-          card.innerHTML = `
-            <div class="quick-link-icon">${link.icon || '🔗'}</div>
-            <div class="quick-link-content">
-              <h4>${link.label}</h4>
-              <p class="text-muted">${link.desc || ''}</p>
-            </div>
-          `;
-          container.appendChild(card);
-        });
-      }
-      
-      // Render connect links in main content
-      if (globalData.links) {
-        renderLinksGrid('links-container', globalData.links);
-        // Also render in footer (nav.js will call this after footer loads)
-        renderFooterLinks('footer-links', globalData.links);
-      }
-      
-      // Initialize scroll animations
-      if (typeof initScrollAnimations === 'function') {
-        initScrollAnimations('.fade-in-up');
-      }
-    });
-  </script>
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

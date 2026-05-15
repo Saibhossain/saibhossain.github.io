@@ -1,33 +1,279 @@
 {
   "meta": {
-    "name": "Saib Hossain",
-    "title": "AI Researcher | Medical Imaging & Generative AI",
+    "name": "MD Saib Hossain",
+    "title": "AI Researcher • Medical Imaging • Agentic AI Systems",
+    "bio": "Building clinically deployable AI for lung cancer screening using deep learning on CT imaging. Published in IEEE ICCIT 2025. Developing secure, multi-agent workflows with cryptographic provenance for LLM safety.",
+    "status": "✓ IEEE ICCIT 2025 Published",
+    "location": "Dhaka, Bangladesh",
     "email": "saibhossain5@gmail.com",
-    "location": "Bangladesh · Remote-First"
+    "phone": "+880 1769-918015",
+    "profileImage": {
+      "src": "assets/images/profile.jpg",
+      "webp": "assets/images/photo.webp",
+      "avif": "assets/images/photo.avif",
+      "alt": "MD Saib Hossain, AI Researcher"
+    }
   },
-  "links": {
+  "social": {
+    "linkedin": "https://linkedin.com/in/saibhossain",
     "github": "https://github.com/Saibhossain",
-    "linkedin": "https://linkedin.com/in/saib-hossain-182834229/",
-    "email": "mailto:saibhossain5@gmail.com",
-    "kaggle": "https://kaggle.com/your-username",
-    "huggingface": "https://huggingface.co/your-username",
-    "orcid": "https://orcid.org/your-id",
-    "scholar": "https://scholar.google.com/citations?user=xxx"
-  },
-  "skills": {
-    "Agentic AI": [
-      {"name": "LangGraph", "level": 95},
-      {"name": "Multi-Agent Systems", "level": 90}
-    ],
-    "Deep Learning": [
-      {"name": "PyTorch", "level": 95},
-      {"name": "GANs/Diffusion", "level": 90}
-    ]
+    "scholar": "https://scholar.google.com/citations?user=XXXXX",
+    "email": "mailto:saibhossain5@gmail.com"
   },
   "quickLinks": [
-    {"label": "About", "href": "/pages/about/", "icon": "👍🏻"},
-    {"label": "Projects", "href": "/pages/projects/", "icon": "👨🏼‍💻"},
-    {"label": "Research", "href": "/pages/research/", "icon": "🔬"},
-    {"label": "Contact", "href": "/pages/contact/", "icon": "📧"}
-  ]
+    {
+      "label": "Research",
+      "href": "#research",
+      "icon": "🔬",
+      "desc": "Medical Imaging, Agentic AI, LLM Safety"
+    },
+    {
+      "label": "Publications",
+      "href": "pages/publications/index.html",
+      "icon": "📚",
+      "desc": "IEEE ICCIT 2025 papers & preprints"
+    },
+    {
+      "label": "Projects",
+      "href": "pages/projects/index.html",
+      "icon": "💻",
+      "desc": "RAG, Agentic AI, CV, LLM fine-tuning"
+    },
+    {
+      "label": "Contact",
+      "href": "pages/contact/index.html",
+      "icon": "✉️",
+      "desc": "Collaboration & research inquiries"
+    }
+  ],
+  "researchInterests": [
+    {
+      "title": "Medical Imaging & Clinical AI",
+      "icon": "🏥",
+      "description": "Deep learning pipelines for CT-based lung cancer screening, radiomic feature extraction, and survival analysis using Cox models. Focus on clinical deployability and bias mitigation.",
+      "keywords": ["lung cancer screening", "CT imaging", "radiomics", "Cox model", "clinical AI"]
+    },
+    {
+      "title": "Agentic AI & Multi-Agent Systems",
+      "icon": "🤖",
+      "description": "Architecting autonomous multi-agent workflows with LLM orchestration for complex task automation. Emphasis on stateful reasoning, tool use, and production reliability.",
+      "keywords": ["agentic AI", "multi-agent", "LangGraph", "LLM orchestration", "workflow automation"]
+    },
+    {
+      "title": "LLM Safety & RAG Security",
+      "icon": "🔐",
+      "description": "Cryptographic provenance frameworks for secure agentic workflows. Hallucination detection, prompt injection defense, and retrieval-augmented generation reliability.",
+      "keywords": ["LLM safety", "RAG", "hallucination detection", "prompt injection", "cryptographic provenance"]
+    },
+    {
+      "title": "Applied ML & Data Systems",
+      "icon": "📊",
+      "description": "End-to-end ML pipelines: data harmonization, cross-domain generalization, model evaluation, and latency optimization for real-world deployment.",
+      "keywords": ["PyTorch", "data pipelines", "model evaluation", "cross-domain", "MLOps"]
+    }
+  ],
+  "publications": {
+    "accepted": [
+      {
+        "title": "Unifying Adult and Pediatric Domains: Multi-Dataset Deep Learning for Fracture Classification, Detection, and Segmentation",
+        "venue": "IEEE ICCIT 2025",
+        "type": "Conference Paper",
+        "authorRole": "First Author",
+        "link": "https://ieeexplore.ieee.org/document/11491681",
+        "doi": "10.1109/ICCIT64616.2025.11491681",
+        "summary": "Unified training pipeline harmonizing FracAtlas (adult) and GRAZPEDWRI-DX (pediatric) datasets. Achieved +3.8% AUC, +4.2% mAP, +2.7% Dice via ResNet-50, YOLOv8/v11, DeepLabV3.",
+        "tags": ["medical imaging", "multi-dataset", "fracture analysis", "cross-domain"],
+        "metrics": {
+          "classification_auc": "+3.8%",
+          "detection_map": "+4.2%",
+          "segmentation_dice": "+2.7%"
+        }
+      },
+      {
+        "title": "BanglaSign-Tutor: Interactive Sign Language Learning via Finger-Guided Feedback",
+        "venue": "IEEE ICCIT 2025",
+        "type": "Conference Paper",
+        "authorRole": "First Author",
+        "link": "https://ieeexplore.ieee.org/document/11491587",
+        "doi": "10.1109/ICCIT64616.2025.11491587",
+        "summary": "Computer vision + Gemma 3 LLM pipeline for BDSL recognition. 98.2% alphabet / 99.5% numeral accuracy. 56.43% reduction in learning latency via real-time haptic feedback.",
+        "tags": ["sign language", "computer vision", "LLM", "accessibility", "BDSL"],
+        "metrics": {
+          "alphabet_accuracy": "98.2%",
+          "numeral_accuracy": "99.5%",
+          "latency_reduction": "56.43%"
+        }
+      },
+      {
+        "title": "Urban Sustainability in Bangladesh: Satellite-Based Land Use & Air Pollution Analysis",
+        "venue": "IEEE ICCIT 2025",
+        "type": "Conference Paper",
+        "authorRole": "First Author",
+        "link": "https://ieeexplore.ieee.org/document/11490302",
+        "doi": "10.1109/ICCIT64616.2025.11490302",
+        "summary": "Google Earth Engine analysis of LULC and pollution trends (2019–2025). Comparative evaluation of six ML algorithms including Random Forest and XGBoost.",
+        "tags": ["remote sensing", "sustainability", "Google Earth Engine", "environmental AI"],
+        "metrics": {
+          "algorithms_compared": 6,
+          "time_span": "2019-2025",
+          "region": "Bangladesh"
+        }
+      }
+    ],
+    "underReview": [
+      {
+        "title": "Prompt Injection is an Authorization Problem: Cryptographic Provenance for Secure Agentic Workflows",
+        "venue": "NeurIPS (Submitted)",
+        "type": "Preprint",
+        "authorRole": "First Author",
+        "status": "Under Review",
+        "summary": "Proposes a security framework for LLM agents using cryptographic context validation to prevent prompt injection and ensure workflow integrity.",
+        "tags": ["LLM security", "prompt injection", "cryptography", "agentic AI", "authorization"]
+      },
+      {
+        "title": "COAST: Clinical Oncology Architecture for Survival Translation with Reliable Prediction and Clinical Decision Support",
+        "venue": "Q1 Journal (In Preparation)",
+        "type": "Manuscript",
+        "authorRole": "First Author",
+        "status": "In Preparation",
+        "funding": "UIU Funded Research Project",
+        "summary": "System architecture for a clinically deployable survival prediction model integrating deep learning features with clinical data using Cox Proportional Hazards framework.",
+        "tags": ["survival analysis", "clinical AI", "oncology", "Cox model", "decision support"]
+      }
+    ]
+  },
+  "featuredProjects": [
+    {
+      "title": "Self-RAG System",
+      "description": "Autonomous RAG with query rewriting, relevance grading, hallucination detection using LangGraph & OpenAI. Improves factual accuracy via self-reflection loops.",
+      "github": "https://github.com/Saibhossain/self_rag_system",
+      "tech": ["LangGraph", "LangSmith", "OpenAI", "RAG", "Hallucination Detection"],
+      "icon": "🔄",
+      "category": "RAG & LLM Systems"
+    },
+    {
+      "title": "Agentic Interviewer",
+      "description": "Autonomous AI interviewer that parses resumes, generates tailored assessments, and conducts stateful technical conversations with real-time evaluation.",
+      "github": "https://github.com/Saibhossain/Interview-agent",
+      "tech": ["Agentic AI", "LLM Orchestration", "PDF Parsing", "Stateful Conversations"],
+      "icon": "🎤",
+      "category": "Agentic AI"
+    },
+    {
+      "title": "MedAssist-LLM",
+      "description": "Fine-tuned Qwen2.5-0.5B medical QA model optimized for fully offline inference on iPhone X. Edge-deployable clinical decision support.",
+      "github": "https://github.com/Saibhossain/MedAssist-LLM-iPhone",
+      "tech": ["Qwen2.5", "Medical QA", "Edge AI", "On-Device Inference", "iOS"],
+      "icon": "📱",
+      "category": "Edge AI & Healthcare"
+    },
+    {
+      "title": "Eye-of-LLM",
+      "description": "Autonomous vision agent using YOLOv11 and Gemini 2.5 Flash. Real-time object segmentation from camera feed routed to LLM for context-aware identification.",
+      "github": "https://github.com/Saibhossain/Eye-of-LLM",
+      "tech": ["YOLOv11", "Gemini 2.5 Flash", "Real-time CV", "Vision-Language"],
+      "icon": "👁️",
+      "category": "Vision + LLM"
+    },
+    {
+      "title": "Synthetic Face Generation",
+      "description": "StyleGAN2 and Stable Diffusion XL pipeline for synthetic face dataset generation to address data scarcity in facial analysis tasks.",
+      "github": "https://github.com/Saibhossain/synthetic-faces",
+      "tech": ["StyleGAN2", "Stable Diffusion XL", "Data Augmentation", "GANs"],
+      "icon": "🎭",
+      "category": "Generative AI"
+    }
+  ],
+  "connectLinks": [
+    {
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/saibhossain",
+      "icon": "in",
+      "desc": "Professional network & updates"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/Saibhossain",
+      "icon": "github",
+      "desc": "Code, projects & contributions"
+    },
+    {
+      "label": "Google Scholar",
+      "href": "https://scholar.google.com/citations?user=XXXXX",
+      "icon": "🎓",
+      "desc": "Publications & citations"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:saibhossain5@gmail.com",
+      "icon": "✉️",
+      "desc": "Direct collaboration inquiries"
+    },
+    {
+      "label": "IEEE Xplore",
+      "href": "https://ieeexplore.ieee.org/author/37088589400",
+      "icon": "📄",
+      "desc": "Published conference papers"
+    }
+  ],
+  "experience": {
+    "current": [
+      {
+        "role": "AI Engineer",
+        "company": "FireAI (Betopia Group)",
+        "period": "Apr 2026 – May 2026",
+        "focus": "Building next-gen agentic AI systems for production workflow automation using Python and LLM orchestration."
+      },
+      {
+        "role": "Research Assistant",
+        "company": "Institute of Advanced Research (IAR) - UIU",
+        "period": "Nov 2025 – Present",
+        "focus": "Deep learning pipelines for medical image analysis, radiomic feature extraction, and clinical AI governance research."
+      }
+    ]
+  },
+  "education": {
+    "degree": "BSc in Computer Science and Engineering",
+    "institution": "United International University",
+    "location": "Dhaka, Bangladesh",
+    "period": "Feb 2022 – Oct 2026 (Expected)",
+    "cgpa": "3.45"
+  },
+  "badges": [
+    {
+      "text": "✓ IEEE ICCIT 2025 Published",
+      "type": "success",
+      "priority": 1
+    },
+    {
+      "text": "✓ NeurIPS Submission",
+      "type": "info",
+      "priority": 2
+    },
+    {
+      "text": "✓ UIU Funded Research",
+      "type": "warning",
+      "priority": 3
+    }
+  ],
+  "seo": {
+    "keywords": [
+      "AI researcher",
+      "medical imaging AI",
+      "lung cancer screening",
+      "agentic AI",
+      "LLM safety",
+      "RAG systems",
+      "deep learning",
+      "CT scan analysis",
+      "IEEE ICCIT",
+      "NeurIPS",
+      "clinical AI",
+      "multi-agent systems"
+    ],
+    "ogImage": "https://saibhossain.dev/assets/images/og-preview.jpg",
+    "canonicalUrl": "https://saibhossain.dev"
+  },
+  "lastUpdated": "2026-05-15T00:00:00Z",
+  "version": "1.0.0"
 }

@@ -1,0 +1,62 @@
+{
+  "stats_config": {
+    "conference_tiers": ["IEEE ICCIT 2025"],
+    "journal_quarters": ["Q1", "Q2", "Q3", "Q4"],
+    "indexing_tags": ["Scopus", "Web of Science", "IEEE Xplore"]
+  },
+  "papers": {
+    "conferences": [
+      {
+        "title": "Unifying Adult and Pediatric Domains: Multi-Dataset Deep Learning for Fracture Classification, Detection, and Segmentation",
+        "venue": "IEEE ICCIT 2025",
+        "year": 2025,
+        "tier": "Core",
+        "index": ["Scopus", "IEEE Xplore"],
+        "link": "https://ieeexplore.ieee.org/document/11491681",
+        "description": "Unified training pipeline harmonizing FracAtlas (adult) and GRAZPEDWRI-DX (pediatric) datasets. Achieved gains in Classification AUC (+3.8%), Detection mAP (+4.2%), and Segmentation Dice (+2.7%).",
+        "image": null
+      },
+      {
+        "title": "BanglaSign-Tutor: An Interactive Bangla Sign Language Learning System via Finger-Guided Feedback",
+        "venue": "IEEE ICCIT 2025",
+        "year": 2025,
+        "tier": "Core",
+        "index": ["Scopus", "IEEE Xplore"],
+        "link": "https://ieeexplore.ieee.org/document/11491587",
+        "description": "Combined Computer Vision with LLM (Gemma 3) pipeline for BDSL hand-sign recognition. 98.2% alphabet accuracy, 99.5% numeral accuracy. 56.43% reduction in learning latency.",
+        "image": null
+      },
+      {
+        "title": "Urban Sustainability in Bangladesh: Satellite-Based Analysis of Land Use and Air Pollution Trends",
+        "venue": "IEEE ICCIT 2025",
+        "year": 2025,
+        "tier": "Core",
+        "index": ["Scopus", "IEEE Xplore"],
+        "link": "https://ieeexplore.ieee.org/document/11490302",
+        "description": "Google Earth Engine analysis of LULC and pollution trends (2019–2025). Comparative evaluation of six ML algorithms including Random Forest and XGBoost.",
+        "image": null
+      }
+    ],
+    "journals": [],
+    "ongoing": [
+      {
+        "title": "Prompt Injection is an Authorization Problem: Cryptographic Provenance for Secure Agentic Workflows",
+        "venue": "NeurIPS",
+        "tier": "A*",
+        "status": "under_review",
+        "progress_stage": 60,
+        "description": "Security framework for LLM agents using cryptographic context validation to prevent prompt injection and ensure workflow integrity.",
+        "funding": null
+      },
+      {
+        "title": "COAST: Clinical Oncology Architecture for Survival Translation with Reliable Prediction",
+        "venue": "Q1 Journal (In Preparation)",
+        "tier": "Q1",
+        "status": "writing_manuscript",
+        "progress_stage": 25,
+        "description": "System architecture for clinically deployable survival prediction integrating deep learning features with clinical data using Cox Proportional Hazards.",
+        "funding": "UIU Funded Research Project"
+      }
+    ]
+  }
+}
