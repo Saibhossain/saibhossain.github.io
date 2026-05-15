@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect | MD Saib Hossain</title>
+  <meta name="description" content="Get in touch with MD Saib Hossain for research collaborations, AI projects, or academic inquiries.">
+  
+  <!-- Unique Contact Page Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../assets/css/base.css"/>
+  <link rel="stylesheet" href="../../assets/css/components.css"/>
+  <link rel="stylesheet" href="../../assets/css/layout.css"/>
+  <link rel="stylesheet" href="../../assets/css/animations.css"/>
+  
+  <!-- Base styles (minimal override) -->
+  <link rel="stylesheet" href="../../assets/css/base.css"/>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg"/>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="contact-bg" aria-hidden="true">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="floating-shapes">
+      <span class="shape shape-1">✦</span>
+      <span class="shape shape-2">◈</span>
+      <span class="shape shape-3">✧</span>
+      <span class="shape shape-4">◉</span>
+    </div>
+  </div>
+
+  <header id="header-placeholder"></header>
+  
+  <main id="main" class="contact-main">
+    
+    <!-- Hero Section: Greeting + Profile -->
+    <section class="contact-hero" id="contact-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-greeting" id="greeting-text">
+            <span class="typewriter"></span><span class="cursor">|</span>
+          </h1>
+          <p class="hero-subtitle" id="hero-subtitle">I'm always open to research collaborations, technical discussions, or just a friendly chat about AI.</p>
+          
+          <!-- Mini Profile Card -->
+          <div class="profile-mini float-in">
+            <img src="../../assets/images/profile.jpg" alt="MD Saib Hossain" class="profile-avatar" loading="lazy">
+            <div class="profile-info">
+              <h3 id="profile-name">MD Saib Hossain</h3>
+              <p id="profile-role">AI Researcher • Medical Imaging • Agentic AI</p>
+              <p class="profile-location" id="profile-location">📍 Dhaka, Bangladesh</p>
+            </div>
+          </div>
+          
+          <!-- Availability Badge -->
+          <div class="availability-badge pulse" id="availability-status">
+            <span class="status-dot"></span>
+            <span id="status-text">Open to collaborations</span>
+            <small id="response-time">Usually replies within 24-48 hours</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Methods Grid -->
+    <section class="contact-methods section" id="contact-methods" aria-label="Contact Methods">
+      <div class="container">
+        
+        <!-- Primary Emails -->
+        <div class="methods-group" data-category="email">
+          <h2 class="group-title fade-in-up">✉️ Direct Contact</h2>
+          <div class="contact-grid" id="primary-contacts">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Social & Professional -->
+        <div class="methods-group" data-category="social">
+          <h2 class="group-title fade-in-up">🌐 Social & Professional</h2>
+          <div class="contact-grid" id="social-contacts">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+        <!-- Academic Profiles -->
+        <div class="methods-group" data-category="academic">
+          <h2 class="group-title fade-in-up">🎓 Academic Profiles</h2>
+          <div class="contact-grid" id="academic-contacts">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Quick Message Form (Optional) -->
+    <section class="contact-form-section section" id="contact-form-section" aria-label="Send a Message">
+      <div class="container">
+        <div class="form-card glass-card float-in-delayed">
+          <h2 class="form-title">Send a Quick Message</h2>
+          <p class="form-subtitle">Prefer to write? I'll get back to you soon.</p>
+          
+          <form id="quick-message-form" class="contact-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your Name" required class="form-input">
+              <input type="email" name="email" placeholder="Your Email" required class="form-input">
+            </div>
+            <textarea name="message" placeholder="Hi Saib, I'd like to discuss..." required class="form-textarea" id="message-input"></textarea>
+            <button type="submit" class="btn-send">
+              <span>Send Message</span>
+              <span class="send-icon">→</span>
+            </button>
+            <p class="form-note">🔒 Your information is never shared. Powered by Formspree.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="contact-footer" id="contact-footer">
+      <div class="container text-center">
+        <p class="footer-text">
+          Can't find what you're looking for? <a href="mailto:saibhossain5@gmail.com" class="footer-link">Email me directly</a>
+        </p>
+        <div class="social-mini" id="social-mini">
+          <!-- Mini social icons -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer-placeholder"></footer>
+
+  <!-- Contact Page Script -->
+  <script src="script.js" defer></script>
+  
+  <!-- Shared Core Scripts -->
+  <script src="../../assets/js/core/config.js"></script>
+  <script src="../../assets/js/core/utils.js"></script>
+  <script src="../../assets/js/core/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+{
+  "greeting": "Let's Connect",
+  "subtitle": "I'm always open to research collaborations, technical discussions, or just a friendly chat about AI.",
+  "profile": {
+    "name": "MD Saib Hossain",
+    "role": "AI Researcher • Medical Imaging • Agentic AI",
+    "location": "Dhaka, Bangladesh",
+    "avatar": "../../assets/images/profile.jpg"
+  },
+  "contact_methods": {
+    "primary": [
+      {
+        "id": "email1",
+        "label": "Primary Email",
+        "value": "saibhossain5@gmail.com",
+        "icon": "✉️",
+        "action": "mailto:saibhossain5@gmail.com",
+        "copyable": true,
+        "category": "email"
+      },
+      {
+        "id": "email2",
+        "label": "Research Email",
+        "value": "mhossain221450@bscse.uiu.ac.bd",
+        "icon": "🔬",
+        "action": "mhossain221450@bscse.uiu.ac.bd",
+        "copyable": true,
+        "category": "email"
+      }
+    ],
+    "social": [
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/saibhossain",
+        "icon": "🔗",
+        "action": "https://www.linkedin.com/in/saib-hossain-182834229/",
+        "color": "#0a66c2",
+        "category": "social"
+      },
+      {
+        "id": "github",
+        "label": "GitHub",
+        "value": "github.com/Saibhossain",
+        "icon": "git",
+        "action": "https://github.com/Saibhossain",
+        "color": "#333",
+        "category": "social"
+      },
+      {
+        "id": "kaggle",
+        "label": "Kaggle",
+        "value": "kaggle.com/saibhossain",
+        "icon": "𝐊",
+        "action": "https://www.kaggle.com/saibhossain",
+        "color": "#20beff",
+        "category": "social"
+      },
+      {
+        "id": "huggingface",
+        "label": "Hugging Face",
+        "value": "huggingface.co/Saibhossain",
+        "icon": "🤗",
+        "action": "https://huggingface.co/Saibhossain",
+        "color": "#ffd21e",
+        "category": "social"
+      },
+      {
+        "id": "facebook",
+        "label": "Facebook",
+        "value": "facebook.com/saib.hossain.ai",
+        "icon": "F",
+        "action": "https://www.facebook.com/saib.hossain.957534/",
+        "color": "#1877f2",
+        "category": "social"
+      }
+    ],
+    "academic": [
+      {
+        "id": "scholar",
+        "label": "Google Scholar",
+        "value": "scholar.google.com/citations?user=saibhossain",
+        "icon": "🎓",
+        "action": "https://scholar.google.com/citations?user=XXXXX",
+        "color": "#4285f4",
+        "category": "academic"
+      },
+      {
+        "id": "orcid",
+        "label": "ORCID ID",
+        "value": "orcid.org/0009-0004-2595-2742",
+        "icon": "🆔",
+        "action": "https://orcid.org/0009-0004-2595-2742",
+        "color": "#a6ce39",
+        "category": "academic"
+      },
+      {
+        "id": "scopes",
+        "label": "Scopus Author ID",
+        "value": "57223456789",
+        "icon": "🤧",
+        "action": "https://www.scopus.com/authid/detail.uri?authorId=57223456789",
+        "color": "#e9710f",
+        "category": "academic"
+      },
+      {
+        "id": "fiber",
+        "label": "Fiber Profile",
+        "value": "fiber.me/saibhossain",
+        "icon": "🤷",
+        "action": "https://fiber.me/saibhossain",
+        "color": "#6c5ce7",
+        "category": "social"
+      }
+    ]
+  },
+  "availability": {
+    "status": "Open to collaborations",
+    "response_time": "Usually replies within 24-48 hours",
+    "preferred_contact": "email1"
+  },
+  "quick_message": {
+    "enabled": true,
+    "placeholder": "Hi Saib, I'd like to discuss...",
+    "submit_endpoint": "https://formspree.io/f/your-form-id"
+  }
+}
