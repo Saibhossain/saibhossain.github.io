@@ -102,7 +102,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', async () => {
       // Load global data and store globally for footer use
-      const globalData = await fetchJSON('assets/data/global.json');
+      const globalData = await fetchJSON('global.json');
       if (!globalData) {
         console.warn('Could not load global.json');
         return;

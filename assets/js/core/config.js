@@ -7,23 +7,23 @@ window.PORTFOLIO_CONFIG = {
   basePath: window.location.hostname === 'localhost' ? '' : '/your-repo-name',
   
   assets: {
-    css: '/assets/css',
-    js: '/assets/js',
-    data: '/assets/data',
-    images: '/assets/images',
-    includes: '/includes'
+    css: '../../assets/css',
+    js: '../../assets/js',
+    data: '../../assets/data',
+    images: '../../assets/images',
+    includes: '../../includes'
   },
   
   // Page routes
   pages: {
     home: '/',
-    about: '/pages/about/',
-    research: '/pages/research/',
-    projects: '/pages/projects/',
-    experience: '/pages/experience/',
-    volunteering: '/pages/volunteering/',
-    startup: '/pages/startup/',
-    contact: '/pages/contact/'
+    about: '../../pages/about/',
+    research: '../../pages/research/',
+    projects: '../../pages/projects/',
+    experience: '../../pages/experience/',
+    volunteering: '../../pages/volunteering/',
+    startup: '../../pages/startup/',
+    contact: '../../pages/contact/'
   },
   
   // Features

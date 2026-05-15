@@ -25,9 +25,9 @@
     ]
   },
   "quickLinks": [
-    {"label": "About", "href": "/pages/about/", "icon": "user"},
-    {"label": "Projects", "href": "/pages/projects/", "icon": "code"},
-    {"label": "Research", "href": "/pages/research/", "icon": "microscope"},
-    {"label": "Contact", "href": "/pages/contact/", "icon": "mail"}
+    {"label": "About", "href": "/pages/about/", "icon": "👍🏻"},
+    {"label": "Projects", "href": "/pages/projects/", "icon": "👨🏼‍💻"},
+    {"label": "Research", "href": "/pages/research/", "icon": "🔬"},
+    {"label": "Contact", "href": "/pages/contact/", "icon": "📧"}
   ]
 }
