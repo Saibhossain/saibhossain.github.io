@@ -88,7 +88,7 @@
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 1.5rem;
 }
 
@@ -183,7 +183,7 @@
 /* --- Navigation CTAs --- */
 .nav-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 2rem;
 }
 
@@ -208,8 +208,19 @@
     margin-bottom: 1rem;
 }
 
-/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .padding-block {
+        padding: 2.5rem 0;
+    }
+
+    .about-page {
+        padding-top: 2rem;
+    }
+
     .split-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -221,6 +232,7 @@
     }
 
     .hero-section {
-        padding: 2rem 1rem;
+        padding: 2.5rem 1rem;
+        margin-bottom: 1rem;
     }
 }
