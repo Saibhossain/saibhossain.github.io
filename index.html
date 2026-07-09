@@ -1,136 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="MD Saib Hossain - AI Engineer & ML Researcher building safe, intelligent systems for healthcare and automation"/>
-  <meta name="theme-color" content="#0a0a1a"/>
-  
-  <title>MD Saib Hossain | AI Engineer • ML Researcher</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="theme-color" content="#0a0a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>MD Saib Hossain | AI Engineer & ML Researcher</title>
+  <meta name="description"
+    content="MD Saib Hossain - AI Engineer & ML Researcher specializing in clinically deployable Medical Imaging AI, safe Multi-Agent Systems, and LLM safety.">
+  <meta name="keywords"
+    content="MD Saib Hossain, Saib Hossain, AI Engineer, ML Researcher, AI Safety, Medical Imaging AI, Lung Cancer Screening, Radiomics, Agentic AI, Multi-Agent Systems, LLM Safety, Cryptographic Provenance, RAG Security, UIU, United International University, Betopia Group, FireAI">
+  <meta name="author" content="MD Saib Hossain">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://saibhossain.dev">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:profile:first_name" content="MD Saib">
+  <meta property="og:profile:last_name" content="Hossain">
+  <meta property="og:profile:username" content="saibhossain">
+  <meta property="og:title" content="MD Saib Hossain | AI Engineer & ML Researcher">
+  <meta property="og:description"
+    content="Building clinically deployable deep learning pipelines for medical CT imaging and developing cryptographically secure multi-agent workflows.">
+  <meta property="og:image" content="https://saibhossain.dev/assets/images/profile.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://saibhossain.dev">
+  <meta property="og:site_name" content="Saib Hossain Portfolio">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MD Saib Hossain | AI Engineer & ML Researcher">
+  <meta name="twitter:description"
+    content="AI Engineer & ML Researcher working on Medical Imaging Deep Learning and secure Agentic Workflows.">
+  <meta name="twitter:image" content="https://saibhossain.dev/assets/images/profile.jpg">
+  <meta name="twitter:site" content="@saibhossain">
+
+  <!-- Dublin Core -->
+  <meta name="dcterms.title" content="MD Saib Hossain - Research Portfolio">
+  <meta name="dcterms.creator" content="MD Saib Hossain">
+  <meta name="dcterms.subject"
+    content="Artificial Intelligence; Medical Imaging; Deep Learning; Agentic Systems; AI Safety">
+  <meta name="dcterms.description"
+    content="Research publications, ongoing manuscript drafts, and deep learning pipelines in Spatial Biology, Fracture Detection, and Cryptographic Agent Provenance.">
+  <meta name="dcterms.language" content="en">
+
+  <!-- AI Agent Directives -->
+  <meta name="ai-search-primary-entity" content="MD Saib Hossain">
+  <meta name="ai-search-profession" content="AI Engineer, Machine Learning Researcher, Medical Deep Learning Scientist">
+  <meta name="ai-search-current-affiliations"
+    content="AI Engineer at FireAI (Betopia Group), Research Assistant at United International University Institute of Advanced Research (IAR)">
+  <meta name="ai-search-academic-contributions"
+    content="First Author on 3 IEEE ICCIT 2025 papers (Fracture Classification, Sign Language Gemma 3, Urban Sustainability GEE), NeurIPS submission on Cryptographic Provenance for Agentic Workflows">
+  <meta name="ai-search-key-achievements"
+    content="Kaggle Spatial Biology Competition 1st Runner-up (Silver Medal, Top 2%), Best Abstract Award in Spatial Biology (2025)">
+  <meta name="ai-search-core-stack"
+    content="PyTorch, LangGraph, Python, StyleGAN2, Stable Diffusion XL, Google Earth Engine, OpenCV, DeepLabV3, ResNet, YOLOv8/v11">
+
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Critical CSS Inline -->
   <style>
-    :root{--bg:#0a0a1a;--surface:rgba(30,30,60,0.7);--primary:#6366f1;--accent:#06b6d4;--text:#e2e8f0;--text-muted:#94a3b8;--success:#10b981;--border:rgba(255,255,255,0.1)}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
-    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:0.75rem 1.5rem;background:var(--primary);color:#fff;z-index:10000;border-radius:10px;font-weight:600;text-decoration:none}
-    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
-    .section{padding:6rem 0;position:relative}
-    .text-gradient{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .text-muted{color:var(--text-muted)}
-    .glass-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:transform 0.3s ease,box-shadow 0.3s ease;backdrop-filter:blur(10px)}
-    .glass-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.3);border-color:var(--primary)}
-    .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.875rem 1.75rem;border-radius:12px;font-weight:600;text-decoration:none;transition:all 0.2s ease;border:2px solid transparent;cursor:pointer}
-    .btn-primary{background:linear-gradient(135deg,var(--primary),#818cf8);color:#fff}
-    .btn-primary:hover{box-shadow:0 0 20px rgba(99,102,241,0.5);transform:translateY(-2px)}
-    .btn-outline{background:transparent;border-color:var(--primary);color:var(--primary)}
-    .btn-outline:hover{background:rgba(99,102,241,0.1)}
-    .badge{display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(16,185,129,0.15);color:var(--success);border-radius:20px;font-size:0.875rem;font-weight:500;border:1px solid rgba(16,185,129,0.3)}
-    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-    @media(max-width:768px){.section{padding:4rem 0}.container{padding:0 1.5rem}}
+    :root {
+      --bg: #0a0a1a;
+      --surface: rgba(30, 30, 60, 0.7);
+      --primary: #6366f1;
+      --accent: #06b6d4;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+      --border: rgba(255, 255, 255, 0.1)
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      width: auto;
+      height: auto;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: #fff;
+      z-index: 10000;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem
+    }
+
+    .section {
+      padding: 6rem 0;
+      position: relative
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .text-muted {
+      color: var(--text-muted)
+    }
+
+    .glass-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px)
+    }
+
+    .glass-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border-color: var(--primary)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+      cursor: pointer
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #818cf8);
+      color: #fff
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+      transform: translateY(-2px)
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--primary);
+      color: var(--primary)
+    }
+
+    .btn-outline:hover {
+      background: rgba(99, 102, 241, 0.1)
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--success);
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border: 1px solid rgba(16, 185, 129, 0.3)
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important
+      }
+    }
+
+    @media(max-width:768px) {
+      .section {
+        padding: 4rem 0
+      }
+
+      .container {
+        padding: 0 1.5rem
+      }
+    }
   </style>
-  
+
   <!-- Shared CSS -->
-  <link rel="stylesheet" href="assets/css/base.css"/>
-  <link rel="stylesheet" href="assets/css/components.css"/>
-  <link rel="stylesheet" href="assets/css/layout.css"/>
-  <link rel="stylesheet" href="assets/css/animations.css"/>
-  
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
   <!-- Main CSS -->
-  <link rel="stylesheet" href="assets/css/main.css"/>
-  
+  <link rel="stylesheet" href="assets/css/main.css" />
+
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
-  
-  <!-- Structured Data -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Structured Data: JSON-LD Person & Academic Schema -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"MD Saib Hossain","jobTitle":"AI Engineer | AI/ML Researcher","url":"https://saibhossain.dev","image":"https://saibhossain.dev/assets/images/profile.jpg","sameAs":["https://linkedin.com/in/saibhossain","https://github.com/Saibhossain"],"worksFor":{"@type":"Organization","name":"FireAI (Betopia Group)"},"researchInterest":["Agentic AI","LLM Safety","Medical Imaging AI","RAG Systems"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://saibhossain.dev/#person",
+    "name": "MD Saib Hossain",
+    "givenName": "MD Saib",
+    "familyName": "Hossain",
+    "jobTitle": "AI Engineer & ML Researcher",
+    "url": "https://saibhossain.dev",
+    "image": "https://saibhossain.dev/assets/images/profile.jpg",
+    "email": "saibhossain5@gmail.com",
+    "telephone": "+8801769918015",
+    "gender": "http://schema.org/Male",
+    "nationality": {
+      "@type": "Country",
+      "name": "Bangladesh"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dhaka",
+      "addressCountry": "Bangladesh"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/saibhossain",
+      "https://github.com/Saibhossain",
+      "https://scholar.google.com/citations?user=zH0QciUAAAAJ&hl=en"
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "FireAI (Betopia Group)",
+        "url": "https://betopia.group",
+        "employee": {
+          "@type": "Person",
+          "name": "MD Saib Hossain",
+          "jobTitle": "AI Engineer"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "Institute of Advanced Research (IAR) - UIU",
+        "url": "https://iar.uiu.ac.bd",
+        "employee": {
+          "@type": "Person",
+          "name": "MD Saib Hossain",
+          "jobTitle": "Research Assistant"
+        }
+      }
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "United International University",
+      "url": "https://uiu.ac.bd",
+      "location": {
+        "@type": "Place",
+        "name": "Dhaka, Bangladesh"
+      }
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Medical Image Analysis",
+      "Agentic AI",
+      "Multi-Agent Systems",
+      "LLM Safety",
+      "Retrieval-Augmented Generation",
+      "Radiomics",
+      "Computer Vision",
+      "Spatial Biology"
+    ],
+    "award": [
+      "Kaggle Spatial Biology Competition 1st Runner-up (Silver Medal, Top 2%)",
+      "Best Abstract Award — Spatial Biology (2025)"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "Bachelor of Science in Computer Science and Engineering",
+        "about": "Computer Science and Engineering",
+        "recognizedBy": {
+          "@type": "EducationalOrganization",
+          "name": "United International University"
+        }
+      }
+    ]
+  }
   </script>
 </head>
+
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
-  
+
   <!-- Header loaded via JS -->
   <header id="header-placeholder"></header>
-  
+
   <main id="main">
-    
+
     <!-- 🎯 Hero Section: Animated Entrance -->
     <section class="hero-section" id="hero" aria-label="Introduction">
       <div class="spinning-bg" aria-hidden="true"></div>
-      
+
       <div class="container hero-content">
         <!-- Name: Letter-by-letter animation -->
         <h1 class="hero-name" id="animated-name" aria-label="MD Saib Hossain">
           <span class="letter" data-index="0">M</span><span class="letter" data-index="1">D</span>
           <span class="letter" data-index="2">&nbsp;</span>
-          <span class="letter" data-index="3">S</span><span class="letter" data-index="4">a</span><span class="letter" data-index="5">i</span><span class="letter" data-index="6">b</span>
+          <span class="letter" data-index="3">S</span><span class="letter" data-index="4">a</span><span class="letter"
+            data-index="5">i</span><span class="letter" data-index="6">b</span>
           <span class="letter" data-index="7">&nbsp;</span>
-          <span class="letter" data-index="8">H</span><span class="letter" data-index="9">o</span><span class="letter" data-index="10">s</span><span class="letter" data-index="11">s</span><span class="letter" data-index="12">a</span><span class="letter" data-index="13">i</span><span class="letter" data-index="14">n</span><span class="letter" data-index="15">.</span>
+          <span class="letter" data-index="8">H</span><span class="letter" data-index="9">o</span><span class="letter"
+            data-index="10">s</span><span class="letter" data-index="11">s</span><span class="letter"
+            data-index="12">a</span><span class="letter" data-index="13">i</span><span class="letter"
+            data-index="14">n</span><span class="letter" data-index="15">.</span>
         </h1>
-        
+
         <!-- Title -->
-        <p class="hero-title">AI Engineer | AI/ML Researcher</p>
-        
+        <p class="hero-title" id="hero-typing-text">AI Engineer | Researcher</p>
+
         <!-- Profile Image: Slow fade-in -->
         <div class="hero-image-wrapper">
           <div class="profile-glow">
             <picture>
               <source srcset="assets/images/profile.jpg" type="image/avif">
               <source srcset="assets/images/profile.jpg" type="image/webp">
-              <img src="assets/images/profile.jpg" alt="MD Saib Hossain" class="profile-pic fade-in-slow" width="380" height="280" loading="eager"/>
+              <img src="assets/images/profile.jpg" alt="MD Saib Hossain" class="profile-pic fade-in-slow" width="380"
+                height="280" loading="eager" />
             </picture>
           </div>
         </div>
-        
+
         <!-- Tagline under image (citation style) -->
         <blockquote class="hero-tagline fade-in-delayed">
           <p>"Teaching computers to think, so humans can focus on dreaming."</p>
           <cite>— MD Saib Hossain</cite>
         </blockquote>
       </div>
-      
+
       <!-- Scroll indicator -->
       <div class="scroll-hint" aria-hidden="true">
         <span class="scroll-arrow"></span>
       </div>
     </section>
 
-      <div class="funny-column scroll-reveal-left">
-        <h3 class="funny-title">  "</h3>
-        <ul class="funny-list">
-          
-          <li class="funny-item">"Being an AI engineer means I'm basically a kindergarten teacher for robots—I spend hours telling them to play nice and asking them to please stop making things up."</li>
-          
-        </ul>
-      </div>
-    
+    <div class="funny-column scroll-reveal-left">
+      <h3 class="funny-title"> "</h3>
+      <ul class="funny-list">
+
+        <li class="funny-item">"Being an AI engineer means I'm basically a kindergarten teacher for robots—I spend hours
+          telling them to play nice and asking them to please stop making things up."</li>
+
+      </ul>
+    </div>
+
     <!-- 📖 About Me Section: Scroll-triggered fade -->
     <section class="about-section section scroll-reveal-up" id="about" aria-labelledby="about-heading">
       <div class="container">
         <div class="about-content">
           <blockquote class="quote-mark">"</blockquote>
           <h2 id="about-heading" class="section-title text-gradient">About Me</h2>
-          <p class="about-text">My name is <strong>MD Saib Hossain</strong>, and I am a builder of digital brains. As an AI Engineer, my job is to teach computers how to read, see, and understand the world just like humans do. Instead of just writing regular code, I create smart virtual assistants that can chat, answer questions, and solve complex puzzles on their own.</p>
-          <p class="about-text">I am highly passionate about making sure these computer brains are safe, friendly, and actually helpful to everyday people. Beyond just technology, I care deeply about using my skills to help communities grow, especially in important areas like health and education. Whether I am designing a new smart system or volunteering for social work, my goal is always to make the future a little bit brighter and a lot more intelligent.</p>
+          <p class="about-text">My name is <strong>MD Saib Hossain</strong>, and I am a builder of digital brains. As an
+            AI Engineer, my job is to teach computers how to read, see, and understand the world just like humans do.
+            Instead of just writing regular code, I create smart virtual assistants that can chat, answer questions, and
+            solve complex puzzles on their own.</p>
+          <p class="about-text">I am highly passionate about making sure these computer brains are safe, friendly, and
+            actually helpful to everyday people. Beyond just technology, I care deeply about using my skills to help
+            communities grow, especially in important areas like health and education. Whether I am designing a new
+            smart system or volunteering for social work, my goal is always to make the future a little bit brighter and
+            a lot more intelligent.</p>
           <blockquote class="quote-mark quote-end">"</blockquote>
-          
+
           <!-- SINGLE FUNNY LINE (Added after About Me) -->
           <blockquote class="funny-line-post-about scroll-reveal-center">
-            "Being an AI engineer means I'm basically a kindergarten teacher for robots—I spend hours telling them to play nice and asking them to please stop making things up."
+            "Being an AI engineer means I'm basically a kindergarten teacher for robots—I spend hours telling them to
+            play nice and asking them to please stop making things up."
           </blockquote>
         </div>
       </div>
     </section>
 
-    
+
     <!-- Ongoing Research -->
     <section class="research-section section scroll-reveal-up" id="research" aria-labelledby="research-heading">
       <div class="container">
@@ -138,26 +427,28 @@
         <div class="research-grid-single">
           <div class="research-card glass-card">
             <h4 class="research-title">Prompt Injection is an Authorization Problem</h4>
-            <p class="research-desc">Cryptographic provenance framework for secure agentic workflows. <strong>Submitted to NeurIPS</strong> • Under Review</p>
+            <p class="research-desc">Cryptographic provenance framework for secure agentic workflows. <strong>Submitted
+                to NeurIPS</strong> • Under Review</p>
             <a href="#" class="research-link" data-modal="research-1">Click here to show more details →</a>
           </div>
           <div class="research-card glass-card">
             <h4 class="research-title">COAST: Clinical Oncology Architecture</h4>
-            <p class="research-desc">Survival prediction model integrating deep learning with clinical data using Cox Proportional Hazards. <strong>Q1 Journal Prep</strong> • UIU Funded</p>
+            <p class="research-desc">Survival prediction model integrating deep learning with clinical data using Cox
+              Proportional Hazards. <strong>Q1 Journal Prep</strong> • UIU Funded</p>
             <a href="#" class="research-link" data-modal="research-2">Click here to show more details →</a>
           </div>
           <div class="research-cta">
-            <a href="pages/publications/index.html" class="btn btn-primary">ALL Research</a>
+            <a href="pages/research/index.html" class="btn btn-primary">ALL Research</a>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- 📊 Progress: Ongoing Projects -->
     <section class="projects-section section" id="projects" aria-labelledby="projects-heading">
       <div class="container">
         <h2 id="projects-heading" class="section-title fade-in-up">Ongoing Projects</h2>
-        
+
         <div class="projects-grid">
           <!-- Project 1 with Progress Bar -->
           <div class="project-card glass-card scroll-reveal-up">
@@ -165,8 +456,9 @@
               <h4 class="project-title">Self-Reflective RAG System</h4>
               <span class="project-status badge">🔄 In Development</span>
             </div>
-            <p class="project-desc">Autonomous RAG with query rewriting, hallucination detection, and answer validation using LangGraph & OpenAI.</p>
-            
+            <p class="project-desc">Autonomous RAG with query rewriting, hallucination detection, and answer validation
+              using LangGraph & OpenAI.</p>
+
             <!-- Progress Bar -->
             <div class="progress-container">
               <div class="progress-label">
@@ -177,23 +469,25 @@
                 <div class="progress-fill" style="width:75%" data-progress="75"></div>
               </div>
             </div>
-            
+
             <div class="project-tech">
               <span class="tech-tag">LangGraph</span>
               <span class="tech-tag">RAG</span>
               <span class="tech-tag">OpenAI</span>
             </div>
-            <a href="https://github.com/Saibhossain/self_rag_system" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+            <a href="https://github.com/Saibhossain/self_rag_system" target="_blank" rel="noopener"
+              class="project-link">View on GitHub →</a>
           </div>
-          
+
           <!-- Project 2 with Progress Bar -->
           <div class="project-card glass-card scroll-reveal-up">
             <div class="project-header">
               <h4 class="project-title">Agentic AI Technical Interviewer</h4>
               <span class="project-status badge">🚀 Beta Testing</span>
             </div>
-            <p class="project-desc">Autonomous AI interviewer that parses resumes, generates assessments, and conducts stateful technical conversations.</p>
-            
+            <p class="project-desc">Autonomous AI interviewer that parses resumes, generates assessments, and conducts
+              stateful technical conversations.</p>
+
             <!-- Progress Bar -->
             <div class="progress-container">
               <div class="progress-label">
@@ -204,22 +498,23 @@
                 <div class="progress-fill" style="width:90%" data-progress="90"></div>
               </div>
             </div>
-            
+
             <div class="project-tech">
               <span class="tech-tag">Agentic AI</span>
               <span class="tech-tag">LLM</span>
               <span class="tech-tag">PDF Parsing</span>
             </div>
-            <a href="https://github.com/Saibhossain/Interview-agent" target="_blank" rel="noopener" class="project-link">View on GitHub →</a>
+            <a href="https://github.com/Saibhossain/Interview-agent" target="_blank" rel="noopener"
+              class="project-link">View on GitHub →</a>
           </div>
         </div>
-        
+
         <div class="projects-cta">
           <a href="pages/projects/index.html" class="btn btn-outline">View All Projects</a>
         </div>
       </div>
     </section>
-    
+
     <!-- 🚀 Startup Section: Praxic Intelligence -->
     <section class="startup-section section scroll-reveal-center" id="startup" aria-labelledby="startup-heading">
       <div class="container">
@@ -233,24 +528,27 @@
           </div>
           <h3 id="startup-heading" class="startup-title">Building the Future of Agentic AI</h3>
           <p class="startup-desc">
-            Praxic Intelligence is my startup focused on developing production-ready agentic AI systems for enterprise workflow automation, with emphasis on security, scalability, and real-world impact.
+            Praxic Intelligence is my startup focused on developing production-ready agentic AI systems for enterprise
+            workflow automation, with emphasis on security, scalability, and real-world impact.
           </p>
           <a href="#" class="btn btn-primary startup-cta">Explore our product →</a>
         </div>
       </div>
     </section>
-    
+
     <!-- 🤝 Collaboration Section -->
     <section class="collab-section section scroll-reveal-center" id="collaborate" aria-labelledby="collab-heading">
       <div class="container">
         <div class="collab-content scroll-reveal-center">
           <h2 id="collab-heading" class="section-title text-gradient">Let's Collaborate</h2>
           <p class="collab-text">
-            Interested in research collaboration, clinical AI deployment, or agentic system design? I'm open to academic partnerships and impactful industry projects.
+            Interested in research collaboration, clinical AI deployment, or agentic system design? I'm open to academic
+            partnerships and impactful industry projects.
           </p>
           <div class="collab-actions">
             <a href="pages/contact/index.html" class="btn btn-primary">Get in Touch</a>
-            <a href="https://www.linkedin.com/in/saib-hossain-182834229/" target="_blank" rel="noopener" class="btn btn-outline">
+            <a href="https://www.linkedin.com/in/saib-hossain-182834229/" target="_blank" rel="noopener"
+              class="btn btn-outline">
               <span>LinkedIn</span>
             </a>
             <a href="mailto:saibhossain5@gmail.com" class="btn btn-outline">
@@ -260,18 +558,19 @@
         </div>
       </div>
     </section>
-    
+
   </main>
-  
+
   <!-- Footer loaded via JS -->
   <footer id="footer-placeholder"></footer>
-  
+
   <!-- Shared Scripts -->
   <script src="assets/js/core/config.js"></script>
   <script src="assets/js/core/utils.js"></script>
   <script src="assets/js/core/nav.js"></script>
-  
+
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -2,10 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Featured AI projects by Saib Hossain - Agentic AI, Medical Imaging, Generative Models"/>
-  <meta name="theme-color" content="#0a0a1a"/>
-  <title>Projects | Saib Hossain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="theme-color" content="#0a0a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <title>Featured AI Projects | MD Saib Hossain</title>
+  <meta name="description" content="Portfolio of featured AI projects by Saib Hossain, including Self-RAG systems, Agentic Interviewer, MedAssist-LLM on edge devices, and real-time vision agents.">
+  <meta name="keywords" content="Saib Hossain Projects, Agentic AI, Self-RAG, MedAssist-LLM, Eye-of-LLM, StyleGAN2, Spatial Biology">
+  <meta name="author" content="MD Saib Hossain">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="canonical" href="https://saibhossain.dev/pages/projects/index.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Featured AI Projects | MD Saib Hossain">
+  <meta property="og:description" content="Explore state-of-the-art developments in Agentic AI, healthcare edge models, and computer vision systems.">
+  <meta property="og:image" content="https://saibhossain.dev/assets/images/profile.jpg">
+  <meta property="og:url" content="https://saibhossain.dev/pages/projects/index.html">
+  <meta property="og:site_name" content="Saib Hossain Portfolio">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Featured AI Projects | MD Saib Hossain">
+  <meta name="twitter:description" content="Explore state-of-the-art developments in Agentic AI, healthcare edge models, and computer vision systems.">
+  <meta name="twitter:image" content="https://saibhossain.dev/assets/images/profile.jpg">
+  
+  <!-- Structured Data: JSON-LD Projects CollectionPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Featured AI Projects",
+    "description": "Portfolio of featured artificial intelligence projects by MD Saib Hossain",
+    "url": "https://saibhossain.dev/pages/projects/index.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Self-RAG System",
+            "description": "Autonomous RAG with query rewriting, relevance grading, hallucination detection using LangGraph & OpenAI.",
+            "applicationCategory": "BusinessApplication"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Agentic Interviewer",
+            "description": "Autonomous AI interviewer that parses resumes, generates assessments, and conducts stateful technical conversations.",
+            "applicationCategory": "BusinessApplication"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "MedAssist-LLM",
+            "description": "Fine-tuned Qwen2.5-0.5B medical QA model optimized for offline inference on iPhone X.",
+            "applicationCategory": "MedicalApplication"
+          }
+        }
+      ]
+    }
+  }
+  </script>
   
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -53,7 +121,10 @@
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="agentic">Agentic AI</button>
           <button class="filter-btn" data-filter="medical">Medical AI</button>
+          <button class="filter-btn" data-filter="LLM">LLM & CV</button>
           <button class="filter-btn" data-filter="generative">Generative</button>
+          <button class="filter-btn" data-filter="chatbot">Chatbot</button>
+          <button class="filter-btn" data-filter="eng">SE</button>
         </div>
       </div>
     </header>

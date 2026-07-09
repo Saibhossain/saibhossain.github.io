@@ -3,7 +3,7 @@
  * Handles scroll animations, progress bars, and interactive elements
  */
 
-(function() {
+(function () {
   'use strict';
 
   // ===== CONFIGURATION =====
@@ -40,10 +40,11 @@
     cacheElements();
     setupEventListeners();
     initLetterAnimation();
+    initTypingEffect();
     initScrollAnimations();
     initProgressBarAnimation();
     initResearchModals();
-    
+
     // Initial check for visible elements
     checkScrollAnimations();
   }
@@ -59,15 +60,15 @@
     elements.projectsSection = document.getElementById('projects');
     elements.startupSection = document.getElementById('startup');
     elements.collabSection = document.getElementById('collaborate');
-    
+
     // Progress bars
     elements.progressBars = document.querySelectorAll('.progress-fill');
-    
+
     // Scroll reveal elements
     elements.scrollRevealElements = document.querySelectorAll(
       '.scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-up, .scroll-reveal-center, .scroll-fade-target'
     );
-    
+
     // Research modal links
     elements.researchLinks = document.querySelectorAll('.research-link');
   }
@@ -76,15 +77,15 @@
   function setupEventListeners() {
     // Scroll handler with debounce
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
+
     // Resize handler for recalculation
     window.addEventListener('resize', debounce(checkScrollAnimations, 150));
-    
+
     // Intersection Observer for modern browsers
     if ('IntersectionObserver' in window) {
       setupIntersectionObserver();
     }
-    
+
     // Research link clicks
     elements.researchLinks.forEach(link => {
       link.addEventListener('click', handleResearchLinkClick);
@@ -94,9 +95,9 @@
   // ===== SCROLL HANDLING =====
   function handleScroll() {
     if (isScrolling) return;
-    
+
     isScrolling = true;
-    
+
     // Debounce scroll events
     clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(() => {
@@ -110,18 +111,18 @@
   function handleHeroFade() {
     const scrollY = window.scrollY;
     const fadeProgress = Math.min(scrollY / CONFIG.heroFadeThreshold, 1);
-    
+
     if (elements.heroName) {
       elements.heroName.style.opacity = 1 - fadeProgress;
       elements.heroName.style.transform = `translateY(${-20 * fadeProgress}px)`;
     }
-    
+
     if (elements.heroImage?.closest('.hero-image-wrapper')) {
       const wrapper = elements.heroImage.closest('.hero-image-wrapper');
       wrapper.style.opacity = 1 - fadeProgress;
       wrapper.style.transform = `translateY(${-15 * fadeProgress}px)`;
     }
-    
+
     if (elements.heroTagline) {
       elements.heroTagline.style.opacity = Math.max(0, 1 - fadeProgress * 1.5);
     }
@@ -139,22 +140,22 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const target = entry.target;
-          
+
           // Handle scroll reveal elements
           if (target.classList.contains('scroll-reveal-left') ||
-              target.classList.contains('scroll-reveal-right') ||
-              target.classList.contains('scroll-reveal-up') ||
-              target.classList.contains('scroll-reveal-center') ||
-              target.classList.contains('scroll-fade-target')) {
+            target.classList.contains('scroll-reveal-right') ||
+            target.classList.contains('scroll-reveal-up') ||
+            target.classList.contains('scroll-reveal-center') ||
+            target.classList.contains('scroll-fade-target')) {
             target.classList.add('is-visible');
             animatedElements.add(target);
           }
-          
+
           // Handle progress bars
           if (target.classList.contains('project-card')) {
             animateProgressBarsInCard(target);
           }
-          
+
           // Stop observing once animated
           if (!target.dataset.persistent) {
             observer.unobserve(target);
@@ -179,19 +180,19 @@
   // Fallback scroll animation checker (for older browsers)
   function checkScrollAnimations() {
     if ('IntersectionObserver' in window) return; // Skip if using Observer
-    
+
     const scrollY = window.scrollY + window.innerHeight * 0.85;
-    
+
     elements.scrollRevealElements.forEach(el => {
       if (animatedElements.has(el)) return;
-      
+
       const rect = el.getBoundingClientRect();
       const elementTop = rect.top + window.scrollY;
-      
+
       if (scrollY > elementTop) {
         el.classList.add('is-visible');
         animatedElements.add(el);
-        
+
         // Animate progress bars if in project card
         if (el.classList.contains('project-card')) {
           animateProgressBarsInCard(el);
@@ -222,12 +223,84 @@
   // ===== LETTER-BY-LETTER ANIMATION =====
   function initLetterAnimation() {
     const letters = document.querySelectorAll('.letter');
-    
+
     letters.forEach((letter, index) => {
       // Add slight random variation for natural feel
       const delay = parseFloat(letter.dataset.index) * 50 + Math.random() * 30;
       letter.style.animationDelay = `${delay}ms`;
     });
+  }
+
+  // ===== TYPING EFFECT FOR HERO TITLE =====
+  function initTypingEffect() {
+    const target = document.getElementById('hero-typing-text');
+    if (!target) return;
+
+    const phrases = [
+      "ML Engineer | AI Researcher",
+      "AI Engineer | AI Researcher",
+      "Entrepreneur | Researcher",
+      "Entrepreneur | Writer",
+      "Researcher | Entrepreneur",
+      "Engineer | Entrepreneur"
+    ];
+
+    const colors = [
+      '#818cf8', // Indigo
+      '#06b6d4', // Cyan
+      '#2dd4bf', // Teal
+      '#c084fc', // Purple
+      '#ffffffff', // Rose
+      '#60a5fa', // Blue
+      '#34d399', // Emerald
+      '#fbbf24',  // Amber
+      '#7300ffff'  // Amber
+    ];
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    target.style.transition = 'color 0.5s ease';
+
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
+
+      if (isDeleting) {
+        target.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        target.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 100;
+      }
+
+      // Append blink cursor
+      target.innerHTML = target.textContent + '<span class="typing-cursor">|</span>';
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        typingSpeed = 2000; // Pause at full phrase
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        // Select a different random color
+        let nextColor;
+        do {
+          nextColor = colors[Math.floor(Math.random() * colors.length)];
+        } while (nextColor === target.style.color);
+        target.style.color = nextColor;
+        typingSpeed = 500; // Pause before next phrase
+      }
+
+      setTimeout(type, typingSpeed);
+    }
+
+    // Set initial color
+    target.style.color = colors[Math.floor(Math.random() * colors.length)];
+    setTimeout(type, 1000);
   }
 
   // ===== RESEARCH MODAL HANDLING =====
@@ -248,14 +321,14 @@
         </div>
       `;
       document.body.appendChild(modal);
-      
+
       // Close modal on click outside or close button
       modal.addEventListener('click', (e) => {
         if (e.target === modal || e.target.classList.contains('modal-close')) {
           closeModal(modal);
         }
       });
-      
+
       // Close on Escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
@@ -270,18 +343,18 @@
     const link = e.currentTarget;
     const modalId = link.dataset.modal;
     const modal = document.getElementById('research-modal');
-    
+
     if (!modal) return;
-    
+
     // Load content based on modal ID
     const content = getResearchContent(modalId);
     modal.querySelector('.modal-body').innerHTML = content;
-    
+
     // Show modal
     modal.setAttribute('aria-hidden', 'false');
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden'; // Prevent background scroll
-    
+
     // Focus trap for accessibility
     const closeBtn = modal.querySelector('.modal-close');
     if (closeBtn) closeBtn.focus();
@@ -318,7 +391,7 @@
         <a href="#" class="btn btn-outline" style="margin-top:1rem">Contact for Manuscript</a>
       `
     };
-    
+
     return content[modalId] || '<p>Content loading...</p>';
   }
 
@@ -343,7 +416,7 @@
 
   function throttle(func, limit) {
     let inThrottle;
-    return function(...args) {
+    return function (...args) {
       if (!inThrottle) {
         func.apply(this, args);
         inThrottle = true;
@@ -356,19 +429,19 @@
   window.PortfolioAnimations = {
     // Manually trigger animation check
     refresh: checkScrollAnimations,
-    
+
     // Animate specific element
     reveal: (element) => {
       if (element?.classList) {
         element.classList.add('is-visible');
       }
     },
-    
+
     // Pause all animations (for reduced motion preference)
     pause: () => {
       document.documentElement.classList.add('reduce-motion');
     },
-    
+
     // Resume animations
     resume: () => {
       document.documentElement.classList.remove('reduce-motion');

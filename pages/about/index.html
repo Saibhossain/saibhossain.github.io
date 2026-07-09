@@ -1,62 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects | Saib Hossain</title>
-  <style>:root{--bg:#0a0a1a;--text:#e2e8f0}*{box-sizing:border-box;margin:0;padding:0}body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif}</style>
-  <link rel="stylesheet" href="../../assets/css/base.css"/>
-  <link rel="stylesheet" href="../../assets/css/components.css"/>
-  <link rel="stylesheet" href="../../assets/css/layout.css"/>
-  <link rel="stylesheet" href="../../assets/css/animations.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="theme-color" content="#0a0a1a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <title>About MD Saib Hossain | AI Engineer & ML Researcher</title>
+  <meta name="description"
+    content="Learn about MD Saib Hossain - AI Engineer & ML Researcher building next-generation agentic workflows and clinically deployable medical imaging deep learning models.">
+  <meta name="keywords"
+    content="Saib Hossain, About Saib Hossain, AI Engineer, ML Researcher, Medical Imaging, AI Safety, United International University, Betopia Group">
+  <meta name="author" content="MD Saib Hossain">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://saibhossain.dev/pages/about/index.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="About MD Saib Hossain | AI Engineer & ML Researcher">
+  <meta property="og:description"
+    content="Discover the research journey, academic milestones, and engineering focus of MD Saib Hossain.">
+  <meta property="og:image" content="https://saibhossain.dev/assets/images/profile.jpg">
+  <meta property="og:url" content="https://saibhossain.dev/pages/about/index.html">
+  <meta property="og:site_name" content="Saib Hossain Portfolio">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About MD Saib Hossain | AI Engineer & ML Researcher">
+  <meta name="twitter:description"
+    content="Discover the research journey, academic milestones, and engineering focus of MD Saib Hossain.">
+  <meta name="twitter:image" content="https://saibhossain.dev/assets/images/profile.jpg">
+
+  <!-- Structured Data: JSON-LD AboutPage & Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "MD Saib Hossain",
+      "jobTitle": "AI Engineer & ML Researcher",
+      "url": "https://saibhossain.dev",
+      "sameAs": [
+        "https://linkedin.com/in/saibhossain",
+        "https://github.com/Saibhossain",
+        "https://scholar.google.com/citations?user=zH0QciUAAAAJ&hl=en"
+      ]
+    }
+  }
+  </script>
+
+  <!-- Global Core Styles -->
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/components.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/animations.css" />
+
+  <!-- Page Specific Styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <!-- Global Header Placeholder -->
   <div id="header-placeholder" data-depth="1"></div>
 
-  <main id="main">
-    <header class="page-header fade-in-up">
-      <h1 class="gradient-text">Featured Projects</h1>
-      <p>My work in Agentic AI, Computer Vision, and LLMs.</p>
-    </header>
+  <main id="main" class="about-page">
+    <!-- Hero Section -->
+    <section class="hero-section fade-in-up">
+      <div class="hero-bg"></div>
+      <h1 id="hero-name" class="gradient-text loading-pulse"></h1>
+      <h2 id="hero-role" class="loading-pulse"></h2>
+    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="projects-grid" id="projects-container">
-          <!-- Content injected by JS -->
-        </div>
+    <!-- Biography & Aims Split Grid -->
+    <div class="container fade-in-up" style="animation-delay: 0.1s;">
+      <div class="split-grid">
+        <section class="biography-section">
+          <h3 class="section-title">Biography</h3>
+          <div id="bio-container"></div>
+        </section>
+
+        <section class="aims-section">
+          <h3 class="section-title">Professional Aims</h3>
+          <div id="aims-container" class="aims-list"></div>
+        </section>
       </div>
+    </div>
+
+
+
+    <!-- Awards & Honors -->
+    <section class="container padding-block bg-alt fade-in-up" style="animation-delay: 0.3s;">
+      <h3 class="section-title">Awards & Honors</h3>
+      <div id="awards-container" class="list-container"></div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="container padding-block fade-in-up" style="animation-delay: 0.4s;">
+      <h3 class="section-title">Latest Blog Posts</h3>
+      <div id="blogs-container" class="card-grid"></div>
+    </section>
+
+    <!-- Hobbies -->
+    <section class="container padding-block fade-in-up" style="animation-delay: 0.5s;">
+      <h3 class="section-title">Hobbies & Interests</h3>
+      <div id="hobbies-container" class="card-grid"></div>
+    </section>
+
+    <!-- Directory Navigation (Startup & Volunteering) -->
+    <section class="container padding-block nav-cta-section fade-in-up" style="animation-delay: 0.6s;">
+      <div id="nav-container" class="nav-grid"></div>
     </section>
   </main>
 
+  <!-- Global Footer Placeholder -->
   <div id="footer-placeholder" data-depth="1"></div>
 
-  <!-- Scripts (Relative Paths) -->
+  <!-- Global Scripts -->
   <script src="../../assets/js/core/config.js"></script>
   <script src="../../assets/js/core/utils.js"></script>
   <script src="../../assets/js/core/nav.js"></script>
   <script src="../../assets/js/components/links.js"></script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      const globalData = await fetchJSON('../../assets/data/global.json'); // Absolute relative path from root
-      if (globalData) renderFooterLinks(globalData.links);
 
-      const projects = await fetchJSON('projects.json'); // Relative to /assets/data/
-      const container = document.getElementById('projects-container');
-      
-      if (container && projects) {
-        container.innerHTML = projects.map((p, i) => `
-          <article class="glass-card project-card fade-in-up" style="animation-delay:${i*0.1}s">
-            <h3><a href="${p.url}" target="_blank" class="gradient-text">${escapeHtml(p.title)}</a></h3>
-            <p class="text-muted mt-2">${escapeHtml(p.desc)}</p>
-            <div class="project-tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-            <div class="mt-auto" style="margin-top:1rem">
-              <a href="${p.url}" target="_blank" class="btn btn-outline btn-sm">View Code →</a>
-            </div>
-          </article>
-        `).join('');
-      }
-    });
-  </script>
+
+
+  <!-- Page Specific Data Injector -->
+  <script src="script.js"></script>
+
 </body>
+
 </html>

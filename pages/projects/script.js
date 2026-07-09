@@ -47,9 +47,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     fetchProjectsData()
   ]);
   
-  // Render footer links if global loaded
-  if (globalData?.links && typeof renderFooterLinks === 'function') {
-    renderFooterLinks('footer-links', globalData.links);
+  // Render footer links if global loaded and not already rendered by nav.js
+  if (globalData?.social && typeof renderFooterLinks === 'function') {
+    const footerContainer = document.getElementById('footer-links');
+    if (footerContainer && footerContainer.children.length === 0) {
+      renderFooterLinks('footer-links', globalData.social);
+    }
   }
   
   // Handle projects data
@@ -108,7 +111,10 @@ function renderProjects(container, projects) {
     const tags = (proj.tags || []).map(t => t.toLowerCase());
     if (tags.some(t => t.includes('agent') || t.includes('langgraph'))) return 'agentic';
     if (tags.some(t => t.includes('medical') || t.includes('health'))) return 'medical';
+    if (tags.some(t => t.includes('LLM') || t.includes('cv'))) return 'LLM';
     if (tags.some(t => t.includes('gan') || t.includes('diffusion'))) return 'generative';
+    if (tags.some(t => t.includes('chatbot') || t.includes('eng'))) return 'chatbot';
+    if (tags.some(t => t.includes('eng') || t.includes('eng'))) return 'se';
     return 'all';
   };
   

@@ -1,0 +1,144 @@
+{
+  "page_title": "Professional Experience",
+  "page_subtitle": "My journey in AI engineering, machine learning research, and secure system architectures.",
+  "categories": [
+    { "id": "all", "label": "All Experience" },
+    { "id": "engineering", "label": "Engineering & Development" },
+    { "id": "research", "label": "Academic & Lab Research" }
+  ],
+  "timeline": [
+    {
+      "title": "Research Intern",
+      "company": "ELITE Research Lab LLC",
+      "location": "Remote",
+      "job_type": "Voluntary / Unpaid (Research Experience)",
+      "category": "research",
+      "start_date": "Jun 2026",
+      "end_date": "Oct 2026",
+      "duration": "4 months",
+      "description": "Engaged in specialized research tasks and deliverables under the direct supervision of Dr. Md. Abdullah-Al-Jubair. Responsible for maintaining strict confidentiality of unpublished research, datasets, and methodologies while dedicating 20 hours weekly to ongoing lab projects.",
+      "skills": [
+        "Research Methodology", 
+        "Data Confidentiality", 
+        "Scientific Reporting", 
+        "Progress Tracking"
+      ],
+      "key_responsibilities": [
+        "Complete assigned research tasks and deliverables via the lab portal",
+        "Maintain strict confidentiality of unpublished research, datasets, and internal communications",
+        "Submit weekly progress reports detailing project milestones",
+        "Log a minimum of 20 hours per week of dedicated research activity"
+      ],
+      "achievements": [],
+      "link": "../../pages/research/index.html"
+    },
+    {
+      "title": "Research Assistant",
+      "company": "Institute of Advanced Research (IAR) - UIU",
+      "location": "Dhaka, Bangladesh",
+      "job_type": "Part-time Research",
+      "category": "research",
+      "start_date": "Nov 2025",
+      "end_date": "Present",
+      "duration": "Ongoing",
+      "description": "Deep learning pipelines for medical image analysis. Extracted and analyzed radiomic features, supported model evaluation and statistical correlation studies. Documented experiments on model reliability, data bias, and clinical applicability.",
+      "skills": ["Medical Imaging", "Radiomics", "PyTorch", "Statistical Analysis", "Clinical AI"],
+      "key_responsibilities": [
+        "Develop CNN architectures for CT scan analysis",
+        "Extract and validate radiomic features for survival prediction",
+        "Conduct bias audits and fairness evaluations",
+        "Prepare manuscripts for peer-reviewed publication"
+      ],
+      "achievements": ["3 IEEE ICCIT 2025 papers (first author)", "UIU-funded research grant recipient"],
+      "link": "../../pages/research/index.html"
+    },
+    {
+      "title": "AI Engineer",
+      "company": "FireAI (Betopia Group)",
+      "location": "Dhaka, Bangladesh (Remote)",
+      "job_type": "Full-time",
+      "category": "engineering",
+      "start_date": "Apr 2026",
+      "end_date": "May 2026",
+      "duration": "2 months",
+      "description": "Building next-generation agentic AI systems to automate complex multi-step business workflows. Architecting production-ready multi-agent systems with LLM orchestration using Python.",
+      "skills": ["Agentic AI", "Multi-Agent Systems", "LLM Orchestration", "Python", "Workflow Automation"],
+      "key_responsibilities": [
+        "Design autonomous agent architectures for enterprise workflow automation",
+        "Implement LLM orchestration patterns for stateful task execution",
+        "Optimize latency and reliability for production AI systems",
+        "Collaborate with product teams on AI feature specifications"
+      ],
+      "achievements": ["Architected scalable multi-agent framework", "Reduced workflow latency by 40%"],
+      "link": null
+    },
+    {
+      "title": "Volunteer Research Assistant",
+      "company": "Ruach Tech",
+      "location": "London, UK (Remote)",
+      "job_type": "Volunteer",
+      "category": "research",
+      "start_date": "Jan 2026",
+      "end_date": "Mar 2026",
+      "duration": "3 months",
+      "description": "Conducted research on AI safety and alignment. Analyzed and summarized advanced AI research papers to support development of safe AI system frameworks.",
+      "skills": ["AI Safety", "Research Analysis", "Technical Writing", "Literature Review"],
+      "key_responsibilities": [
+        "Review and synthesize cutting-edge AI safety research",
+        "Contribute to framework design for aligned AI systems",
+        "Document findings for R&D teams",
+        "Support ethical AI governance initiatives"
+      ],
+      "achievements": ["Contributed to internal AI safety guidelines", "Summarized 50+ research papers"],
+      "link": null
+    },
+    {
+      "title": "Machine Learning Engineer Intern",
+      "company": "Fluvo Soft",
+      "location": "Remote",
+      "job_type": "Internship",
+      "category": "engineering",
+      "start_date": "Nov 2025",
+      "end_date": "Mar 2026",
+      "duration": "5 months",
+      "description": "Designed synthetic face generation pipeline with StyleGAN2 and Stable Diffusion XL to address data scarcity. Developed Agentic RAG system for customer support and HR workflow automation.",
+      "skills": ["StyleGAN2", "Stable Diffusion XL", "RAG Systems", "Data Augmentation", "Python"],
+      "key_responsibilities": [
+        "Build generative AI pipelines for synthetic data creation",
+        "Implement RAG architectures for enterprise knowledge retrieval",
+        "Optimize model inference for production deployment",
+        "Collaborate with cross-functional teams on AI product features"
+      ],
+      "achievements": ["Reduced data collection costs by 70% via synthetic generation", "Deployed RAG system serving 500+ daily queries"],
+      "link": null
+    },
+    {
+      "title": "Kaggle Competition — 1st Runner-up",
+      "company": "Kaggle",
+      "location": "Global (Online)",
+      "job_type": "Competition",
+      "category": "research",
+      "start_date": "Aug 2025",
+      "end_date": "Oct 2025",
+      "duration": "3 months",
+      "description": "Deep Learning in Computational and Spatial Biology competition. Developed ensemble models for cell segmentation and spatial pattern recognition. Awarded Best Abstract for Spatial Biology contribution.",
+      "skills": ["Computer Vision", "Ensemble Learning", "Bioinformatics", "PyTorch", "Data Visualization"],
+      "key_responsibilities": [
+        "Design multi-model ensemble for robust predictions",
+        "Implement spatial attention mechanisms for biology data",
+        "Optimize inference pipeline for competition constraints",
+        "Document methodology for reproducible research"
+      ],
+      "achievements": ["🥈 1st Runner-up (Top 2%)", "🏆 Best Abstract Award — Spatial Biology"],
+      "link": "https://kaggle.com/competitions/spatial-biology"
+    }
+  ],
+  "skills_legend": {
+    "Agentic AI": "#6366f1",
+    "Medical Imaging": "#10b981", 
+    "LLM Orchestration": "#8b5cf6",
+    "Computer Vision": "#06b6d4",
+    "Research": "#f59e0b",
+    "Python": "#374151"
+  }
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "type": "featured",
+    "role": "Technical Expert Representative",
+    "organization": "Alo Bhubon Trust",
+    "event": "Seminar on Preventive Measures for Cervical and Breast Cancer in Bangladesh",
+    "date": "January 27, 2026",
+    "location": "Nascent Gardenia, Dhaka",
+    "collaborators": [
+      "Rotary Club of Dhaka",
+      "Rotary Club of Dhaka Dhruva Tara",
+      "Rotary Club of Dhaka Mega City"
+    ],
+    "description": "Represented Alo Bhubon Trust as a technical expert during a high-level joint seminar focused on nationwide cancer prevention strategies. Supported the technical discourse surrounding the Trust's screening programs, emphasizing the operational requirements for remote diagnostic camps. Contributed to strategic discussions on procuring critical medical imaging hardware—including Mammography, X-ray, and Breast Elastography machines—to establish sustainable, early-detection infrastructure at the Rahima Baniz Health Care Center (RBHC) in Naogaon.",
+    "keyInitiatives": [
+      "Advocated for the expansion of HPV vaccination and Self Breast Examination (SBE) programs targeting 25 million at-risk women.",
+      "Detailed the technical and financial logistics (approx. 37,690 BDT per camp) for executing remote screening initiatives for 70-100 women.",
+      "Fostered strategic partnerships with Rotary Clubs to sponsor vaccine doses and upgrade rural diagnostic technology."
+    ],
+    "referenceUrl": "https://www.facebook.com/alobtfb/posts/pfbid02TB46UuUBf51rcW9FXEPPE2uCQ2vnqSMfjdEEZH6inXLUsh8iAUtuJfazTFg7pRA5l",
+    "images": [
+      "../../assets/images/volentering/img.jpg",
+      "../../assets/images/volentering/img2.jpg"
+    ]
+  },
+  {
+    "type": "featured",
+    "role": "General Secretary (District Committee)",
+    "organization": "National Children’s Task Force (NCTF)",
+    "event": "Child Rights Monitoring & Advocacy",
+    "date": "2014 - 2017",
+    "location": "Satkhira, Bangladesh",
+    "collaborators": [
+      "Save the Children",
+      "Plan International Bangladesh",
+      "Bangladesh Shishu Academy"
+    ],
+    "description": "Served as the General Secretary for the Satkhira district committee of the National Children's Task Force (NCTF), a nationwide child-led organization dedicated to monitoring and establishing child rights across Bangladesh. Directed grassroots advocacy programs and coordinated local initiatives to monitor the implementation of the National Plan of Action against child exploitation, abuse, and trafficking.",
+    "keyInitiatives": [
+      "Led district-level administrative operations and youth mobilization to advocate for child protection and child rights governance.",
+      "Facilitated child-led dialogues, awareness campaigns, and community interventions in collaboration with government duty bearers and international NGOs.",
+      "Actively monitored the local child rights situation to contribute data for alternative reporting on child protection metrics."
+    ],
+    "referenceUrl": "https://www.nctfbd.org/home/",
+    "socialUrl": "https://m.facebook.com/nctfsatkhira/?mibextid=LQQJ4d",
+    "images": [
+      "../../assets/images/nctf/humanchain.jpeg",
+      "../../assets/images/nctf/nctf_press-release.jpeg"
+    ]
+  },
+  {
+    "type": "contribution",
+    "role": "Volunteer Research Assistant",
+    "organization": "Ruach Tech",
+    "date": "Jul 2025 – Present",
+    "description": "Collaborated with multi-disciplinary clinical and engineering cohorts to evaluate patient outcome frameworks. Assisted in data preprocessing pipelines for health equity studies and reviewed machine learning methodologies for algorithmic fairness.",
+    "keyInitiatives": [
+      "Assisted in preprocessing diverse patient datasets for analysis",
+      "Reviewed academic literature on bias mitigation in healthcare algorithms",
+      "Participated in framework design sessions for clinical trials evaluation"
+    ]
+  },
+  {
+    "type": "contribution",
+    "role": "Open-Source Mentor & Presenter",
+    "organization": "AI Safety & Alignment Study Circles",
+    "date": "Oct 2024 – Oct 2025",
+    "description": "Conducted weekly study sessions covering prompt-injection threat models, RAG guardrail pipelines, and simple LLM fine-tuning structures. Published step-by-step notebook tutorials to guide undergraduate students in getting started with ML frameworks.",
+    "keyInitiatives": [
+      "Designed and presented 10+ slides and notebook walkthroughs",
+      "Mentored junior CSE students in foundational deep learning topics",
+      "Contributed repository templates for secure RAG setups"
+    ]
+  },
+  {
+    "type": "contribution",
+    "role": "Kaggle Notebooks Contributor",
+    "organization": "Global ML Community",
+    "date": "Jan 2025 – Present",
+    "description": "Actively share clean, documented notebooks on chest CT preprocessing, CNN training templates, and data balance scripts. Engaged in answering community questions, troubleshooting code issues for junior developers, and peer-reviewing public pipelines.",
+    "keyInitiatives": [
+      "Published 5+ highly upvoted public notebooks on medical imaging preprocessing",
+      "Engaged in technical forum responses to debug PyTorch training errors",
+      "Helped design reproducible data splits for medical datasets"
+    ]
+  }
+]

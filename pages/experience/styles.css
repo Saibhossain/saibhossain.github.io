@@ -1,0 +1,287 @@
+/* ========================================
+   EXPERIENCE PAGE — Modern Timeline & Filters
+   ======================================== */
+
+.experience-hero {
+  padding: 7rem 0 3rem;
+  position: relative;
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 60%), #0a0a1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 1rem auto 0;
+  line-height: 1.6;
+}
+
+/* --- Category Filters --- */
+.filters-section {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.filter-bar {
+  display: flex;
+  padding: 0.4rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+}
+
+.filter-btn {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn:hover {
+  color: #f1f5f9;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: #090d16;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.35);
+}
+
+/* --- Interactive Timeline --- */
+.timeline-wrapper {
+  position: relative;
+  max-width: 950px;
+  margin: 2rem auto 6rem;
+  padding: 0 1rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 170px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    rgba(99, 102, 241, 0.4), 
+    rgba(6, 182, 212, 0.4) 50%, 
+    rgba(255, 255, 255, 0.05)
+  );
+  z-index: 1;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 4rem;
+}
+
+/* Timeline Node */
+.timeline-node {
+  position: absolute;
+  left: 156px; /* Centered perfectly on the 170px timeline track line */
+  top: 24px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #090d16;
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-node {
+  transform: scale(1.15);
+  border-color: #60a5fa;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+}
+
+.node-icon {
+  font-size: 0.95rem;
+}
+
+.node-glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.15;
+  filter: blur(4px);
+  animation: pulseGlow 3s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.1; transform: scale(0.9); }
+  100% { opacity: 0.25; transform: scale(1.1); }
+}
+
+/* Date Side Column */
+.timeline-date-col {
+  padding-top: 1.6rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.date-badge {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.duration-tag {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+/* Content Card Column */
+.timeline-card-col {
+  position: relative;
+}
+
+.timeline-card-col .card {
+  padding: 2rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: auto;
+}
+
+.timeline-card-col .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1), 0 0 0 1px rgba(99, 102, 241, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.role-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.2;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+.location-badge, .job-type-badge {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.job-type-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  color: #e2e8f0;
+  display: inline-block;
+}
+
+.description-text {
+  line-height: 1.7;
+  font-size: 0.98rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsibilities */
+.responsibilities-section {
+  margin-top: 1.25rem;
+}
+
+.resp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resp-item {
+  position: relative;
+  padding-left: 1.25rem;
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.resp-item::before {
+  content: '◇';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    padding-left: 3rem;
+  }
+
+  .timeline-line {
+    left: 25px;
+  }
+
+  .timeline-node {
+    left: 11px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .timeline-date-col {
+    text-align: left;
+    padding-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .card-header div:last-child {
+    text-align: left !important;
+  }
+}

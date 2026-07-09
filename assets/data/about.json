@@ -1,0 +1,117 @@
+{
+  "name": "MD Saib Hossain",
+  "role": "AI Engineer & ML Researcher",
+  "biography": [
+    "I am an AI Engineer and Machine Learning Researcher driven by a single core mission: building robust, safe, and clinically deployable intelligent systems. My expertise bridges the gap between theoretical deep learning and practical, high-throughput production pipelines, with specific focus on Medical Image Analysis and Stateful Multi-Agent architectures.",
+    "Currently, I serve as a Research Assistant at the United International University (UIU) Institute of Advanced Research (IAR), where I lead clinical AI pipeline developments. Simultaneously, I work as an AI Engineer at FireAI (Betopia Group), architecting stateful multi-agent systems and security filters to safeguard LLM orchestrations from prompt injection vulnerabilities.",
+    "I believe in a future where AI systems act as secure, aligned partners to human experts. Whether designing CNN pipelines for pediatric fracture segmentations or coding cryptographic context validation frameworks for autonomous agents, I focus on system reliability, cross-domain generalization, and open-source scalability."
+  ],
+  "aims": [
+    {
+      "title": "Clinical Deployability",
+      "description": "Bridge medical deep learning and hospital workflows, ensuring models generalise across diverse patient demographics without domain bias."
+    },
+    {
+      "title": "Stateful Agent Security",
+      "description": "Architect cryptographic provenance and authorization checks to defend multi-agent LLM systems from runtime prompt injections."
+    },
+    {
+      "title": "Edge AI Democratization",
+      "description": "Optimize and quantize large language models for offline, low-latency execution on personal edge devices like smartphones."
+    }
+  ],
+  "blogPosts": [
+    {
+      "title": "The Evolution of Healing: From Ancient Remedies to Quantum Artificial Intelligence",
+      "date": "[March 30, 2026]",
+      "readTime": "[7 min read]",
+      "snippet": "Exploring the paradigm shift in clinical healing, tracing the progression from historical medicinal practices to the integration of quantum-inspired algorithms in modern AI diagnostics.",
+      "url": "https://medium.com/@saibhossain5/the-evolution-of-healing-from-ancient-remedies-to-quantum-artificial-intelligence-c05389b71ae4?sharedUserId=saibhossain5"
+    },
+    {
+      "title": "Securing RAG:pt Injection at the Retrieval Layer",
+      "date": "Mar 28, 2026",
+      "readTime": "8 min read",
+      "snippet": "A deep dive into structural prompt authorization rules and verification signatures to prevent untrusted vector chunks from taking control of your LLM.",
+      "url": "https://github.com/Saibhossain/self_rag_system"
+    },
+    {
+      "title": "Edge Inference: Running Qwen2.5 on an iPhone X Fully Offline",
+      "date": "Feb 10, 2026",
+      "readTime": "5 min read",
+      "snippet": "How I quantized and deployed a 0.5B medical QA model locally on edge hardware, achieving complete data privacy and sub-100ms first-token latency.",
+      "url": "https://github.com/Saibhossain/MedAssist-LLM-iPhone"
+    }
+  ],
+  "publishedArticles": [
+    {
+      "title": "Unifying Adult and Pediatric Domains: Multi-Dataset Deep Learning for Fracture Classification",
+      "venue": "IEEE ICCIT 2025",
+      "summary": "Unified training pipeline harmonizing FracAtlas and GRAZPEDWRI-DX datasets. Achieved +3.8% AUC, +4.2% mAP, +2.7% Dice.",
+      "doi": "10.1109/ICCIT64616.2025.11491681"
+    },
+    {
+      "title": "BanglaSign-Tutor: Interactive Sign Language Learning via Finger-Guided Feedback",
+      "venue": "IEEE ICCIT 2025",
+      "summary": "CV + Gemma 3 pipeline for BDSL hand-sign recognition. 98.2% alphabet and 99.5% numeral accuracy with latency reduction.",
+      "doi": "10.1109/ICCIT64616.2025.11491587"
+    },
+    {
+      "title": "Urban Sustainability in Bangladesh: Satellite-Based Land Use & Air Pollution Analysis",
+      "venue": "IEEE ICCIT 2025",
+      "summary": "Google Earth Engine analysis of LULC and pollution trends from 2019-2025 across six machine learning algorithms.",
+      "doi": "10.1109/ICCIT64616.2025.11490302"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Kaggle Spatial Biology Competition — 1st Runner-up",
+      "issuer": "Kaggle / Spatial Biology Society",
+      "date": "Oct 2025",
+      "description": "Silver Medal (Top 2% globally) for cell segmentation ensembles and spatial biology pattern recognition."
+    },
+    {
+      "title": "Best Abstract Award — Spatial Biology",
+      "issuer": "Computational Biology Symposium",
+      "date": "Oct 2025",
+      "description": "Recognized for spatial attention mechanisms and reproducible notebook contributions."
+    },
+    {
+      "title": "UIU Research Grant Recipient",
+      "issuer": "Institute of Advanced Research (IAR) - UIU",
+      "date": "Nov 2025",
+      "description": "Funded research grant for developing clinically deployable survival models (COAST)."
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Teaching Robots",
+      "icon": "🤖",
+      "description": "Hours spent writing alignment scripts, reinforcement loops, and fine-tuning edge instances to behave and speak politely."
+    },
+    {
+      "name": "Computational Biology Modeling",
+      "icon": "🧬",
+      "description": "Applying vision attention algorithms to spatial cell segmentations and studying protein fold dynamics."
+    },
+    {
+      "name": "Technical Writing & Open-Source",
+      "icon": "✍️",
+      "description": "Writing explainers on LLM authorization vectors, prompt firewall safety architectures, and sharing codebase templates."
+    }
+  ],
+  "navigation": [
+    {
+      "title": "My Startup",
+      "description": "Discover Praxic Intelligence—my venture focused on developing production-grade, secure multi-agent systems.",
+      "url": "../startup/index.html",
+      "icon": "💡"
+    },
+    {
+      "title": "Volunteering Work",
+      "description": "Explore my contributions to community welfare, AI safety research reviews, and education programs.",
+      "url": "../volunteering/index.html",
+      "icon": "🤝"
+    }
+  ]
+}

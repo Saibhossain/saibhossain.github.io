@@ -2,6 +2,20 @@
   "pageTitle": "Featured Projects",
   "pageDescription": "Hands-on AI projects showcasing agentic systems, medical imaging, and generative models.",
   "items": [
+    
+    {
+      "title": "ScholarAgent — AI Scholarship Advisor",
+      "description": "Multi-agent AI system for scholarship search, academic profile analysis, roadmap generation, and automated SOP writing.",
+      "url": "https://github.com/Saibhossain/ScholarAgent.git",
+      "tags": ["CrewAI", "Agentic AI", "Ollama", "Streamlit", "Tavily API"],
+      "category": "agentic",
+      "highlights": [
+        "Multi-agent scholarship recommendation pipeline",
+        "Local LLM orchestration using Ollama + Gemma3",
+        "CrewAI tracing and agent workflow observability"
+      ],
+      "image": "../../assets/images/projects/scholaragent.webp"
+    },
     {
       "title": "Agentic AI Technical Interviewer",
       "description": "Stateful AI agent that conducts dynamic technical interviews with intent routing and structured evaluation.",
@@ -32,7 +46,7 @@
       "description": "Autonomous vision agent integrating YOLO11 object detection with Gemini 2.5 Flash for contextual reasoning about visual environments in real-time.",
       "url": "https://github.com/Saibhossain/Eye-of-LLM.git",
       "tags": ["Computer Vision", "YOLO11", "Gemini API", "Real-time Processing", "Multimodal AI"],
-      "category": "agentic",
+      "category": "cv",
       "highlights": [
         "Real-time camera stream processing",
         "Object segmentation + LLM contextual interpretation",
@@ -69,7 +83,7 @@
       "description": "Vision-based Bangla sign language recognition system translating hand gestures into Bangla alphabets and spoken words using MediaPipe + CNN.",
       "url": "https://github.com/Saibhossain/bangla-sign-language-assistant.git",
       "tags": ["Computer Vision", "MediaPipe", "CNN", "Accessibility", "Edge Deployment"],
-      "category": "medical",
+      "category": "cv",
       "highlights": [
         "Real-time gesture detection with hand landmarks",
         "Bangla alphabet prediction + text-to-speech output",
@@ -81,7 +95,7 @@
       "description": "Autonomous AI search agent retrieving web results and generating concise summaries using local LLMs via Ollama + LangGraph orchestration.",
       "url": "https://github.com/Saibhossain/Googler-Search-Agent.git",
       "tags": ["Agentic AI", "Local LLMs", "Ollama", "Web Automation", "Summarization"],
-      "category": "agentic",
+      "category": "eng",
       "highlights": [
         "Offline-friendly research assistant",
         "Autonomous query execution + result synthesis",
@@ -93,7 +107,7 @@
       "description": "Intelligent routing system selecting optimal locally-hosted LLM (Gemma3, DeepSeek-R1) based on prompt complexity to balance accuracy and compute cost.",
       "url": "https://github.com/Saibhossain/prompt-based-dynamic-llm-selector.git",
       "tags": ["LLM Orchestration", "Prompt Engineering", "Resource Optimization", "Local Inference"],
-      "category": "agentic",
+      "category": "LLM",
       "highlights": [
         "Dynamic model selection based on prompt analysis",
         "Multi-model orchestration via Ollama",
@@ -129,7 +143,7 @@
       "description": "Educational chatbot using fine-tuned GPT-2 for student Q&A support with FastAPI backend and interactive web interface.",
       "url": "https://github.com/Saibhossain/AI_ChatBotUsingGPT-2.git",
       "tags": ["GPT-2", "FastAPI", "Full-Stack", "Educational AI"],
-      "category": "agentic",
+      "category": "chatbot",
       "highlights": [
         "REST API backend with conversational AI",
         "Interactive web interface for learning support",

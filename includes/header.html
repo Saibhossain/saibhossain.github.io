@@ -1,17 +1,44 @@
 <nav class="nav" aria-label="Main navigation">
   <div class="nav-container">
-    <a href="/" class="nav-logo" aria-label="Home">SH</a>
-    
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+    <a href="/" class="nav-logo" aria-label="MD Saib Hossain Home">
+      <span class="logo-text">SH</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
       ☰
     </button>
-    
-    <ul id="nav-menu" class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/pages/about/index.html">About</a></li>
-      <li><a href="/pages/projects/index.html">Projects</a></li>
-      <li><a href="/pages/research/index.html">Research</a></li>
-      <li><a href="/pages/contact/index.html">Contact</a></li>
-    </ul>
+
+    <div id="nav-menu" class="nav-menu-wrapper">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/about/index.html">About</a></li>
+        <li><a href="/pages/experience/index.html">Experience</a></li>
+        <li><a href="/pages/projects/index.html">Projects</a></li>
+        <li><a href="/pages/research/index.html">Research</a></li>
+        <li><a href="/pages/contact/index.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="/assets/cv/SaibUpdatedCV.docx.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv-view"
+          aria-label="View Saib Hossain CV in a new tab">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+          View CV
+        </a>
+        <a href="/assets/cv/SaibUpdatedCV.docx.pdf" download="Saib_Hossain_CV.pdf" class="nav-cv-download"
+          aria-label="Download Saib Hossain CV PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download CV
+        </a>
+      </div>
+    </div>
   </div>
 </nav>
