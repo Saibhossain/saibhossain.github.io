@@ -81,7 +81,12 @@ a:hover { color: var(--accent); }
   background: var(--gradient-main);
   border-radius: 4px;
 }
-::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+/* Responsive container spacing */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1.25rem;
+  }
+}
 
 /* Reduce motion preference */
 @media (prefers-reduced-motion: reduce) {

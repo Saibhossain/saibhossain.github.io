@@ -253,16 +253,44 @@
 
 /* --- Responsive Layout --- */
 @media (max-width: 768px) {
+  .filters-section {
+    margin: 2rem 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .filter-bar {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 30px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    padding: 0.3rem;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
   .timeline-wrapper {
-    padding-left: 3rem;
+    padding-left: 2rem;
   }
 
   .timeline-line {
-    left: 25px;
+    left: 15px;
   }
 
   .timeline-node {
-    left: 11px;
+    left: -31px;
+    width: 28px;
+    height: 28px;
   }
 
   .timeline-item {
@@ -273,15 +301,29 @@
   .timeline-date-col {
     text-align: left;
     padding-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-card-col .card {
+    padding: 1.25rem 1rem;
   }
 
   .card-header {
     flex-direction: column;
     gap: 0.75rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 
   .card-header div:last-child {
     text-align: left !important;
+  }
+
+  .role-title {
+    font-size: 1.25rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
   }
 }

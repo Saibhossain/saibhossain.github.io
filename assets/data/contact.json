@@ -68,10 +68,19 @@
       {
         "id": "facebook",
         "label": "Facebook",
-        "value": "facebook.com/saib.hossain.ai",
+        "value": "facebook.com/saib.hossain.957534",
         "icon": "F",
         "action": "https://www.facebook.com/saib.hossain.957534/",
         "color": "#1877f2",
+        "category": "social"
+      },
+      {
+        "id": "youtube",
+        "label": "YouTube",
+        "value": "youtube.com/@saibhossain3837",
+        "icon": "YT",
+        "action": "https://www.youtube.com/@saibhossain3837",
+        "color": "#ff0000",
         "category": "social"
       }
     ],
@@ -83,6 +92,15 @@
         "icon": "🎓",
         "action": "https://scholar.google.com/citations?user=zH0QciUAAAAJ&hl=en",
         "color": "#4285f4",
+        "category": "academic"
+      },
+      {
+        "id": "researchgate",
+        "label": "ResearchGate",
+        "value": "researchgate.net/profile/Saib-Hossain",
+        "icon": "RG",
+        "action": "https://www.researchgate.net/profile/Saib-Hossain?ev=hdr_xprf",
+        "color": "#00ccbb",
         "category": "academic"
       },
       {
