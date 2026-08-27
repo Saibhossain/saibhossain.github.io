@@ -75,20 +75,26 @@
   }
   </script>
   
-  <!-- Preconnect -->
+  <meta name="color-scheme" content="dark light">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+  <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Critical CSS Inline -->
-  <style>
-    :root{--bg:#0a0a1a;--surface:rgba(30,30,60,0.7);--primary:#6366f1;--accent:#06b6d4;--text:#e2e8f0;--text-muted:#94a3b8}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:0.75rem 1.5rem;background:var(--primary);color:#fff;z-index:10000;border-radius:10px;font-weight:600}
-    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
-    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Shared CSS -->
   <link rel="stylesheet" href="../../assets/css/base.css"/>

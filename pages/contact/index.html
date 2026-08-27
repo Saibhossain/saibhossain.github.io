@@ -52,18 +52,38 @@
   }
   </script>
 
-  <!-- Unique Contact Page Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <meta name="color-scheme" content="dark light">
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg"/>
+
+  <!-- Global Core Styles -->
   <link rel="stylesheet" href="../../assets/css/base.css"/>
   <link rel="stylesheet" href="../../assets/css/components.css"/>
   <link rel="stylesheet" href="../../assets/css/layout.css"/>
   <link rel="stylesheet" href="../../assets/css/animations.css"/>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg"/>
+  <!-- Unique Contact Page Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Animated Background -->

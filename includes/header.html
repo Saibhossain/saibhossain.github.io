@@ -1,43 +1,96 @@
 <nav class="nav" aria-label="Main navigation">
   <div class="nav-container">
     <a href="/" class="nav-logo" aria-label="MD Saib Hossain Home">
-      <span class="logo-text">SH</span>
+      <span class="logo-badge">SH</span>
+      <span class="logo-name">Saib Hossain</span>
     </a>
 
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
-      <span class="hamburger"></span>
-    </button>
+    <!-- Mobile Top Actions (Theme Toggle + Hamburger) -->
+    <div class="nav-actions-mobile-wrap">
+      <button class="theme-toggle-btn mobile-theme-btn" id="mobile-theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu" id="mobile-nav-toggle">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+
+    <!-- Backdrop Overlay for Mobile/iPad Drawer -->
+    <div class="nav-backdrop" id="nav-backdrop"></div>
 
     <div id="nav-menu" class="nav-menu-wrapper">
+      <!-- Mobile Drawer Header with Close Button -->
+      <div class="mobile-drawer-header">
+        <span class="drawer-title">Menu</span>
+        <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close navigation menu">&times;</button>
+      </div>
+
       <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/pages/about/index.html">About</a></li>
-        <li><a href="/pages/experience/index.html">Experience</a></li>
-        <li><a href="/pages/projects/index.html">Projects</a></li>
-        <li><a href="/pages/research/index.html">Research</a></li>
-        <li><a href="/pages/contact/index.html">Contact</a></li>
+        <li><a href="/"><span>Home</span><span class="mobile-nav-arrow">→</span></a></li>
+        <li><a href="/pages/about/index.html"><span>About</span><span class="mobile-nav-arrow">→</span></a></li>
+        <li><a href="/pages/experience/index.html"><span>Experience</span><span class="mobile-nav-arrow">→</span></a></li>
+        <li><a href="/pages/projects/index.html"><span>Projects</span><span class="mobile-nav-arrow">→</span></a></li>
+        <li><a href="/pages/research/index.html"><span>Research</span><span class="mobile-nav-arrow">→</span></a></li>
+        <li><a href="/pages/startup/index.html"><span>Startup</span><span class="mobile-nav-arrow">→</span></a></li>
+        <li><a href="/pages/volunteering/index.html"><span>Volunteering</span><span class="mobile-nav-arrow">→</span></a></li>
+        <li><a href="/pages/contact/index.html"><span>Contact</span><span class="mobile-nav-arrow">→</span></a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="/assets/cv/Md_Saib_Hossain_CV22Aug.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv-view"
+        <!-- View CV -->
+        <a href="/assets/cv/Md_Saib_Hossain_CV22Aug.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv-btn nav-cv-view"
           aria-label="View Saib Hossain CV in a new tab">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
             <circle cx="12" cy="12" r="3"></circle>
           </svg>
-          View CV
+          <span>View CV</span>
         </a>
-        <a href="/assets/cv/Md_Saib_Hossain_CV22Aug.pdf" download="Saib_Hossain_CV.pdf" class="nav-cv-download"
+
+        <!-- Download CV -->
+        <a href="/assets/cv/Md_Saib_Hossain_CV22Aug.pdf" download="Saib_Hossain_CV.pdf" class="nav-cv-btn nav-cv-download"
           aria-label="Download Saib Hossain CV PDF">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          Download CV
+          <span>Download CV</span>
         </a>
+
+        <!-- Desktop Theme Toggle Button -->
+        <button class="theme-toggle-btn desktop-theme-btn" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
       </div>
     </div>
   </div>

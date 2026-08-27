@@ -1,11 +1,15 @@
-/* --- Startup Page Styles --- */
+/* ===================================================
+   STARTUP PAGE STYLES — PRAXIC INTELLIGENCE
+   MD Saib Hossain Portfolio
+   =================================================== */
+
 .startup-page {
-  min-height: calc(100vh - 72px - 280px); /* Fill space between nav and footer */
+  min-height: calc(100vh - 72px - 280px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0;
-  background: radial-gradient(ellipse at 50% 30%, rgba(99,102,241,0.08) 0%, transparent 60%), #0a0a1a;
+  padding: 4rem 0;
+  position: relative;
 }
 
 .container-center {
@@ -15,92 +19,110 @@
 }
 
 .startup-card {
-  max-width: 750px;
+  max-width: 800px;
   width: 100%;
-  padding: 3.5rem 2.5rem;
-  border-radius: var(--radius-lg);
+  padding: 4rem 3rem;
+  border-radius: var(--radius-xl);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-lg);
+  background: var(--surface);
+  position: relative;
 }
 
 .startup-badge {
-  display: inline-block;
-  padding: 0.35rem 0.85rem;
-  background: rgba(99, 102, 241, 0.15);
-  color: #a78bfa;
-  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  background: var(--badge-bg);
+  color: var(--primary-light);
+  border-radius: var(--radius-full);
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  border: 1px solid var(--badge-border);
+}
+
+[data-theme="light"] .startup-badge {
+  color: var(--primary);
 }
 
 .startup-card h1 {
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
   font-weight: 800;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.03em;
   margin-bottom: 0.5rem;
 }
 
-.tagline {
-  color: var(--text-muted);
-  font-size: 1.15rem;
-  font-weight: 500;
+.startup-page .tagline {
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 2rem;
 }
 
-.description {
-  color: #cbd5e1;
-  line-height: 1.75;
-  font-size: 1.02rem;
-  margin-bottom: 2.5rem;
+.startup-page .description {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Features Grid */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin-bottom: 3rem;
 }
 
 .feat-item {
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  border-radius: 12px;
-  transition: var(--transition);
+  padding: 1.75rem 1.25rem;
+  background: var(--surface-active);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .feat-item:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(99, 102, 241, 0.2);
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  background: var(--surface-hover);
+  box-shadow: 0 4px 14px var(--primary-glow);
 }
 
 .feat-icon {
-  font-size: 2rem;
+  font-size: 2.25rem;
   display: block;
   margin-bottom: 0.75rem;
 }
 
 .feat-item h4 {
-  color: #e2e8f0;
-  margin-bottom: 0.35rem;
-  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .feat-item p {
-  color: #94a3b8;
-  font-size: 0.85rem;
-  line-height: 1.4;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 /* Status Progress Box */
 .status-box {
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 1.5rem 2rem;
+  background: var(--surface-active);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
   margin-bottom: 3rem;
   width: 100%;
 }
@@ -110,69 +132,48 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  color: #cbd5e1;
+  color: var(--text);
   font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.pulse-dot {
-  width: 10px;
-  height: 10px;
-  background-color: var(--accent);
-  border-radius: 50%;
-  position: relative;
-}
-
-.pulse-dot::before {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  background-color: var(--accent);
-  opacity: 0.4;
-  animation: pulseDot 2s infinite;
-}
-
-@keyframes pulseDot {
-  0% { transform: scale(1); opacity: 0.4; }
-  100% { transform: scale(2.5); opacity: 0; }
+  font-weight: 600;
+  margin-bottom: 1.25rem;
 }
 
 .progress-bar-wrap {
-  height: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
+  height: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .progress-bar-fill {
   height: 100%;
   background: var(--gradient-main);
-  border-radius: 4px;
+  border-radius: var(--radius-full);
 }
 
 .status-percent {
-  color: var(--text-muted);
-  font-size: 0.8rem;
+  color: var(--accent);
+  font-size: 0.85rem;
   font-family: var(--font-mono);
+  font-weight: 700;
 }
 
 .action-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 /* --- Responsive Adjustments --- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .startup-page {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
   }
   .startup-card {
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
   .features-grid {
     grid-template-columns: 1fr;
@@ -183,7 +184,6 @@
   }
   .action-buttons .btn {
     width: 100%;
-    max-width: 300px;
-    justify-content: center;
+    max-width: 320px;
   }
 }

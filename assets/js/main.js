@@ -246,15 +246,14 @@
     ];
 
     const colors = [
-      '#818cf8', // Indigo
+      '#6366f1', // Indigo
       '#06b6d4', // Cyan
-      '#2dd4bf', // Teal
-      '#c084fc', // Purple
-      '#ffffffff', // Rose
-      '#60a5fa', // Blue
-      '#34d399', // Emerald
-      '#fbbf24',  // Amber
-      '#7300ffff'  // Amber
+      '#10b981', // Emerald
+      '#8b5cf6', // Violet
+      '#f43f5e', // Rose
+      '#3b82f6', // Blue
+      '#14b8a6', // Teal
+      '#f59e0b'  // Amber
     ];
 
     let phraseIndex = 0;
