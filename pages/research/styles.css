@@ -221,7 +221,7 @@
 }
 
 .pub-title a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .pub-meta {

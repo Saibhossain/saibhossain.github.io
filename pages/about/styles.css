@@ -119,7 +119,8 @@
 .aim-item:hover {
   transform: translateX(4px);
   border-color: var(--border-hover);
-  border-left-color: var(--accent);
+  border-left-color: var(--primary);
+  background: var(--surface-hover);
 }
 
 .aim-item h4 {
@@ -145,7 +146,7 @@
 
 .card-highlight {
   border-color: var(--primary) !important;
-  background: var(--surface-hover) !important;
+  background: var(--badge-bg) !important;
   box-shadow: 0 0 25px var(--primary-glow);
 }
 
@@ -156,8 +157,14 @@
   font-weight: 700;
 }
 
+.card-title a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
 .card-title a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .card-desc {
@@ -195,12 +202,13 @@
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
 }
 
 .list-item:hover {
   transform: translateX(4px);
   border-color: var(--border-hover);
+  background: var(--surface-hover);
 }
 
 .list-date {
@@ -254,9 +262,14 @@
 }
 
 .nav-card:hover {
-  border-color: var(--accent);
+  border-color: var(--primary);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md), 0 0 25px var(--accent-glow);
+  box-shadow: var(--shadow-md), 0 0 25px var(--primary-glow);
+  background: var(--surface-hover);
+}
+
+.nav-card:hover h4 {
+  color: var(--primary);
 }
 
 .nav-icon {

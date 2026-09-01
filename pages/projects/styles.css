@@ -61,33 +61,26 @@
   border: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all var(--transition-fast);
   position: relative;
-  overflow: hidden;
 }
-.filter-btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-main);
-  opacity: 0;
-  transition: var(--transition);
-  z-index: -1;
+.filter-btn:hover {
+  color: var(--primary);
+  background: var(--badge-bg);
+  border-color: var(--badge-border);
 }
-.filter-btn:hover,
-.filter-btn.active {
-  color: white;
-  border-color: transparent;
-}
-.filter-btn:hover::before,
-.filter-btn.active::before {
-  opacity: 1;
+[data-theme="dark"] .filter-btn:hover {
+  color: var(--text);
+  background: var(--surface-hover);
 }
 .filter-btn.active {
+  background: var(--gradient-main) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99,102,241,0.3);
+  box-shadow: 0 4px 12px var(--primary-glow);
 }
 
 /* ===== MASONRY GRID LAYOUT (Unique) ===== */

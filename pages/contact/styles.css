@@ -93,17 +93,39 @@
 }
 
 [data-theme="light"] .contact-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(16, 185, 129, 0.18);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(16, 185, 129, 0.22);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
-[data-theme="light"] .method-label {
-  color: #065f46;
+[data-theme="light"] .contact-card:hover {
+  background: #ffffff;
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.15);
 }
 
-[data-theme="light"] .method-value {
+[data-theme="light"] .contact-label {
+  color: #047857;
+}
+
+[data-theme="light"] .contact-value {
   color: #064e3b;
+}
+
+[data-theme="light"] .contact-card:hover .contact-value {
+  color: #047857;
+}
+
+[data-theme="light"] .contact-card[data-category="social"]:hover .contact-value {
+  color: #b45309;
+}
+
+[data-theme="light"] .contact-card[data-category="academic"]:hover .contact-value {
+  color: #0284c7;
+}
+
+[data-theme="light"] .contact-action {
+  color: #047857;
 }
 
 [data-theme="light"] .group-title {
@@ -111,8 +133,9 @@
 }
 
 [data-theme="light"] .form-card {
-  background: rgba(255, 255, 255, 0.92);
-  border-color: rgba(16, 185, 129, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 16px 40px rgba(6, 78, 59, 0.08);
 }
 
 [data-theme="light"] .form-title {
@@ -126,8 +149,47 @@
 [data-theme="light"] .form-input,
 [data-theme="light"] .form-textarea {
   background: #ffffff;
-  border-color: rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.3);
   color: #064e3b;
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-textarea:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+[data-theme="light"] .form-input::placeholder,
+[data-theme="light"] .form-textarea::placeholder {
+  color: #6ee7b7;
+}
+
+[data-theme="light"] .form-note {
+  color: #047857;
+}
+
+[data-theme="light"] .footer-text {
+  color: #065f46;
+}
+
+[data-theme="light"] .footer-link {
+  color: #b45309;
+}
+
+[data-theme="light"] .footer-link:hover {
+  color: #064e3b;
+}
+
+[data-theme="light"] .social-mini a {
+  background: rgba(16, 185, 129, 0.08);
+  color: #064e3b;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+[data-theme="light"] .social-mini a:hover {
+  background: var(--gradient-1);
+  color: #ffffff !important;
+  border-color: transparent;
 }
 
 /* ===== Base Reset & Typography ===== */

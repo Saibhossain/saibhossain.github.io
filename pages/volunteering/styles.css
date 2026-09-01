@@ -256,8 +256,8 @@
 
 .volunteering-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-md), 0 0 20px var(--accent-glow);
-  border-color: var(--accent);
+  box-shadow: var(--shadow-md), 0 0 20px var(--primary-glow);
+  border-color: var(--primary);
 }
 
 .volunteering-card .volunteering-date {
