@@ -285,7 +285,7 @@
 }
 
 .research-link:hover {
-  color: var(--primary-light);
+  color: var(--primary);
   transform: translateX(4px);
 }
 
@@ -347,7 +347,7 @@
 }
 
 .project-link:hover {
-  color: var(--primary-light);
+  color: var(--primary);
   transform: translateX(4px);
 }
 
