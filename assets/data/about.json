@@ -3,7 +3,7 @@
   "role": "AI Engineer & ML Researcher",
   "biography": [
     "I am an AI Engineer and Machine Learning Researcher driven by a single core mission: building robust, safe, and clinically deployable intelligent systems. My expertise bridges the gap between theoretical deep learning and practical, high-throughput production pipelines, with specific focus on Medical Image Analysis and Stateful Multi-Agent architectures.",
-    "Currently, I serve as a Research Assistant at the United International University (UIU) Institute of Advanced Research (IAR), where I lead clinical AI pipeline developments. Simultaneously, I work as an AI Engineer at FireAI (Betopia Group), architecting stateful multi-agent systems and security filters to safeguard LLM orchestrations from prompt injection vulnerabilities.",
+    "Currently, I serve as a Research Assistant at the United International University (UIU) Institute of Advanced Research (IAR), where I lead clinical AI pipeline developments, architecting stateful multi-agent systems and security filters to safeguard LLM orchestrations from prompt injection vulnerabilities.",
     "I believe in a future where AI systems act as secure, aligned partners to human experts. Whether designing CNN pipelines for pediatric fracture segmentations or coding cryptographic context validation frameworks for autonomous agents, I focus on system reliability, cross-domain generalization, and open-source scalability."
   ],
   "aims": [

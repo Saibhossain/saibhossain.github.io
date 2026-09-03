@@ -53,26 +53,6 @@
       "link": "../../pages/research/index.html"
     },
     {
-      "title": "AI Engineer",
-      "company": "FireAI (Betopia Group)",
-      "location": "Dhaka, Bangladesh (Remote)",
-      "job_type": "Full-time",
-      "category": "engineering",
-      "start_date": "Apr 2026",
-      "end_date": "May 2026",
-      "duration": "2 months",
-      "description": "Building next-generation agentic AI systems to automate complex multi-step business workflows. Architecting production-ready multi-agent systems with LLM orchestration using Python.",
-      "skills": ["Agentic AI", "Multi-Agent Systems", "LLM Orchestration", "Python", "Workflow Automation"],
-      "key_responsibilities": [
-        "Design autonomous agent architectures for enterprise workflow automation",
-        "Implement LLM orchestration patterns for stateful task execution",
-        "Optimize latency and reliability for production AI systems",
-        "Collaborate with product teams on AI feature specifications"
-      ],
-      "achievements": ["Architected scalable multi-agent framework", "Reduced workflow latency by 40%"],
-      "link": null
-    },
-    {
       "title": "Volunteer Research Assistant",
       "company": "Ruach Tech",
       "location": "London, UK (Remote)",
