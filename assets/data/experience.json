@@ -2,9 +2,18 @@
   "page_title": "Professional Experience",
   "page_subtitle": "My journey in AI engineering, machine learning research, and secure system architectures.",
   "categories": [
-    { "id": "all", "label": "All Experience" },
-    { "id": "engineering", "label": "Engineering & Development" },
-    { "id": "research", "label": "Academic & Lab Research" }
+    {
+      "id": "all",
+      "label": "All Experience"
+    },
+    {
+      "id": "engineering",
+      "label": "Engineering & Development"
+    },
+    {
+      "id": "research",
+      "label": "Academic & Lab Research"
+    }
   ],
   "timeline": [
     {
@@ -18,9 +27,9 @@
       "duration": "4 months",
       "description": "Engaged in specialized research tasks and deliverables under the direct supervision of Dr. Md. Abdullah-Al-Jubair. Responsible for maintaining strict confidentiality of unpublished research, datasets, and methodologies while dedicating 20 hours weekly to ongoing lab projects.",
       "skills": [
-        "Research Methodology", 
-        "Data Confidentiality", 
-        "Scientific Reporting", 
+        "Research Methodology",
+        "Data Confidentiality",
+        "Scientific Reporting",
         "Progress Tracking"
       ],
       "key_responsibilities": [
@@ -41,15 +50,29 @@
       "start_date": "Nov 2025",
       "end_date": "Present",
       "duration": "Ongoing",
-      "description": "Deep learning pipelines for medical image analysis. Extracted and analyzed radiomic features, supported model evaluation and statistical correlation studies. Documented experiments on model reliability, data bias, and clinical applicability.",
-      "skills": ["Medical Imaging", "Radiomics", "PyTorch", "Statistical Analysis", "Clinical AI"],
-      "key_responsibilities": [
-        "Develop CNN architectures for CT scan analysis",
-        "Extract and validate radiomic features for survival prediction",
-        "Conduct bias audits and fairness evaluations",
-        "Prepare manuscripts for peer-reviewed publication"
+      "description": "Lead multidisciplinary research initiatives at the intersection of AI in Healthcare, Medical AI, Agentic AI, AI Security, and Human–Computer Interaction (HCI). Coordinate three funded research projects involving 10+ researchers across five research teams, providing research direction, technical oversight, project coordination, and researcher mentorship. Work closely with professors, physicians, neurosurgeons, oncology specialists, mathematicians, AI researchers, and other domain experts to translate clinical and scientific requirements into rigorous AI research and practical healthcare applications.\n\nCore Research Areas:\n• AI in Healthcare & Medical Imaging: Developing and evaluating deep learning and computer vision approaches for healthcare research, with applications in breast cancer, cervical cancer, lung cancer, and brain stroke.\n• Medical Agentic AI & Intelligent Systems: Researching agentic workflows, intelligent decision-support systems, AI-assisted healthcare applications, and HCI approaches for medical contexts.\n• AI Security & Responsible AI: Investigating security, reliability, robustness, and emerging risks associated with AI models and agentic systems in healthcare environments.\n\nLeadership & Research Contributions:\n• Scientific Publication: Contributed to 5 Q1 journal manuscripts—3 submitted and 2 in progress.\n• Researcher Development: Mentor and train junior researchers in medical image analysis, machine learning, AI model development, experimental methodology, and research practices.\n• Technical Research Leadership: Contribute hands-on to the design, development, experimentation, evaluation, and documentation of AI models and healthcare-focused intelligent applications.\n• End-to-End Research Coordination: Support research activities across the full lifecycle, including problem formulation, dataset preparation, ethical considerations, model development, experimentation, evaluation, documentation, and publication.",
+      "skills": [
+        "AI in Healthcare",
+        "Medical Image Analysis",
+        "Agentic AI",
+        "AI Security",
+        "Clinical AI",
+        "Computer Vision",
+        "PyTorch",
+        "Statistical Analysis",
+        "HCI"
       ],
-      "achievements": ["3 IEEE ICCIT 2025 papers (first author)", "UIU-funded research grant recipient"],
+      "key_responsibilities": [
+        "Coordinate three funded research projects involving 10+ researchers across five research teams",
+        "Translate clinical & scientific requirements into AI research with physicians, neurosurgeons, and oncology specialists",
+        "Develop deep learning & computer vision models for breast, cervical, lung cancer, and brain stroke",
+        "Investigate agentic workflows, intelligent decision-support systems, and healthcare AI security",
+        "Mentor and train junior researchers in medical image analysis, machine learning, and research practices"
+      ],
+      "achievements": [
+        "Contributed to 5 Q1 journal manuscripts (3 submitted, 2 in progress)",
+        "UIU-funded research grant recipient"
+      ],
       "link": "../../pages/research/index.html"
     },
     {
@@ -62,14 +85,22 @@
       "end_date": "Mar 2026",
       "duration": "3 months",
       "description": "Conducted research on AI safety and alignment. Analyzed and summarized advanced AI research papers to support development of safe AI system frameworks.",
-      "skills": ["AI Safety", "Research Analysis", "Technical Writing", "Literature Review"],
+      "skills": [
+        "AI Safety",
+        "Research Analysis",
+        "Technical Writing",
+        "Literature Review"
+      ],
       "key_responsibilities": [
         "Review and synthesize cutting-edge AI safety research",
         "Contribute to framework design for aligned AI systems",
         "Document findings for R&D teams",
         "Support ethical AI governance initiatives"
       ],
-      "achievements": ["Contributed to internal AI safety guidelines", "Summarized 50+ research papers"],
+      "achievements": [
+        "Contributed to internal AI safety guidelines",
+        "Summarized 50+ research papers"
+      ],
       "link": null
     },
     {
@@ -82,14 +113,23 @@
       "end_date": "Mar 2026",
       "duration": "5 months",
       "description": "Designed synthetic face generation pipeline with StyleGAN2 and Stable Diffusion XL to address data scarcity. Developed Agentic RAG system for customer support and HR workflow automation.",
-      "skills": ["StyleGAN2", "Stable Diffusion XL", "RAG Systems", "Data Augmentation", "Python"],
+      "skills": [
+        "StyleGAN2",
+        "Stable Diffusion XL",
+        "RAG Systems",
+        "Data Augmentation",
+        "Python"
+      ],
       "key_responsibilities": [
         "Build generative AI pipelines for synthetic data creation",
         "Implement RAG architectures for enterprise knowledge retrieval",
         "Optimize model inference for production deployment",
         "Collaborate with cross-functional teams on AI product features"
       ],
-      "achievements": ["Reduced data collection costs by 70% via synthetic generation", "Deployed RAG system serving 500+ daily queries"],
+      "achievements": [
+        "Reduced data collection costs by 70% via synthetic generation",
+        "Deployed RAG system serving 500+ daily queries"
+      ],
       "link": null
     },
     {
@@ -102,22 +142,38 @@
       "end_date": "Oct 2025",
       "duration": "3 months",
       "description": "Deep Learning in Computational and Spatial Biology competition. Developed ensemble models for cell segmentation and spatial pattern recognition. Awarded Best Abstract for Spatial Biology contribution.",
-      "skills": ["Computer Vision", "Ensemble Learning", "Bioinformatics", "PyTorch", "Data Visualization"],
+      "skills": [
+        "Computer Vision",
+        "Ensemble Learning",
+        "Bioinformatics",
+        "PyTorch",
+        "Data Visualization"
+      ],
       "key_responsibilities": [
         "Design multi-model ensemble for robust predictions",
         "Implement spatial attention mechanisms for biology data",
         "Optimize inference pipeline for competition constraints",
         "Document methodology for reproducible research"
       ],
-      "achievements": ["🥈 1st Runner-up (Top 2%)", "🏆 Best Abstract Award — Spatial Biology"],
+      "achievements": [
+        "🥈 1st Runner-up (Top 2%)",
+        "🏆 Best Abstract Award — Spatial Biology"
+      ],
       "link": "https://kaggle.com/competitions/spatial-biology"
     }
   ],
   "skills_legend": {
     "Agentic AI": "#6366f1",
-    "Medical Imaging": "#10b981", 
-    "LLM Orchestration": "#8b5cf6",
+    "Medical Imaging": "#10b981",
+    "AI in Healthcare": "#0ea5e9",
+    "AI Security": "#ec4899",
+    "Clinical AI": "#14b8a6",
     "Computer Vision": "#06b6d4",
+    "Radiomics": "#a855f7",
+    "PyTorch": "#f97316",
+    "Statistical Analysis": "#64748b",
+    "HCI": "#eab308",
+    "LLM Orchestration": "#8b5cf6",
     "Research": "#f59e0b",
     "Python": "#374151"
   }
