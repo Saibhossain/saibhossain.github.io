@@ -87,11 +87,10 @@
   top: 10px;
   bottom: 10px;
   width: 2px;
-  background: linear-gradient(to bottom, 
-    var(--primary), 
-    var(--accent) 50%, 
-    var(--border)
-  );
+  background: linear-gradient(to bottom,
+      var(--primary),
+      var(--accent) 50%,
+      var(--border));
   z-index: 1;
 }
 
@@ -114,7 +113,8 @@
 /* Timeline Node */
 .timeline-node {
   position: absolute;
-  left: 155px; /* Centered on timeline line */
+  left: 155px;
+  /* Centered on timeline line */
   top: 24px;
   width: 32px;
   height: 32px;
@@ -150,8 +150,15 @@
 }
 
 @keyframes pulseGlow {
-  0% { opacity: 0.1; transform: scale(0.9); }
-  100% { opacity: 0.35; transform: scale(1.15); }
+  0% {
+    opacity: 0.1;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 0.35;
+    transform: scale(1.15);
+  }
 }
 
 /* Date Side Column */
@@ -220,7 +227,8 @@
   margin-top: 0.35rem;
 }
 
-.location-badge, .job-type-badge {
+.location-badge,
+.job-type-badge {
   display: block;
   font-size: 0.82rem;
   color: var(--text-muted);

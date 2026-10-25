@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (filter === activeFilter) return;
 
         activeFilter = filter;
-        
+
         // Update active class
         filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         e.target.classList.add('active');
@@ -106,9 +106,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Map custom bullet tag colors from skills_legend if matched, otherwise use defaults
       const skillsHtml = item.skills && item.skills.length > 0
         ? item.skills.map(skill => {
-            const color = (experienceData.skills_legend && experienceData.skills_legend[skill]) || 'var(--border-color)';
-            return `<span class="skill-tag" style="--skill-border: ${color}">${escapeHtml(skill)}</span>`;
-          }).join('')
+          const color = (experienceData.skills_legend && experienceData.skills_legend[skill]) || 'var(--border-color)';
+          return `<span class="skill-tag" style="--skill-border: ${color}">${escapeHtml(skill)}</span>`;
+        }).join('')
         : '';
 
       const responsibilitiesHtml = item.key_responsibilities && item.key_responsibilities.length > 0
