@@ -1,0 +1,39 @@
+# ===================================================
+# robots.txt — MD Saib Hossain Portfolio
+# Canonical Domain: https://saibhossain.dev
+# GitHub Mirror: https://saibhossain.github.io
+# ===================================================
+
+User-agent: *
+Allow: /
+Allow: /pages/
+Allow: /assets/
+Allow: /assets/images/
+Allow: /assets/cv/
+Allow: /assets/data/
+
+# Sitemaps
+Sitemap: https://saibhossain.dev/sitemap.xml
+Sitemap: https://saibhossain.github.io/sitemap.xml
+
+# AI & Search Engine Crawlers (AEO / GEO / Scholar Indexing)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /

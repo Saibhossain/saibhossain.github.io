@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===================================================
+       SITEMAP: MD Saib Hossain | Personal Portfolio & Research Index
+       Canonical Domain: https://saibhossain.dev
+       GitHub Pages Mirror: https://saibhossain.github.io
+       Last Updated: 2026-10-25
+       =================================================== -->
+
+  <!-- 1. Homepage: Identity, Aims & Scopes, Highlights, Live HUD -->
+  <url>
+    <loc>https://saibhossain.dev/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/profile.jpg</image:loc>
+      <image:title>MD Saib Hossain — AI Engineer &amp; ML Researcher</image:title>
+      <image:caption>Official portrait of MD Saib Hossain, AI Engineer &amp; Machine Learning Researcher</image:caption>
+      <image:geo_location>Dhaka, Bangladesh</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/profile_transparent.webp</image:loc>
+      <image:title>MD Saib Hossain Portrait</image:title>
+      <image:caption>MD Saib Hossain Transparent Portrait Graphic</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 2. Research & Publications: IEEE ICCIT 2025, NeurIPS, Preprints -->
+  <url>
+    <loc>https://saibhossain.dev/pages/research/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/research/Fracture/fig1_yolov11_detection_results.webp</image:loc>
+      <image:title>YOLOv11 Fracture Detection Results — Multi-Dataset Deep Learning</image:title>
+      <image:caption>Detection and classification results across adult and pediatric fracture domains (IEEE ICCIT 2025)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/research/Fracture/fig2_tasks_classification_detection_segmentation.webp</image:loc>
+      <image:title>Multi-Task Musculoskeletal Framework Architecture</image:title>
+      <image:caption>Unified classification, detection, and segmentation architecture for pediatric and adult fractures</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/research/BanglaSignTutor/fig1_banglasign_learning_framework.webp</image:loc>
+      <image:title>BanglaSign-Tutor Interactive Learning Framework</image:title>
+      <image:caption>Interactive Bengali Sign Language tutoring architecture with visual and vibrotactile haptic feedback</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/research/BanglaSignTutor/fig2_hardware_setup_raspberry_pi.webp</image:loc>
+      <image:title>BanglaSign-Tutor Edge Hardware Implementation</image:title>
+      <image:caption>Raspberry Pi and camera hardware setup for real-time edge sign language translation</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/research/urbonSustainability/fig1_study_area_maps.webp</image:loc>
+      <image:title>Urban Sustainability Satellite Study Area Maps</image:title>
+      <image:caption>Sentinel-2 and Landsat geospatial study area maps covering Dhaka, Khulna, and Rajshahi (IEEE ICCIT 2025)</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 3. Projects & Systems: Self-RAG, Agentic AI, MemoryOS -->
+  <url>
+    <loc>https://saibhossain.dev/pages/projects/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- 4. About MD Saib Hossain: Background, Narrative, Core Skills -->
+  <url>
+    <loc>https://saibhossain.dev/pages/about/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/profile.jpg</image:loc>
+      <image:title>MD Saib Hossain — Background &amp; Philosophy</image:title>
+      <image:caption>MD Saib Hossain — AI Engineer, ML Researcher, and Builder of Digital Brains</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 5. Professional Journey & Academic Experience -->
+  <url>
+    <loc>https://saibhossain.dev/pages/experience/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 6. Volunteering & Social Good: Alo Bhubon Trust, NCTF, Save the Children -->
+  <url>
+    <loc>https://saibhossain.dev/pages/volunteering/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/volentering/img.webp</image:loc>
+      <image:title>Alo Bhubon Trust — Rural Cancer Diagnostics Fieldwork</image:title>
+      <image:caption>Fieldwork and remote cancer screening infrastructure setup at Naogaon with Alo Bhubon Trust</image:caption>
+      <image:geo_location>Naogaon, Bangladesh</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://saibhossain.dev/assets/images/volentering/img2.webp</image:loc>
+      <image:title>National Children's Task Force (NCTF) Advocacy Sessions</image:title>
+      <image:caption>Youth leadership dialogues and child rights governance monitoring with Save the Children</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 7. Startup: Praxic Intelligence (Agentic AI Security & Enterprise Workflows) -->
+  <url>
+    <loc>https://saibhossain.dev/pages/startup/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 8. Contact & Collaboration -->
+  <url>
+    <loc>https://saibhossain.dev/pages/contact/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- ===================================================
+       Direct HTML File Mappings (Search Engine Exact Path Indexing)
+       =================================================== -->
+  <url>
+    <loc>https://saibhossain.dev/index.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://saibhossain.dev/pages/research/index.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://saibhossain.dev/pages/projects/index.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://saibhossain.dev/pages/about/index.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://saibhossain.dev/pages/experience/index.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://saibhossain.dev/pages/volunteering/index.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://saibhossain.dev/pages/startup/index.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://saibhossain.dev/pages/contact/index.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
