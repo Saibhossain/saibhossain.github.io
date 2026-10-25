@@ -108,11 +108,11 @@
     rel="stylesheet">
 
   <!-- Core Design System CSS -->
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/layout.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/base.css?v=3" />
+  <link rel="stylesheet" href="assets/css/components.css?v=3" />
+  <link rel="stylesheet" href="assets/css/layout.css?v=3" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=3" />
+  <link rel="stylesheet" href="assets/css/main.css?v=3" />
 
   <!-- Favicon & Search Result Icons -->
   <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192x192.png" />
@@ -279,7 +279,8 @@
 
             <!-- Live Status & Personal Greeting -->
             <div class="hero-status-row">
-              <div class="live-visitor-pill" id="live-visitor-pill" title="Live active sessions exploring this portfolio right now">
+              <div class="live-visitor-pill" id="live-visitor-pill"
+                title="Live active sessions exploring this portfolio right now">
                 <span class="live-dot-pulse"></span>
                 <span class="live-count-number" id="live-visitor-count">4</span>
                 <span>viewing right now</span>
@@ -302,7 +303,9 @@
 
             <!-- Personal Mission Narrative -->
             <p class="hero-bio">
-              I am a builder of digital brains. As an AI Engineer and Researcher, I teach computers how to read, see, and reason to solve real human problems — bridging machine learning research with scalable software, enterprise agentic systems, and healthcare screening.
+              I am a builder of digital brains. As an AI Engineer and Researcher, I teach computers how to read, see,
+              and reason to solve real human problems — bridging machine learning research with scalable software,
+              enterprise agentic systems, and healthcare screening.
             </p>
 
             <!-- Dimension Pillars Chips -->
@@ -321,30 +324,55 @@
               <a href="pages/projects/index.html" class="btn btn-outline">
                 View Projects →
               </a>
-              <a href="animated/index.html" class="btn btn-story-mode" title="Experience full-screen cinematic scrollytelling">
+              <a href="animated/index.html" class="btn btn-story-mode"
+                title="Experience full-screen cinematic scrollytelling">
                 <span>✦</span> Cinematic Story Mode
               </a>
             </div>
 
             <!-- Academic & Social HUD Profiles -->
             <div class="hero-social-row">
-              <a href="https://scholar.google.com/citations?user=zH0QciUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="Google Scholar">
-                <svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+              <a href="https://scholar.google.com/citations?user=zH0QciUAAAAJ&hl=en" target="_blank"
+                rel="noopener noreferrer" class="hero-social-link" title="Google Scholar">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+                </svg>
               </a>
-              <a href="https://orcid.org/0009-0004-2595-2742" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="ORCID iD">
-                <svg viewBox="0 0 256 256"><path d="M128 0C57.307 0 0 57.307 0 128s57.307 128 128 128 128-57.307 128-128S198.693 0 128 0zm-39.73 189.78H64.44V73.34h23.83v116.44zm-11.91-131.6c-7.9 0-14.3-6.4-14.3-14.3 0-7.9 6.4-14.3 14.3-14.3 7.9 0 14.3 6.4 14.3 14.3 0 7.9-6.4 14.3-14.3 14.3zm113.62 93.38c-14.93 23.36-40.4 23.36-58.4 23.36h-34.9v-116.4h34.9c18 0 43.47 0 58.4 23.36 12.3 19.23 12.3 50.45 0 69.68zm-54.8-51.27h-14.6v64.67h14.6c18.5 0 37.3 0 37.3-32.34 0-32.33-18.8-32.33-37.3-32.33z"/></svg>
+              <a href="https://orcid.org/0009-0004-2595-2742" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" title="ORCID iD">
+                <svg viewBox="0 0 256 256">
+                  <path
+                    d="M128 0C57.307 0 0 57.307 0 128s57.307 128 128 128 128-57.307 128-128S198.693 0 128 0zm-39.73 189.78H64.44V73.34h23.83v116.44zm-11.91-131.6c-7.9 0-14.3-6.4-14.3-14.3 0-7.9 6.4-14.3 14.3-14.3 7.9 0 14.3 6.4 14.3 14.3 0 7.9-6.4 14.3-14.3 14.3zm113.62 93.38c-14.93 23.36-40.4 23.36-58.4 23.36h-34.9v-116.4h34.9c18 0 43.47 0 58.4 23.36 12.3 19.23 12.3 50.45 0 69.68zm-54.8-51.27h-14.6v64.67h14.6c18.5 0 37.3 0 37.3-32.34 0-32.33-18.8-32.33-37.3-32.33z" />
+                </svg>
               </a>
-              <a href="https://ieeexplore.ieee.org/author/37088589400" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="IEEE Xplore">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-3.5c0-.83-.67-1.5-1.5-1.5S10 12.67 10 13.5V17H8v-6h2v.9c.56-.63 1.39-1.02 2.3-1.02 1.77 0 3.2 1.43 3.2 3.2V17z"/></svg>
+              <a href="https://ieeexplore.ieee.org/author/37088589400" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" title="IEEE Xplore">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-3.5c0-.83-.67-1.5-1.5-1.5S10 12.67 10 13.5V17H8v-6h2v.9c.56-.63 1.39-1.02 2.3-1.02 1.77 0 3.2 1.43 3.2 3.2V17z" />
+                </svg>
               </a>
-              <a href="https://www.researchgate.net/profile/Saib-Hossain?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="ResearchGate">
-                <svg viewBox="0 0 24 24"><path d="M19.586 0c-.818 0-1.508.19-2.072.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-1.128-.97C14.73.57 14.157.432 13.45.432c-1.122 0-2.077.34-2.866 1.02-.79.68-1.378 1.64-1.765 2.883-.387 1.242-.58 2.684-.58 4.327 0 1.65.203 3.1.61 4.348.406 1.25 1.01 2.217 1.81 2.903.8.686 1.782 1.03 2.946 1.03 1.13 0 2.08-.344 2.85-.97.77-.625 1.34-1.517 1.7-2.674v3.39h2.36V0h-1.928zm-4.34 14.28c-.528.528-1.22.792-2.078.792-.857 0-1.545-.264-2.062-.792-.518-.528-.89-1.29-1.118-2.285-.228-.996-.342-2.203-.342-3.62 0-1.42.114-2.628.342-3.623.228-.996.6-1.758 1.118-2.286.517-.527 1.205-.79 2.062-.79.858 0 1.55.263 2.077.79.528.528.898 1.29 1.11 2.286.213.995.32 2.204.32 3.623 0 1.417-.107 2.624-.32 3.62-.212.996-.582 1.757-1.11 2.285zM4.148 7.37H1.79V24h2.358V7.37zM2.969 0C2.15 0 1.472.274.938.823.403 1.37.135 2.08.135 2.95c0 .87.268 1.58.803 2.128.534.548 1.212.822 2.031.822.82 0 1.498-.274 2.032-.822.535-.548.802-1.258.802-2.128 0-.87-.267-1.58-.802-2.127C4.467.274 3.789 0 2.969 0z"/></svg>
+              <a href="https://www.researchgate.net/profile/Saib-Hossain?ev=hdr_xprf" target="_blank"
+                rel="noopener noreferrer" class="hero-social-link" title="ResearchGate">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19.586 0c-.818 0-1.508.19-2.072.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-1.128-.97C14.73.57 14.157.432 13.45.432c-1.122 0-2.077.34-2.866 1.02-.79.68-1.378 1.64-1.765 2.883-.387 1.242-.58 2.684-.58 4.327 0 1.65.203 3.1.61 4.348.406 1.25 1.01 2.217 1.81 2.903.8.686 1.782 1.03 2.946 1.03 1.13 0 2.08-.344 2.85-.97.77-.625 1.34-1.517 1.7-2.674v3.39h2.36V0h-1.928zm-4.34 14.28c-.528.528-1.22.792-2.078.792-.857 0-1.545-.264-2.062-.792-.518-.528-.89-1.29-1.118-2.285-.228-.996-.342-2.203-.342-3.62 0-1.42.114-2.628.342-3.623.228-.996.6-1.758 1.118-2.286.517-.527 1.205-.79 2.062-.79.858 0 1.55.263 2.077.79.528.528.898 1.29 1.11 2.286.213.995.32 2.204.32 3.623 0 1.417-.107 2.624-.32 3.62-.212.996-.582 1.757-1.11 2.285zM4.148 7.37H1.79V24h2.358V7.37zM2.969 0C2.15 0 1.472.274.938.823.403 1.37.135 2.08.135 2.95c0 .87.268 1.58.803 2.128.534.548 1.212.822 2.031.822.82 0 1.498-.274 2.032-.822.535-.548.802-1.258.802-2.128 0-.87-.267-1.58-.802-2.127C4.467.274 3.789 0 2.969 0z" />
+                </svg>
               </a>
-              <a href="https://linkedin.com/in/saibhossain" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn">
-                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <a href="https://linkedin.com/in/saibhossain" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" title="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
               </a>
-              <a href="https://github.com/Saibhossain" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub">
-                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <a href="https://github.com/Saibhossain" target="_blank" rel="noopener noreferrer"
+                class="hero-social-link" title="GitHub">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                </svg>
               </a>
             </div>
           </div>
@@ -365,9 +393,9 @@
               <div class="profile-glass-card">
                 <div class="profile-img-frame">
                   <picture>
-                    <source srcset="assets/images/profile.jpg" type="image/avif">
-                    <source srcset="assets/images/profile.jpg" type="image/webp">
-                    <img src="assets/images/profile.jpg" alt="MD Saib Hossain, AI Engineer & Researcher" class="profile-pic" width="350" height="350" loading="eager" />
+                    <source srcset="assets/images/profile.webp?v=2" type="image/webp">
+                    <img src="assets/images/profile.jpg?v=2" alt="MD Saib Hossain, AI Engineer &amp; Researcher"
+                      class="profile-pic" width="420" height="490" loading="eager" />
                   </picture>
                   <div class="profile-glass-overlay"></div>
                 </div>
@@ -380,7 +408,9 @@
         <!-- Personal Philosophy & Humor Quote Card -->
         <div class="personality-quote-card">
           <p class="personality-quote-text">
-            "Teaching computers to think, so humans can focus on dreaming. Being an AI engineer means I'm basically a kindergarten teacher for robots — I spend hours telling them to play nice and asking them to please stop making things up."
+            "Teaching computers to think, so humans can focus on dreaming. Being an AI engineer means I'm basically a
+            kindergarten teacher for robots — I spend hours telling them to play nice and asking them to please stop
+            making things up."
           </p>
           <div class="personality-quote-meta">
             <span>— MD Saib Hossain</span>
@@ -408,7 +438,8 @@
             <span class="aim-icon">🏥</span>
             <h4 class="aim-title">Healthcare &amp; Clinical AI</h4>
             <p class="aim-desc">
-              Developing clinically deployable deep learning architectures for early cancer screening, CT radiomics, and fracture diagnostics that withstand real-world distribution shift.
+              Developing clinically deployable deep learning architectures for early cancer screening, CT radiomics, and
+              fracture diagnostics that withstand real-world distribution shift.
             </p>
           </div>
 
@@ -417,7 +448,8 @@
             <span class="aim-icon">🤖</span>
             <h4 class="aim-title">Autonomous Agentic Systems</h4>
             <p class="aim-desc">
-              Engineering stateful multi-agent workflows with LangGraph, local LLM execution, memory persistence, and cryptographic authorization bounds against prompt injection.
+              Engineering stateful multi-agent workflows with LangGraph, local LLM execution, memory persistence, and
+              cryptographic authorization bounds against prompt injection.
             </p>
           </div>
 
@@ -426,7 +458,8 @@
             <span class="aim-icon">🌍</span>
             <h4 class="aim-title">Health Equity &amp; Access</h4>
             <p class="aim-desc">
-              Bringing early screening technology and diagnostic hardware directly to rural communities through remote mobile diagnostic camps and affordable screening infrastructure.
+              Bringing early screening technology and diagnostic hardware directly to rural communities through remote
+              mobile diagnostic camps and affordable screening infrastructure.
             </p>
           </div>
 
@@ -435,7 +468,8 @@
             <span class="aim-icon">📚</span>
             <h4 class="aim-title">Education &amp; Child Advocacy</h4>
             <p class="aim-desc">
-              Demystifying artificial intelligence through educational books ("AI for Children") and advocating for child protection governance through grassroots leadership.
+              Demystifying artificial intelligence through educational books ("AI for Children") and advocating for
+              child protection governance through grassroots leadership.
             </p>
           </div>
         </div>
@@ -457,13 +491,20 @@
           <!-- Left: Narrative -->
           <div class="about-narrative glass-card" style="padding: 2.25rem;">
             <p>
-              My name is <strong>MD Saib Hossain</strong>, and I am a builder of digital brains. Instead of merely writing routine code, I create smart intelligent systems that can perceive, reason, and solve complex challenges alongside humans.
+              My name is <strong>MD Saib Hossain</strong>, and I am a builder of digital brains. Instead of merely
+              writing routine code, I create smart intelligent systems that can perceive, reason, and solve complex
+              challenges alongside humans.
             </p>
             <p>
-              I am highly passionate about ensuring that AI systems are safe, reliable, and practically useful in everyday human lives. My background spans computer science, hands-on software development, multi-agent LLM systems, medical computer vision, and community leadership.
+              I am highly passionate about ensuring that AI systems are safe, reliable, and practically useful in
+              everyday human lives. My background spans computer science, hands-on software development, multi-agent LLM
+              systems, medical computer vision, and community leadership.
             </p>
             <p>
-              Whether I am designing stateful multi-agent tools, analyzing complex radiomic imaging volumes, launching enterprise workflows through my startup, or organizing remote cancer screening camps for underserved women, my mission remains constant: <strong>make the future a little bit brighter and a lot more intelligent</strong>.
+              Whether I am designing stateful multi-agent tools, analyzing complex radiomic imaging volumes, launching
+              enterprise workflows through my startup, or organizing remote cancer screening camps for underserved
+              women, my mission remains constant: <strong>make the future a little bit brighter and a lot more
+                intelligent</strong>.
             </p>
           </div>
 
@@ -471,15 +512,18 @@
           <div class="about-highlights-deck">
             <div class="highlight-box">
               <h4 class="highlight-box-title">💻 AI &amp; Software Engineering</h4>
-              <p class="highlight-box-desc">Production pipelines with Python, PyTorch, LangGraph, Ollama, Streamlit, and full-stack integration.</p>
+              <p class="highlight-box-desc">Production pipelines with Python, PyTorch, LangGraph, Ollama, Streamlit, and
+                full-stack integration.</p>
             </div>
             <div class="highlight-box">
               <h4 class="highlight-box-title">🔬 Peer-Reviewed Research</h4>
-              <p class="highlight-box-desc">Published papers in IEEE ICCIT 2025, agentic safety preprints, and clinical cancer survival models.</p>
+              <p class="highlight-box-desc">Published papers in IEEE ICCIT 2025, agentic safety preprints, and clinical
+                cancer survival models.</p>
             </div>
             <div class="highlight-box">
               <h4 class="highlight-box-title">🤝 Social Impact &amp; Fieldwork</h4>
-              <p class="highlight-box-desc">Leadership at National Children's Task Force (NCTF) and technical representation for Alo Bhubon Trust.</p>
+              <p class="highlight-box-desc">Leadership at National Children's Task Force (NCTF) and technical
+                representation for Alo Bhubon Trust.</p>
             </div>
           </div>
         </div>
@@ -503,14 +547,18 @@
           <div class="featured-research-card">
             <div class="research-card-header">
               <span class="venue-tag published">IEEE ICCIT 2025</span>
-              <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">Scopus • IEEE Xplore</span>
+              <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">Scopus • IEEE
+                Xplore</span>
             </div>
             <h3 class="research-card-title">Unifying Adult &amp; Pediatric Fracture Domains</h3>
             <p class="research-card-desc">
-              Multi-dataset deep learning framework harmonizing FracAtlas and GRAZPEDWRI-DX datasets into a demographic-invariant musculoskeletal foundation model. Eliminates pediatric growth plate false positives with YOLOv11 and DeepLabV3 (0.930 ROC-AUC).
+              Multi-dataset deep learning framework harmonizing FracAtlas and GRAZPEDWRI-DX datasets into a
+              demographic-invariant musculoskeletal foundation model. Eliminates pediatric growth plate false positives
+              with YOLOv11 and DeepLabV3 (0.930 ROC-AUC).
             </p>
             <div class="research-card-footer">
-              <a href="https://ieeexplore.ieee.org/document/11491681" target="_blank" rel="noopener noreferrer" class="research-card-link">
+              <a href="https://ieeexplore.ieee.org/document/11491681" target="_blank" rel="noopener noreferrer"
+                class="research-card-link">
                 View on IEEE Xplore →
               </a>
               <a href="pages/research/index.html" class="research-card-link" style="color: var(--text-muted);">
@@ -527,10 +575,13 @@
             </div>
             <h3 class="research-card-title">BanglaSign-Tutor: Interactive Sign Language System</h3>
             <p class="research-card-desc">
-              Assistive AI hardware-software framework translating Bengali Sign Language (BDSL-47) into real-time visual-haptic corrective feedback with 98.4% accuracy, designed for deaf education and inclusive communication.
+              Assistive AI hardware-software framework translating Bengali Sign Language (BDSL-47) into real-time
+              visual-haptic corrective feedback with 98.4% accuracy, designed for deaf education and inclusive
+              communication.
             </p>
             <div class="research-card-footer">
-              <a href="https://ieeexplore.ieee.org/document/11491587" target="_blank" rel="noopener noreferrer" class="research-card-link">
+              <a href="https://ieeexplore.ieee.org/document/11491587" target="_blank" rel="noopener noreferrer"
+                class="research-card-link">
                 View on IEEE Xplore →
               </a>
               <a href="pages/research/index.html" class="research-card-link" style="color: var(--text-muted);">
@@ -543,11 +594,13 @@
           <div class="featured-research-card">
             <div class="research-card-header">
               <span class="venue-tag submitted">Submitted to NeurIPS</span>
-              <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">Agentic AI Safety</span>
+              <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);">Agentic AI
+                Safety</span>
             </div>
             <h3 class="research-card-title">Prompt Injection is an Authorization Problem</h3>
             <p class="research-card-desc">
-              Formalizing LLM prompt injection mitigation through cryptographic context provenance and capability-based authorization tokens, ensuring untrusted input cannot invoke sensitive agentic tools.
+              Formalizing LLM prompt injection mitigation through cryptographic context provenance and capability-based
+              authorization tokens, ensuring untrusted input cannot invoke sensitive agentic tools.
             </p>
             <div class="research-card-footer">
               <a href="#" class="research-link research-card-link" data-modal="research-1">
@@ -586,10 +639,13 @@
           <div class="project-card">
             <div class="project-header">
               <h4 class="project-title">Self-Reflective RAG System</h4>
-              <span class="venue-tag" style="background: rgba(99, 102, 241, 0.12); color: var(--primary-light); border-color: rgba(99, 102, 241, 0.3);">In Development</span>
+              <span class="venue-tag"
+                style="background: rgba(99, 102, 241, 0.12); color: var(--primary-light); border-color: rgba(99, 102, 241, 0.3);">In
+                Development</span>
             </div>
             <p class="project-desc">
-              Autonomous RAG pipeline with query rewriting, self-evaluation, hallucination detection, and semantic validation using LangGraph and local/hosted embeddings.
+              Autonomous RAG pipeline with query rewriting, self-evaluation, hallucination detection, and semantic
+              validation using LangGraph and local/hosted embeddings.
             </p>
             <div class="progress-container">
               <div class="progress-label">
@@ -605,7 +661,8 @@
               <span class="tech-tag">RAG</span>
               <span class="tech-tag">OpenAI</span>
             </div>
-            <a href="https://github.com/Saibhossain/self_rag_system" target="_blank" rel="noopener noreferrer" class="project-link">
+            <a href="https://github.com/Saibhossain/self_rag_system" target="_blank" rel="noopener noreferrer"
+              class="project-link">
               View on GitHub →
             </a>
           </div>
@@ -614,10 +671,13 @@
           <div class="project-card">
             <div class="project-header">
               <h4 class="project-title">Agentic AI Technical Interviewer</h4>
-              <span class="venue-tag" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b; border-color: rgba(245, 158, 11, 0.3);">Beta Testing</span>
+              <span class="venue-tag"
+                style="background: rgba(245, 158, 11, 0.12); color: #f59e0b; border-color: rgba(245, 158, 11, 0.3);">Beta
+                Testing</span>
             </div>
             <p class="project-desc">
-              Autonomous AI interviewer that parses candidate resumes, generates tailored coding questions, and conducts adaptive multi-turn technical interview dialogs with structured evaluation.
+              Autonomous AI interviewer that parses candidate resumes, generates tailored coding questions, and conducts
+              adaptive multi-turn technical interview dialogs with structured evaluation.
             </p>
             <div class="progress-container">
               <div class="progress-label">
@@ -633,7 +693,8 @@
               <span class="tech-tag">LLM</span>
               <span class="tech-tag">PDF Parsing</span>
             </div>
-            <a href="https://github.com/Saibhossain/Interview-agent" target="_blank" rel="noopener noreferrer" class="project-link">
+            <a href="https://github.com/Saibhossain/Interview-agent" target="_blank" rel="noopener noreferrer"
+              class="project-link">
               View on GitHub →
             </a>
           </div>
@@ -645,7 +706,8 @@
               <span class="venue-tag published">Active Repo</span>
             </div>
             <p class="project-desc">
-              Multi-user educational sandbox exploring modern LLM memory persistence patterns: LangGraph checkpointers, PostgresStore persistence, and dynamic Ollama execution without cloud lock-in.
+              Multi-user educational sandbox exploring modern LLM memory persistence patterns: LangGraph checkpointers,
+              PostgresStore persistence, and dynamic Ollama execution without cloud lock-in.
             </p>
             <div class="progress-container">
               <div class="progress-label">
@@ -661,7 +723,8 @@
               <span class="tech-tag">PostgreSQL</span>
               <span class="tech-tag">Ollama</span>
             </div>
-            <a href="https://github.com/Saibhossain/MemoryOS.git" target="_blank" rel="noopener noreferrer" class="project-link">
+            <a href="https://github.com/Saibhossain/MemoryOS.git" target="_blank" rel="noopener noreferrer"
+              class="project-link">
               View on GitHub →
             </a>
           </div>
@@ -694,7 +757,9 @@
             <span class="volunteer-badge">Technical Expert Representative</span>
             <h4 class="volunteer-title">Alo Bhubon Trust — Rural Cancer Diagnostics</h4>
             <p class="volunteer-desc">
-              Supporting nationwide cervical and breast cancer screening camps. Advising on procuring mammography, X-ray, and breast elastography hardware at the Rahima Baniz Health Care Center (RBHC) in Naogaon, bringing early cancer detection to 25 million at-risk women.
+              Supporting nationwide cervical and breast cancer screening camps. Advising on procuring mammography,
+              X-ray, and breast elastography hardware at the Rahima Baniz Health Care Center (RBHC) in Naogaon, bringing
+              early cancer detection to 25 million at-risk women.
             </p>
             <a href="pages/volunteering/index.html" class="research-card-link">
               Read Seminar &amp; Fieldwork Details →
@@ -706,7 +771,9 @@
             <span class="volunteer-badge">District General Secretary</span>
             <h4 class="volunteer-title">National Children's Task Force (NCTF)</h4>
             <p class="volunteer-desc">
-              Served as District General Secretary for NCTF in partnership with Save the Children and Plan International. Directed grassroots youth advocacy programs, facilitated dialogues with government duty bearers, and monitored child protection governance.
+              Served as District General Secretary for NCTF in partnership with Save the Children and Plan
+              International. Directed grassroots youth advocacy programs, facilitated dialogues with government duty
+              bearers, and monitored child protection governance.
             </p>
             <a href="pages/volunteering/index.html" class="research-card-link">
               Read Child Advocacy Initiatives →
@@ -732,7 +799,8 @@
           </div>
           <h3 id="startup-heading" class="startup-title">Praxic Intelligence</h3>
           <p class="startup-desc">
-            Praxic Intelligence is my startup focused on developing production-ready agentic AI systems for enterprise workflow automation, with emphasis on security, scalability, and real-world clinical resilience.
+            Praxic Intelligence is my startup focused on developing production-ready agentic AI systems for enterprise
+            workflow automation, with emphasis on security, scalability, and real-world clinical resilience.
           </p>
           <a href="pages/startup/index.html" class="btn btn-primary">
             Explore Praxic Intelligence →
@@ -748,7 +816,8 @@
           <span class="badge">Open to Opportunities</span>
           <h2 id="collab-heading" class="section-title text-gradient">Let's Collaborate</h2>
           <p class="collab-text">
-            Interested in research collaboration, clinical AI deployment, agentic system design, or engineering partnerships? I am always open to impactful collaborations.
+            Interested in research collaboration, clinical AI deployment, agentic system design, or engineering
+            partnerships? I am always open to impactful collaborations.
           </p>
           <div class="collab-actions">
             <a href="pages/contact/index.html" class="btn btn-primary">
@@ -757,7 +826,8 @@
             <a href="mailto:saibhossain5@gmail.com" class="btn btn-outline">
               Email Directly
             </a>
-            <a href="https://linkedin.com/in/saibhossain" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <a href="https://linkedin.com/in/saibhossain" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline">
               LinkedIn Profile
             </a>
           </div>
@@ -773,7 +843,7 @@
   <!-- Shared Scripts -->
   <script src="assets/js/core/config.js"></script>
   <script src="assets/js/core/utils.js"></script>
-  <script src="assets/js/core/nav.js"></script>
+  <script src="assets/js/core/nav.js?v=2"></script>
 
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>

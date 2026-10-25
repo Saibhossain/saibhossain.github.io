@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const [globalDataRes, headerRes, footerRes] = await Promise.all([
       fetch(`${prefix}assets/data/global.json?v=` + Date.now()).then(r => r.ok ? r.json() : null).catch(() => null),
-      fetch(`${prefix}includes/header.html`),
-      fetch(`${prefix}includes/footer.html`)
+      fetch(`${prefix}includes/header.html?v=` + Date.now()),
+      fetch(`${prefix}includes/footer.html?v=` + Date.now())
     ]);
 
     if (globalDataRes) {

@@ -1,7 +1,7 @@
 /* ===================================================
    MAIN.CSS — APPLE-INSPIRED PERSONAL PORTFOLIO
    MD Saib Hossain | AI Engineer • Researcher • Builder • Volunteer
-   Designed with emotional resonance, aesthetic precision & multi-faceted balance
+   Designed with emotional resonance, aesthetic precision & multi-device adaptation
    =================================================== */
 
 /* ===== HERO SECTION ===== */
@@ -12,7 +12,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 3.5rem 0 3rem;
+  padding: clamp(2.5rem, 5vh, 4rem) 0 clamp(2rem, 4vh, 3.5rem);
 }
 
 /* Ambient cosmic glow canvas */
@@ -42,11 +42,11 @@
   100% { transform: scale(1) translate(2%, -1%); }
 }
 
-/* Two-column Hero Layout */
+/* Two-column Hero Layout — Fluid for Desktop & Laptop */
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 3.5rem;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: clamp(2.5rem, 4vw, 4.5rem);
   align-items: center;
   position: relative;
   z-index: 2;
@@ -311,24 +311,25 @@
 
 .profile-stage-wrapper {
   position: relative;
-  width: min(100%, 350px);
-  aspect-ratio: 1 / 1;
+  width: min(100%, 450px);
+  aspect-ratio: 4 / 4.75;
+  margin: 0 auto;
 }
 
 .profile-aura-ring {
   position: absolute;
-  inset: -14px;
-  border-radius: 36px;
+  inset: -18px;
+  border-radius: 46px;
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.45), rgba(6, 182, 212, 0.45));
-  filter: blur(22px);
-  opacity: 0.55;
+  filter: blur(28px);
+  opacity: 0.58;
   animation: auraGlow 6s ease-in-out infinite alternate;
   z-index: 0;
 }
 
 @keyframes auraGlow {
   0% { transform: scale(0.96); opacity: 0.35; }
-  100% { transform: scale(1.04); opacity: 0.7; }
+  100% { transform: scale(1.04); opacity: 0.72; }
 }
 
 .profile-glass-card {
@@ -336,10 +337,10 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  border-radius: 32px;
+  border-radius: 38px;
   background: var(--surface);
   border: 1.5px solid var(--border-light);
-  box-shadow: var(--shadow-lg), 0 0 35px var(--primary-glow);
+  box-shadow: var(--shadow-lg), 0 0 45px var(--primary-glow);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -360,7 +361,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   display: block;
   transition: transform 0.6s var(--transition-smooth);
 }
@@ -380,32 +381,40 @@
 .profile-chip {
   position: absolute;
   z-index: 4;
-  padding: 0.45rem 0.95rem;
+  padding: 0.5rem 1.05rem;
   border-radius: var(--radius-full);
   background: rgba(14, 18, 30, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  font-size: 0.82rem;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  font-size: 0.84rem;
   font-weight: 600;
   color: #fff;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
   animation: floatChip 4s ease-in-out infinite alternate;
   pointer-events: none;
+  white-space: nowrap;
+}
+
+[data-theme="light"] .profile-chip {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
 .profile-chip-top {
-  top: 12px;
-  right: -10px;
+  top: 18px;
+  right: -14px;
   animation-delay: 0s;
 }
 
 .profile-chip-bottom {
-  bottom: 16px;
-  left: -12px;
+  bottom: 22px;
+  left: -16px;
   animation-delay: -2s;
 }
 
@@ -899,13 +908,91 @@
 }
 
 /* ===================================================
-   RESPONSIVE OPTIMIZATIONS (DESKTOP, TABLET, MOBILE)
+   RESPONSIVE OPTIMIZATIONS (LAPTOPS, TABLETS, PHONES)
    =================================================== */
 
-@media (max-width: 1024px) {
+/* Wide Laptops & Desktop (1201px to 1440px) */
+@media (max-width: 1440px) {
+  .hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(2rem, 3.5vw, 3.5rem);
+  }
+  .profile-stage-wrapper {
+    width: min(100%, 430px);
+  }
+}
+
+/* Standard Laptops (1025px to 1200px) */
+@media (max-width: 1200px) {
+  .hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2.25rem;
+  }
+  .profile-stage-wrapper {
+    width: min(100%, 400px);
+  }
+  .hero-name {
+    font-size: clamp(2.3rem, 3.8vw, 3.6rem);
+  }
+  .hero-bio {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* Compact Laptops & Landscape Tablets (881px to 1024px) */
+@media (max-width: 1024px) and (min-width: 881px) {
+  .hero-section {
+    padding: 3rem 0 2rem;
+  }
+  .hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 1.75rem;
+    align-items: center;
+  }
+  .profile-stage-wrapper {
+    width: min(100%, 370px);
+  }
+  .hero-name {
+    font-size: clamp(2.1rem, 3.5vw, 2.9rem);
+  }
+  .hero-bio {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+  .hero-pillars-row {
+    gap: 0.45rem;
+    margin-bottom: 1.5rem;
+  }
+  .pillar-chip {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.7rem;
+  }
+  .hero-actions {
+    gap: 0.65rem;
+  }
+  .hero-actions .btn {
+    padding: 0.6rem 1.15rem;
+    font-size: 0.88rem;
+  }
+  .about-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 1.75rem;
+  }
+  .aims-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets & Mobile Portrait (<= 880px) */
+@media (max-width: 880px) {
+  .hero-section {
+    padding: clamp(2rem, 4vh, 3rem) 0 2rem;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.25rem;
   }
   .hero-text-col {
     align-items: center;
@@ -914,14 +1001,31 @@
   .hero-status-row {
     justify-content: center;
   }
+  .hero-title-box {
+    justify-content: center;
+  }
   .hero-bio {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    max-width: 580px;
+    font-size: 0.98rem;
+    line-height: 1.7;
   }
   .hero-pillars-row {
     justify-content: center;
   }
   .hero-actions {
+    justify-content: center;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    min-height: 48px;
     justify-content: center;
   }
   .hero-social-row {
@@ -929,57 +1033,194 @@
   }
   .hero-profile-col {
     order: -1;
+    margin-bottom: 0.5rem;
   }
   .profile-stage-wrapper {
-    width: min(100%, 280px);
+    width: min(84vw, 350px);
+    aspect-ratio: 4 / 4.75;
+  }
+  .profile-chip {
+    font-size: 0.78rem;
+    padding: 0.38rem 0.85rem;
+  }
+  .profile-chip-top {
+    right: 8px;
+    top: 10px;
+  }
+  .profile-chip-bottom {
+    left: 8px;
+    bottom: 12px;
   }
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 3rem 0 2rem;
+  .aims-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: 1.25rem;
+  }
+  .research-showcase-grid,
+  .projects-grid,
+  .volunteer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .startup-card,
   .collab-card {
-    padding: 2.5rem 1.5rem;
+    padding: 2.25rem 1.5rem;
   }
   .personality-quote-card {
     padding: 1.25rem 1.5rem;
+    margin-top: 2.25rem;
+  }
+  .collab-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 340px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 0.75rem;
   }
   .collab-actions .btn {
     width: 100%;
-    max-width: 320px;
+    min-height: 48px;
+    justify-content: center;
   }
 }
 
+/* Phone devices (<= 480px / iPhone SE, 13/14/15/16, Android) */
 @media (max-width: 480px) {
+  .hero-section {
+    padding: 1.5rem 0 1.25rem;
+  }
+  .hero-status-row {
+    flex-direction: column;
+    gap: 0.45rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+  .live-visitor-pill,
+  .hero-greeting-badge {
+    font-size: 0.76rem;
+    padding: 0.32rem 0.75rem;
+  }
   .hero-name {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 7.8vw, 2.45rem);
+    letter-spacing: -0.025em;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .hero-title-box {
+    min-height: 1.85rem;
+    margin-bottom: 0.85rem;
   }
   .hero-title {
-    font-size: 1.05rem;
+    font-size: 0.94rem;
+  }
+  .hero-bio {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    padding: 0 0.25rem;
+  }
+  .hero-pillars-row {
+    gap: 0.35rem;
+    margin-bottom: 1.25rem;
+    justify-content: center;
+  }
+  .pillar-chip {
+    font-size: 0.72rem;
+    padding: 0.28rem 0.6rem;
   }
   .profile-stage-wrapper {
-    width: 230px;
+    width: min(88vw, 320px);
+    aspect-ratio: 4 / 4.75;
+  }
+  .profile-glass-card {
+    border-radius: 28px;
+  }
+  .profile-aura-ring {
+    border-radius: 36px;
+    inset: -8px;
+    filter: blur(16px);
   }
   .profile-chip {
-    font-size: 0.72rem;
-    padding: 0.35rem 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.65rem;
   }
   .profile-chip-top {
-    right: -4px;
-    top: 6px;
+    right: 8px;
+    top: 8px;
   }
   .profile-chip-bottom {
-    left: -4px;
-    bottom: 8px;
+    left: 8px;
+    bottom: 10px;
+  }
+  .hero-actions {
+    width: 100%;
+    gap: 0.65rem;
   }
   .hero-actions .btn {
     width: 100%;
+    min-height: 48px;
+    font-size: 0.9rem;
+  }
+  .hero-social-row {
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+  .hero-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .personality-quote-card {
+    padding: 1rem 1.15rem;
+    margin-top: 1.75rem;
+    border-radius: var(--radius-md);
+  }
+  .personality-quote-text {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .personality-quote-meta {
+    font-size: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  .aim-card,
+  .featured-research-card,
+  .project-card,
+  .volunteer-card,
+  .about-narrative {
+    padding: 1.25rem !important;
+    border-radius: var(--radius-md);
+  }
+  .research-card-header,
+  .research-card-footer,
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .highlight-box {
+    padding: 1.15rem 1.25rem;
+  }
+  .startup-card,
+  .collab-card {
+    padding: 1.75rem 1.15rem;
+    border-radius: var(--radius-lg);
+  }
+  .collab-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.65rem;
+  }
+  .collab-actions .btn {
+    width: 100%;
+    min-height: 48px;
     justify-content: center;
   }
 }
