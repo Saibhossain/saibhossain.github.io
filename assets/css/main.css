@@ -105,11 +105,12 @@
   width: clamp(200px, 35vw, 270px);
   height: auto;
   aspect-ratio: 1 / 1;
-  border-radius: 22px;
-  border: 3px solid var(--bg);
+  border-radius: 50%;
+  border: 3px solid var(--border);
   display: block;
   object-fit: cover;
   box-shadow: var(--shadow-md);
+  background: var(--surface);
 }
 
 /* Citation Quote */
