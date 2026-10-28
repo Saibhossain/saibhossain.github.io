@@ -6,6 +6,8 @@
 
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /pages/
 Allow: /assets/
 Allow: /assets/images/
@@ -16,7 +18,12 @@ Allow: /assets/data/
 Sitemap: https://saibhossain.dev/sitemap.xml
 Sitemap: https://saibhossain.github.io/sitemap.xml
 
-# AI & Search Engine Crawlers (AEO / GEO / Scholar Indexing)
+# AI & LLM Search Agent Indexes
+# Canonical LLM summary: https://saibhossain.github.io/llms.txt
+# Unabridged research index: https://saibhossain.github.io/llms-full.txt
+# Dynamic research data: https://saibhossain.github.io/assets/data/research.json
+
+# AI Search & Academic Engine Crawlers (AEO / GEO / Scholar Indexing)
 User-agent: Googlebot
 Allow: /
 
@@ -29,11 +36,41 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
+User-agent: Applebot-Extended
+Allow: /
+
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
 Allow: /
