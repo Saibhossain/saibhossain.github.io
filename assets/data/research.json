@@ -119,7 +119,7 @@
             "caption": "Training and validation loss progression alongside mAP@50 and mAP@50-95 gains across 50 epochs."
           }
         ],
-        "bibtex": "@INPROCEEDINGS{11491681,\n  author={Hossain, Md Saib and Hossen, Md Maynul and Nur, Iffat and Islam, Md Ashraful and Sarkar, Shahariar and Sanjida, Tasmin and Anik, Azizur Rahman},\n  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},\n  title={Unifying Adult and Pediatric Domains: Multi-Dataset Deep Learning for Fracture Classification, Detection, and Segmentation},\n  year={2025},\n  pages={1-6},\n  doi={10.1109/ICCIT68323.2025.11491681}\n}"
+        "bibtex": "@inproceedings{hossain2025unifying,\n  title={Unifying Adult and Pediatric Domains: Multi-Dataset Deep Learning for Fracture Classification, Detection, and Segmentation},\n  author={Hossain, Md Saib and Hossen, Md Maynul and Nur, Iffat and Islam, Md Ashraful and Sarkar, Shahariar and Sanjida, Tasmin and Anik, Azizur Rahman},\n  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},\n  pages={5674--5679},\n  year={2025},\n  organization={IEEE}\n}"
       },
       {
         "id": "banglasign-tutor",
@@ -185,7 +185,7 @@
             "caption": "Repeated attempt latency curves demonstrating 56.43% time reduction with feedback."
           }
         ],
-        "bibtex": "@INPROCEEDINGS{11491587,\n  author={Hossain, Md Saib and Hossain, Md Shakil and Islam, Md Rakibul and Khan, Abusaleh Alam and Nayeem, Radwanul Islam and Khatun, Mst. Sumia and Talukder, Md. Shafqat and Hafiz, Fahim},\n  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},\n  title={BanglaSign-Tutor: An interactive Bangla Sign Language Learning System via Finger-Guided Feedback},\n  year={2025},\n  pages={1-6},\n  doi={10.1109/ICCIT68323.2025.11491587}\n}"
+        "bibtex": "@inproceedings{hossain2025banglasign,\n  title={BanglaSign-Tutor: An Interactive Bangla Sign Language Learning System via Finger-Guided Feedback},\n  author={Hossain, Md Saib and Hossain, Md Shakil and Islam, Md Rakibul and Khan, Abusaleh Alam and Nayeem, Radwanul Islam and Khatun, Mst Sumia and Talukder, Md Shafqat and Hafiz, Fahim},\n  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},\n  pages={652--657},\n  year={2025},\n  organization={IEEE}\n}"
       },
       {
         "id": "urban-sustainability",
@@ -251,7 +251,7 @@
             "caption": "Temporal trendlines of NO2, SO2, CO, O3, and CH4 monitored via Sentinel-5P TROPOMI satellite."
           }
         ],
-        "bibtex": "@INPROCEEDINGS{11490302,\n  author={Hossain, Md Saib and Hossen, Md Maynul and Sarkar, Shahariar and Sanjida, Tasmin and Abedeen, Iftekharul},\n  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},\n  title={Urban Sustainability in Bangladesh: Satellite-Based Analysis of Land Use and Air Pollution Trends in Major Bangladeshi Cities},\n  year={2025},\n  pages={1-6},\n  doi={10.1109/ICCIT68323.2025.11490302}\n}"
+        "bibtex": "@inproceedings{hossain2025urban,\n  title={Urban Sustainability in Bangladesh: Satellite-Based Analysis of Land Use and Air Pollution Trends in Major Bangladeshi Cities},\n  author={Hossain, Md Saib and Hossen, Md Maynul and Sarkar, Shahariar and Sanjida, Tasmin and Abedeen, Iftekharul},\n  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},\n  pages={1894--1899},\n  year={2025},\n  organization={IEEE}\n}"
       }
     ],
     "journals": [],
