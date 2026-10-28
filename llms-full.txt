@@ -1,0 +1,144 @@
+# MD Saib Hossain — Complete Research & Publication Index (Unabridged)
+> Canonical AI-searchable repository index for MD Saib Hossain. Optimized for Perplexity AI, ChatGPT Search, Claude Web Search, Google Gemini/AI Overviews, and academic reference crawlers.
+
+- Researcher Name: MD Saib Hossain
+- Professional Title: AI Engineer and Researcher
+- Primary Affiliation: Research Assistant, Institute of Advanced Research (IAR), United International University (UIU), Dhaka, Bangladesh
+- Email: saibhossain5@gmail.com
+- Telephone: +8801769918015
+- ORCID: 0009-0004-2595-2742 (https://orcid.org/0009-0004-2595-2742)
+- Google Scholar: https://scholar.google.com/citations?user=zH0QciUAAAAJ&hl=en
+- IEEE Xplore Author: https://ieeexplore.ieee.org/author/37088589400
+- ResearchGate: https://www.researchgate.net/profile/Saib-Hossain?ev=hdr_xprf
+- GitHub: https://github.com/Saibhossain
+- LinkedIn: https://linkedin.com/in/saibhossain
+- Canonical Website: https://saibhossain.dev (Mirror: https://saibhossain.github.io)
+
+---
+
+## 1. Published Peer-Reviewed Conference Papers (IEEE ICCIT 2025)
+
+### Paper 1: Fracture Classification, Detection, and Segmentation
+
+- **Paper Title**: Unifying Adult and Pediatric Domains: Multi-Dataset Deep Learning for Fracture Classification, Detection, and Segmentation
+- **BibTeX Citation Key**: `hossain2025unifying`
+- **Authors**: Md Saib Hossain, Md Maynul Hossen, Iffat Nur, Md Ashraful Islam, Shahariar Sarkar, Tasmin Sanjida, Azizur Rahman Anik
+- **Conference**: 2025 28th International Conference on Computer and Information Technology (ICCIT)
+- **Publisher / Organization**: IEEE
+- **Year**: 2025
+- **Page Numbers**: 5674–5679
+- **Indexing**: Scopus, IEEE Xplore
+- **Publication Link**: https://ieeexplore.ieee.org/document/11491681
+- **DOI**: 10.1109/ICCIT68322.2025.11491681
+- **Empirical Metrics**:
+  - Binary Classification ROC-AUC: 0.930 (+3.8% gain via two-stage pseudo-labeling)
+  - F1-Score: 0.824 (Accuracy: 81.3%)
+  - Object Detection (YOLOv11): 0.550 mAP@0.5, 0.230 mAP@0.5:0.95 (outperformed Faster R-CNN 0.480, YOLOv8s 0.431)
+  - Semantic Segmentation (DeepLabV3 ResNet-101): 0.512 mask mAP@0.5
+- **Abstract & Methodology**:
+  Musculoskeletal trauma diagnosis is severely hampered by domain disparities between adult and pediatric radiographs, where pediatric open growth plates (epiphyseal lines) are frequently misclassified as acute fractures. This research introduces a systematic multi-task deep learning framework harmonizing adult datasets (FracAtlas: 4,083 multi-anatomical X-rays, 717 fracture-positive, 922 instances) and pediatric datasets (GRAZPEDWRI-DX: 20,327 wrist X-rays) into a unified label space. 
+  The pipeline executes three synergistic computer vision tasks: binary classification via ResNet-50 enhanced by two-stage pseudo-labeling, bounding-box detection benchmarked across YOLOv8s, YOLOv11, and Faster R-CNN, and pixel-level semantic segmentation using DeepLabV3 and YOLOv8s-seg. Multi-dataset cross-domain training effectively eliminates false positives along pediatric epiphyseal plates and resolves fine fracture under-segmentation, establishing a demographic-invariant foundation for automated orthopaedic triage.
+- **Copy-Paste Official BibTeX**:
+```bibtex
+@inproceedings{hossain2025unifying,
+  title={Unifying Adult and Pediatric Domains: Multi-Dataset Deep Learning for Fracture Classification, Detection, and Segmentation},
+  author={Hossain, Md Saib and Hossen, Md Maynul and Nur, Iffat and Islam, Md Ashraful and Sarkar, Shahariar and Sanjida, Tasmin and Anik, Azizur Rahman},
+  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},
+  pages={5674--5679},
+  year={2025},
+  organization={IEEE}
+}
+```
+
+---
+
+### Paper 2: BanglaSign-Tutor (Interactive Multimodal Sign Language System)
+
+- **Paper Title**: BanglaSign-Tutor: An Interactive Bangla Sign Language Learning System via Finger-Guided Feedback
+- **BibTeX Citation Key**: `hossain2025banglasign`
+- **Authors**: Md Saib Hossain, Md Shakil Hossain, Md Rakibul Islam, Abusaleh Alam Khan, Radwanul Islam Nayeem, Mst. Sumia Khatun, Md. Shafqat Talukder, Fahim Hafiz
+- **Conference**: 2025 28th International Conference on Computer and Information Technology (ICCIT)
+- **Publisher / Organization**: IEEE
+- **Year**: 2025
+- **Page Numbers**: 652–657
+- **Indexing**: Scopus, IEEE Xplore
+- **Publication Link**: https://ieeexplore.ieee.org/document/11491587
+- **DOI**: 10.1109/ICCIT68322.2025.11491587
+- **Empirical Metrics**:
+  - Alphabet Recognition Accuracy: 98.20% across 37 Bangla alphabet classes (0.91 F1-Score)
+  - Numeral Recognition Accuracy: 99.50% across 10 digit classes (0–9)
+  - Learning Latency Reduction: 56.43% reduction in learner execution time
+  - Average Learning Time: Dropped from 26.46s (baseline) to 11.53s with real-time feedback
+- **Abstract & Methodology**:
+  Traditional sign language instruction methods lack real-time feedback, slowing acquisition for both hearing-impaired and non-impaired learners. BanglaSign-Tutor is the first multimodal Bangla Sign Language (BdSL) interactive tutoring platform combining computer vision, wearable tactile haptics, and generative large language models (LLMs).
+  The system captures scale-invariant 3D hand skeletal landmarks and classifies gestures using an optimized Random Forest classifier trained on BDSL47 (47,000 images, 47 classes). The software provides real-time corrective visual prompts in native Bangla (e.g., 'তর্জনী সোজা করুন' / 'Straighten index finger'), synchronized with a wearable Raspberry Pi 4-driven haptic vibration motor that generates distinct tactile pulses (200ms confirmation vs. 800ms corrective pattern) for deaf-blind accessibility. 
+  To support continuous language generation, Google Gemma 3 (4B parameter) is integrated via Ollama to generate context-adaptive 3–4 word sentence exercises. In a controlled 16-participant empirical user study, the platform achieved a 56.43% latency reduction, demonstrating accelerated BdSL mastery.
+- **Copy-Paste Official BibTeX**:
+```bibtex
+@inproceedings{hossain2025banglasign,
+  title={BanglaSign-Tutor: An Interactive Bangla Sign Language Learning System via Finger-Guided Feedback},
+  author={Hossain, Md Saib and Hossain, Md Shakil and Islam, Md Rakibul and Khan, Abusaleh Alam and Nayeem, Radwanul Islam and Khatun, Mst Sumia and Talukder, Md Shafqat and Hafiz, Fahim},
+  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},
+  pages={652--657},
+  year={2025},
+  organization={IEEE}
+}
+```
+
+---
+
+### Paper 3: Urban Sustainability & Satellite Environmental Analysis
+
+- **Paper Title**: Urban Sustainability in Bangladesh: Satellite-Based Analysis of Land Use and Air Pollution Trends in Major Bangladeshi Cities
+- **BibTeX Citation Key**: `hossain2025urban`
+- **Authors**: Md Saib Hossain, Md Maynul Hossen, Shahariar Sarkar, Tasmin Sanjida, Iftekharul Abedeen
+- **Conference**: 2025 28th International Conference on Computer and Information Technology (ICCIT)
+- **Publisher / Organization**: IEEE
+- **Year**: 2025
+- **Page Numbers**: 1894–1899
+- **Indexing**: Scopus, IEEE Xplore
+- **Publication Link**: https://ieeexplore.ieee.org/document/11490302
+- **DOI**: 10.1109/ICCIT68322.2025.11490302
+- **Empirical Metrics**:
+  - Classifier Performance: Random Forest achieved 99.0% (Dhaka), 99.3% (Khulna), and 99.1% (Rajshahi) Overall Accuracy with Kappa >0.988
+  - Dhaka Urban Sprawl: +50.0% built-up land expansion alongside -5.5% vegetation loss and -5.0% surface water depletion
+  - Khulna Wetland Loss: -35.2% wetland reduction
+  - Khulna SO2 Surge: +118% increase in tropospheric SO2 post-2023 industrial development
+- **Abstract & Methodology**:
+  Rapid urbanization and unmanaged industrialization across the Global South impose severe environmental stress on urban ecology. This research implements a cloud-based geospatial big data architecture using Google Earth Engine (GEE) to analyze multi-temporal Sentinel-2 MSI surface reflectance (10–20m resolution) and Sentinel-5P TROPOMI Level-3 tropospheric chemical data from 2019 to 2025 across three key economic regions of Bangladesh: Dhaka (1,471 km²), Khulna (3,566 km²), and Rajshahi (2,420 km²).
+  Spectral indices (NDVI, NDBI, NDWI) were computed and benchmarked across six supervised machine learning models: Random Forest (RF), Classification and Regression Trees (CART), and XGBoost. Spatiotemporal transition matrices quantified severe land degradation: Dhaka's built-up coverage expanded by +50.0% while Khulna lost over one-third (-35.2%) of its critical wetlands. 
+  Correlating land use land cover (LULC) dynamics with atmospheric trace gases (NO2, SO2, CO, O3, CH4) revealed critical localized pollution hotspots, supplying empirical satellite evidence directly aligned with UN Sustainable Development Goals (SDG 6: Clean Water, SDG 11: Sustainable Cities, SDG 13: Climate Action, and SDG 15: Life on Land).
+- **Copy-Paste Official BibTeX**:
+```bibtex
+@inproceedings{hossain2025urban,
+  title={Urban Sustainability in Bangladesh: Satellite-Based Analysis of Land Use and Air Pollution Trends in Major Bangladeshi Cities},
+  author={Hossain, Md Saib and Hossen, Md Maynul and Sarkar, Shahariar and Sanjida, Tasmin and Abedeen, Iftekharul},
+  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},
+  pages={1894--1899},
+  year={2025},
+  organization={IEEE}
+}
+```
+
+---
+
+## 2. Ongoing Research & Manuscripts Under Review
+
+1. **Prompt Injection is an Authorization Problem: Cryptographic Provenance for Secure Agentic Workflows**
+   - Target Venue: NeurIPS (A* Tier)
+   - Status: Under Review
+   - Scope: Zero-trust cryptographic authorization preventing indirect prompt injection in autonomous LLM agents.
+
+2. **COAST: Clinical Oncology Architecture for Survival Translation with Reliable Deep Feature Prediction**
+   - Target Venue: Q1 High-Impact Oncology / Medical Imaging Journal
+   - Status: Manuscript in Preparation
+   - Funding: Competitive Grant from Institute of Advanced Research (IAR), United International University (UIU)
+   - Scope: 3D CT radiomics and clinical risk stratification for cancer prognosis.
+
+---
+
+## 3. Medical Physics Articles & Educational Books
+
+- **Role of AI Researcher in Medical Physics** — Published by South Asia Centre for Medical Physics and Cancer Research (SCMPCR). URL: https://scmpcr.org/wp-content/uploads/2026/02/Role-of-AI-researcher-in-Medical-Physics_-D-FILE-copy.pdf
+- **AI Applications in Modern Medical Physics** — Featured article in Asia-Oceania Federation of Organizations for Medical Physics (AFOMP) Newsletter.
+- **AI for Children: Exploring Artificial Intelligence for Young Minds** — Educational monograph introducing computer vision and neural networks to young learners.
