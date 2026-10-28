@@ -922,6 +922,73 @@ svg.hud-icon,
   border-color: var(--text-muted);
 }
 
+/* Native Inline BibTeX Dropdown */
+.paper-bibtex-details {
+  margin-top: 1.15rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+[data-theme="light"] .paper-bibtex-details {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.paper-bibtex-details:hover {
+  border-color: var(--research-primary-glow);
+}
+
+.paper-bibtex-details[open] {
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.bibtex-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.bibtex-summary:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.bibtex-pre {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 0.775rem;
+  line-height: 1.55;
+  color: #a5b4fc;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+[data-theme="light"] .bibtex-pre {
+  background: #f8fafc;
+  color: #3730a3;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bibtex-pre code {
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+
 /* ===================================================
    ONGOING RESEARCH & PREPRINTS CARDS
    =================================================== */
