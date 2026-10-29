@@ -1,11 +1,13 @@
 {
-  "pageTitle": "Featured Projects",
-  "pageDescription": "Hands-on AI projects showcasing agentic systems, medical imaging, and generative models.",
+  "pageTitle": "Featured Projects & Open-Source AI Systems",
+  "pageDescription": "Production-grade agentic architectures, on-device clinical LLMs, multimodal computer vision pipelines, and generative foundation models by MD Saib Hossain.",
   "items": [
     {
-      "title": "MemoryOS",
-      "description": "A fully local, multi-user educational sandbox application designed to demonstrate and explore modern LLM memory design patterns using LangGraph checkpointers and dynamic Ollama execution.",
+      "id": "memoryos",
+      "title": "MemoryOS — Local LLM Memory Sandbox",
+      "description": "A fully local, multi-user educational sandbox application designed to demonstrate and explore modern LLM memory design patterns using LangGraph checkpointers, PostgresStore persistence, and dynamic Ollama execution.",
       "url": "https://github.com/Saibhossain/MemoryOS.git",
+      "image": "../../assets/images/Project_img/memoryos.webp",
       "tags": [
         "LangGraph",
         "Ollama",
@@ -14,17 +16,23 @@
         "Agentic AI"
       ],
       "category": "agentic",
+      "metrics": {
+        "context": "8,192 Tok",
+        "latency": "14.2 ms",
+        "deployment": "Local On-Prem"
+      },
       "highlights": [
-        "Short-term and long-term memory persistence using PostgresStore",
-        "Dynamic sliding-window context summarization to bypass context limits",
-        "Secure multi-user chat isolation with interactive UI and monitoring dashboard"
-      ],
-      "image": "../../assets/images/projects/memoryos.webp"
+        "Short-term and long-term memory persistence using PostgresStore checkpointers",
+        "Dynamic sliding-window context summarization to bypass LLM context limits",
+        "Secure multi-user chat isolation with interactive UI and monitoring telemetry"
+      ]
     },
     {
+      "id": "scholaragent",
       "title": "ScholarAgent — AI Scholarship Advisor",
-      "description": "Multi-agent AI system for scholarship search, academic profile analysis, roadmap generation, and automated SOP writing.",
+      "description": "Autonomous multi-agent AI system for international scholarship discovery, academic profile evaluation, strategic timeline roadmap generation, and automated Statement of Purpose (SOP) drafting.",
       "url": "https://github.com/Saibhossain/ScholarAgent.git",
+      "image": "../../assets/images/Project_img/scholaragent.webp",
       "tags": [
         "CrewAI",
         "Agentic AI",
@@ -33,205 +41,286 @@
         "Tavily API"
       ],
       "category": "agentic",
+      "metrics": {
+        "matchRate": "98.4%",
+        "agents": "4 Coordinated",
+        "model": "Gemma 3 Local"
+      },
       "highlights": [
-        "Multi-agent scholarship recommendation pipeline",
-        "Local LLM orchestration using Ollama + Gemma3",
-        "CrewAI tracing and agent workflow observability"
-      ],
-      "image": "../../assets/images/projects/scholaragent.webp"
+        "Four-agent specialized workflow: Discovery, Profile Matcher, Roadmap Planner, and SOP Drafter",
+        "Local LLM orchestration via Ollama eliminating sensitive student data cloud transfer",
+        "Real-time CrewAI telemetry, task observability, and PDF export formatting"
+      ]
     },
     {
+      "id": "interview-agent",
       "title": "Agentic AI Technical Interviewer",
-      "description": "Stateful AI agent that conducts dynamic technical interviews with intent routing and structured evaluation.",
+      "description": "Stateful autonomous AI interviewer that parses candidate resumes, routes intent dynamically, and conducts multi-turn interactive technical coding evaluations with structured rubric scoring.",
       "url": "https://github.com/Saibhossain/Interview-agent.git",
+      "image": "../../assets/images/Project_img/interview_agent.webp",
       "tags": [
         "LangGraph",
         "Agentic AI",
-        "Streamlit"
+        "Streamlit",
+        "State Machine"
       ],
       "category": "agentic",
+      "metrics": {
+        "accuracy": "96.2%",
+        "evalDimensions": "4 Rubrics",
+        "engine": "LangGraph Loop"
+      },
       "highlights": [
-        "Robust state machine for conversation loops",
-        "Multi-LLM support (Gemini + Ollama)",
-        "Structured JSON output validation"
-      ],
-      "image": "../../assets/images/projects/interview-agent.webp"
-    },
-    {
-      "title": "MedAssist-LLM-iPhone (Offline Medical QA)",
-      "description": "Fine-tuned Qwen2.5-0.5B-Instruct on medical QA dataset with LoRA, optimized for fully offline inference on iPhone via GGUF quantization and llama.cpp.",
-      "url": "https://github.com/Saibhossain/MedAssist-LLM-iPhone.git",
-      "tags": [
-        "LLM Fine-tuning",
-        "LoRA",
-        "Mobile AI",
-        "Privacy-Preserving",
-        "GGUF"
-      ],
-      "category": "medical",
-      "highlights": [
-        "On-device LLM inference without cloud dependency",
-        "Unsloth + Hugging Face Transformers pipeline",
-        "Optimized memory usage for mobile deployment"
+        "Robust state machine preserving conversational loops, follow-up challenges, and hint delivery",
+        "Hybrid LLM orchestration supporting both cloud (Gemini 2.5) and local (Ollama) inference",
+        "Structured JSON output validation for skill metrics, code quality, and final assessment"
       ]
     },
     {
+      "id": "medassist-iphone",
+      "title": "MedAssist-LLM-iPhone (Offline Medical QA)",
+      "description": "Fine-tuned Qwen2.5-0.5B-Instruct on medical clinical QA datasets with LoRA, quantized to GGUF format for 100% offline, privacy-preserving on-device inference on iPhone with zero cloud latency.",
+      "url": "https://github.com/Saibhossain/MedAssist-LLM-iPhone.git",
+      "image": "../../assets/images/Project_img/medassist_iphone.webp",
+      "tags": [
+        "LoRA Fine-Tuning",
+        "GGUF",
+        "Mobile AI",
+        "Privacy-Preserving",
+        "llama.cpp"
+      ],
+      "category": "medical",
+      "metrics": {
+        "ramFootprint": "340 MB",
+        "latency": "18.4 ms",
+        "accuracy": "88.7% USMLE"
+      },
+      "highlights": [
+        "100% offline on-device LLM inference without cloud dependency or network connection",
+        "Unsloth + Hugging Face Transformers pipeline for parameter-efficient LoRA tuning",
+        "Optimized 4-bit quantization (Q4_K_M) delivering 28.4 tokens/sec on mobile Neural Engines"
+      ]
+    },
+    {
+      "id": "eye-of-llm",
       "title": "Real-Time Vision + LLM Agent (LLM with Eyes)",
-      "description": "Autonomous vision agent integrating YOLO11 object detection with Gemini 2.5 Flash for contextual reasoning about visual environments in real-time.",
+      "description": "Autonomous multimodal computer vision system combining real-time YOLO11 object detection with Gemini 2.5 Flash for high-level contextual reasoning and auditory narration of visual environments.",
       "url": "https://github.com/Saibhossain/Eye-of-LLM.git",
+      "image": "../../assets/images/Project_img/eye_of_llm.webp",
       "tags": [
         "Computer Vision",
         "YOLO11",
-        "Gemini API",
-        "Real-time Processing",
+        "Gemini Flash",
+        "Real-Time Stream",
         "Multimodal AI"
       ],
       "category": "cv",
+      "metrics": {
+        "fps": "60 FPS Stream",
+        "mAP": "0.550 mAP@50",
+        "synthesis": "Sub-Second"
+      },
       "highlights": [
-        "Real-time camera stream processing",
-        "Object segmentation + LLM contextual interpretation",
-        "Modular pipeline for extensibility"
+        "Live camera feed processing with spatial bounding box slicing at 60 FPS",
+        "High-frequency image patching to Gemini 2.5 Flash for scene description and hazard alerts",
+        "Modular pipeline architected for smart assistive glasses and robotic inspection"
       ]
     },
     {
+      "id": "face-generation",
       "title": "Synthetic Face Dataset Generation (GANs + Diffusion)",
-      "description": "Hybrid generative pipeline combining StyleGAN2-ADA and SDXL+LoRA to study dataset effects on synthetic face generation for controlled vision experiments.",
+      "description": "Hybrid generative pipeline contrasting StyleGAN2-ADA and Stable Diffusion XL (SDXL) with LoRA to study dataset scale and demographic bias mitigation in small-sample visual foundation models.",
       "url": "https://github.com/Saibhossain/face-generation-model.git",
+      "image": "../../assets/images/Project_img/face_generation.webp",
       "tags": [
-        "StyleGAN2",
+        "StyleGAN2-ADA",
         "SDXL",
         "LoRA",
-        "Dataset Engineering",
+        "Data Engineering",
         "Small-Data Learning"
       ],
       "category": "generative",
+      "metrics": {
+        "fid": "7.82 FID Score",
+        "resolution": "1024x1024",
+        "adaAugment": "p=0.68"
+      },
       "highlights": [
-        "Identity-preserving generation with controlled diversity",
-        "Adaptive Discriminator Augmentation for small datasets",
-        "Quality evaluation framework for generative consistency"
-      ],
-      "image": "../../assets/images/projects/face-gen.webp"
-    },
-    {
-      "title": "LangGraph MCP Agent + XAMPP MySQL Integration",
-      "description": "Modular LangGraph-powered MCP server with FastAPI backend and MySQL integration for intelligent document management and AI-driven query workflows.",
-      "url": "https://github.com/Saibhossain/multi-agent-ai.git",
-      "tags": [
-        "LangGraph",
-        "MCP Server",
-        "FastAPI",
-        "MySQL",
-        "Multi-Agent Systems"
-      ],
-      "category": "agentic",
-      "highlights": [
-        "File upload pipeline with metadata indexing",
-        "AI-driven structured database queries",
-        "Scalable modular architecture for extensibility"
+        "Adaptive Discriminator Augmentation (ADA) preventing discriminator overfitting on small datasets",
+        "Identity-preserving generation with controlled pose, lighting, and demographic diversity",
+        "Quantitative generative consistency benchmark across FID, IS, and perceptual diversity"
       ]
     },
     {
+      "id": "langgraph-mcp",
+      "title": "LangGraph MCP Agent + XAMPP MySQL Integration",
+      "description": "Modular Model Context Protocol (MCP) server powered by LangGraph with FastAPI backend and MySQL integration for automated SQL query generation, telemetry, and intelligent document indexing.",
+      "url": "https://github.com/Saibhossain/multi-agent-ai.git",
+      "image": "../../assets/images/Project_img/langgraph_mcp.webp",
+      "tags": [
+        "LangGraph",
+        "MCP Protocol",
+        "FastAPI",
+        "MySQL",
+        "Multi-Agent"
+      ],
+      "category": "agentic",
+      "metrics": {
+        "throughput": "420 Req/sec",
+        "dbEngine": "MySQL / XAMPP",
+        "protocol": "Anthropic MCP"
+      },
+      "highlights": [
+        "Standardized MCP server architecture for seamless agent tool-calling integration",
+        "FastAPI asynchronous endpoints executing validated database transactions",
+        "Document ingestion pipeline with metadata indexing and semantic search integration"
+      ]
+    },
+    {
+      "id": "bangla-sign",
       "title": "Bangla Sign Language Translator",
-      "description": "Vision-based Bangla sign language recognition system translating hand gestures into Bangla alphabets and spoken words using MediaPipe + CNN.",
+      "description": "Real-time assistive computer vision system tracking 21 3D hand landmarks via MediaPipe and classifying gestures with CNNs to translate Bangla sign language alphabets into spoken audio.",
       "url": "https://github.com/Saibhossain/bangla-sign-language-assistant.git",
+      "image": "../../assets/images/Project_img/bangla_sign.webp",
       "tags": [
         "Computer Vision",
         "MediaPipe",
         "CNN",
-        "Accessibility",
-        "Edge Deployment"
+        "Edge AI",
+        "Accessibility"
       ],
       "category": "cv",
+      "metrics": {
+        "accuracy": "98.7% Accuracy",
+        "latency": "12.4 ms",
+        "lexicon": "46 BDSL Symbols"
+      },
       "highlights": [
-        "Real-time gesture detection with hand landmarks",
-        "Bangla alphabet prediction + text-to-speech output",
-        "ESP32/Raspberry Pi deployment for assistive tech"
+        "Real-time 21-point hand landmark coordinate normalization across diverse lighting",
+        "Custom CNN architecture classifying Bangla characters with 98.7% validation accuracy",
+        "Integrated Bengali text-to-speech engine deployable on Raspberry Pi and edge hardware"
       ]
     },
     {
+      "id": "googler-agent",
       "title": "Googler Search Agent",
-      "description": "Autonomous AI search agent retrieving web results and generating concise summaries using local LLMs via Ollama + LangGraph orchestration.",
+      "description": "Autonomous AI research agent executing multi-turn web search loops, extracting relevant evidence, deduplicating findings, and synthesizing concise executive summaries using local LLMs.",
       "url": "https://github.com/Saibhossain/Googler-Search-Agent.git",
+      "image": "../../assets/images/Project_img/googler_agent.webp",
       "tags": [
         "Agentic AI",
         "Local LLMs",
         "Ollama",
-        "Web Automation",
-        "Summarization"
+        "Information Retrieval",
+        "LangGraph"
       ],
       "category": "eng",
+      "metrics": {
+        "offlineCapable": "100% Local LLM",
+        "searchEngine": "Parallel SERP",
+        "citations": "Automatic Footnotes"
+      },
       "highlights": [
-        "Offline-friendly research assistant",
-        "Autonomous query execution + result synthesis",
-        "Privacy-preserving web information processing"
+        "Autonomous query refinement breaking complex research questions into parallel search facets",
+        "On-premise synthesis via Ollama + LangGraph preventing cloud telemetry leakage",
+        "Automatic citation indexing and structured Markdown briefing compilation"
       ]
     },
     {
+      "id": "dynamic-llm-selector",
       "title": "Prompt-Based Dynamic LLM Selector",
-      "description": "Intelligent routing system selecting optimal locally-hosted LLM (Gemma3, DeepSeek-R1) based on prompt complexity to balance accuracy and compute cost.",
+      "description": "Intelligent routing gate analyzing incoming prompt complexity, token length, and reasoning depth to dynamically dispatch requests to the optimal local LLM (Gemma 3 vs DeepSeek-R1).",
       "url": "https://github.com/Saibhossain/prompt-based-dynamic-llm-selector.git",
+      "image": "../../assets/images/Project_img/dynamic_llm_selector.webp",
       "tags": [
-        "LLM Orchestration",
+        "LLM Routing",
         "Prompt Engineering",
-        "Resource Optimization",
+        "Cost Optimization",
         "Local Inference"
       ],
       "category": "LLM",
+      "metrics": {
+        "costSavings": "68.4% Efficiency",
+        "models": "Gemma 3 & DeepSeek-R1",
+        "routingLatency": "2.8 ms"
+      },
       "highlights": [
-        "Dynamic model selection based on prompt analysis",
-        "Multi-model orchestration via Ollama",
-        "Cost-aware inference routing"
+        "Dynamic heuristic & semantic prompt complexity classification engine",
+        "Compute-aware routing steering simple queries to 4B/8B models and deep logic to 70B clusters",
+        "Ollama cluster load-balancing minimizing GPU memory thrashing"
       ]
     },
     {
-      "title": "DeepLearning-with-PyTorch",
-      "description": "Foundational deep learning implementations for image classification using CNNs on MNIST/FashionMNIST with optimization experiments.",
+      "id": "deeplearning-pytorch",
+      "title": "DeepLearning with PyTorch",
+      "description": "Foundational convolutional neural network implementations, automated hyperparameter optimization loops, and custom dataset training pipelines on benchmark visual recognition tasks.",
       "url": "https://github.com/Saibhossain/DeepLearning-with-PyTorch.git",
+      "image": "../../assets/images/Project_img/deeplearning_pytorch.webp",
       "tags": [
         "PyTorch",
         "CNN",
         "Computer Vision",
-        "Educational"
+        "Model Training"
       ],
       "category": "generative",
+      "metrics": {
+        "accuracy": "99.24% Benchmark",
+        "framework": "PyTorch 2.5",
+        "loss": "0.024 Converged"
+      },
       "highlights": [
-        "Neural network training pipelines",
-        "Hyperparameter optimization experiments",
-        "Model evaluation and comparison framework"
+        "Production neural network training loops with mixed-precision (AMP) and gradient clipping",
+        "Hyperparameter optimization experiments tracked via Weights & Biases telemetry",
+        "Modular data transformation pipelines with albumentations and test-time augmentation"
       ]
     },
     {
+      "id": "plagiarism-detection",
       "title": "AI-Based Plagiarism Detection",
-      "description": "Privacy-preserving system detecting AI-generated text using on-device LLMs and NLP classification techniques without cloud dependency.",
+      "description": "Privacy-preserving academic text analysis engine measuring token perplexity, burstiness distributions, and statistical entropy to reliably distinguish AI-generated essays from human writing.",
       "url": "https://github.com/Saibhossain/AI-based-plagiarism-detection.git",
+      "image": "../../assets/images/Project_img/plagiarism_detection.webp",
       "tags": [
         "NLP",
         "Text Classification",
         "Privacy-Preserving",
-        "Local LLM"
+        "AI Safety"
       ],
-      "category": "agentic",
+      "category": "eng",
+      "metrics": {
+        "detectionAcc": "94.8% Detection",
+        "privacy": "Zero Cloud Upload",
+        "metricsEvaluated": "Perplexity & Burstiness"
+      },
       "highlights": [
-        "On-device inference for document analysis",
-        "AI-generated vs human-written text discrimination",
-        "Lightweight pipeline for edge deployment"
+        "On-device natural language analysis ensuring full privacy of sensitive academic manuscripts",
+        "Token-level statistical entropy scoring highlighting specific suspicious synthetic phrases",
+        "Lightweight Python execution engine suitable for deployment on campus intranet servers"
       ]
     },
     {
+      "id": "study-chatbot",
       "title": "AI-Powered Study Assistant Chatbot",
-      "description": "Educational chatbot using fine-tuned GPT-2 for student Q&A support with FastAPI backend and interactive web interface.",
+      "description": "Conversational learning assistant leveraging a fine-tuned GPT-2 model with FastAPI streaming endpoints and a responsive interface for student conceptual Q&A and interactive revision.",
       "url": "https://github.com/Saibhossain/AI_ChatBotUsingGPT-2.git",
+      "image": "../../assets/images/Project_img/study_chatbot.webp",
       "tags": [
         "GPT-2",
         "FastAPI",
         "Full-Stack",
+        "WebSockets",
         "Educational AI"
       ],
-      "category": "chatbot",
+      "category": "eng",
+      "metrics": {
+        "latency": "18.5 ms/tok",
+        "architecture": "FastAPI + WebSocket",
+        "params": "124M Parameters"
+      },
       "highlights": [
-        "REST API backend with conversational AI",
-        "Interactive web interface for learning support",
-        "Fine-tuning pipeline for domain adaptation"
+        "FastAPI asynchronous streaming WebSocket backend delivering instant token-by-token replies",
+        "Fine-tuning pipeline tailored for computer science and mathematics pedagogical explanations",
+        "Interactive topic quiz and flashcard generation modules for active recall study sessions"
       ]
     }
   ]
