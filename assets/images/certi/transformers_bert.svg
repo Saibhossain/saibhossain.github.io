@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg_2024" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Card -->
+  <rect x="4" y="4" width="632" height="392" rx="16" fill="url(#bg_2024)" stroke="url(#borderGrad)" stroke-width="2"/>
+  <rect x="4" y="4" width="632" height="392" rx="16" fill="url(#glow)"/>
+
+  <!-- Guilloche / Geometric Border Inset -->
+  <rect x="18" y="18" width="604" height="364" rx="10" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 4"/>
+
+  <!-- Top Header: Issuer Badge & Status -->
+  <g transform="translate(36, 46)">
+    <rect x="0" y="0" width="140" height="30" rx="15" fill="rgba(255,255,255,0.06)" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="15" cy="15" r="5" fill="#8b5cf6"/>
+    <text x="28" y="19" fill="#f8fafc" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="0.5">DeepLearning.AI</text>
+  </g>
+
+  <g transform="translate(490, 46)">
+    <rect x="0" y="0" width="114" height="30" rx="15" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-opacity="0.4" stroke-width="1"/>
+    <circle cx="14" cy="15" r="4" fill="#10b981"/>
+    <text x="25" y="19" fill="#34d399" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600">VERIFIED</text>
+  </g>
+
+  <!-- Certificate Subtitle Eyebrow -->
+  <text x="36" y="125" fill="#8b5cf6" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">NLP ARCHITECTURE CERTIFICATE</text>
+
+  <!-- Certificate Main Title -->
+  <text x="36" y="162" fill="#ffffff" font-family="'Inter', system-ui, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.5">Transformer Models &amp; BERT</text>
+
+  <!-- Presentation Text -->
+  <text x="36" y="205" fill="#94a3b8" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="400">This credential is officially awarded to</text>
+
+  <!-- Recipient Name -->
+  <text x="36" y="242" fill="#f1f5f9" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="800" letter-spacing="0.2">MD Saib Hossain</text>
+  <line x1="36" y1="256" x2="280" y2="256" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Official Seal Motif (Right Side) -->
+  <g transform="translate(510, 230)">
+    <circle cx="0" cy="0" r="45" fill="rgba(255,255,255,0.02)" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <circle cx="0" cy="0" r="38" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <path d="M-12 -2 L-4 6 L14 -12" fill="none" stroke="#8b5cf6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="0" y="24" text-anchor="middle" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="1">CERTIFIED</text>
+  </g>
+
+  <!-- Footer Metadata Bar -->
+  <g transform="translate(36, 320)">
+    <rect x="0" y="0" width="568" height="44" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    <text x="16" y="26" fill="#64748b" font-family="monospace" font-size="11">ID: <tspan fill="#cbd5e1">FULDL1CN9XZA</tspan></text>
+    <text x="370" y="26" fill="#64748b" font-family="'Inter', sans-serif" font-size="11">ISSUED: <tspan fill="#f8fafc" font-weight="700">2024</tspan></text>
+  </g>
+</svg>
