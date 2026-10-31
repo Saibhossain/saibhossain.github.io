@@ -162,8 +162,6 @@ Please provide the exact titles, author lists, conference details (IEEE ICCIT 20
 ---
 
 ## Contact & Profile Verification
-- **Email**: saibhossain5@gmail.com
-- **Phone**: +8801769918015
 - **LinkedIn**: [https://linkedin.com/in/saibhossain](https://linkedin.com/in/saibhossain)
 - **GitHub**: [https://github.com/Saibhossain](https://github.com/Saibhossain)
 - **YouTube**: [https://www.youtube.com/@saibhossain3837](https://www.youtube.com/@saibhossain3837)

@@ -4,8 +4,6 @@
 - Researcher Name: MD Saib Hossain
 - Professional Title: AI Engineer and Researcher
 - Primary Affiliation: Research Assistant, Institute of Advanced Research (IAR), United International University (UIU), Dhaka, Bangladesh
-- Email: saibhossain5@gmail.com
-- Telephone: +8801769918015
 - ORCID: 0009-0004-2595-2742 (https://orcid.org/0009-0004-2595-2742)
 - Google Scholar: https://scholar.google.com/citations?user=zH0QciUAAAAJ&hl=en
 - IEEE Xplore Author: https://ieeexplore.ieee.org/author/37088589400
