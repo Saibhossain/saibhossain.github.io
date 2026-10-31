@@ -87,6 +87,7 @@ My work focuses on bridging theoretical deep learning and practical production e
 - **Volunteer Research Assistant** — *Ruach Tech:* Healthcare equity data preprocessing and algorithmic fairness auditing.
 - **Open-Source Mentor** — *AI Safety & Alignment Study Circles:* Hosting hands-on tutorials on LLM guardrails, RAG security, and PyTorch deep learning pipelines.
 
+
 ---
 
 ## 🛠️ Architecture & Tech Stack
