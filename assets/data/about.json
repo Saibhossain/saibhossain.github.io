@@ -1,6 +1,10 @@
 {
   "name": "MD Saib Hossain",
   "role": "AI Engineer & ML Researcher",
+  "profileImage": {
+    "photo": "assets/images/profile.webp",
+    "socialCard": "assets/images/profile_pencil_square.webp"
+  },
   "biography": [
     "I am an AI Engineer and Machine Learning Researcher obsessed with conquering the hardest friction points between pure theory and real-world impact. Simple solutions to trivial problems never inspired me—I am driven to build resilient, battle-tested intelligent systems that don’t just pass sanitized benchmarks, but thrive in high-stakes environments where critical decisions and human lives hang in the balance. My work lives at the bleeding edge of Medical Image Analysis and Stateful Multi-Agent architectures.",
     "Currently, as a Research Assistant at the United International University (UIU) Institute of Advanced Research (IAR), I lead multidisciplinary clinical AI pipelines and engineer defenses for autonomous agent networks. I treat multi-agent security not as a superficial afterthought, but as an authorization and provenance problem—building deterministic safeguards that defend LLM orchestrations from prompt injection vulnerabilities and runtime hijacking.",
@@ -34,13 +38,6 @@
       "readTime": "10 min read",
       "snippet": "We are currently witnessing a paradigm shift in healthcare often described as the 'Golden Age' of Artificial Intelligence (AI).",
       "url": "https://scmpcr.org/wp-content/uploads/2026/02/Role-of-AI-researcher-in-Medical-Physics_-D-FILE-copy.pdf"
-    },
-    {
-      "title": "Edge Inference: Running Qwen2.5 on an iPhone X Fully Offline",
-      "date": "Feb 10, 2026",
-      "readTime": "5 min read",
-      "snippet": "How I quantized and deployed a 0.5B medical QA model locally on edge hardware, achieving complete data privacy and sub-100ms first-token latency.",
-      "url": "https://github.com/Saibhossain/MedAssist-LLM-iPhone"
     }
   ],
   "publishedArticles": [

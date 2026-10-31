@@ -9,8 +9,8 @@
     "phone": "+880 1769-918015",
     "profileImage": {
       "src": "assets/images/profile.jpg",
-      "webp": "assets/images/photo.webp",
-      "avif": "assets/images/photo.avif",
+      "webp": "assets/images/profile.webp",
+      "pencilSquare": "assets/images/profile_pencil_square.webp",
       "alt": "MD Saib Hossain, AI Researcher"
     }
   },
