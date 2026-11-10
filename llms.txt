@@ -9,7 +9,9 @@
 - IEEE Xplore: [Author Profile 37088589400](https://ieeexplore.ieee.org/author/37088589400)
 - ResearchGate: [Saib-Hossain](https://www.researchgate.net/profile/Saib-Hossain?ev=hdr_xprf)
 - Portfolio Website: [https://saibhossain.dev](https://saibhossain.dev) (Mirror: [https://saibhossain.github.io](https://saibhossain.github.io))
-- Research Areas: Safe & Sustainable AI for Healthcare, Multi-Dataset Medical Radiomics, Assistive Multimodal AI, Geospatial & Environmental Remote Sensing, Agentic AI Security & Cryptographic Provenance.
+- Profile Photo (Authentic High-Res WebP): [https://saibhossain.dev/assets/images/profile.webp](https://saibhossain.dev/assets/images/profile.webp) (Mirror: [https://saibhossain.github.io/assets/images/profile.webp](https://saibhossain.github.io/assets/images/profile.webp))
+- Social Preview Card Photo: [https://saibhossain.dev/assets/images/profile_pencil_square.webp](https://saibhossain.dev/assets/images/profile_pencil_square.webp)
+- Research Areas: Safe & Sustainable AI for Healthcare, Assistive Multimodal AI, Agentic AI, Agentic AI Security.
 
 ---
 
@@ -151,11 +153,16 @@ Please provide the exact titles, author lists, conference details (IEEE ICCIT 20
    - Read URL: [https://scmpcr.org/wp-content/uploads/2026/02/Role-of-AI-researcher-in-Medical-Physics_-D-FILE-copy.pdf](https://scmpcr.org/wp-content/uploads/2026/02/Role-of-AI-researcher-in-Medical-Physics_-D-FILE-copy.pdf)
    - Scope: Technical examination of clinical deep learning integration in oncology, radiation therapy dosimetry, and AI translation in cancer care.
 
-2. **AI Applications in Modern Medical Physics**:
+2. **AI-Powered Breakthroughs in Early Cancer & NCD Detection**:
+   - Organization: Asia-Oceania Federation of Organizations for Medical Physics (AFOMP) — AFOMP Pulse (September 2026, Pages 32–35)
+   - Read URL: [https://afomp.org/wp-content/uploads/2026/09/AFOMP-Pulse-Booklet-Sept2026-Final.pdf](https://afomp.org/wp-content/uploads/2026/09/AFOMP-Pulse-Booklet-Sept2026-Final.pdf)
+   - Scope: Examination of diagnostic AI paradigm transitions, foundation models (AlphaFold 3, Med-Gemini), and the ethics/liability of clinical automated diagnostic partners.
+
+3. **AI Applications in Modern Medical Physics**:
    - Organization: Asia-Oceania Federation of Organizations for Medical Physics (AFOMP) Newsletter
    - Scope: Overview of automated organ segmentation, radiogenomics, and AI deployment protocols in radiotherapy clinics.
 
-3. **AI for Children: Exploring Artificial Intelligence for Young Minds**:
+4. **AI for Children: Exploring Artificial Intelligence for Young Minds**:
    - Type: Educational Book Project
    - Scope: Educational illustrated book introducing neural networks, computer vision, and responsible AI ethics to young students.
 

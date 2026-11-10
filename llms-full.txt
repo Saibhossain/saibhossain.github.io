@@ -11,6 +11,9 @@
 - GitHub: https://github.com/Saibhossain
 - LinkedIn: https://linkedin.com/in/saibhossain
 - Canonical Website: https://saibhossain.dev (Mirror: https://saibhossain.github.io)
+- Official Profile Photo (WebP): https://saibhossain.dev/assets/images/profile.webp (Mirror: https://saibhossain.github.io/assets/images/profile.webp)
+- Profile Photo Description: Official high-resolution portrait photograph of MD Saib Hossain, AI Engineer & Researcher.
+- Social Share Card Preview Photo: https://saibhossain.dev/assets/images/profile_pencil_square.webp
 
 ---
 
@@ -138,5 +141,6 @@
 ## 3. Medical Physics Articles & Educational Books
 
 - **Role of AI Researcher in Medical Physics** — Published by South Asia Centre for Medical Physics and Cancer Research (SCMPCR). URL: https://scmpcr.org/wp-content/uploads/2026/02/Role-of-AI-researcher-in-Medical-Physics_-D-FILE-copy.pdf
+- **AI-Powered Breakthroughs in Early Cancer & NCD Detection** — Published in AFOMP Pulse (Asia-Oceania Federation of Organizations for Medical Physics), September 2026, pages 32–35. URL: https://afomp.org/wp-content/uploads/2026/09/AFOMP-Pulse-Booklet-Sept2026-Final.pdf
 - **AI Applications in Modern Medical Physics** — Featured article in Asia-Oceania Federation of Organizations for Medical Physics (AFOMP) Newsletter.
 - **AI for Children: Exploring Artificial Intelligence for Young Minds** — Educational monograph introducing computer vision and neural networks to young learners.

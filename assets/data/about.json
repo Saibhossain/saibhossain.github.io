@@ -26,17 +26,38 @@
   ],
   "blogPosts": [
     {
+      "id": "afomp-pulse-sept-2026",
+      "title": "AI-Powered Breakthroughs in Early Cancer & NCD Detection",
+      "date": "September 2026",
+      "readTime": "8 min read",
+      "publisher": "AFOMP Pulse (Asia-Oceania Federation of Organizations for Medical Physics)",
+      "publisher_logo": "https://afomp.org/wp-content/uploads/2024/12/afomp-header-logo-dark-blue.png",
+      "url": "https://afomp.org/wp-content/uploads/2026/09/AFOMP-Pulse-Booklet-Sept2026-Final.pdf#page=32",
+      "pdf_url": "https://afomp.org/wp-content/uploads/2026/09/AFOMP-Pulse-Booklet-Sept2026-Final.pdf",
+      "pages": "32-35",
+      "image": "assets/images/blogpost/artical.jpg",
+      "featured": true,
+      "linkText": "Read on AFOMP Pulse (PDF) →",
+      "snippet": "Here is a glimpse of what we cover:\n• The New Diagnostic Paradigm: How we are transitioning from traditional methods to data-driven AI systems that can identify subtle biological patterns long before physical symptoms emerge.\n• Frontier Models in Action: A look at how technologies like AlphaFold 3 and Med-Gemini are unlocking entirely new possibilities in structural biology, drug discovery, and multimodal patient care.\n• The Safety Bottleneck: We explore the complex ethical dilemma of medical liability—when an automated system acts as a partner in the exam room, how do we balance innovation with accountability?\nBuilding and designing AI systems for the healthcare space is something I work on every day, and writing this overview was a great opportunity to explore the broader, real-world impact of these technologies."
+    },
+    {
+      "id": "medium-evolution-healing-2026",
       "title": "The Evolution of Healing: From Ancient Remedies to Quantum Artificial Intelligence",
-      "date": "[March 30, 2026]",
-      "readTime": "[7 min read]",
+      "date": "March 30, 2026",
+      "readTime": "7 min read",
+      "publisher": "Medium",
+      "linkText": "Read on Medium →",
       "snippet": "Exploring the paradigm shift in clinical healing, tracing the progression from historical medicinal practices to the integration of quantum-inspired algorithms in modern AI diagnostics.",
       "url": "https://medium.com/@saibhossain5/the-evolution-of-healing-from-ancient-remedies-to-quantum-artificial-intelligence-c05389b71ae4?sharedUserId=saibhossain5"
     },
     {
+      "id": "scmpcr-role-ai-researcher-2026",
       "title": "Beyond the Algorithm: The Multidisciplinary Role of AI Researchers in Medical Physics",
       "date": "February 2026",
       "readTime": "10 min read",
-      "snippet": "We are currently witnessing a paradigm shift in healthcare often described as the 'Golden Age' of Artificial Intelligence (AI).",
+      "publisher": "SCMPCR (South Asia Centre for Medical Physics and Cancer Research)",
+      "linkText": "Read on SCMPCR (PDF) →",
+      "snippet": "We are currently witnessing a paradigm shift in healthcare often described as the 'Golden Age' of Artificial Intelligence (AI). This paper examines the multidisciplinary responsibilities of AI researchers in modern radiation oncology and clinical medical physics.",
       "url": "https://scmpcr.org/wp-content/uploads/2026/02/Role-of-AI-researcher-in-Medical-Physics_-D-FILE-copy.pdf"
     }
   ],

@@ -11,6 +11,8 @@ Allow: /llms-full.txt
 Allow: /pages/
 Allow: /assets/
 Allow: /assets/images/
+Allow: /assets/images/profile.webp
+Allow: /assets/images/profile_pencil_square.webp
 Allow: /assets/cv/
 Allow: /assets/data/
 
@@ -22,13 +24,18 @@ Sitemap: https://saibhossain.github.io/sitemap.xml
 # Canonical LLM summary: https://saibhossain.github.io/llms.txt
 # Unabridged research index: https://saibhossain.github.io/llms-full.txt
 # Dynamic research data: https://saibhossain.github.io/assets/data/research.json
+# Verified Profile Photo for LLMs: https://saibhossain.dev/assets/images/profile.webp
+# Social Share Card Preview Photo: https://saibhossain.dev/assets/images/profile_pencil_square.webp
 
 # AI Search & Academic Engine Crawlers (AEO / GEO / Scholar Indexing)
 User-agent: Googlebot
 Allow: /
+Allow: /assets/images/
 
 User-agent: Googlebot-Image
 Allow: /assets/images/
+Allow: /assets/images/profile.webp
+Allow: /assets/images/profile_pencil_square.webp
 
 User-agent: Bingbot
 Allow: /
