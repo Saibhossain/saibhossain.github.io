@@ -219,7 +219,7 @@
       "time": "Issued 2024 · Verified Credential",
       "credential_id": "8G2L899L1IFE",
       "category": "prof-cert",
-      "image": "../../assets/images/certi/ibm_ai_engineering.svg",
+      "image": "../../assets/images/certi/ibm_ai_engineering.png",
       "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE",
       "description": "Comprehensive 6-course professional specialization covering Machine Learning with Python, Deep Learning with PyTorch and TensorFlow, Computer Vision, NLP, and building deployable production AI applications with a capstone project.",
       "skills": [
@@ -238,7 +238,7 @@
       "time": "Issued 2024 · Verified Credential",
       "credential_id": "PX5AOJ4XEGPA",
       "category": "prof-cert",
-      "image": "../../assets/images/certi/google_data_analytics.svg",
+      "image": "../../assets/images/certi/google_data_analytics.png",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA",
       "description": "Rigorous 8-course credential in end-to-end data analytics: data cleaning, exploratory analysis, SQL database queries, R statistical programming, and interactive data visualization using Tableau.",
       "skills": [
@@ -257,7 +257,7 @@
       "time": "Issued 2024 · Challenge Credential",
       "credential_id": "e/f720698a-2815-11f1-83da-13cb2aea2e67",
       "category": "prof-cert",
-      "image": "../../assets/images/certi/aws_ai_practitioner.svg",
+      "image": "../../assets/images/certi/aws_ai_practitioner.png",
       "url": "https://www.udacity.com/certificate/e/f720698a-2815-11f1-83da-13cb2aea2e67",
       "description": "Hands-on foundation in cloud-native artificial intelligence, Amazon Bedrock, foundation model evaluation, generative AI architectures, and responsible AI governance on AWS infrastructure.",
       "skills": [
@@ -275,7 +275,7 @@
       "time": "Issued 2024 · Official Certification",
       "credential_id": "u0hroxniov",
       "category": "prof-cert",
-      "image": "../../assets/images/certi/deep_agents_langchain.svg",
+      "image": "../../assets/images/certi/deep_agents_langchain.png",
       "url": "https://academy.langchain.com/certificates/u0hroxniov",
       "description": "Advanced certification in building stateful, cyclic multi-agent architectures using LangGraph, dynamic tool execution, memory management, and human-in-the-loop agentic workflows.",
       "skills": [
@@ -311,7 +311,7 @@
       "time": "Issued 2024 · Verified Credential",
       "credential_id": "a81366ef-a9b3-4a9f-bc1d-3b3ccdd3f3d3",
       "category": "prof-training",
-      "image": "../../assets/images/certi/cisco_cybersecurity.svg",
+      "image": "../../assets/images/certi/cisco_cybersecurity.png",
       "url": "https://www.credly.com/badges/a81366ef-a9b3-4a9f-bc1d-3b3ccdd3f3d3/public_url",
       "description": "Professional training covering threat identification, defense architectures, encryption algorithms, network security principles, and enterprise vulnerability management.",
       "skills": [
@@ -329,7 +329,7 @@
       "time": "Issued 2024 · Training Certificate",
       "credential_id": "6xy3crte3zpb",
       "category": "prof-training",
-      "image": "../../assets/images/certi/mcp_anthropic.svg",
+      "image": "../../assets/images/certi/mcp_anthropic.png",
       "url": "https://verify.skilljar.com/c/6xy3crte3zpb",
       "description": "Technical training on implementing the Model Context Protocol (MCP) to securely connect AI models with external tools, contextual databases, and real-time environment APIs.",
       "skills": [
@@ -346,7 +346,7 @@
       "time": "Issued 2024 · Course Certificate",
       "credential_id": "TW48IZYTPFLB",
       "category": "learning-cert",
-      "image": "../../assets/images/certi/pytorch_deeplearning.svg",
+      "image": "../../assets/images/certi/pytorch_deeplearning.png",
       "url": "https://www.coursera.org/account/accomplishments/verify/TW48IZYTPFLB",
       "description": "Specialized course on designing deep neural networks with PyTorch, custom tensors, automatic differentiation, convolutional networks, and transfer learning for computer vision.",
       "skills": [
@@ -364,7 +364,7 @@
       "time": "Issued 2024 · Course Certificate",
       "credential_id": "FULDL1CN9XZA",
       "category": "learning-cert",
-      "image": "../../assets/images/certi/transformers_bert.svg",
+      "image": "../../assets/images/certi/transformers_bert.png",
       "url": "https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA",
       "description": "In-depth study of self-attention mechanisms, multi-head attention, positional encodings, BERT pre-training/fine-tuning, and Hugging Face Transformers for sequence classification and NLP.",
       "skills": [
@@ -382,7 +382,7 @@
       "time": "Issued 2023 · Specialization Certificate",
       "credential_id": "M0R6WZHG3OWV",
       "category": "learning-cert",
-      "image": "../../assets/images/certi/ibm_data_science.svg",
+      "image": "../../assets/images/certi/ibm_data_science.png",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV",
       "description": "Practical data science workflow training in Python programming, Pandas data manipulation, NumPy arrays, SQL relational databases, and statistical data visualization.",
       "skills": [
@@ -401,7 +401,7 @@
       "time": "Issued 2023 · Course Certificate",
       "credential_id": "KAIA00ECLV0Y",
       "category": "learning-cert",
-      "image": "../../assets/images/certi/yale_financial_markets.svg",
+      "image": "../../assets/images/certi/yale_financial_markets.png",
       "url": "https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y",
       "description": "Taught by Nobel Laureate Robert Shiller. Foundations of modern financial markets, securities valuation, risk management, portfolio diversification, and behavioral finance dynamics.",
       "skills": [
