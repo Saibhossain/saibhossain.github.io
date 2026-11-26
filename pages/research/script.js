@@ -1,47 +1,40 @@
 /**
- * Research Page Logic & Dynamic Interactive Renderer
+ * Research & Publications Page Script (Clean & Mobile-Optimized)
  * MD Saib Hossain Portfolio
- *
- * Dynamically renders research publications, metrics HUD, interactive thumbnail galleries,
- * native dialog lightbox, category filters, and live search from assets/data/research.json.
  */
 
 (function () {
   'use strict';
 
   const CONFIG = {
-    jsonPath: '../../assets/data/research.json?v=' + Date.now(),
-    stages: {
-      writing_manuscript: { label: 'Writing Manuscript', pct: 25 },
-      submitted: { label: 'Submitted', pct: 40 },
-      under_review: { label: 'Under Review', pct: 60 },
-      review_submitted: { label: 'Review Submitted', pct: 75 },
-      accepted: { label: 'Accepted', pct: 90 },
-      waiting_online: { label: 'Waiting Online', pct: 95 },
-      published: { label: 'Published', pct: 100 }
+    jsonPath: '../../assets/data/research.json?v=4.2',
+    statusMeta: {
+      published: { label: 'Published', pillClass: 'status-published' },
+      accepted: { label: 'Accepted', pillClass: 'status-published' },
+      under_review: { label: 'Under Review', pillClass: 'status-review' },
+      submitted: { label: 'Submitted', pillClass: 'status-submitted' },
+      writing_manuscript: { label: 'In Preparation', pillClass: 'status-review' }
     }
   };
 
-  // State Management
   const state = {
     data: null,
     activeCategory: 'all',
     searchQuery: '',
     currentGallery: [],
-    currentGalleryIndex: 0,
-    currentPaperTitle: ''
+    currentGalleryIndex: 0
   };
 
-  // DOM Elements
   const els = {
     statsTbody: document.getElementById('stats-tbody'),
-    papersTableSection: document.getElementById('papers-table-section'),
     papersDirectoryTbody: document.getElementById('papers-directory-tbody'),
     tableCountPill: document.getElementById('table-count-pill'),
     categoryTabs: document.getElementById('category-tabs'),
     searchInput: document.getElementById('research-search'),
     clearSearchBtn: document.getElementById('clear-search-btn'),
     resultsCount: document.getElementById('results-count'),
+    journalsSection: document.getElementById('journals-section'),
+    journalsContainer: document.getElementById('journals-container'),
     confSection: document.getElementById('conferences-section'),
     confContainer: document.getElementById('conf-container'),
     ongoingSection: document.getElementById('ongoing-section'),
@@ -53,13 +46,11 @@
     modalFigTitle: document.getElementById('modal-fig-title'),
     modalFigCaption: document.getElementById('modal-fig-caption'),
     modalFigCounter: document.getElementById('modal-fig-counter'),
-    modalCloseBtn: document.getElementById('modal-close-btn'),
     modalPrevBtn: document.getElementById('modal-prev-btn'),
     modalNextBtn: document.getElementById('modal-next-btn'),
     bibtexToast: document.getElementById('bibtex-toast')
   };
 
-  // Toast timer reference
   let toastTimer = null;
 
   async function init() {
@@ -68,121 +59,99 @@
       if (!res.ok) throw new Error('Failed to load research.json: ' + res.status);
       state.data = await res.json();
 
-      renderStats(state.data.papers);
+      renderStatsTable(state.data.papers || {});
       setupCategoryTabs();
       setupSearch();
       setupLightboxModal();
       renderAll();
     } catch (err) {
-      console.error('Research Page Initialization Error:', err);
-      if (els.resultsCount) {
-        els.resultsCount.textContent = 'Unable to load research data. Please check connection.';
-      }
-      if (els.statsTbody) {
-        els.statsTbody.innerHTML = '<tr><td colspan="4" class="text-center text-muted">Error loading research statistics.</td></tr>';
-      }
+      console.error('Research initialization error:', err);
+      if (els.resultsCount) els.resultsCount.textContent = 'Unable to load publications.';
     }
   }
 
-  /**
-   * Renders Research Output & Impact Statistics Table
-   */
-  function renderStats(papers) {
-    if (!els.statsTbody || !papers) return;
-    const confCount = (papers.conferences || []).length;
-    const aStarCount = (papers.ongoing || []).filter(p => p.tier === 'A*' || (p.venue && p.venue.includes('NeurIPS'))).length + 
-                       (papers.conferences || []).filter(p => p.tier === 'A*').length;
-    
-    const journalCounts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0 };
-    (papers.journals || []).forEach(j => { if (journalCounts[j.tier] !== undefined) journalCounts[j.tier]++; });
-    (papers.ongoing || []).forEach(j => { if (journalCounts[j.tier] !== undefined) journalCounts[j.tier]++; });
-
-    const totalJournals = (papers.journals || []).length + (papers.ongoing || []).filter(j => j.tier && j.tier.startsWith('Q')).length;
-    const journalTiersStr = Object.entries(journalCounts).filter(([_, v]) => v > 0).map(([k, v]) => `${k}: ${v}`).join(', ') || 'Q1: 1';
+  function renderStatsTable(papers) {
+    if (!els.statsTbody) return;
+    const confs = papers.conferences || [];
+    const journals = papers.journals || [];
+    const ongoing = papers.ongoing || [];
 
     const rows = [
-      { cat: 'Conferences', total: confCount, tier: 'Core/Scopus', index: ['Scopus', 'IEEE Xplore'] },
-      { cat: 'A* Conferences', total: aStarCount || 1, tier: 'NeurIPS', index: ['DBLP', 'CORE'] },
-      { cat: 'Journals', total: totalJournals || 1, tier: journalTiersStr, index: ['Web of Science', 'Scopus'] }
+      { track: 'Conference Proceedings', total: confs.length, tier: 'IEEE ICCIT 2025', status: 'Published', cls: 'status-published', index: 'Scopus, IEEE Xplore' },
+      { track: 'Journal Manuscripts', total: journals.length, tier: 'Q1 Track', status: 'Submitted', cls: 'status-submitted', index: 'Web of Science, Scopus' },
+      { track: 'A* Conference Pipeline', total: ongoing.length, tier: 'NeurIPS Track', status: 'Under Review', cls: 'status-review', index: 'CORE A*, DBLP' }
     ];
 
     els.statsTbody.innerHTML = rows.map(r => `
       <tr>
-        <td><strong>${escapeHTML(r.cat)}</strong></td>
-        <td><span class="stat-count-pill">${r.total}</span></td>
-        <td><span class="stat-tier-tag">${escapeHTML(r.tier)}</span></td>
-        <td><div class="index-badges">${r.index.map(i => `<span class="idx-badge">${escapeHTML(i)}</span>`).join('')}</div></td>
+        <th scope="row">${escapeHTML(r.track)}</th>
+        <td><span class="stat-num">${r.total}</span></td>
+        <td><span class="table-muted">${escapeHTML(r.tier)}</span></td>
+        <td><span class="status-pill ${r.cls}">${escapeHTML(r.status)}</span></td>
+        <td><span class="table-muted">${escapeHTML(r.index)}</span></td>
       </tr>
     `).join('');
   }
 
-  /**
-   * Builds category filter tabs with dynamic counts
-   */
+  function getAllItems() {
+    const p = (state.data && state.data.papers) || {};
+    return [
+      ...(p.journals || []).map(i => ({ ...i, _section: 'journal' })),
+      ...(p.conferences || []).map(i => ({ ...i, _section: 'conference' })),
+      ...(p.ongoing || []).map(i => ({ ...i, _section: 'ongoing' })),
+      ...(p.special_publications || []).map(i => ({ ...i, _section: 'special' }))
+    ];
+  }
+
   function setupCategoryTabs() {
-    if (!els.categoryTabs) return;
+    if (!els.categoryTabs || !state.data) return;
+    const categories = state.data.categories || [];
+    const allItems = getAllItems();
 
-    const categories = (state.data && state.data.categories) || [
-      { id: 'all', label: 'All Research' },
-      { id: 'medical-imaging', label: 'Medical AI & Radiomics' },
-      { id: 'assistive-ai', label: 'Multimodal & Assistive AI' },
-      { id: 'geospatial', label: 'Geospatial & Climate AI' },
-      { id: 'ai-safety', label: 'Agentic AI & Security' }
-    ];
-    const papers = (state.data && state.data.papers) || {};
-
-    // Calculate count per category
-    const countMap = { all: 0 };
-    categories.forEach(c => { countMap[c.id] = 0; });
-
-    const allItems = [
-      ...(papers.conferences || []),
-      ...(papers.ongoing || []),
-      ...(papers.special_publications || [])
-    ];
-
-    countMap.all = allItems.length;
-
+    const countMap = { all: allItems.length };
+    categories.forEach(c => { if (c.id !== 'all') countMap[c.id] = 0; });
     allItems.forEach(item => {
-      if (item.category && countMap[item.category] !== undefined) {
-        countMap[item.category]++;
-      }
+      if (item.category && countMap[item.category] !== undefined) countMap[item.category]++;
     });
 
-    els.categoryTabs.innerHTML = categories.map(cat => `
-      <button type="button" class="category-tab-btn ${cat.id === state.activeCategory ? 'active' : ''}" data-cat="${cat.id}">
-        <span>${escapeHTML(cat.label)}</span>
-        <span class="tab-badge">${countMap[cat.id] || 0}</span>
-      </button>
-    `).join('');
+    els.categoryTabs.innerHTML = categories.map(cat => {
+      const active = cat.id === state.activeCategory;
+      return `
+        <button type="button" class="category-tab-btn ${active ? 'active' : ''}" data-cat="${escapeHTML(cat.id)}" aria-pressed="${active}">
+          <span>${escapeHTML(cat.label)}</span>
+          <span class="tab-count">${countMap[cat.id] || 0}</span>
+        </button>
+      `;
+    }).join('');
 
     els.categoryTabs.addEventListener('click', (e) => {
       const btn = e.target.closest('.category-tab-btn');
       if (!btn) return;
       const cat = btn.dataset.cat;
-      if (cat === state.activeCategory) return;
+      if (!cat || cat === state.activeCategory) return;
 
       state.activeCategory = cat;
-
       els.categoryTabs.querySelectorAll('.category-tab-btn').forEach(b => {
-        b.classList.toggle('active', b.dataset.cat === cat);
+        const sel = b.dataset.cat === cat;
+        b.classList.toggle('active', sel);
+        b.setAttribute('aria-pressed', sel ? 'true' : 'false');
       });
 
+      try {
+        btn.scrollIntoView({ block: 'nearest', inline: 'nearest', container: 'nearest' });
+      } catch (err) {
+        btn.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      }
       renderAll();
     });
   }
 
-  /**
-   * Search input events
-   */
   function setupSearch() {
     if (!els.searchInput) return;
 
     els.searchInput.addEventListener('input', (e) => {
       state.searchQuery = e.target.value.trim().toLowerCase();
-      if (els.clearSearchBtn) {
-        els.clearSearchBtn.style.display = state.searchQuery ? 'block' : 'none';
-      }
+      if (els.clearSearchBtn) els.clearSearchBtn.hidden = !state.searchQuery;
       renderAll();
     });
 
@@ -190,502 +159,278 @@
       els.clearSearchBtn.addEventListener('click', () => {
         els.searchInput.value = '';
         state.searchQuery = '';
-        els.clearSearchBtn.style.display = 'none';
+        els.clearSearchBtn.hidden = true;
         els.searchInput.focus();
         renderAll();
       });
     }
   }
 
-  /**
-   * Check if an item matches the active category and search query
-   */
   function matchesFilter(item) {
-    if (state.activeCategory !== 'all' && item.category !== state.activeCategory) {
-      return false;
-    }
-
+    if (state.activeCategory !== 'all' && item.category !== state.activeCategory) return false;
     if (!state.searchQuery) return true;
 
     const q = state.searchQuery;
-    const title = (item.title || '').toLowerCase();
-    const authors = (item.authors || '').toLowerCase();
-    const venue = (item.venue || '').toLowerCase();
-    const desc = (item.description || '').toLowerCase();
-    const publisher = (item.publisher || '').toLowerCase();
-    const metricsStr = (item.metrics || []).map(m => `${m.label} ${m.value} ${m.delta}`).join(' ').toLowerCase();
-
-    return title.includes(q) ||
-           authors.includes(q) ||
-           venue.includes(q) ||
-           desc.includes(q) ||
-           publisher.includes(q) ||
-           metricsStr.includes(q);
+    const text = [
+      item.title, item.authors, item.venue, item.publisher,
+      item.doi, item.status, item.tier, item.description
+    ].filter(Boolean).join(' ').toLowerCase();
+    return text.includes(q);
   }
 
-  /**
-   * Main Render Pipeline
-   */
   function renderAll() {
     if (!state.data || !state.data.papers) return;
 
+    const journals = (state.data.papers.journals || []).filter(matchesFilter);
     const confs = (state.data.papers.conferences || []).filter(matchesFilter);
-    const ongoings = (state.data.papers.ongoing || []).filter(matchesFilter);
+    const ongoing = (state.data.papers.ongoing || []).filter(matchesFilter);
     const specials = (state.data.papers.special_publications || []).filter(matchesFilter);
 
-    renderPapersDirectory([...confs, ...ongoings, ...specials]);
-    renderConferences(confs);
-    renderOngoing(ongoings);
-    renderSpecial(specials);
-
-    // Update Result Counter
-    const totalMatching = confs.length + ongoings.length + specials.length;
-    const categories = (state.data && state.data.categories) || [
-      { id: 'all', label: 'All Research' },
-      { id: 'medical-imaging', label: 'Medical AI & Radiomics' },
-      { id: 'assistive-ai', label: 'Multimodal & Assistive AI' },
-      { id: 'geospatial', label: 'Geospatial & Climate AI' },
-      { id: 'ai-safety', label: 'Agentic AI & Security' }
+    const researchPapersFiltered = [
+      ...journals.map(i => ({ ...i, _section: 'journal' })),
+      ...confs.map(i => ({ ...i, _section: 'conference' })),
+      ...ongoing.map(i => ({ ...i, _section: 'ongoing' }))
     ];
-    const catObj = categories.find(c => c.id === state.activeCategory);
-    const catLabel = catObj ? catObj.label : 'All Research';
+
+    const allFiltered = [
+      ...researchPapersFiltered,
+      ...specials.map(i => ({ ...i, _section: 'special' }))
+    ];
+
+    renderMinimalCards(journals, els.journalsSection, els.journalsContainer, 'journal');
+    renderConferences(confs);
+    renderMinimalCards(ongoing, els.ongoingSection, els.ongoingContainer, 'ongoing');
+    renderSpecial(specials);
+    renderDirectoryTable(researchPapersFiltered);
 
     if (els.resultsCount) {
-      if (totalMatching === 0) {
-        els.resultsCount.textContent = `No publications found matching "${state.searchQuery}" in ${catLabel}.`;
-      } else {
-        els.resultsCount.textContent = `Showing ${totalMatching} publication${totalMatching === 1 ? '' : 's'} in ${catLabel}${state.searchQuery ? ` matching "${state.searchQuery}"` : ''}.`;
-      }
+      els.resultsCount.textContent = allFiltered.length === 0
+        ? `No publications found matching "${state.searchQuery}".`
+        : `${allFiltered.length} publication${allFiltered.length === 1 ? '' : 's'} shown`;
     }
   }
 
-  /**
-   * Render Tabular Directory of All Publications
-   */
-  function renderPapersDirectory(items) {
-    if (!els.papersDirectoryTbody) return;
-
+  function renderMinimalCards(items, sectionEl, containerEl, prefix) {
+    if (!sectionEl || !containerEl) return;
     if (items.length === 0) {
-      els.papersDirectoryTbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted" style="padding:1.5rem;">No publications match the current filter.</td></tr>';
-      if (els.tableCountPill) els.tableCountPill.textContent = '0 Papers';
+      sectionEl.hidden = true;
       return;
     }
+    sectionEl.hidden = false;
 
-    if (els.tableCountPill) {
-      els.tableCountPill.textContent = `${items.length} Publication${items.length === 1 ? '' : 's'}`;
-    }
-
-    els.papersDirectoryTbody.innerHTML = items.map(item => {
-      const isConf = Boolean(item.metrics || (item.venue && item.venue.includes('ICCIT')));
-      const targetAnchor = isConf ? `#paper-${item.id}` : (item.status ? `#ongoing-${item.id}` : `#special-${item.id}`);
-      const linkHref = item.link || targetAnchor;
-      const isExternal = Boolean(item.link && item.link.startsWith('http'));
-      const badgeText = item.status ? `Ongoing (${item.status.replace('_', ' ')})` : (item.badge || (item.index ? item.index.join(', ') : 'Peer-Reviewed'));
-      const badgeClass = item.status ? 'badge-ongoing' : (isConf ? 'badge-conf' : 'badge-special');
-
+    containerEl.innerHTML = items.map(item => {
+      const status = CONFIG.statusMeta[item.status] || { label: 'Submitted', pillClass: 'status-submitted' };
       return `
-        <tr>
-          <td>
-            <a href="${targetAnchor}" class="table-paper-title-link">
-              <strong>${escapeHTML(item.title)}</strong>
-            </a>
-          </td>
-          <td><span class="table-venue-text">${escapeHTML(item.venue || item.publisher || 'Academic')}</span></td>
-          <td><span class="table-year-text">${item.year || '2026'}</span></td>
-          <td><span class="directory-status-badge ${badgeClass}">${escapeHTML(badgeText)}</span></td>
-          <td>
-            <a href="${linkHref}" ${isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''} class="table-action-link" title="Open ${escapeHTML(item.title)}">
-              <span>${isExternal ? 'Paper ↗' : 'View ↓'}</span>
-            </a>
-          </td>
-        </tr>
+        <article class="minimal-card" id="${prefix}-${escapeHTML(item.id)}">
+          <div class="minimal-card-top">
+            <span class="venue-label">${escapeHTML(item.venue)}${item.tier ? ` · ${escapeHTML(item.tier)}` : ''}</span>
+            <span class="status-pill ${status.pillClass}">${escapeHTML(status.label)}</span>
+          </div>
+          <h3 class="minimal-card-title">${escapeHTML(item.title)}</h3>
+          <p class="minimal-card-desc">${escapeHTML(item.description)}</p>
+          ${item.funding ? `<div class="minimal-card-foot"><span>${escapeHTML(item.funding)}</span><span>${escapeHTML(String(item.year || '2026'))}</span></div>` : ''}
+        </article>
       `;
     }).join('');
   }
 
-  /**
-   * Render Published Conference Papers
-   */
   function renderConferences(papers) {
-    if (!els.confContainer) return;
-
+    if (!els.confSection || !els.confContainer) return;
     if (papers.length === 0) {
-      els.confSection.style.display = state.searchQuery || state.activeCategory !== 'all' ? 'none' : 'block';
-      els.confContainer.innerHTML = '<p class="text-muted" style="text-align:center; padding:2rem;">No peer-reviewed conference publications match this filter.</p>';
+      els.confSection.hidden = true;
       return;
     }
-
-    els.confSection.style.display = 'block';
+    els.confSection.hidden = false;
 
     els.confContainer.innerHTML = papers.map(p => {
-      const catClass = `cat-${p.category || 'medical-imaging'}`;
-      const catObj = (state.data.categories || []).find(c => c.id === p.category);
-      const catLabel = catObj ? catObj.label : p.category;
-
-      // Author highlights
-      const formattedAuthors = highlightAuthor(p.authors || '');
-
-      // Metrics HUD
-      const metricsHTML = (p.metrics && p.metrics.length > 0)
-        ? `<div class="metrics-hud" aria-label="Quantitative Empirical Metrics">
+      const gallery = p.gallery || [];
+      const metricsHtml = (p.metrics || []).length > 0
+        ? `<div class="conf-metrics">
             ${p.metrics.map(m => `
-              <div class="metric-item">
-                <span class="metric-label">${escapeHTML(m.label)}</span>
-                <div class="metric-value-wrap">
-                  <span class="metric-value">${escapeHTML(m.value)}</span>
-                  ${m.delta ? `<span class="metric-delta">${escapeHTML(m.delta)}</span>` : ''}
-                </div>
+              <div class="conf-metric">
+                <span class="conf-metric-label">${escapeHTML(m.label)}</span>
+                <span class="conf-metric-val">${escapeHTML(m.value)}</span>
               </div>
             `).join('')}
           </div>`
         : '';
 
-      // Gallery Thumbnails
-      const gallery = p.gallery || [];
-      const galleryHTML = gallery.length > 0
-        ? `<div class="gallery-strip" aria-label="Paper Figures and Result Tables">
-            ${gallery.map((g, idx) => `
-              <button type="button" class="gallery-thumb-btn" data-paper-id="${p.id}" data-fig-index="${idx}" title="${escapeHTML(g.title)}">
-                <img src="${g.src}" alt="${escapeHTML(g.title)}" loading="lazy">
-                <span class="thumb-title-hint">${escapeHTML(g.title.split(':')[0])}</span>
-              </button>
-            `).join('')}
-          </div>`
-        : '';
-
-      // Featured Image
-      const featuredImgHTML = p.image
-        ? `<div class="featured-visual-box" data-paper-id="${p.id}" data-fig-index="0" role="button" tabindex="0" aria-label="Inspect ${escapeHTML(p.title)} visual data">
-            <img src="${p.image}" alt="${escapeHTML(p.title)}" class="featured-visual-img" loading="lazy">
-            <div class="visual-hover-overlay">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              <span>Click to Inspect High-Res Visual</span>
-            </div>
+      const thumbsHtml = gallery.length > 0
+        ? `<div class="conf-thumbs" aria-label="Paper figures and result tables">
+            ${gallery.map((g, idx) => {
+          const shortTag = g.title.split(':')[0];
+          const isTable = /^table/i.test(shortTag.trim());
+          return `
+                <button type="button" class="thumb-btn open-lightbox-trigger ${isTable ? 'is-table' : ''}" data-paper-id="${escapeHTML(p.id)}" data-fig-index="${idx}" title="${escapeHTML(g.title)}">
+                  <img src="${g.src}" alt="${escapeHTML(g.title)}" loading="lazy" decoding="async" />
+                  <span class="thumb-tag">${escapeHTML(shortTag)}</span>
+                </button>
+              `;
+        }).join('')}
           </div>`
         : '';
 
       return `
-        <article class="paper-card" id="paper-${p.id}">
-          <div class="paper-meta-top">
-            <div class="badge-cluster">
-              <span class="venue-pill">${escapeHTML(p.venue)}</span>
-              <span class="cat-pill ${catClass}">${escapeHTML(catLabel)}</span>
-              <span class="index-chip">${p.year}</span>
+        <article class="conf-card" id="paper-${escapeHTML(p.id)}">
+          <div class="conf-meta-row">
+            <div class="conf-meta-tags">
+              <span class="status-pill status-published">${escapeHTML(p.venue)}</span>
+              ${p.pages ? `<span class="venue-label">pp. ${escapeHTML(p.pages)}</span>` : ''}
             </div>
-            <div class="indexing-tags">
-              ${(p.index || []).map(idx => `<span class="index-chip">${escapeHTML(idx)}</span>`).join('')}
-            </div>
+            <span class="venue-label">${escapeHTML((p.index || []).join(' · '))}</span>
           </div>
 
-          <h3 class="paper-title">
+          <h3 class="conf-title">
             <a href="${p.link}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.title)}</a>
           </h3>
 
-          <div class="paper-authors">
-            ${formattedAuthors}
-          </div>
+          <div class="conf-authors">${highlightAuthor(p.authors || '')}</div>
 
-          ${metricsHTML}
+          ${metricsHtml}
 
-          <p class="paper-narrative">
-            ${escapeHTML(p.description)}
-          </p>
-
-          <div class="paper-visuals">
-            ${featuredImgHTML}
-            ${galleryHTML}
-          </div>
-
-          <div class="paper-actions">
-            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="paper-btn btn-primary-ieee">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              <span>Read on IEEE Xplore</span>
-            </a>
-            ${gallery.length > 0 ? `
-              <button type="button" class="paper-btn btn-outline-gallery open-gallery-btn" data-paper-id="${p.id}" data-fig-index="0">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                <span>Inspect Figures &amp; Tables (${gallery.length})</span>
+          ${p.image ? `
+            <div class="conf-visual-row">
+              <button type="button" class="conf-primary-fig open-lightbox-trigger" data-paper-id="${escapeHTML(p.id)}" data-fig-index="0" aria-label="Inspect figures and tables for ${escapeHTML(p.title)}">
+                <img src="${p.image}" alt="${escapeHTML(p.title)} primary figure" loading="lazy" decoding="async" />
               </button>
-            ` : ''}
-            ${p.bibtex ? `
-              <button type="button" class="paper-btn btn-bibtex copy-bibtex-btn" data-paper-id="${p.id}">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                <span>Copy BibTeX</span>
-              </button>
-            ` : ''}
-          </div>
-
-          ${p.bibtex ? `
-            <details class="paper-bibtex-details">
-              <summary class="bibtex-summary">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                <span>BibTeX Citation</span>
-              </summary>
-              <pre class="bibtex-pre"><code class="language-bibtex">${escapeHTML(p.bibtex)}</code></pre>
-            </details>
-          ` : ''}
-        </article>
-      `;
-    }).join('');
-
-    // Attach Gallery & BibTeX Listeners
-    setupPaperEventListeners();
-  }
-
-  /**
-   * Render Ongoing Research & Preprints
-   */
-  function renderOngoing(ongoing) {
-    if (!els.ongoingContainer) return;
-
-    if (ongoing.length === 0) {
-      els.ongoingSection.style.display = 'none';
-      return;
-    }
-
-    els.ongoingSection.style.display = 'block';
-
-    els.ongoingContainer.innerHTML = ongoing.map(p => {
-      const stage = CONFIG.stages[p.status] || { label: 'In Progress', pct: p.progress_stage || 30 };
-      const pct = p.progress_stage || stage.pct;
-
-      return `
-        <article class="ongoing-paper-card" id="ongoing-${p.id}">
-          <div class="ongoing-badge-row">
-            <span class="venue-pill">${escapeHTML(p.venue)}</span>
-            <span class="tier-badge">${escapeHTML(p.tier || 'Preprint')}</span>
-          </div>
-
-          <h3 class="ongoing-paper-title">${escapeHTML(p.title)}</h3>
-
-          <p class="ongoing-paper-desc">${escapeHTML(p.description)}</p>
-
-          ${p.funding ? `
-            <div class="funding-tag">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-              <span>${escapeHTML(p.funding)}</span>
+              ${thumbsHtml}
             </div>
           ` : ''}
 
-          <div class="progress-hud-box">
-            <div class="progress-header">
-              <span>Status: <strong>${escapeHTML(stage.label)}</strong></span>
-              <span>${pct}%</span>
-            </div>
-            <div class="progress-track-bar">
-              <div class="progress-fill-bar" style="width: ${pct}%"></div>
-            </div>
-            <div class="stage-step-labels">
-              <span>Draft</span>
-              <span>Submitted</span>
-              <span>Review</span>
-              <span>Accepted</span>
-            </div>
+          <div class="conf-actions">
+            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="btn-clean btn-clean-primary">IEEE Xplore ↗</a>
+            ${gallery.length > 0 ? `<button type="button" class="btn-clean btn-clean-ghost open-lightbox-trigger" data-paper-id="${escapeHTML(p.id)}" data-fig-index="1">Figures &amp; Tables (${gallery.length})</button>` : ''}
+            ${p.bibtex ? `<button type="button" class="btn-clean btn-clean-ghost copy-bibtex-btn" data-paper-id="${escapeHTML(p.id)}">Copy BibTeX</button>` : ''}
           </div>
+
+          <details class="conf-details">
+            <summary>Abstract &amp; BibTeX Citation</summary>
+            <div class="conf-details-body">
+              <p class="conf-abstract">${escapeHTML(p.description)}</p>
+              ${p.bibtex ? `<pre class="bibtex-pre"><code>${escapeHTML(p.bibtex)}</code></pre>` : ''}
+            </div>
+          </details>
         </article>
       `;
     }).join('');
   }
 
-  /**
-   * Render Special Publications, Monograph & Medical Physics
-   */
   function renderSpecial(specials) {
-    if (!els.specialContainer) return;
-
+    if (!els.specialSection || !els.specialContainer) return;
     if (specials.length === 0) {
-      els.specialSection.style.display = 'none';
+      els.specialSection.hidden = true;
       return;
     }
-
-    els.specialSection.style.display = 'block';
+    els.specialSection.hidden = false;
 
     els.specialContainer.innerHTML = specials.map(s => `
-      <article class="special-card" id="special-${s.id}">
-        <div class="special-badge-row">
-          <span class="special-badge">${escapeHTML(s.badge || s.type)}</span>
-          <span class="special-year">${s.year}</span>
+      <article class="minimal-card" id="special-${escapeHTML(s.id)}">
+        <div class="minimal-card-top">
+          <span class="venue-label">${escapeHTML(s.venue || s.badge)}</span>
+          <span class="status-pill status-published">${escapeHTML(String(s.year || '2026'))}</span>
         </div>
-
-        <h3 class="special-title">${escapeHTML(s.title)}</h3>
-        <span class="special-publisher">${escapeHTML(s.publisher)}</span>
-
-        <p class="special-desc">${escapeHTML(s.description)}</p>
-
-        <div class="special-action">
-          <a href="${s.link}" target="_blank" rel="noopener noreferrer" class="special-link-btn">
-            <span>Read Publication</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-          </a>
+        <h3 class="minimal-card-title">${escapeHTML(s.title)}</h3>
+        <p class="minimal-card-desc">${escapeHTML(s.description)}</p>
+        <div class="minimal-card-foot">
+          <span>${escapeHTML(s.publisher)}</span>
+          <a href="${s.link}" target="_blank" rel="noopener noreferrer" class="table-action">Read PDF ↗</a>
         </div>
       </article>
     `).join('');
   }
 
-  /**
-   * Attach card interaction events (thumbnails, lightbox, BibTeX)
-   */
-  function setupPaperEventListeners() {
-    // Featured Visual Click
-    document.querySelectorAll('.featured-visual-box').forEach(box => {
-      box.addEventListener('click', () => {
-        const paperId = box.dataset.paperId;
-        const figIdx = parseInt(box.dataset.figIndex, 10) || 0;
-        openLightbox(paperId, figIdx);
-      });
-      box.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          const paperId = box.dataset.paperId;
-          const figIdx = parseInt(box.dataset.figIndex, 10) || 0;
-          openLightbox(paperId, figIdx);
-        }
-      });
-    });
+  function renderDirectoryTable(items) {
+    if (!els.papersDirectoryTbody) return;
+    if (els.tableCountPill) els.tableCountPill.textContent = `${items.length} Paper${items.length === 1 ? '' : 's'}`;
 
-    // Gallery Thumbnails Click
-    document.querySelectorAll('.gallery-thumb-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const paperId = btn.dataset.paperId;
-        const figIdx = parseInt(btn.dataset.figIndex, 10) || 0;
-        openLightbox(paperId, figIdx);
-      });
-    });
+    if (items.length === 0) {
+      els.papersDirectoryTbody.innerHTML = '<tr><td colspan="5">No matching publications.</td></tr>';
+      return;
+    }
 
-    // Explore Figures Button Click
-    document.querySelectorAll('.open-gallery-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const paperId = btn.dataset.paperId;
-        openLightbox(paperId, 0);
-      });
-    });
+    els.papersDirectoryTbody.innerHTML = items.map(item => {
+      let anchor = `#paper-${item.id}`;
+      if (item._section === 'journal') anchor = `#journal-${item.id}`;
+      else if (item._section === 'ongoing') anchor = `#ongoing-${item.id}`;
+      else if (item._section === 'special') anchor = `#special-${item.id}`;
 
-    // Copy BibTeX Button Click
-    document.querySelectorAll('.copy-bibtex-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const paperId = btn.dataset.paperId;
-        const paper = (state.data.papers.conferences || []).find(p => p.id === paperId);
-        if (paper && paper.bibtex) {
-          copyToClipboard(paper.bibtex);
-        }
-      });
-    });
+      const status = CONFIG.statusMeta[item.status] || { label: 'Published', pillClass: 'status-published' };
+      const isExt = Boolean(item.link && item.link.startsWith('http'));
+
+      return `
+        <tr>
+          <th scope="row"><a href="${anchor}" class="table-title-link">${escapeHTML(item.title)}</a></th>
+          <td><span class="table-muted">${escapeHTML(item.venue || item.publisher || '')}</span></td>
+          <td><span class="table-muted">${escapeHTML(String(item.year || '2026'))}</span></td>
+          <td><span class="status-pill ${status.pillClass}">${escapeHTML(status.label)}</span></td>
+          <td><a href="${isExt ? item.link : anchor}" ${isExt ? 'target="_blank" rel="noopener noreferrer"' : ''} class="table-action">${isExt ? 'Open ↗' : 'View ↑'}</a></td>
+        </tr>
+      `;
+    }).join('');
   }
 
-  /**
-   * Lightbox Modal Functions (<dialog>)
-   */
   function setupLightboxModal() {
     if (!els.figureModal) return;
 
-    // Close button
-    if (els.modalCloseBtn) {
-      els.modalCloseBtn.addEventListener('click', () => {
-        closeLightbox();
+    if (els.confContainer) {
+      els.confContainer.addEventListener('click', (e) => {
+        const lbBtn = e.target.closest('.open-lightbox-trigger');
+        if (lbBtn) {
+          openLightbox(lbBtn.dataset.paperId, parseInt(lbBtn.dataset.figIndex, 10) || 0);
+          return;
+        }
+        const bibBtn = e.target.closest('.copy-bibtex-btn');
+        if (bibBtn && state.data) {
+          const paper = (state.data.papers.conferences || []).find(p => p.id === bibBtn.dataset.paperId);
+          if (paper && paper.bibtex) copyToClipboard(paper.bibtex);
+        }
       });
     }
 
-    // Prev / Next Buttons
-    if (els.modalPrevBtn) {
-      els.modalPrevBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navigateLightbox(-1);
-      });
-    }
+    if (els.modalPrevBtn) els.modalPrevBtn.addEventListener('click', () => navigateLightbox(-1));
+    if (els.modalNextBtn) els.modalNextBtn.addEventListener('click', () => navigateLightbox(1));
 
-    if (els.modalNextBtn) {
-      els.modalNextBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navigateLightbox(1);
-      });
-    }
-
-    // Light dismiss: click outside modal-inner closes dialog
-    els.figureModal.addEventListener('click', (e) => {
-      const inner = els.figureModal.querySelector('.modal-inner');
-      if (inner && !inner.contains(e.target)) {
-        closeLightbox();
-      }
-    });
-
-    // Keyboard navigation inside open modal
     window.addEventListener('keydown', (e) => {
       if (!els.figureModal.open) return;
-      if (e.key === 'ArrowLeft') {
-        navigateLightbox(-1);
-      } else if (e.key === 'ArrowRight') {
-        navigateLightbox(1);
-      }
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      else if (e.key === 'ArrowRight') navigateLightbox(1);
     });
+
+    if (!('closedBy' in HTMLDialogElement.prototype)) {
+      els.figureModal.addEventListener('click', (event) => {
+        if (event.target !== els.figureModal) return;
+        const r = els.figureModal.getBoundingClientRect();
+        if (r.top <= event.clientY && event.clientY <= r.top + r.height && r.left <= event.clientX && event.clientX <= r.left + r.width) return;
+        els.figureModal.close();
+      });
+    }
   }
 
   function openLightbox(paperId, figIndex) {
     if (!els.figureModal || !state.data) return;
-
     const paper = (state.data.papers.conferences || []).find(p => p.id === paperId);
     if (!paper || !paper.gallery || paper.gallery.length === 0) return;
-
     state.currentGallery = paper.gallery;
     state.currentGalleryIndex = Math.max(0, Math.min(figIndex, paper.gallery.length - 1));
-    state.currentPaperTitle = paper.title;
-
     updateModalContent();
-
-    try {
-      if (typeof els.figureModal.showModal === 'function') {
-        els.figureModal.showModal();
-      } else {
-        els.figureModal.setAttribute('open', '');
-      }
-      document.body.style.overflow = 'hidden';
-    } catch (err) {
-      console.warn('Dialog showModal error:', err);
-    }
-  }
-
-  function closeLightbox() {
-    if (!els.figureModal) return;
-    try {
-      if (typeof els.figureModal.close === 'function') {
-        els.figureModal.close();
-      } else {
-        els.figureModal.removeAttribute('open');
-      }
-    } catch (err) {
-      els.figureModal.removeAttribute('open');
-    }
-    document.body.style.overflow = '';
+    els.figureModal.showModal();
   }
 
   function navigateLightbox(delta) {
-    if (!state.currentGallery || state.currentGallery.length === 0) return;
-    const len = state.currentGallery.length;
-    state.currentGalleryIndex = (state.currentGalleryIndex + delta + len) % len;
+    if (!state.currentGallery.length) return;
+    state.currentGalleryIndex = (state.currentGalleryIndex + delta + state.currentGallery.length) % state.currentGallery.length;
     updateModalContent();
   }
 
   function updateModalContent() {
     const item = state.currentGallery[state.currentGalleryIndex];
     if (!item) return;
-
-    if (els.modalFigImg) {
-      els.modalFigImg.src = item.src;
-      els.modalFigImg.alt = item.title;
-    }
-    if (els.modalFigTitle) {
-      els.modalFigTitle.textContent = item.title;
-    }
-    if (els.modalFigCaption) {
-      els.modalFigCaption.textContent = item.caption;
-    }
-    if (els.modalFigCounter) {
-      els.modalFigCounter.textContent = `Figure ${state.currentGalleryIndex + 1} of ${state.currentGallery.length}`;
-    }
+    if (els.modalFigImg) { els.modalFigImg.src = item.src; els.modalFigImg.alt = item.title; }
+    if (els.modalFigTitle) els.modalFigTitle.textContent = item.title;
+    if (els.modalFigCaption) els.modalFigCaption.textContent = item.caption;
+    if (els.modalFigCounter) els.modalFigCounter.textContent = `Visual ${state.currentGalleryIndex + 1} of ${state.currentGallery.length}`;
   }
 
-  /**
-   * BibTeX Copy Helper with Toast Notification
-   */
   async function copyToClipboard(text) {
     try {
       if (navigator.clipboard && window.isSecureContext) {
@@ -693,44 +438,24 @@
       } else {
         const ta = document.createElement('textarea');
         ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
+        ta.style.cssText = 'position:fixed;opacity:0';
         document.body.appendChild(ta);
         ta.select();
         document.execCommand('copy');
         document.body.removeChild(ta);
       }
-      showToast('BibTeX citation copied to clipboard!');
-    } catch (err) {
-      console.error('Clipboard copy failed:', err);
-      showToast('Failed to copy. Please manually copy citation.');
-    }
+      if (els.bibtexToast) {
+        els.bibtexToast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => els.bibtexToast.classList.remove('show'), 2600);
+      }
+    } catch (e) { }
   }
 
-  function showToast(msg) {
-    if (!els.bibtexToast) return;
-    const span = els.bibtexToast.querySelector('span');
-    if (span) span.textContent = msg;
-
-    els.bibtexToast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-      els.bibtexToast.classList.remove('show');
-    }, 3200);
+  function highlightAuthor(str) {
+    return escapeHTML(str).replace(/Md Saib Hossain/gi, '<strong>Md Saib Hossain</strong>');
   }
 
-  /**
-   * Helper to highlight MD Saib Hossain in authors string
-   */
-  function highlightAuthor(authorsStr) {
-    if (!authorsStr) return '';
-    const safeStr = escapeHTML(authorsStr);
-    return safeStr.replace(/Md Saib Hossain/gi, '<strong>Md Saib Hossain</strong>');
-  }
-
-  /**
-   * HTML escape utility
-   */
   function escapeHTML(str) {
     if (!str) return '';
     return String(str)
@@ -741,7 +466,6 @@
       .replace(/'/g, '&#039;');
   }
 
-  // Initialize on DOM ready
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

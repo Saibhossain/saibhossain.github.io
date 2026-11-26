@@ -1,44 +1,21 @@
 {
   "researcher": {
     "name": "MD Saib Hossain",
-    "role": "AI Engineer & ML Researcher",
+    "role": "AI/ML Engineer & Researcher",
     "orcid": "0009-0004-2595-2742",
     "orcid_url": "https://orcid.org/0009-0004-2595-2742",
     "scholar_url": "https://scholar.google.com/citations?user=zH0QciUAAAAJ&hl=en",
     "researchgate_url": "https://www.researchgate.net/profile/Saib-Hossain?ev=hdr_xprf",
-    "ieee_url": "https://ieeexplore.ieee.org/author/37088589400",
-    "supervisor": {
-      "name": "Prof. Dr. Hasin Anupama Azhari",
-      "role": "Dean, SSE & Director, Institute of Advanced Research (IAR), UIU",
-      "url": "https://ins.uiu.ac.bd/faculty/azhari-dr-hasin-anupama/"
-    }
-  },
-  "stats_config": {
-    "conference_tiers": [
-      "IEEE ICCIT 2025"
-    ],
-    "journal_quarters": [
-      "Q1",
-      "Q2",
-      "Q3",
-      "Q4"
-    ],
-    "indexing_tags": [
-      "Scopus",
-      "Web of Science",
-      "IEEE Xplore",
-      "DBLP",
-      "CORE"
-    ]
+    "ieee_url": "https://ieeexplore.ieee.org/author/37088589400"
   },
   "categories": [
     {
       "id": "all",
-      "label": "All Research"
+      "label": "All Publications"
     },
     {
       "id": "medical-imaging",
-      "label": "Medical AI & Radiomics"
+      "label": "Medical AI & Oncology"
     },
     {
       "id": "assistive-ai",
@@ -59,9 +36,12 @@
         "id": "fracture-unification",
         "title": "Unifying Adult and Pediatric Domains: Multi-Dataset Deep Learning for Fracture Classification, Detection, and Segmentation",
         "venue": "IEEE ICCIT 2025",
+        "pages": "5674–5679",
+        "doi": "10.1109/ICCIT68322.2025.11491681",
         "year": 2025,
         "category": "medical-imaging",
         "tier": "Core",
+        "status": "published",
         "index": [
           "Scopus",
           "IEEE Xplore"
@@ -90,7 +70,7 @@
             "delta": "Held-out Test"
           }
         ],
-        "description": "Systematic multi-task deep learning framework harmonizing adult (FracAtlas: 4,083 multi-anatomical X-rays, 717 fracture-positive, 922 instances) and pediatric (GRAZPEDWRI-DX: 20,327 wrist X-rays) label spaces into a unified input stream. Benchmark results: ResNet-50 binary classification via two-stage pseudo-labeling achieved 0.824 F1-score, 81.3% accuracy, and 0.930 ROC-AUC (+3.8% AUC gain); YOLOv11 led object detection with 0.550 mAP@0.5 and 0.230 mAP@0.5:0.95, outperforming Faster R-CNN (0.480) and YOLOv8s (0.431); DeepLabV3 (ResNet-101) led semantic segmentation with 0.512 mask mAP@0.5. Multi-dataset cross-domain learning effectively eliminated false positives on pediatric growth plates and resolved narrow fracture under-segmentation, advancing demographic-invariant musculoskeletal foundation models.",
+        "description": "Systematic multi-task deep learning framework harmonizing adult (FracAtlas: 4,083 multi-anatomical X-rays, 717 fracture-positive, 922 instances) and pediatric (GRAZPEDWRI-DX: 20,327 wrist X-rays) label spaces into a unified input stream. Benchmark results: ResNet-50 binary classification via two-stage pseudo-labeling achieved 0.824 F1-score, 81.3% accuracy, and 0.930 ROC-AUC (+3.8% AUC gain); YOLOv11 led object detection with 0.550 mAP@0.5 and 0.230 mAP@0.5:0.95, outperforming Faster R-CNN (0.480) and YOLOv8s (0.431); DeepLabV3 (ResNet-101) led semantic segmentation with 0.512 mask mAP@0.5. Multi-dataset cross-domain learning effectively eliminated false positives on pediatric growth plates and resolved narrow fracture under-segmentation.",
         "image": "../../assets/images/research/Fracture/fig1_yolov11_detection_results.webp",
         "gallery": [
           {
@@ -102,6 +82,16 @@
             "src": "../../assets/images/research/Fracture/table1_performance_comparison.webp",
             "title": "Table I: Multi-Task Performance Matrix",
             "caption": "Comprehensive benchmark across Classification (ResNet-50), Detection (YOLOv8s, YOLOv11, Faster R-CNN), and Segmentation (YOLOv8s-seg, DeepLabV3)."
+          },
+          {
+            "src": "../../assets/images/research/Fracture/table2_resnet50_baseline.webp",
+            "title": "Table II: ResNet-50 Pseudo-Labeling Gains",
+            "caption": "Quantitative classification comparison before and after cross-domain pediatric pseudo-labeling."
+          },
+          {
+            "src": "../../assets/images/research/Fracture/table3_segmentation_comparison.webp",
+            "title": "Table III: Semantic Segmentation Comparison",
+            "caption": "Mask mAP@0.5 and boundary precision across YOLOv8s-seg and DeepLabV3 (ResNet-101)."
           },
           {
             "src": "../../assets/images/research/Fracture/fig2_tasks_classification_detection_segmentation.webp",
@@ -125,9 +115,12 @@
         "id": "banglasign-tutor",
         "title": "BanglaSign-Tutor: An Interactive Bangla Sign Language Learning System via Finger-Guided Feedback",
         "venue": "IEEE ICCIT 2025",
+        "pages": "652–657",
+        "doi": "10.1109/ICCIT68322.2025.11491587",
         "year": 2025,
         "category": "assistive-ai",
         "tier": "Core",
+        "status": "published",
         "index": [
           "Scopus",
           "IEEE Xplore"
@@ -151,12 +144,12 @@
             "delta": "User Study"
           },
           {
-            "label": "Average Learning Time",
+            "label": "Avg Learning Time",
             "value": "11.53s",
             "delta": "vs 26.46s Baseline"
           }
         ],
-        "description": "First multimodal Bangla Sign Language (BdSL) interactive tutoring platform integrating computer vision, tactile haptics, and generative LLMs. Extracts scale-invariant 3D hand landmarks categorized by a Random Forest model on BDSL47 (47,000 images, 47 classes), achieving 98.20% accuracy for 37 Bangla alphabets (0.91 F1-score) and 99.50% for numerals (0–9). Features real-time visual finger pose error correction in Bangla, paired with Raspberry Pi 4-driven haptic vibration signals (200ms positive pulse vs. 800ms corrective pattern) for deaf-blind accessibility. Integrated Gemma 3 (4B parameter) via Ollama for dynamic, progressive 3–4 word sentence practice (e.g., 'আমি ভাত খাই'). A 16-participant user study validated a 56.43% overall reduction in learning latency (average time dropping from 26.46s to 11.53s), proving accelerated skill acquisition.",
+        "description": "First multimodal Bangla Sign Language (BdSL) interactive tutoring platform integrating computer vision, tactile haptics, and generative LLMs. Extracts scale-invariant 3D hand landmarks categorized by a Random Forest model on BDSL47 (47,000 images, 47 classes), achieving 98.20% accuracy for 37 Bangla alphabets (0.91 F1-score) and 99.50% for numerals (0–9). Features real-time visual finger pose error correction in Bangla, paired with Raspberry Pi 4-driven haptic vibration signals (200ms positive pulse vs. 800ms corrective pattern) for deaf-blind accessibility, alongside Gemma 3 (4B) via Ollama for progressive sentence practice. A 16-participant user study validated a 56.43% reduction in learning latency (26.46s to 11.53s).",
         "image": "../../assets/images/research/BanglaSignTutor/fig1_banglasign_learning_framework.webp",
         "gallery": [
           {
@@ -165,9 +158,19 @@
             "caption": "Alphabet recognition feedback flow combined with Gemma 3 LLM sentence generation practice loop."
           },
           {
+            "src": "../../assets/images/research/BanglaSignTutor/table1_feedback_learning_comparison.webp",
+            "title": "Table I: Feedback Learning Latency Comparison",
+            "caption": "Empirical 16-participant study comparing baseline sign acquisition latency vs finger-guided multimodal feedback."
+          },
+          {
+            "src": "../../assets/images/research/BanglaSignTutor/table2_bdsl47_dataset_description.webp",
+            "title": "Table II: BDSL47 Dataset Composition",
+            "caption": "Breakdown of 47,000 sign instances across 37 Bangla alphabet characters and 10 numeral digits."
+          },
+          {
             "src": "../../assets/images/research/BanglaSignTutor/fig4_visual_corrective_feedback_system.webp",
             "title": "Figure 4: Real-time Visual Feedback System",
-            "caption": "Finger landmark tracking interface displaying actionable Bangla correction prompts (e.g., 'তর্জনী সোজা করুন')."
+            "caption": "Finger landmark tracking interface displaying actionable Bangla correction prompts."
           },
           {
             "src": "../../assets/images/research/BanglaSignTutor/fig2_hardware_setup_raspberry_pi.webp",
@@ -191,9 +194,12 @@
         "id": "urban-sustainability",
         "title": "Urban Sustainability in Bangladesh: Satellite-Based Analysis of Land Use and Air Pollution Trends",
         "venue": "IEEE ICCIT 2025",
+        "pages": "1894–1899",
+        "doi": "10.1109/ICCIT68322.2025.11490302",
         "year": 2025,
         "category": "geospatial",
         "tier": "Core",
+        "status": "published",
         "index": [
           "Scopus",
           "IEEE Xplore"
@@ -204,10 +210,10 @@
           {
             "label": "Random Forest OA",
             "value": "99.3%",
-            "delta": "Khulna (Highest)"
+            "delta": "Khulna (Kappa >0.988)"
           },
           {
-            "label": "Dhaka Urban Expansion",
+            "label": "Dhaka Urban Growth",
             "value": "+50.0%",
             "delta": "Built-up Surge"
           },
@@ -222,7 +228,7 @@
             "delta": "Post-2023 Industrial"
           }
         ],
-        "description": "Geospatial big-data framework on Google Earth Engine (GEE) analyzing multi-temporal Sentinel-2 MSI surface reflectance (10–20m resolution) and Sentinel-5P TROPOMI Level-3 tropospheric data from 2019 to 2025 across Dhaka (1,471 km²), Khulna (3,566 km²), and Rajshahi (2,420 km²). Extracted spectral indices (NDVI, NDBI, NDWI) and benchmarked six supervised ML models: Random Forest achieved leading Overall Accuracy of 99.0% (Dhaka), 99.3% (Khulna), and 99.1% (Rajshahi) with Kappa coefficients >0.988, followed by CART and XGBoost. Spatiotemporal analysis revealed Dhaka's built-up area expanded by +50% and barren land by +18.9% with vegetation (-5.5%) and water (-5.0%) declines, while Khulna suffered a -35.2% wetland loss and a +118% surge in SO2 post-2023. Correlated LULC shifts with atmospheric pollutants (NO2, SO2, CO, O3, CH4) to provide critical empirical evidence for UN Sustainable Development Goals (SDG 6, 11, 13, 15).",
+        "description": "Geospatial big-data framework on Google Earth Engine (GEE) analyzing multi-temporal Sentinel-2 MSI surface reflectance (10–20m resolution) and Sentinel-5P TROPOMI Level-3 tropospheric data from 2019 to 2025 across Dhaka (1,471 km²), Khulna (3,566 km²), and Rajshahi (2,420 km²). Extracted spectral indices (NDVI, NDBI, NDWI) and benchmarked six supervised ML models: Random Forest achieved leading Overall Accuracy of 99.0% (Dhaka), 99.3% (Khulna), and 99.1% (Rajshahi) with Kappa >0.988. Correlated LULC shifts with atmospheric pollutants (NO2, SO2, CO, O3, CH4) to supply empirical evidence aligned with UN SDGs 6, 11, 13, and 15.",
         "image": "../../assets/images/research/urbonSustainability/fig3_methodology_gee_pipeline.webp",
         "gallery": [
           {
@@ -234,6 +240,11 @@
             "src": "../../assets/images/research/urbonSustainability/table3_classification_performance_all_districts.webp",
             "title": "Table III: Multi-District Classification Matrix",
             "caption": "Overall Accuracy, Kappa Coefficient, User's Accuracy, and Producer's Accuracy across 6 ML classifiers in Dhaka, Khulna, and Rajshahi."
+          },
+          {
+            "src": "../../assets/images/research/urbonSustainability/table4_pollutant_values_comparison.webp",
+            "title": "Table IV: Multi-Year Atmospheric Pollutant Concentrations",
+            "caption": "Quantitative tropospheric trace gas trends across major metropolitan regions (2019–2025)."
           },
           {
             "src": "../../assets/images/research/urbonSustainability/fig4_ml_models_dhaka.webp",
@@ -254,29 +265,76 @@
         "bibtex": "@inproceedings{hossain2025urban,\n  title={Urban Sustainability in Bangladesh: Satellite-Based Analysis of Land Use and Air Pollution Trends in Major Bangladeshi Cities},\n  author={Hossain, Md Saib and Hossen, Md Maynul and Sarkar, Shahariar and Sanjida, Tasmin and Abedeen, Iftekharul},\n  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},\n  pages={1894--1899},\n  year={2025},\n  organization={IEEE}\n}"
       }
     ],
-    "journals": [],
+    "journals": [
+      {
+        "id": "msurvpred-escc",
+        "title": "MSurvPred: A Multimodal Deep Learning Framework for Personalized Survival Prediction in Esophageal Squamous Cell Carcinoma",
+        "venue": "Q1 Medical & Oncology Journal Track",
+        "year": 2026,
+        "category": "medical-imaging",
+        "tier": "Q1",
+        "status": "submitted",
+        "progress_stage": 45,
+        "index": [
+          "Web of Science",
+          "Scopus"
+        ],
+        "description": "Multimodal deep learning framework fusing medical imaging representations with clinical and pathological prognostic variables to deliver personalized survival risk stratification and individualized time-to-event prediction in Esophageal Squamous Cell Carcinoma (ESCC).",
+        "funding": "Institute of Advanced Research (IAR), UIU"
+      },
+      {
+        "id": "coast-clinical-oncology",
+        "title": "COAST: Clinical Oncology Architecture for Survival Translation with Reliable Deep Feature Prediction",
+        "venue": "Q1 Medical Imaging & Radiology Journal Track",
+        "year": 2026,
+        "category": "medical-imaging",
+        "tier": "Q1",
+        "status": "submitted",
+        "progress_stage": 45,
+        "index": [
+          "Web of Science",
+          "Scopus"
+        ],
+        "description": "System architecture for clinically deployable survival prediction integrating deep 3D CT radiomics with multimodal clinical covariates via Cox Proportional Hazards modeling and calibrated uncertainty estimation.",
+        "funding": "UIU Institute of Advanced Research (IAR) Funded Grant"
+      }
+    ],
     "ongoing": [
       {
         "id": "prompt-injection-provenance",
         "title": "Prompt Injection is an Authorization Problem: Cryptographic Provenance for Secure Agentic Workflows",
-        "venue": "NeurIPS",
+        "venue": "NeurIPS Track",
+        "year": 2026,
         "category": "ai-safety",
         "tier": "A*",
         "status": "under_review",
         "progress_stage": 60,
         "description": "Security framework for autonomous LLM agents using cryptographic context validation, fine-grained capability tokens, and stateful authorization checkpoints to neutralize indirect prompt injection attacks.",
         "funding": "Independent Research Initiative"
+      }
+    ],
+    "special_publications": [
+      {
+        "id": "afomp-pulse-2026",
+        "title": "AI-Powered Breakthroughs in Early Cancer & NCD Detection",
+        "publisher": "AFOMP Pulse — Asia-Oceania Federation of Organizations for Medical Physics (pp. 32–35)",
+        "venue": "AFOMP Pulse",
+        "year": 2026,
+        "category": "medical-imaging",
+        "badge": "Medical Physics Feature",
+        "description": "Overview of data-driven clinical AI systems identifying early biological patterns prior to symptom onset, frontier models (AlphaFold 3, Med-Gemini) in structural biology and multimodal care, and medical liability governance.",
+        "link": "https://afomp.org/wp-content/uploads/2026/09/AFOMP-Pulse-Booklet-Sept2026-Final.pdf#page=32"
       },
       {
-        "id": "coast-clinical-oncology",
-        "title": "COAST: Clinical Oncology Architecture for Survival Translation with Reliable Deep Feature Prediction",
-        "venue": "Q1 Journal (In Preparation)",
+        "id": "scmpcr-medical-physics-2026",
+        "title": "Beyond the Algorithm: The Multidisciplinary Role of AI Researchers in Medical Physics",
+        "publisher": "South Asia Centre for Medical Physics and Cancer Research (SCMPCR)",
+        "venue": "SCMPCR Technical Article",
+        "year": 2026,
         "category": "medical-imaging",
-        "tier": "Q1",
-        "status": "writing_manuscript",
-        "progress_stage": 25,
-        "description": "System architecture for clinically deployable survival prediction integrating deep 3D CT radiomics with multimodal clinical covariates via Cox Proportional Hazards and uncertainty estimation.",
-        "funding": "UIU Institute of Advanced Research (IAR) Funded Grant"
+        "badge": "Technical Monograph",
+        "description": "Technical examination of clinical deep learning integration in radiation oncology, automated organ segmentation, radiogenomics, and safe translational AI deployment protocols.",
+        "link": "https://scmpcr.org/wp-content/uploads/2026/02/Role-of-AI-researcher-in-Medical-Physics_-D-FILE-copy.pdf"
       }
     ]
   }

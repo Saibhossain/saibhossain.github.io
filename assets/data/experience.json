@@ -1,6 +1,8 @@
 {
-  "page_title": "Professional Experience & Certification",
-  "page_subtitle": "Engineering production AI systems, leading healthcare ML research, and certified professional specializations.",
+  "page_title": "Professional Experience & Credentials",
+  "page_subtitle": "AI/ML Engineer and Researcher experienced in building and deploying LLM-powered applications, agentic workflows, machine-learning systems, and full-stack AI products across the complete lifecycle from architecture to cloud deployment.",
+  "career_start": "Nov 2025",
+  "cv_pdf": "../../assets/cv/Md_Saib_Hossain.pdf",
   "categories": [
     {
       "id": "all-experience",
@@ -8,85 +10,152 @@
     },
     {
       "id": "engineering",
-      "label": "Eng. & Dev"
+      "label": "AI & Software Engineering"
     },
     {
-      "id": "prof-cert",
-      "label": "Prof. Certificate"
+      "id": "research",
+      "label": "Research & AI Safety"
     },
     {
-      "id": "prof-training",
-      "label": "Prof. Training"
+      "id": "certifications",
+      "label": "Certifications & Licenses"
     },
     {
-      "id": "learning-cert",
-      "label": "Learning Certificate"
+      "id": "education-skills",
+      "label": "Education & Technical Stack"
     }
   ],
   "timeline": [
     {
       "id": "iar-uiu-ra",
       "title": "Research Assistant",
-      "company": "Institute of Advanced Research (IAR) - UIU",
+      "company": "Institute of Advanced Research (IAR), United International University (UIU)",
       "location": "Dhaka, Bangladesh",
-      "job_type": "Research Assistantship (Lead)",
+      "job_type": "Funded Research · Lead",
       "category": "research",
       "start_date": "Nov 2025",
       "end_date": "Present",
-      "description": "Lead multidisciplinary research initiatives at the intersection of AI in Healthcare, Medical AI, Agentic AI, AI Security, and Human–Computer Interaction (HCI). Coordinate three funded research projects involving 10+ researchers across five research teams, providing research direction, technical oversight, project coordination, and researcher mentorship. Work closely with professors, physicians, neurosurgeons, oncology specialists, mathematicians, AI researchers, and other domain experts to translate clinical and scientific requirements into rigorous AI research and practical healthcare applications.",
+      "description": "Lead multidisciplinary, funded research projects across AI in Healthcare, Medical AI, Agentic AI, and AI Security. Provide research direction, technical oversight, project coordination, and mentorship across collaborating clinical and engineering teams.",
       "skills": [
         "AI in Healthcare",
         "Medical Image Analysis",
         "Agentic AI",
         "AI Security",
-        "Clinical AI",
-        "Computer Vision",
         "PyTorch",
-        "Statistical Analysis",
-        "HCI"
+        "Vision Transformers",
+        "Deep Learning",
+        "Experimental Methodology"
       ],
       "key_responsibilities": [
-        "Coordinate three funded research projects involving 10+ researchers across five multidisciplinary research teams",
-        "Translate clinical & scientific requirements into AI research with physicians, neurosurgeons, and oncology specialists",
-        "Develop deep learning & computer vision models for breast, cervical, lung cancer, and brain stroke detection",
-        "Investigate agentic workflows, intelligent decision-support systems, and healthcare AI security protocols",
-        "Mentor and train junior researchers in medical image analysis, machine learning, and rigorous scientific methodology"
+        "Lead multidisciplinary funded research projects across AI in Healthcare, Medical AI, Agentic AI, and AI Security",
+        "Provide research direction, technical architecture oversight, project coordination, and milestone tracking",
+        "Mentor and train junior researchers in medical image analysis, machine learning, deep learning, and AI model development",
+        "Guide experimental methodology, reproducible evaluation pipelines, and scientific manuscript preparation",
+        "Deploy clinical AI screening platforms including AI-driven lung cancer triage and diagnostic guidance systems"
       ],
       "achievements": [
-        "Contributed to 5 Q1 journal manuscripts (3 submitted, 2 in progress)",
-        "UIU Institute of Advanced Research (IAR) funded grant recipient",
-        "Built and deployed clinical triage prototype for rural healthcare"
+        "First author on 3 peer-reviewed IEEE ICCIT 2025 conference papers",
+        "2 Q1-journal manuscripts submitted to Academic Radiology and Journal of Medical Systems",
+        "UIU-funded deployment of AI Lung Cancer Screening & Clinical Triage Web Platform"
       ],
-      "link": "../../pages/research/index.html"
+      "link": "../../pages/research/index.html",
+      "link_label": "View Research Publications",
+      "secondary_link": "https://lungcancerscreening.vercel.app/",
+      "secondary_link_label": "Clinical Platform"
+    },
+    {
+      "id": "scmpcr-fullstack-ai",
+      "title": "Full-Stack AI Engineer",
+      "company": "SCMPCR (South Asia Centre for Medical Physics and Cancer Research)",
+      "location": "Remote",
+      "job_type": "Contract · Remote",
+      "category": "engineering",
+      "start_date": "Oct 2026",
+      "end_date": "Present",
+      "description": "Built and maintained a digital examination and automated certification platform covering online assessment, automated evaluation, and verifiable certificate-generation workflows. Managed the complete software lifecycle from system design to AWS cloud deployment and production operations.",
+      "skills": [
+        "Python",
+        "FastAPI",
+        "SQL",
+        "PostgreSQL",
+        "AWS",
+        "Docker",
+        "System Design",
+        "Full-Stack Engineering"
+      ],
+      "key_responsibilities": [
+        "Architect and maintain an end-to-end digital examination, grading, and automated certification platform",
+        "Implement secure online assessment delivery, evaluation pipelines, and dynamic certificate generation workflows",
+        "Manage the full engineering lifecycle: architecture, backend/frontend implementation, testing, and debugging",
+        "Handle AWS cloud deployment, uptime monitoring, and ongoing production maintenance"
+      ],
+      "achievements": [
+        "Production system actively serving 50+ active examination and certification users",
+        "Zero-downtime automated evaluation and instant credential issuance workflow"
+      ],
+      "link": "https://elp11exam.praxicintelligence.com/",
+      "link_label": "Live Platform"
+    },
+    {
+      "id": "elite-research-intern",
+      "title": "Research Intern",
+      "company": "ELITE Research Lab LLC",
+      "location": "Remote (USA)",
+      "job_type": "Research Internship · Remote",
+      "category": "research",
+      "start_date": "Jun 2026",
+      "end_date": "Oct 2026",
+      "description": "Researched and benchmarked scalable Retrieval-Augmented Generation (RAG) pipelines combining dense vector search, structured metadata filtering, and LLM response verification for high-precision enterprise knowledge retrieval.",
+      "skills": [
+        "RAG Pipelines",
+        "Dense Vector Search",
+        "Metadata Filtering",
+        "LLM Verification",
+        "Python",
+        "DeepEval",
+        "Enterprise Retrieval"
+      ],
+      "key_responsibilities": [
+        "Research and benchmark scalable RAG architectures for enterprise knowledge retrieval",
+        "Combine dense vector similarity search with structured metadata filtering to improve retrieval precision",
+        "Implement LLM response verification and hallucination guardrails across multi-document corpora",
+        "Conduct systematic latency, recall, and faithfulness evaluations across benchmark datasets"
+      ],
+      "achievements": [
+        "Established verified retrieval evaluation benchmarks combining dense embeddings with metadata constraints",
+        "Completed all empirical RAG research deliverables and verification protocols"
+      ],
+      "link": "../../pages/research/index.html",
+      "link_label": "Research Overview"
     },
     {
       "id": "fireai-engineer",
       "title": "AI Engineer",
       "company": "FireAI (Betopia Group)",
       "location": "Dhaka, Bangladesh",
-      "job_type": "Full-time / Contract AI Engineering",
+      "job_type": "Full-Time · AI Engineering",
       "category": "engineering",
       "start_date": "Apr 2026",
       "end_date": "May 2026",
-      "description": "Focused on building the next generation of agentic AI systems to completely automate complex multi-step enterprise tasks. Architected multi-agent AI systems for production workflow automation with Python, LangGraph, and LLM orchestration, optimizing execution latency and ensuring fault-tolerant tool-calling execution.",
+      "description": "Engineered next-generation agentic AI systems to automate complex multi-step enterprise workflows. Architected stateful multi-agent orchestration pipelines in Python for production business automation.",
       "skills": [
         "Agentic AI",
         "LangGraph",
         "Multi-Agent Systems",
         "Python",
         "LLM Orchestration",
-        "FastAPI",
-        "Autonomous Workflows"
+        "Tool Calling",
+        "FastAPI"
       ],
       "key_responsibilities": [
-        "Architect multi-agent AI systems to completely automate complex multi-step enterprise workflows",
-        "Implement stateful cyclic execution graphs with LangGraph and Python",
-        "Design structured tool interfaces, input schema validation, and fallback mechanisms",
-        "Conduct latency profiling and cost instrumentation across LLM API pipelines"
+        "Architect production multi-agent AI systems to automate complex multi-step business workflows",
+        "Implement stateful execution graphs, deterministic tool calling, and LLM orchestration in Python",
+        "Design structured schema validation, retry policies, and sandbox guardrails for autonomous tasks",
+        "Optimize end-to-end agent latency and API token efficiency for production workloads"
       ],
       "achievements": [
-        "Production deployment of multi-agent task execution pipeline",
-        "Achieved sub-minute execution across multi-step autonomous workflows"
+        "Delivered production-ready multi-agent workflow automation architecture",
+        "Streamlined multi-step business operations via coordinated LLM tool execution"
       ],
       "link": null
     },
@@ -95,175 +164,216 @@
       "title": "Machine Learning Engineer Intern",
       "company": "Fluvo Soft",
       "location": "Remote",
-      "job_type": "Internship",
+      "job_type": "Internship · Remote",
       "category": "engineering",
       "start_date": "Nov 2025",
       "end_date": "Mar 2026",
-      "description": "Designed a synthetic face generation pipeline utilizing StyleGAN2 and Stable Diffusion XL (SDXL) with LoRA to address training data scarcity. Developed and deployed an Agentic RAG system for customer support and HR team workflow automation.",
+      "description": "Designed a synthetic face generation pipeline utilizing StyleGAN2 and Stable Diffusion XL (SDXL) to address training data scarcity. Developed and deployed an Agentic RAG system automating internal workflows for customer support and HR teams across model integration, retrieval, and agent orchestration.",
       "skills": [
         "StyleGAN2",
         "Stable Diffusion XL",
-        "LoRA",
         "Agentic RAG",
-        "Computer Vision",
+        "PyTorch",
         "Python",
-        "PyTorch"
+        "Model Integration",
+        "Agent Orchestration"
       ],
       "key_responsibilities": [
-        "Build generative vision pipelines combining GANs and Diffusion models for synthetic dataset creation",
-        "Implement Agentic RAG architectures for enterprise knowledge retrieval and document indexing",
-        "Optimize inference latency and deploy production model endpoints via FastAPI microservices",
-        "Collaborate with engineering teams to integrate AI capabilities into customer support workflows"
+        "Design synthetic face generation pipelines with StyleGAN2 and Stable Diffusion XL (SDXL) to mitigate data scarcity",
+        "Develop and deploy an Agentic RAG platform automating recurring workflows for customer support and HR teams",
+        "Execute end-to-end engineering across model integration, dense retrieval indexing, and agent orchestration",
+        "Package inference services into maintainable REST API endpoints"
       ],
       "achievements": [
-        "Reduced data collection and annotation costs by 70% via synthetic image augmentation",
-        "Deployed Agentic RAG system actively serving 500+ daily internal queries"
+        "Resolved dataset scarcity bottlenecks through controllable generative vision synthesis",
+        "Deployed production Agentic RAG assistant supporting daily HR and customer support operations"
       ],
-      "link": "https://github.com/Saibhossain/face-generation-model.git"
-    },
-    {
-      "id": "elite-research-intern",
-      "title": "Research Intern",
-      "company": "ELITE Research Lab LLC",
-      "location": "Remote",
-      "job_type": "Research Experience (Unpaid)",
-      "category": "research",
-      "start_date": "Jun 2026",
-      "end_date": "Oct 2026",
-      "description": "Engaged in specialized research tasks and deliverables under the direct supervision of Dr. Md. Abdullah-Al-Jubair. Responsible for maintaining strict confidentiality of unpublished research, datasets, and methodologies while dedicating 20 hours weekly to ongoing lab projects.",
-      "skills": [
-        "Research Methodology",
-        "Data Confidentiality",
-        "Scientific Reporting",
-        "Literature Synthesis",
-        "Experimental Benchmarking"
-      ],
-      "key_responsibilities": [
-        "Complete assigned research tasks, dataset preprocessing, and experimental benchmarks via the lab portal",
-        "Maintain strict confidentiality of unpublished research, datasets, and internal communications",
-        "Submit weekly progress reports detailing project milestones, literature summaries, and experimental metrics",
-        "Log a minimum of 20 hours per week of dedicated research activity"
-      ],
-      "achievements": [
-        "Delivered weekly scientific benchmarks across high-dimensional datasets",
-        "Successfully finalized core research milestones ahead of schedule"
-      ],
-      "link": "../../pages/research/index.html"
+      "link": "https://github.com/Saibhossain/face-generation-model.git",
+      "link_label": "View Repository"
     },
     {
       "id": "ruach-tech-ra",
       "title": "Volunteer Research Assistant",
       "company": "Ruach Tech",
       "location": "London, UK (Remote)",
-      "job_type": "Volunteer Research",
+      "job_type": "Volunteer Research · Remote",
       "category": "research",
       "start_date": "Jan 2026",
       "end_date": "Mar 2026",
-      "description": "Conducted research on AI safety, alignment strategies, and model governance. Analyzed and synthesized over 50 advanced technical AI research papers to support the development of safe AI system frameworks for ongoing R&D projects.",
+      "description": "Conducted foundational research on AI safety, alignment, and governance. Analyzed and synthesized advanced AI safety literature to support safe AI system frameworks for ongoing R&D initiatives.",
       "skills": [
         "AI Safety",
         "AI Alignment",
-        "Research Analysis",
-        "Technical Writing",
-        "Literature Review",
-        "Model Governance"
+        "AI Governance",
+        "AI Guardrails",
+        "Research Synthesis",
+        "Technical Analysis"
       ],
       "key_responsibilities": [
-        "Review and synthesize cutting-edge AI safety, alignment, and interpretability research",
-        "Contribute to theoretical and empirical framework design for reliable autonomous AI agents",
-        "Document scientific briefs and safety checklists for R&D engineering teams",
-        "Support ethical AI governance and algorithmic fairness initiatives"
+        "Conduct targeted research on AI safety, model alignment, and runtime guardrails",
+        "Analyze and summarize advanced AI safety and alignment publications into actionable R&D briefs",
+        "Support the design of safe AI system frameworks and evaluation checklists for ongoing projects"
       ],
       "achievements": [
-        "Contributed to internal AI safety guidelines for agentic deployment",
-        "Authored structured technical summaries for 50+ research publications"
+        "Synthesized technical alignment and safety frameworks for internal R&D engineering",
+        "Contributed structured safety evaluation criteria for autonomous LLM systems"
       ],
       "link": null
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science & Engineering (B.Sc. in CSE)",
+      "institution": "United International University (UIU)",
+      "location": "Dhaka, Bangladesh",
+      "period": "2022 – 2026",
+      "metric": "CGPA: 3.38 / 4.00",
+      "highlights": [
+        "Undergraduate research focus on Medical Image Analysis, Deep Learning, and Secure Agentic AI",
+        "First author on 3 IEEE ICCIT 2025 publications completed during undergraduate tenure",
+        "Active technical contributor in UIU Mars Rover Team (UMRT) autonomous navigation (2023 – 2024)"
+      ]
+    }
+  ],
+  "technical_skills": [
+    {
+      "domain": "Languages",
+      "items": [
+        "Python",
+        "C++",
+        "SQL"
+      ]
     },
     {
-      "id": "kaggle-silver-runnerup",
-      "title": "Kaggle Competition — 1st Runner-up (Silver Medal)",
-      "company": "Kaggle",
-      "location": "Global (Online)",
-      "job_type": "Competitive Machine Learning",
-      "category": "engineering",
-      "start_date": "Aug 2025",
-      "end_date": "Oct 2025",
-      "description": "Deep Learning in Computational and Spatial Biology competition. Developed multi-model ensemble architectures combining spatial attention mechanisms with deep convolutional backbones for cell segmentation and pattern recognition. Awarded Best Abstract for Spatial Biology contribution.",
-      "skills": [
-        "Computer Vision",
-        "Ensemble Learning",
-        "Bioinformatics",
-        "Spatial Biology",
+      "domain": "ML & Deep Learning",
+      "items": [
         "PyTorch",
-        "Feature Engineering"
-      ],
-      "key_responsibilities": [
-        "Design multi-model ensemble pipelines for cell boundary segmentation and spatial pattern recognition",
-        "Implement spatial attention mechanisms tailored for high-dimensional biological microscopy data",
-        "Optimize inference runtime and memory footprint under strict competition constraints",
-        "Document methodology and code for fully reproducible open-source research"
-      ],
-      "achievements": [
-        "🥈 1st Runner-up (Top 2% globally among international competitive teams)",
-        "🏆 Best Abstract Award — Spatial Biology (2025)"
-      ],
-      "link": "https://kaggle.com/competitions/spatial-biology"
+        "Vision Transformers",
+        "Deep Learning",
+        "Scikit-Learn",
+        "NumPy",
+        "Pandas"
+      ]
+    },
+    {
+      "domain": "LLM & GenAI",
+      "items": [
+        "OpenAI API",
+        "Gemini API",
+        "AI Guardrails",
+        "Sandbox Testing",
+        "AI Governance"
+      ]
+    },
+    {
+      "domain": "Agentic AI",
+      "items": [
+        "LangChain",
+        "LangGraph",
+        "CrewAI",
+        "RAG",
+        "Multi-Agent Systems",
+        "Tool Calling",
+        "Stateful Workflows"
+      ]
+    },
+    {
+      "domain": "Backend & Data",
+      "items": [
+        "FastAPI",
+        "REST APIs",
+        "PostgreSQL",
+        "Supabase"
+      ]
+    },
+    {
+      "domain": "Deployment & LLMOps",
+      "items": [
+        "AWS",
+        "Docker",
+        "Render",
+        "Vercel",
+        "Cloudflare",
+        "LangSmith",
+        "DeepEval"
+      ]
+    },
+    {
+      "domain": "Software Engineering",
+      "items": [
+        "System Design",
+        "API Integration",
+        "Testing",
+        "Debugging",
+        "Production Maintenance"
+      ]
+    }
+  ],
+  "honors_leadership": [
+    {
+      "title": "1st Runner-up & Best Abstract Award — Spatial Biology",
+      "organization": "Kaggle Competition (Deep Learning in Computational and Spatial Biology)",
+      "period": "2025",
+      "type": "International Award",
+      "description": "Awarded 1st Runner-up and Best Abstract Award for deep spatial attention ensembles in cell segmentation and computational biology."
+    },
+    {
+      "title": "Healthcare & Community Development Volunteer",
+      "organization": "Alo-Bhubon Trust (ALO-BT)",
+      "period": "2025 – Present",
+      "type": "Leadership & Impact",
+      "url": "https://alobhubon.org/",
+      "description": "Supporting rural cancer screening, community healthcare outreach, and diagnostic awareness initiatives."
+    },
+    {
+      "title": "Autonomous Navigation Team Member",
+      "organization": "UIU Mars Rover Team (UMRT)",
+      "period": "2023 – 2024",
+      "type": "Robotics Engineering",
+      "url": "https://www.facebook.com/watch/?v=976184633448068",
+      "description": "Optimized autonomous rover navigation and perception algorithms for international robotics challenges."
+    },
+    {
+      "title": "General Secretary (District Committee)",
+      "organization": "National Children's Task Force (NCTF), Satkhira",
+      "period": "2014 – 2017",
+      "type": "Executive Leadership",
+      "url": "https://www.facebook.com/satkhiranctf/mentions/",
+      "description": "Led district-wide youth governance, child rights advocacy, and civic communication programs."
     }
   ],
   "certifications": [
     {
       "id": "ibm-ai-eng",
       "title": "IBM AI Engineering Professional Certificate",
-      "provider": "IBM via Coursera",
-      "time": "Issued 2024 · Verified Credential",
+      "provider": "IBM · Coursera",
+      "time": "Verified Professional Certificate",
       "credential_id": "8G2L899L1IFE",
       "category": "prof-cert",
       "image": "../../assets/images/certi/ibm_ai_engineering.png",
       "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/8G2L899L1IFE",
-      "description": "Comprehensive 6-course professional specialization covering Machine Learning with Python, Deep Learning with PyTorch and TensorFlow, Computer Vision, NLP, and building deployable production AI applications with a capstone project.",
+      "description": "Comprehensive 6-course professional specialization covering Machine Learning with Python, Deep Learning with PyTorch and TensorFlow, Computer Vision, NLP, and deployable AI systems.",
       "skills": [
         "Deep Learning",
         "PyTorch",
         "TensorFlow",
         "ML Pipelines",
-        "Computer Vision",
-        "Model Deployment"
-      ]
-    },
-    {
-      "id": "google-data-analytics",
-      "title": "Google Data Analytics Professional Certificate",
-      "provider": "Google via Coursera",
-      "time": "Issued 2024 · Verified Credential",
-      "credential_id": "PX5AOJ4XEGPA",
-      "category": "prof-cert",
-      "image": "../../assets/images/certi/google_data_analytics.png",
-      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA",
-      "description": "Rigorous 8-course credential in end-to-end data analytics: data cleaning, exploratory analysis, SQL database queries, R statistical programming, and interactive data visualization using Tableau.",
-      "skills": [
-        "SQL",
-        "R Programming",
-        "Tableau",
-        "Data Analysis",
-        "Data Cleaning",
-        "Spreadsheets"
+        "Computer Vision"
       ]
     },
     {
       "id": "aws-ai-practitioner",
       "title": "AWS AI Practitioner Challenge",
-      "provider": "AWS via Udacity",
-      "time": "Issued 2024 · Challenge Credential",
-      "credential_id": "e/f720698a-2815-11f1-83da-13cb2aea2e67",
+      "provider": "AWS · Udacity",
+      "time": "Verified Credential",
+      "credential_id": "f720698a-2815-11f1",
       "category": "prof-cert",
       "image": "../../assets/images/certi/aws_ai_practitioner.png",
       "url": "https://www.udacity.com/certificate/e/f720698a-2815-11f1-83da-13cb2aea2e67",
-      "description": "Hands-on foundation in cloud-native artificial intelligence, Amazon Bedrock, foundation model evaluation, generative AI architectures, and responsible AI governance on AWS infrastructure.",
+      "description": "Cloud-native artificial intelligence, Amazon Bedrock, foundation model evaluation, generative AI architectures, and responsible AI governance on AWS.",
       "skills": [
-        "AWS Bedrock",
+        "AWS",
         "Generative AI",
-        "Cloud AI",
         "Foundation Models",
         "Responsible AI"
       ]
@@ -272,228 +382,187 @@
       "id": "deep-agents-langchain",
       "title": "Project Deep Agents",
       "provider": "LangChain Academy",
-      "time": "Issued 2024 · Official Certification",
+      "time": "Official Certification",
       "credential_id": "u0hroxniov",
       "category": "prof-cert",
       "image": "../../assets/images/certi/deep_agents_langchain.png",
       "url": "https://academy.langchain.com/certificates/u0hroxniov",
-      "description": "Advanced certification in building stateful, cyclic multi-agent architectures using LangGraph, dynamic tool execution, memory management, and human-in-the-loop agentic workflows.",
+      "description": "Advanced certification in building stateful, cyclic multi-agent architectures using LangGraph, dynamic tool execution, memory management, and human-in-the-loop workflows.",
       "skills": [
         "LangGraph",
         "Deep Agents",
         "Stateful Workflows",
-        "Tool Calling",
         "Multi-Agent Systems"
+      ]
+    },
+    {
+      "id": "google-data-analytics",
+      "title": "Google Data Analytics Professional Certificate",
+      "provider": "Google · Coursera",
+      "time": "Verified Professional Certificate",
+      "credential_id": "PX5AOJ4XEGPA",
+      "category": "prof-cert",
+      "image": "../../assets/images/certi/google_data_analytics.svg",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/PX5AOJ4XEGPA",
+      "description": "8-course professional credential in end-to-end data analytics, SQL querying, exploratory analysis, statistical programming, and executive visualization.",
+      "skills": [
+        "SQL",
+        "Data Analysis",
+        "Statistical Modeling",
+        "Tableau"
+      ]
+    },
+    {
+      "id": "mcp-anthropic",
+      "title": "Model Context Protocol (MCP): Advanced Topics",
+      "provider": "Anthropic · Skilljar",
+      "time": "Verified Training",
+      "credential_id": "6xy3crte3zpb",
+      "category": "prof-training",
+      "image": "../../assets/images/certi/mcp_anthropic.png",
+      "url": "https://verify.skilljar.com/c/6xy3crte3zpb",
+      "description": "Technical training on implementing the Model Context Protocol (MCP) to securely connect LLM agents with external tools, structured data repositories, and runtime APIs.",
+      "skills": [
+        "Model Context Protocol",
+        "Agentic Tooling",
+        "API Integration",
+        "Context Security"
+      ]
+    },
+    {
+      "id": "langchain-python",
+      "title": "Introduction to LangChain – Python",
+      "provider": "LangChain Academy",
+      "time": "Official Certification",
+      "credential_id": "fypshqqdea",
+      "category": "prof-training",
+      "image": "../../assets/images/certi/langchain_python.svg",
+      "url": "https://academy.langchain.com/certificates/fypshqqdea",
+      "description": "Structured engineering training on LangChain orchestration in Python, prompt templates, structured output parsing, retrieval chains, and tool-calling agents.",
+      "skills": [
+        "LangChain",
+        "Python",
+        "RAG",
+        "Tool Calling"
       ]
     },
     {
       "id": "redhat-sysadmin",
       "title": "Red Hat System Administration",
-      "provider": "Red Hat via Credly",
-      "time": "Issued 2024 · Verified Credential",
-      "credential_id": "f76fc449-70e1-4013-81ba-975d8ae167dd",
+      "provider": "Red Hat · Credly",
+      "time": "Verified Enterprise Badge",
+      "credential_id": "f76fc449-70e1-4013",
       "category": "prof-training",
       "image": "../../assets/images/certi/redhat_sysadmin.svg",
       "url": "https://www.credly.com/badges/f76fc449-70e1-4013-81ba-975d8ae167dd",
-      "description": "Professional enterprise training in Linux system administration, storage management, security policies, bash automation, network configuration, and enterprise server maintenance.",
+      "description": "Enterprise Linux system administration, storage configuration, access control policies, shell automation, networking, and production server operations.",
       "skills": [
-        "Linux",
         "Red Hat Enterprise Linux",
-        "System Administration",
+        "Linux",
         "Bash Automation",
-        "Security"
+        "System Administration"
       ]
     },
     {
       "id": "cisco-cybersecurity",
       "title": "Introduction to Cybersecurity",
-      "provider": "Cisco via Credly",
-      "time": "Issued 2024 · Verified Credential",
-      "credential_id": "a81366ef-a9b3-4a9f-bc1d-3b3ccdd3f3d3",
+      "provider": "Cisco · Credly",
+      "time": "Verified Enterprise Badge",
+      "credential_id": "a81366ef-a9b3-4a9f",
       "category": "prof-training",
       "image": "../../assets/images/certi/cisco_cybersecurity.png",
       "url": "https://www.credly.com/badges/a81366ef-a9b3-4a9f-bc1d-3b3ccdd3f3d3/public_url",
-      "description": "Professional training covering threat identification, defense architectures, encryption algorithms, network security principles, and enterprise vulnerability management.",
+      "description": "Foundational enterprise cybersecurity covering threat detection, network defense architectures, cryptographic controls, and vulnerability management.",
       "skills": [
         "Cybersecurity",
         "Network Defense",
         "Cryptography",
-        "Threat Analysis",
-        "Security Architecture"
-      ]
-    },
-    {
-      "id": "mcp-anthropic",
-      "title": "Model Context Protocol (MCP) - Advanced Topics",
-      "provider": "Anthropic / Skilljar",
-      "time": "Issued 2024 · Training Certificate",
-      "credential_id": "6xy3crte3zpb",
-      "category": "prof-training",
-      "image": "../../assets/images/certi/mcp_anthropic.png",
-      "url": "https://verify.skilljar.com/c/6xy3crte3zpb",
-      "description": "Technical training on implementing the Model Context Protocol (MCP) to securely connect AI models with external tools, contextual databases, and real-time environment APIs.",
-      "skills": [
-        "Model Context Protocol (MCP)",
-        "API Design",
-        "Context Management",
-        "Agentic Tooling"
-      ]
-    },
-    {
-      "id": "pytorch-deeplearning",
-      "title": "Deep Learning with PyTorch",
-      "provider": "DeepLearning.AI via Coursera",
-      "time": "Issued 2024 · Course Certificate",
-      "credential_id": "TW48IZYTPFLB",
-      "category": "learning-cert",
-      "image": "../../assets/images/certi/pytorch_deeplearning.png",
-      "url": "https://www.coursera.org/account/accomplishments/verify/TW48IZYTPFLB",
-      "description": "Specialized course on designing deep neural networks with PyTorch, custom tensors, automatic differentiation, convolutional networks, and transfer learning for computer vision.",
-      "skills": [
-        "PyTorch",
-        "Deep Learning",
-        "CNNs",
-        "Transfer Learning",
-        "Model Optimization"
-      ]
-    },
-    {
-      "id": "transformers-bert",
-      "title": "Transformer Models and BERT",
-      "provider": "DeepLearning.AI via Coursera",
-      "time": "Issued 2024 · Course Certificate",
-      "credential_id": "FULDL1CN9XZA",
-      "category": "learning-cert",
-      "image": "../../assets/images/certi/transformers_bert.png",
-      "url": "https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA",
-      "description": "In-depth study of self-attention mechanisms, multi-head attention, positional encodings, BERT pre-training/fine-tuning, and Hugging Face Transformers for sequence classification and NLP.",
-      "skills": [
-        "Transformers",
-        "BERT",
-        "Self-Attention",
-        "Hugging Face",
-        "NLP Fine-Tuning"
+        "Security Controls"
       ]
     },
     {
       "id": "ibm-data-science",
-      "title": "IBM Data Science Fundamentals",
-      "provider": "IBM via Coursera",
-      "time": "Issued 2023 · Specialization Certificate",
+      "title": "Data Science Fundamentals: Python & SQL",
+      "provider": "IBM · Coursera",
+      "time": "Specialization Certificate",
       "credential_id": "M0R6WZHG3OWV",
       "category": "learning-cert",
-      "image": "../../assets/images/certi/ibm_data_science.png",
+      "image": "../../assets/images/certi/data_science_fundamental.png",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/M0R6WZHG3OWV",
-      "description": "Practical data science workflow training in Python programming, Pandas data manipulation, NumPy arrays, SQL relational databases, and statistical data visualization.",
+      "description": "Applied data science specialization covering Python data structures, relational SQL database querying, Pandas/NumPy analytics, and statistical evaluation.",
       "skills": [
         "Python",
         "SQL",
         "Pandas",
         "NumPy",
-        "Jupyter",
         "Data Science"
+      ]
+    },
+    {
+      "id": "pytorch-deeplearning",
+      "title": "PyTorch: Techniques and Ecosystem Tools",
+      "provider": "DeepLearning.AI · Coursera",
+      "time": "Course Certificate",
+      "credential_id": "TW48IZYTPFLB",
+      "category": "learning-cert",
+      "image": "../../assets/images/certi/pytorch_deeplearning.svg",
+      "url": "https://www.coursera.org/account/accomplishments/verify/TW48IZYTPFLB",
+      "description": "Specialized training on PyTorch neural architectures, custom dataset pipelines, hyperparameter optimization, transfer learning, and ecosystem tooling.",
+      "skills": [
+        "PyTorch",
+        "Deep Learning",
+        "CNNs",
+        "Transfer Learning"
+      ]
+    },
+    {
+      "id": "hackerrank-sql",
+      "title": "SQL (Basic) Certificate",
+      "provider": "HackerRank",
+      "time": "Skill Assessment Certificate",
+      "credential_id": "D25E9873296D",
+      "category": "learning-cert",
+      "image": "../../assets/images/certi/hackerrank_sql.svg",
+      "url": "https://www.hackerrank.com/certificates/d25e9873296d",
+      "description": "Proctored technical assessment verifying proficiency in relational database querying, joins, aggregations, filtering, and schema operations in SQL.",
+      "skills": [
+        "SQL",
+        "Relational Databases",
+        "Query Optimization"
+      ]
+    },
+    {
+      "id": "transformers-bert",
+      "title": "Transformer Models and BERT",
+      "provider": "Google Cloud / Coursera",
+      "time": "Course Certificate",
+      "credential_id": "FULDL1CN9XZA",
+      "category": "learning-cert",
+      "image": "../../assets/images/certi/transformers_bert.png",
+      "url": "https://www.coursera.org/account/accomplishments/verify/FULDL1CN9XZA",
+      "description": "Self-attention architectures, multi-head attention, positional encodings, bidirectional encoder representations (BERT), and fine-tuning workflows.",
+      "skills": [
+        "Transformers",
+        "BERT",
+        "Self-Attention",
+        "NLP"
       ]
     },
     {
       "id": "yale-financial-markets",
       "title": "Financial Markets",
-      "provider": "Yale University via Coursera",
-      "time": "Issued 2023 · Course Certificate",
+      "provider": "Yale University · Coursera",
+      "time": "Course Certificate (Honors)",
       "credential_id": "KAIA00ECLV0Y",
       "category": "learning-cert",
       "image": "../../assets/images/certi/yale_financial_markets.png",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/KAIA00ECLV0Y",
-      "description": "Taught by Nobel Laureate Robert Shiller. Foundations of modern financial markets, securities valuation, risk management, portfolio diversification, and behavioral finance dynamics.",
+      "url": "https://www.coursera.org/account/accomplishments/verify/KAIA00ECLV0Y",
+      "description": "Taught by Nobel Laureate Prof. Robert Shiller covering quantitative risk management, market microstructure, valuation principles, and behavioral finance.",
       "skills": [
-        "Financial Markets",
         "Risk Management",
-        "Portfolio Analysis",
-        "Behavioral Finance"
+        "Quantitative Analysis",
+        "Financial Markets"
       ]
     }
-  ],
-  "skills_legend": {
-    "AI in Healthcare": "#0ea5e9",
-    "Medical Image Analysis": "#10b981",
-    "Agentic AI": "#6366f1",
-    "AI Security": "#ec4899",
-    "Clinical AI": "#14b8a6",
-    "Computer Vision": "#06b6d4",
-    "PyTorch": "#f97316",
-    "Statistical Analysis": "#64748b",
-    "HCI": "#eab308",
-    "LangGraph": "#6366f1",
-    "Multi-Agent Systems": "#8b5cf6",
-    "Python": "#38bdf8",
-    "LLM Orchestration": "#a855f7",
-    "FastAPI": "#009688",
-    "Autonomous Workflows": "#8b5cf6",
-    "StyleGAN2": "#ec4899",
-    "Stable Diffusion XL": "#f43f5e",
-    "LoRA": "#f59e0b",
-    "Agentic RAG": "#6366f1",
-    "Data Augmentation": "#10b981",
-    "Research Methodology": "#3b82f6",
-    "Data Confidentiality": "#ef4444",
-    "Scientific Reporting": "#6366f1",
-    "Literature Synthesis": "#0ea5e9",
-    "Experimental Benchmarking": "#10b981",
-    "AI Alignment": "#8b5cf6",
-    "Research Analysis": "#38bdf8",
-    "Technical Writing": "#64748b",
-    "Literature Review": "#0ea5e9",
-    "Model Governance": "#ec4899",
-    "Ensemble Learning": "#f59e0b",
-    "Bioinformatics": "#10b981",
-    "Spatial Biology": "#06b6d4",
-    "Feature Engineering": "#f97316",
-    "Deep Learning": "#6366f1",
-    "TensorFlow": "#f97316",
-    "ML Pipelines": "#0ea5e9",
-    "Model Deployment": "#10b981",
-    "SQL": "#38bdf8",
-    "R Programming": "#2563eb",
-    "Tableau": "#e11d48",
-    "Data Analysis": "#0ea5e9",
-    "Data Cleaning": "#10b981",
-    "Spreadsheets": "#16a34a",
-    "AWS Bedrock": "#f59e0b",
-    "Generative AI": "#ec4899",
-    "Cloud AI": "#f59e0b",
-    "Foundation Models": "#8b5cf6",
-    "Responsible AI": "#14b8a6",
-    "Deep Agents": "#6366f1",
-    "Stateful Workflows": "#8b5cf6",
-    "Tool Calling": "#10b981",
-    "Linux": "#ef4444",
-    "Red Hat Enterprise Linux": "#dc2626",
-    "System Administration": "#ea580c",
-    "Bash Automation": "#4b5563",
-    "Security": "#e11d48",
-    "Cybersecurity": "#0ea5e9",
-    "Network Defense": "#0284c7",
-    "Cryptography": "#6366f1",
-    "Threat Analysis": "#ef4444",
-    "Security Architecture": "#8b5cf6",
-    "Model Context Protocol (MCP)": "#d97706",
-    "API Design": "#0284c7",
-    "Context Management": "#a855f7",
-    "Agentic Tooling": "#10b981",
-    "CNNs": "#06b6d4",
-    "Transfer Learning": "#f59e0b",
-    "Model Optimization": "#10b981",
-    "Transformers": "#8b5cf6",
-    "BERT": "#a855f7",
-    "Self-Attention": "#ec4899",
-    "Hugging Face": "#eab308",
-    "NLP Fine-Tuning": "#8b5cf6",
-    "Pandas": "#3b82f6",
-    "NumPy": "#0284c7",
-    "Jupyter": "#f97316",
-    "Data Science": "#0ea5e9",
-    "Financial Markets": "#3b82f6",
-    "Risk Management": "#ef4444",
-    "Portfolio Analysis": "#10b981",
-    "Behavioral Finance": "#8b5cf6"
-  }
+  ]
 }

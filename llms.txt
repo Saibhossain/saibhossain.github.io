@@ -137,10 +137,16 @@ Please provide the exact titles, author lists, conference details (IEEE ICCIT 20
 - **Status**: Under Review
 - **Summary**: Formulates indirect prompt injection defense as an authorization problem. Introduces a zero-trust cryptographic provenance architecture for autonomous LLM agents that binds LLM capability tokens to execution contexts, preventing untrusted external inputs from escalating privileges or hijacking stateful agent workflows.
 
-### 2. Clinical Oncology Architecture for Survival Translation (Target: Q1 Journal)
+### 2. Multimodal Survival Prediction in Esophageal Squamous Cell Carcinoma (Target: Q1 Journal)
+- **Title**: MSurvPred: A Multimodal Deep Learning Framework for Personalized Survival Prediction in Esophageal Squamous Cell Carcinoma
+- **Target Venue**: Top-tier Q1 Medical Imaging / Oncology Journal
+- **Status**: Submitted
+- **Summary**: Multimodal deep learning framework fusing cross-modal diagnostic imaging representations and clinical covariates for personalized survival prediction and prognostic stratification in Esophageal Squamous Cell Carcinoma (ESCC).
+
+### 3. Clinical Oncology Architecture for Survival Translation (Target: Q1 Journal)
 - **Title**: COAST: Clinical Oncology Architecture for Survival Translation with Reliable Deep Feature Prediction
 - **Target Venue**: Top-tier Q1 Medical Imaging / Oncology Journal
-- **Status**: Writing Manuscript
+- **Status**: Submitted
 - **Funding**: Supported by a competitive research grant from United International University (UIU) Institute of Advanced Research (IAR)
 - **Summary**: Integrates deep 3D CT radiomics, pathological biomarkers, and clinical covariates via Cox Proportional Hazards and Monte Carlo uncertainty estimation for reliable clinical survival analysis and prognostic risk stratification.
 

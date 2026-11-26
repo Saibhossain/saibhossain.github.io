@@ -130,9 +130,14 @@
    - Status: Under Review
    - Scope: Zero-trust cryptographic authorization preventing indirect prompt injection in autonomous LLM agents.
 
-2. **COAST: Clinical Oncology Architecture for Survival Translation with Reliable Deep Feature Prediction**
+2. **MSurvPred: A Multimodal Deep Learning Framework for Personalized Survival Prediction in Esophageal Squamous Cell Carcinoma**
    - Target Venue: Q1 High-Impact Oncology / Medical Imaging Journal
-   - Status: Manuscript in Preparation
+   - Status: Submitted
+   - Scope: Multimodal deep learning combining imaging representations and clinical variables for personalized survival prediction in Esophageal Squamous Cell Carcinoma (ESCC).
+
+3. **COAST: Clinical Oncology Architecture for Survival Translation with Reliable Deep Feature Prediction**
+   - Target Venue: Q1 High-Impact Oncology / Medical Imaging Journal
+   - Status: Submitted
    - Funding: Competitive Grant from Institute of Advanced Research (IAR), United International University (UIU)
    - Scope: 3D CT radiomics and clinical risk stratification for cancer prognosis.
 
