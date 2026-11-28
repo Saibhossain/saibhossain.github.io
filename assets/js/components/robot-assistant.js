@@ -604,6 +604,12 @@
   }
 
   // ===== 6. BUILD VOLUMETRIC 3D ROBOT MARKUP & ACCESSIBLE UI =====
+  const backdrop = document.createElement('div');
+  backdrop.className = 'saib-bot-backdrop';
+  backdrop.id = 'saib-bot-backdrop';
+  backdrop.hidden = true;
+  document.body.appendChild(backdrop);
+
   const root = document.createElement('aside');
   root.className = 'saib-bot-root';
   root.setAttribute('aria-label', 'Saib-Bot 3D Interactive Portfolio Assistant');
@@ -617,7 +623,8 @@
     </button>
 
     <section class="saib-bot-panel" id="saib-bot-panel" role="dialog" aria-labelledby="saib-bot-panel-title" hidden>
-      <header class="saib-bot-panel-head">
+      <div class="saib-bot-sheet-grabber" aria-hidden="true"></div>
+      <header class="saib-bot-panel-head" id="saib-bot-panel-head">
         <div class="saib-bot-panel-id">
           <img src="${ROBOT_FACE_IMG}" alt="Saib-Bot smiling cyan face" class="saib-bot-panel-face" width="36" height="36">
           <div class="saib-bot-panel-title-wrap">
@@ -627,6 +634,7 @@
         </div>
         <div class="saib-bot-head-actions">
           <button type="button" class="saib-bot-icon-btn is-active" id="saib-bot-panel-tts" aria-label="Toggle voice speech" title="Voice TTS On/Off">🔊</button>
+          <button type="button" class="saib-bot-icon-btn saib-bot-panel-motion" id="saib-bot-panel-motion" aria-label="Pause robot animation" title="Pause / Play animation">⏸</button>
           <button type="button" class="saib-bot-icon-btn" id="saib-bot-dock-switch" aria-label="Switch robot side left or right" title="Move Left / Right">⇄</button>
           <button type="button" class="saib-bot-icon-btn" id="saib-bot-panel-close" aria-label="Close assistant chat">✕</button>
         </div>
@@ -784,10 +792,13 @@
 
   // ===== 7. DOM REFS =====
   const els = {
+    backdrop,
     live: document.getElementById('saib-bot-live'),
     restoreBtn: document.getElementById('saib-bot-restore-btn'),
     panel: document.getElementById('saib-bot-panel'),
+    panelHead: document.getElementById('saib-bot-panel-head'),
     panelTts: document.getElementById('saib-bot-panel-tts'),
+    panelMotion: document.getElementById('saib-bot-panel-motion'),
     dockSwitch: document.getElementById('saib-bot-dock-switch'),
     panelClose: document.getElementById('saib-bot-panel-close'),
     messages: document.getElementById('saib-bot-messages'),
@@ -1014,18 +1025,45 @@
     } catch (e) {}
   }
 
+  function isPhoneViewport() {
+    return window.innerWidth <= 640;
+  }
+
+  function syncMobileViewport() {
+    if (!els.panel || els.panel.hidden || !isPhoneViewport()) {
+      root.style.removeProperty('--bot-kb-offset');
+      root.style.removeProperty('--bot-sheet-max-h');
+      return;
+    }
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const kbHeight = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
+    const maxH = Math.max(260, Math.floor(vv.height - 16));
+    root.style.setProperty('--bot-kb-offset', `${Math.round(kbHeight)}px`);
+    root.style.setProperty('--bot-sheet-max-h', `${Math.min(maxH, 620)}px`);
+    if (els.messages) els.messages.scrollTop = els.messages.scrollHeight;
+  }
+
   function openPanel(focusInput) {
     if (!els.panel) return;
     els.panel.hidden = false;
+    root.classList.add('is-panel-open');
+    if (els.backdrop) els.backdrop.hidden = false;
     if (els.togglePanelBtn) els.togglePanelBtn.setAttribute('aria-expanded', 'true');
     hideBubble();
-    if (focusInput && els.input) els.input.focus();
+    syncMobileViewport();
+    const isCoarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (focusInput && els.input && !isCoarse) els.input.focus();
   }
 
   function closePanel() {
     if (!els.panel) return;
     els.panel.hidden = true;
+    root.classList.remove('is-panel-open');
+    if (els.backdrop) els.backdrop.hidden = true;
     if (els.togglePanelBtn) els.togglePanelBtn.setAttribute('aria-expanded', 'false');
+    root.style.removeProperty('--bot-kb-offset');
+    root.style.removeProperty('--bot-sheet-max-h');
   }
 
   function togglePanel() {
@@ -1048,10 +1086,13 @@
   function toggleMotionPause() {
     state.motionPaused = !state.motionPaused;
     root.classList.toggle('is-motion-paused', state.motionPaused);
-    if (els.toggleMotionBtn) {
-      els.toggleMotionBtn.textContent = state.motionPaused ? '▶' : '⏸';
-      els.toggleMotionBtn.setAttribute('aria-label', state.motionPaused ? 'Play robot animation' : 'Pause robot animation');
-    }
+    const icon = state.motionPaused ? '▶' : '⏸';
+    const label = state.motionPaused ? 'Play robot animation' : 'Pause robot animation';
+    [els.toggleMotionBtn, els.panelMotion].forEach((btn) => {
+      if (!btn) return;
+      btn.textContent = icon;
+      btn.setAttribute('aria-label', label);
+    });
     persistPrefs();
     announce(state.motionPaused ? 'Robot animation paused' : 'Robot animation playing');
   }
@@ -1129,7 +1170,7 @@
     }, 4200);
 
     window.addEventListener('pointermove', (e) => {
-      if (state.motionPaused || state.minimized || state.tourActive) return;
+      if (e.pointerType === 'touch' || state.motionPaused || state.minimized || state.tourActive) return;
       const rect = root.getBoundingClientRect();
       const cx = rect.left + rect.width * 0.5;
       const cy = rect.top + rect.height * 0.4;
@@ -1189,7 +1230,7 @@
   function stopTour(silent) {
     state.tourActive = false;
     clearTourHighlight();
-    root.classList.remove('is-flying');
+    root.classList.remove('is-flying', 'is-touring');
     root.style.setProperty('--bot-fly-x', '0px');
     root.style.setProperty('--bot-fly-y', '0px');
     if (els.toggleTourBtn) els.toggleTourBtn.classList.remove('is-active');
@@ -1202,6 +1243,13 @@
 
   function flyToSection(el) {
     if (!el || !root) return;
+    // On phones, keep robot & tour card docked cleanly at the bottom so highlighted content remains unobstructed above
+    if (isPhoneViewport()) {
+      root.classList.remove('is-flying');
+      root.style.setProperty('--bot-fly-x', '0px');
+      root.style.setProperty('--bot-fly-y', '0px');
+      return;
+    }
     // Measure base resting rect first by resetting fly vars temporarily
     root.classList.remove('is-flying');
     root.style.setProperty('--bot-fly-x', '0px');
@@ -1246,7 +1294,10 @@
     setMood('scan');
 
     try {
-      stop.el.scrollIntoView({ behavior: state.motionPaused ? 'auto' : 'smooth', block: 'center' });
+      stop.el.scrollIntoView({
+        behavior: state.motionPaused ? 'auto' : 'smooth',
+        block: isPhoneViewport() ? 'start' : 'center'
+      });
     } catch (e) {}
 
     setTimeout(() => {
@@ -1285,6 +1336,7 @@
     state.tourStops = buildTourStops();
     state.tourStep = 0;
     state.tourActive = true;
+    root.classList.add('is-touring');
     if (els.toggleTourBtn) els.toggleTourBtn.classList.add('is-active');
     renderCurrentTourStep();
   }
@@ -1391,12 +1443,37 @@
   els.charBtn.addEventListener('click', handleRobotTap);
   els.togglePanelBtn.addEventListener('click', togglePanel);
   els.panelClose.addEventListener('click', closePanel);
+  if (els.backdrop) els.backdrop.addEventListener('click', closePanel);
   els.toggleTtsBtn.addEventListener('click', toggleTts);
   els.panelTts.addEventListener('click', toggleTts);
   els.toggleTourBtn.addEventListener('click', () => (state.tourActive ? stopTour(false) : startPageTour()));
   els.toggleMotionBtn.addEventListener('click', toggleMotionPause);
+  if (els.panelMotion) els.panelMotion.addEventListener('click', toggleMotionPause);
   els.dockSwitch.addEventListener('click', () => setDockSide(state.dockSide === 'right' ? 'left' : 'right'));
   els.bubbleClose.addEventListener('click', hideBubble);
+
+  // Swipe-down to dismiss mobile bottom sheet from header
+  if (els.panelHead) {
+    let sheetStartY = null;
+    els.panelHead.addEventListener('touchstart', (e) => {
+      if (!isPhoneViewport() || e.touches.length !== 1) return;
+      sheetStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    els.panelHead.addEventListener('touchend', (e) => {
+      if (sheetStartY === null || !isPhoneViewport()) return;
+      const dy = (e.changedTouches[0] ? e.changedTouches[0].clientY : sheetStartY) - sheetStartY;
+      sheetStartY = null;
+      if (dy > 55) closePanel();
+    }, { passive: true });
+  }
+
+  // Keep mobile bottom sheet positioned cleanly above virtual keyboard
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', syncMobileViewport);
+    window.visualViewport.addEventListener('scroll', syncMobileViewport);
+  }
+  window.addEventListener('resize', syncMobileViewport, { passive: true });
 
   els.minimizeBtn.addEventListener('click', () => {
     stopTour(true);

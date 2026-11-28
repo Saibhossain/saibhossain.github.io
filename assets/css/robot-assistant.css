@@ -17,11 +17,41 @@
   white-space: nowrap !important;
 }
 
+/* ===== FORM-FACTOR TOKENS & SAFE SCROLL PADDING ===== */
+:root {
+  --bot-target: 28px;
+}
+
+@media (pointer: coarse) {
+  :root {
+    --bot-target: 44px;
+  }
+}
+
+html {
+  scroll-padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* ===== MOBILE BACKDROP (ONLY SHOWN WHEN PANEL OPEN ON PHONES) ===== */
+.saib-bot-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 994;
+  background: rgba(3, 7, 18, 0.56);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.saib-bot-backdrop[hidden] {
+  display: none !important;
+}
+
 /* ===== FLOATING ROOT CONTAINER ===== */
 .saib-bot-root {
   position: fixed;
-  right: 1.25rem;
-  bottom: 1.25rem;
+  right: max(1.25rem, env(safe-area-inset-right, 0px));
+  bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
   z-index: 995;
   display: flex;
   flex-direction: column;
@@ -42,7 +72,7 @@
 }
 
 .saib-bot-root.is-docked-left {
-  left: 1.25rem;
+  left: max(1.25rem, env(safe-area-inset-left, 0px));
   right: auto;
   align-items: flex-start;
 }
@@ -108,6 +138,8 @@
   font-size: 0.81rem;
   line-height: 1.45;
   color: var(--text, #f1f5f9);
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .saib-bot-bubble[hidden] {
@@ -196,6 +228,7 @@
   padding: 0;
   cursor: pointer;
   border-radius: 24px;
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -663,10 +696,10 @@
 
 .saib-bot-dock-btn,
 .saib-bot-drag-handle {
-  width: 30px;
-  height: 30px;
-  min-width: 28px;
-  min-height: 28px;
+  width: max(30px, var(--bot-target));
+  height: max(30px, var(--bot-target));
+  min-inline-size: var(--bot-target);
+  min-block-size: var(--bot-target);
   border-radius: 50%;
   border: none;
   background: transparent;
@@ -674,8 +707,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   cursor: pointer;
+  touch-action: manipulation;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
@@ -762,6 +796,7 @@
   font-weight: 700;
   color: var(--text, #f1f5f9);
   line-height: 1.2;
+  text-wrap: balance;
 }
 
 .saib-bot-panel-sub {
@@ -781,17 +816,34 @@
 }
 
 .saib-bot-icon-btn {
-  width: 30px;
-  height: 30px;
+  min-inline-size: var(--bot-target);
+  min-block-size: var(--bot-target);
+  width: max(30px, var(--bot-target));
+  height: max(30px, var(--bot-target));
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 10px;
   background: transparent;
   color: var(--text-secondary, #cbd5e1);
   cursor: pointer;
+  touch-action: manipulation;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.86rem;
+  font-size: 0.9rem;
+}
+
+.saib-bot-sheet-grabber {
+  display: none;
+  width: 40px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.45);
+  margin: 0.45rem auto 0.15rem;
+  flex-shrink: 0;
+}
+
+.saib-bot-panel-motion {
+  display: none;
 }
 
 .saib-bot-icon-btn:hover {
@@ -879,6 +931,8 @@
 .saib-bot-messages {
   flex: 1 1 auto;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding: 0.7rem 0.8rem;
   display: flex;
   flex-direction: column;
@@ -890,9 +944,10 @@
   max-width: 90%;
   padding: 0.55rem 0.75rem;
   border-radius: 12px;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   line-height: 1.5;
-  word-wrap: break-word;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
 }
 
 .saib-bot-msg.is-bot {
@@ -999,15 +1054,17 @@
 
 .saib-bot-send-btn {
   flex-shrink: 0;
-  min-height: 38px;
-  padding: 0 0.85rem;
+  min-block-size: max(40px, var(--bot-target));
+  min-inline-size: 56px;
+  padding: 0 0.95rem;
   border: none;
   border-radius: 10px;
   background: var(--gradient-main, linear-gradient(135deg, #6366f1, #06b6d4));
   color: #ffffff;
-  font-size: 0.82rem;
+  font-size: 0.86rem;
   font-weight: 600;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 /* ===== PAGE SECTION TOUR HIGHLIGHT ===== */
@@ -1015,38 +1072,157 @@
   outline: 2px solid var(--accent, #06b6d4);
   outline-offset: 6px;
   border-radius: var(--radius-lg, 18px);
+  scroll-margin-top: 84px;
   transition: outline-color 0.3s ease;
 }
 
-/* ===== RESPONSIVE MOBILE ADJUSTMENTS ===== */
+/* ===== TOUCH TARGET SIZING FOR COARSE POINTERS ===== */
+@media (pointer: coarse) {
+  .saib-bot-action-pill,
+  .saib-bot-page-link,
+  .saib-bot-chip,
+  .saib-bot-bubble-btn,
+  .saib-bot-msg-link {
+    min-block-size: 38px;
+    display: inline-flex;
+    align-items: center;
+    padding-inline: 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .saib-bot-bubble-close {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .saib-bot-input {
+    min-block-size: 44px;
+  }
+}
+
+/* ===== PHONE OPTIMIZATION (<= 640px) ===== */
 @media (max-width: 640px) {
+  .saib-bot-backdrop {
+    display: block;
+  }
+
   .saib-bot-root {
-    right: 0.75rem;
-    bottom: 0.75rem;
+    right: max(0.65rem, env(safe-area-inset-right, 0px));
+    bottom: max(0.65rem, env(safe-area-inset-bottom, 0px));
+    gap: 0.35rem;
   }
 
   .saib-bot-root.is-docked-left {
-    left: 0.75rem;
+    left: max(0.65rem, env(safe-area-inset-left, 0px));
+    right: auto;
   }
 
+  /* Compact, non-intrusive 3D robot footprint on phones */
   .saib-bot-stage {
-    width: 76px;
-    height: 94px;
+    width: 66px;
+    height: 82px;
   }
 
   .saib-bot-rig {
-    transform: scale(0.84);
+    transform: scale(0.74);
     transform-origin: bottom center;
   }
 
-  .saib-bot-dock-btn,
-  .saib-bot-drag-handle {
-    width: 34px;
-    height: 34px;
+  /* Clean 3-button thumb-friendly mobile dock (hide desktop drag/extra clutter; pause & voice live in header too) */
+  .saib-bot-dock-bar {
+    gap: 0.2rem;
+    padding: 0.22rem 0.28rem;
+  }
+
+  .saib-bot-drag-handle,
+  #saib-bot-toggle-tts,
+  #saib-bot-toggle-motion {
+    display: none;
+  }
+
+  .saib-bot-dock-btn {
+    width: 40px;
+    height: 40px;
+    min-inline-size: 40px;
+    min-block-size: 40px;
+    font-size: 1rem;
+  }
+
+  /* Full-width bottom-anchored bubble for clear mobile reading & tour */
+  .saib-bot-bubble {
+    width: min(320px, calc(100vw - 1.3rem));
+    max-width: calc(100vw - 1.3rem);
+    padding: 0.75rem 2.4rem 0.75rem 0.9rem;
+    font-size: 0.84rem;
+  }
+
+  /* During active phone tour, keep bubble full width and centered at bottom cleanly */
+  .saib-bot-root.is-touring {
+    left: max(0.65rem, env(safe-area-inset-left, 0px));
+    right: max(0.65rem, env(safe-area-inset-right, 0px));
+    bottom: max(0.65rem, env(safe-area-inset-bottom, 0px));
+    align-items: stretch;
+    transform: none !important;
+  }
+
+  .saib-bot-root.is-touring .saib-bot-bubble {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .saib-bot-root.is-touring .saib-bot-avatar-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-inline: 0.2rem;
+  }
+
+  /* Full-width Mobile Bottom Sheet when chat panel is open */
+  .saib-bot-root.is-panel-open .saib-bot-avatar-wrap,
+  .saib-bot-root.is-panel-open .saib-bot-bubble {
+    display: none !important;
   }
 
   .saib-bot-panel {
-    width: calc(100vw - 1.5rem);
-    max-height: min(460px, calc(100dvh - 140px));
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: var(--bot-kb-offset, 0px);
+    width: 100%;
+    max-width: 100%;
+    max-height: var(--bot-sheet-max-h, min(82dvh, 620px));
+    border-radius: 20px 20px 0 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    overscroll-behavior: contain;
+    z-index: 1002;
+  }
+
+  .saib-bot-sheet-grabber {
+    display: block;
+  }
+
+  .saib-bot-panel-motion {
+    display: inline-flex;
+  }
+
+  .saib-bot-panel-head {
+    padding: 0.5rem 0.85rem 0.65rem;
+    touch-action: pan-x;
+  }
+
+  .saib-bot-panel-sub {
+    font-size: 0.75rem;
+  }
+
+  .saib-bot-form {
+    padding: 0.55rem 0.75rem max(0.65rem, env(safe-area-inset-bottom, 0px));
+  }
+
+  .saib-bot-min-pill {
+    min-height: 44px;
+    padding: 0.35rem 0.85rem 0.35rem 0.4rem;
   }
 }

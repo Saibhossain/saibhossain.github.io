@@ -300,14 +300,14 @@ function loadRobotAssistant(relativePrefix) {
   if (!document.querySelector('link[data-saib-bot-css]')) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `${relativePrefix}assets/css/robot-assistant.css?v=1.0`;
+    link.href = `${relativePrefix}assets/css/robot-assistant.css?v=1.1`;
     link.setAttribute('data-saib-bot-css', 'true');
     document.head.appendChild(link);
   }
 
   if (!document.querySelector('script[data-saib-bot-js]')) {
     const script = document.createElement('script');
-    script.src = `${relativePrefix}assets/js/components/robot-assistant.js?v=1.0`;
+    script.src = `${relativePrefix}assets/js/components/robot-assistant.js?v=1.1`;
     script.defer = true;
     script.setAttribute('data-saib-bot-js', 'true');
     document.body.appendChild(script);
