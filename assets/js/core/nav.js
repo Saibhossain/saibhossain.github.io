@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     document.querySelector('link[href*="../../assets/"]');
   const prefix = isSubpage ? '../../' : './';
 
+  // Load 3D Saib-Bot companion globally across all pages
+  loadRobotAssistant(prefix);
+
   // 3. Load global data, header, and footer in parallel
   try {
     const [globalDataRes, headerRes, footerRes] = await Promise.all([
@@ -290,7 +293,29 @@ function renderFooterSocialLinks(containerId, socialLinks) {
   });
 }
 
+/**
+ * Load 3D Cartoon Robot Assistant across all portfolio pages
+ */
+function loadRobotAssistant(relativePrefix) {
+  if (!document.querySelector('link[data-saib-bot-css]')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${relativePrefix}assets/css/robot-assistant.css?v=1.0`;
+    link.setAttribute('data-saib-bot-css', 'true');
+    document.head.appendChild(link);
+  }
+
+  if (!document.querySelector('script[data-saib-bot-js]')) {
+    const script = document.createElement('script');
+    script.src = `${relativePrefix}assets/js/components/robot-assistant.js?v=1.0`;
+    script.defer = true;
+    script.setAttribute('data-saib-bot-js', 'true');
+    document.body.appendChild(script);
+  }
+}
+
 // Exports for inline scripts
 window.initNavInteractions = initNavInteractions;
 window.highlightActiveNav = highlightActiveNav;
 window.initThemeToggle = initThemeToggle;
+window.loadRobotAssistant = loadRobotAssistant;
